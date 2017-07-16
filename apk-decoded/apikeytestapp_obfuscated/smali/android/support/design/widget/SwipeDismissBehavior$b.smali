@@ -46,17 +46,17 @@
 
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$b;->a:Landroid/support/design/widget/SwipeDismissBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->a:Landroid/support/v4/widget/p;
+    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ac;
 
     if-eqz v0, :cond_1
 
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$b;->a:Landroid/support/design/widget/SwipeDismissBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->a:Landroid/support/v4/widget/p;
+    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ac;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/p;->a(Z)Z
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ac;->a(Z)Z
 
     move-result v0
 
@@ -64,7 +64,7 @@
 
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$b;->b:Landroid/view/View;
 
-    invoke-static {v0, p0}, Landroid/support/v4/view/r;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {v0, p0}, Landroid/support/v4/view/ac;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
     :cond_0
     :goto_0
@@ -77,13 +77,13 @@
 
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$b;->a:Landroid/support/design/widget/SwipeDismissBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->b:Landroid/support/design/widget/SwipeDismissBehavior$a;
+    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->i:Landroid/support/design/widget/SwipeDismissBehavior$a;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$b;->a:Landroid/support/design/widget/SwipeDismissBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->b:Landroid/support/design/widget/SwipeDismissBehavior$a;
+    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->i:Landroid/support/design/widget/SwipeDismissBehavior$a;
 
     iget-object v1, p0, Landroid/support/design/widget/SwipeDismissBehavior$b;->b:Landroid/view/View;
 

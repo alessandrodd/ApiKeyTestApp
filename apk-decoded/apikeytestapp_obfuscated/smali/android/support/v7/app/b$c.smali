@@ -1,5 +1,8 @@
 .class Landroid/support/v7/app/b$c;
-.super Landroid/widget/ArrayAdapter;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/support/v7/app/b$a;
 
 
 # annotations
@@ -8,40 +11,65 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x8
     name = "c"
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/widget/ArrayAdapter",
-        "<",
-        "Ljava/lang/CharSequence;",
-        ">;"
-    }
-.end annotation
+
+# instance fields
+.field final a:Landroid/app/Activity;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;II[Ljava/lang/CharSequence;)V
+.method constructor <init>(Landroid/app/Activity;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroid/support/v7/app/b$c;->a:Landroid/app/Activity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getItemId(I)J
-    .locals 2
+.method public a()Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    int-to-long v0, p1
+    const/4 v0, 0x0
 
-    return-wide v0
+    return-object v0
 .end method
 
-.method public hasStableIds()Z
+.method public a(I)V
+    .locals 0
+    .param p1    # I
+        .annotation build Landroid/support/annotation/an;
+        .end annotation
+    .end param
+
+    return-void
+.end method
+
+.method public a(Landroid/graphics/drawable/Drawable;I)V
+    .locals 0
+    .param p2    # I
+        .annotation build Landroid/support/annotation/an;
+        .end annotation
+    .end param
+
+    return-void
+.end method
+
+.method public b()Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/app/b$c;->a:Landroid/app/Activity;
+
+    return-object v0
+.end method
+
+.method public c()Z
     .locals 1
 
     const/4 v0, 0x1

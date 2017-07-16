@@ -2,47 +2,117 @@
 .super Ljava/lang/Object;
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/support/v4/view/c$c;,
+        Landroid/support/v4/view/c$a;,
+        Landroid/support/v4/view/c$b;,
+        Landroid/support/v4/view/c$d;
+    }
+.end annotation
+
+
+# static fields
+.field private static final d:Ljava/lang/String; = "AsyncLayoutInflater"
+
+
+# instance fields
+.field a:Landroid/view/LayoutInflater;
+
+.field b:Landroid/os/Handler;
+
+.field c:Landroid/support/v4/view/c$c;
+
+.field private e:Landroid/os/Handler$Callback;
+
+
 # direct methods
-.method public static a(II)I
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x11
+    new-instance v0, Landroid/support/v4/view/c$1;
 
-    if-lt v0, v1, :cond_0
+    invoke-direct {v0, p0}, Landroid/support/v4/view/c$1;-><init>(Landroid/support/v4/view/c;)V
 
-    invoke-static {p0, p1}, Landroid/view/Gravity;->getAbsoluteGravity(II)I
+    iput-object v0, p0, Landroid/support/v4/view/c;->e:Landroid/os/Handler$Callback;
 
-    move-result v0
+    new-instance v0, Landroid/support/v4/view/c$a;
 
-    :goto_0
-    return v0
+    invoke-direct {v0, p1}, Landroid/support/v4/view/c$a;-><init>(Landroid/content/Context;)V
 
-    :cond_0
-    const v0, -0x800001
+    iput-object v0, p0, Landroid/support/v4/view/c;->a:Landroid/view/LayoutInflater;
 
-    and-int/2addr v0, p0
+    new-instance v0, Landroid/os/Handler;
 
-    goto :goto_0
+    iget-object v1, p0, Landroid/support/v4/view/c;->e:Landroid/os/Handler$Callback;
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Handler$Callback;)V
+
+    iput-object v0, p0, Landroid/support/v4/view/c;->b:Landroid/os/Handler;
+
+    invoke-static {}, Landroid/support/v4/view/c$c;->a()Landroid/support/v4/view/c$c;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v4/view/c;->c:Landroid/support/v4/view/c$c;
+
+    return-void
 .end method
 
-.method public static a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
+
+# virtual methods
+.method public a(ILandroid/view/ViewGroup;Landroid/support/v4/view/c$d;)V
     .locals 2
+    .param p1    # I
+        .annotation build Landroid/support/annotation/aa;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/ViewGroup;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .param p3    # Landroid/support/v4/view/c$d;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ar;
+    .end annotation
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    if-nez p3, :cond_0
 
-    const/16 v1, 0x11
+    new-instance v0, Ljava/lang/NullPointerException;
 
-    if-lt v0, v1, :cond_0
+    const-string v1, "callback argument may not be null!"
 
-    invoke-static/range {p0 .. p5}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    :goto_0
-    return-void
+    throw v0
 
     :cond_0
-    invoke-static {p0, p1, p2, p3, p4}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;)V
+    iget-object v0, p0, Landroid/support/v4/view/c;->c:Landroid/support/v4/view/c$c;
 
-    goto :goto_0
+    invoke-virtual {v0}, Landroid/support/v4/view/c$c;->c()Landroid/support/v4/view/c$b;
+
+    move-result-object v0
+
+    iput-object p0, v0, Landroid/support/v4/view/c$b;->a:Landroid/support/v4/view/c;
+
+    iput p1, v0, Landroid/support/v4/view/c$b;->c:I
+
+    iput-object p2, v0, Landroid/support/v4/view/c$b;->b:Landroid/view/ViewGroup;
+
+    iput-object p3, v0, Landroid/support/v4/view/c$b;->e:Landroid/support/v4/view/c$d;
+
+    iget-object v1, p0, Landroid/support/v4/view/c;->c:Landroid/support/v4/view/c$c;
+
+    invoke-virtual {v1, v0}, Landroid/support/v4/view/c$c;->b(Landroid/support/v4/view/c$b;)V
+
+    return-void
 .end method

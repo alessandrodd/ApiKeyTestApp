@@ -554,6 +554,14 @@
     return-object v0
 .end method
 
+.method public b()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "android.support.v4.media.session.IMediaControllerCallback"
+
+    return-object v0
+.end method
+
 .method public b(I)V
     .locals 5
 

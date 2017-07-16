@@ -20,6 +20,8 @@
 
 .field private c:Ljava/lang/reflect/Method;
 
+.field private d:Ljava/lang/reflect/Method;
+
 
 # direct methods
 .method constructor <init>()V

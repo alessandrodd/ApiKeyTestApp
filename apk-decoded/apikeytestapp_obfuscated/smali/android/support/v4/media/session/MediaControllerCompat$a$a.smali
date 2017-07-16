@@ -13,8 +13,46 @@
 .end annotation
 
 
+# static fields
+.field private static final b:I = 0x1
+
+.field private static final c:I = 0x2
+
+.field private static final d:I = 0x3
+
+.field private static final e:I = 0x4
+
+.field private static final f:I = 0x5
+
+.field private static final g:I = 0x6
+
+.field private static final h:I = 0x7
+
+.field private static final i:I = 0x8
+
+.field private static final j:I = 0x9
+
+.field private static final k:I = 0xa
+
+.field private static final l:I = 0xb
+
+.field private static final m:I = 0xc
+
+
 # instance fields
 .field final synthetic a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+
+
+# direct methods
+.method public constructor <init>(Landroid/support/v4/media/session/MediaControllerCompat$a;Landroid/os/Looper;)V
+    .locals 0
+
+    iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    return-void
+.end method
 
 
 # virtual methods
@@ -186,9 +224,9 @@
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v0, Landroid/support/v4/media/session/MediaControllerCompat$b;
+    check-cast v0, Landroid/support/v4/media/session/MediaControllerCompat$g;
 
-    invoke-virtual {v1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$a;->a(Landroid/support/v4/media/session/MediaControllerCompat$b;)V
+    invoke-virtual {v1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$a;->a(Landroid/support/v4/media/session/MediaControllerCompat$g;)V
 
     goto/16 :goto_0
 

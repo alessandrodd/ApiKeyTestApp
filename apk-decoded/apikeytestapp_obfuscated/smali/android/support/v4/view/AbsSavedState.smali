@@ -55,6 +55,16 @@
     return-void
 .end method
 
+.method protected constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroid/support/v4/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+
+    return-void
+.end method
+
 .method protected constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 1
 

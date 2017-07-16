@@ -67,9 +67,9 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v0, v0, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v0, v0, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/at;->b()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/bb;->b()I
 
     move-result v0
 
@@ -84,7 +84,7 @@
     :cond_1
     iget-object v1, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    invoke-virtual {v1, p1}, Landroid/support/v7/widget/LinearLayoutManager;->d(Landroid/view/View;)I
+    invoke-virtual {v1, p1}, Landroid/support/v7/widget/LinearLayoutManager;->e(Landroid/view/View;)I
 
     move-result v1
 
@@ -96,9 +96,9 @@
 
     iget-object v1, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v1, v1, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v1, v1, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v1}, Landroid/support/v7/widget/at;->d()I
+    invoke-virtual {v1}, Landroid/support/v7/widget/bb;->d()I
 
     move-result v1
 
@@ -106,9 +106,9 @@
 
     iget-object v1, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v1, v1, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v1, v1, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v1, p1}, Landroid/support/v7/widget/at;->b(Landroid/view/View;)I
+    invoke-virtual {v1, p1}, Landroid/support/v7/widget/bb;->b(Landroid/view/View;)I
 
     move-result v1
 
@@ -116,9 +116,9 @@
 
     iget-object v1, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v1, v1, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v1, v1, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v1}, Landroid/support/v7/widget/at;->d()I
+    invoke-virtual {v1}, Landroid/support/v7/widget/bb;->d()I
 
     move-result v1
 
@@ -130,9 +130,9 @@
 
     iget-object v1, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v1, v1, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v1, v1, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v1, p1}, Landroid/support/v7/widget/at;->e(Landroid/view/View;)I
+    invoke-virtual {v1, p1}, Landroid/support/v7/widget/bb;->e(Landroid/view/View;)I
 
     move-result v1
 
@@ -142,17 +142,17 @@
 
     iget-object v2, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v2, v2, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v2, v2, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v2}, Landroid/support/v7/widget/at;->c()I
+    invoke-virtual {v2}, Landroid/support/v7/widget/bb;->c()I
 
     move-result v2
 
     iget-object v3, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v3, v3, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v3, v3, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v3, p1}, Landroid/support/v7/widget/at;->a(Landroid/view/View;)I
+    invoke-virtual {v3, p1}, Landroid/support/v7/widget/bb;->a(Landroid/view/View;)I
 
     move-result v3
 
@@ -185,17 +185,17 @@
     :cond_2
     iget-object v1, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v1, v1, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v1, v1, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v1, p1}, Landroid/support/v7/widget/at;->a(Landroid/view/View;)I
+    invoke-virtual {v1, p1}, Landroid/support/v7/widget/bb;->a(Landroid/view/View;)I
 
     move-result v1
 
     iget-object v2, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v2, v2, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v2, v2, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v2}, Landroid/support/v7/widget/at;->c()I
+    invoke-virtual {v2}, Landroid/support/v7/widget/bb;->c()I
 
     move-result v2
 
@@ -207,9 +207,9 @@
 
     iget-object v3, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v3, v3, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v3, v3, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v3, p1}, Landroid/support/v7/widget/at;->e(Landroid/view/View;)I
+    invoke-virtual {v3, p1}, Landroid/support/v7/widget/bb;->e(Landroid/view/View;)I
 
     move-result v3
 
@@ -217,9 +217,9 @@
 
     iget-object v3, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v3, v3, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v3, v3, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v3}, Landroid/support/v7/widget/at;->d()I
+    invoke-virtual {v3}, Landroid/support/v7/widget/bb;->d()I
 
     move-result v3
 
@@ -227,9 +227,9 @@
 
     iget-object v3, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v3, v3, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v3, v3, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v3, p1}, Landroid/support/v7/widget/at;->b(Landroid/view/View;)I
+    invoke-virtual {v3, p1}, Landroid/support/v7/widget/bb;->b(Landroid/view/View;)I
 
     move-result v3
 
@@ -237,9 +237,9 @@
 
     iget-object v3, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v3, v3, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v3, v3, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v3}, Landroid/support/v7/widget/at;->d()I
+    invoke-virtual {v3}, Landroid/support/v7/widget/bb;->d()I
 
     move-result v3
 
@@ -268,32 +268,32 @@
     goto/16 :goto_0
 .end method
 
-.method a(Landroid/view/View;Landroid/support/v7/widget/RecyclerView$r;)Z
+.method a(Landroid/view/View;Landroid/support/v7/widget/RecyclerView$t;)Z
     .locals 2
 
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v7/widget/RecyclerView$h;
+    check-cast v0, Landroid/support/v7/widget/RecyclerView$i;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$h;->d()Z
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$i;->e()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$h;->f()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$i;->h()I
 
     move-result v1
 
     if-ltz v1, :cond_0
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$h;->f()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$i;->h()I
 
     move-result v0
 
-    invoke-virtual {p2}, Landroid/support/v7/widget/RecyclerView$r;->e()I
+    invoke-virtual {p2}, Landroid/support/v7/widget/RecyclerView$t;->i()I
 
     move-result v1
 
@@ -319,9 +319,9 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v0, v0, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v0, v0, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/at;->d()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/bb;->d()I
 
     move-result v0
 
@@ -333,9 +333,9 @@
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v0, v0, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v0, v0, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/at;->c()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/bb;->c()I
 
     move-result v0
 
@@ -351,17 +351,17 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v0, v0, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v0, v0, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/at;->b(Landroid/view/View;)I
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/bb;->b(Landroid/view/View;)I
 
     move-result v0
 
     iget-object v1, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v1, v1, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v1, v1, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v1}, Landroid/support/v7/widget/at;->b()I
+    invoke-virtual {v1}, Landroid/support/v7/widget/bb;->b()I
 
     move-result v1
 
@@ -372,7 +372,7 @@
     :goto_0
     iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/LinearLayoutManager;->d(Landroid/view/View;)I
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/LinearLayoutManager;->e(Landroid/view/View;)I
 
     move-result v0
 
@@ -383,9 +383,9 @@
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$a;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v0, v0, Landroid/support/v7/widget/LinearLayoutManager;->j:Landroid/support/v7/widget/at;
+    iget-object v0, v0, Landroid/support/v7/widget/LinearLayoutManager;->o:Landroid/support/v7/widget/bb;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/at;->a(Landroid/view/View;)I
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/bb;->a(Landroid/view/View;)I
 
     move-result v0
 

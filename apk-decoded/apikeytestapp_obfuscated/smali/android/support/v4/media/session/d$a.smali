@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/session/d$a;
+.class public interface abstract Landroid/support/v4/media/session/d$a;
 .super Ljava/lang/Object;
 
 
@@ -8,32 +8,39 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x609
     name = "a"
 .end annotation
 
 
-# direct methods
-.method public static a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p0, Landroid/media/session/MediaSession$QueueItem;
-
-    invoke-virtual {p0}, Landroid/media/session/MediaSession$QueueItem;->getDescription()Landroid/media/MediaDescription;
-
-    move-result-object v0
-
-    return-object v0
+# virtual methods
+.method public abstract a()V
 .end method
 
-.method public static b(Ljava/lang/Object;)J
-    .locals 2
+.method public abstract a(IIIII)V
+.end method
 
-    check-cast p0, Landroid/media/session/MediaSession$QueueItem;
+.method public abstract a(Landroid/os/Bundle;)V
+.end method
 
-    invoke-virtual {p0}, Landroid/media/session/MediaSession$QueueItem;->getQueueId()J
+.method public abstract a(Ljava/lang/CharSequence;)V
+.end method
 
-    move-result-wide v0
+.method public abstract a(Ljava/lang/Object;)V
+.end method
 
-    return-wide v0
+.method public abstract a(Ljava/lang/String;Landroid/os/Bundle;)V
+.end method
+
+.method public abstract a(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<*>;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract b(Ljava/lang/Object;)V
 .end method

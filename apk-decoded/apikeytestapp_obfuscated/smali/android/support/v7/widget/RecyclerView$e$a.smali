@@ -1,5 +1,8 @@
-.class interface abstract Landroid/support/v7/widget/RecyclerView$e$a;
+.class public interface abstract annotation Landroid/support/v7/widget/RecyclerView$e$a;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
 
 # annotations
@@ -8,6 +11,10 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x2609
     name = "a"
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->SOURCE:Ljava/lang/annotation/RetentionPolicy;
 .end annotation

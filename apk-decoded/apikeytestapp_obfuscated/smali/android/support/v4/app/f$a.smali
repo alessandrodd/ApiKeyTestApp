@@ -1,198 +1,66 @@
 .class Landroid/support/v4/app/f$a;
-.super Landroid/support/v4/app/i;
+.super Landroid/support/v4/app/f;
 
 
 # annotations
+.annotation build Landroid/support/annotation/ai;
+    a = 0x10
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroid/support/v4/app/f;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0xa
     name = "a"
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/support/v4/app/i",
-        "<",
-        "Landroid/support/v4/app/f;",
-        ">;"
-    }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/app/f;
+.field protected final c:Landroid/app/ActivityOptions;
 
 
 # direct methods
-.method public constructor <init>(Landroid/support/v4/app/f;)V
+.method constructor <init>(Landroid/app/ActivityOptions;)V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/app/f$a;->a:Landroid/support/v4/app/f;
+    invoke-direct {p0}, Landroid/support/v4/app/f;-><init>()V
 
-    invoke-direct {p0, p1}, Landroid/support/v4/app/i;-><init>(Landroid/support/v4/app/f;)V
+    iput-object p1, p0, Landroid/support/v4/app/f$a;->c:Landroid/app/ActivityOptions;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/app/f$a;->a:Landroid/support/v4/app/f;
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/app/f;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public a(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/app/f$a;->a:Landroid/support/v4/app/f;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/support/v4/app/f;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public a()Z
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/app/f$a;->a:Landroid/support/v4/app/f;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/f;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/Window;->peekDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public a(Landroid/support/v4/app/Fragment;)Z
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/app/f$a;->a:Landroid/support/v4/app/f;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/f;->isFinishing()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public b()Landroid/view/LayoutInflater;
+.method public a(Landroid/support/v4/app/f;)V
     .locals 2
 
-    iget-object v0, p0, Landroid/support/v4/app/f$a;->a:Landroid/support/v4/app/f;
+    instance-of v0, p1, Landroid/support/v4/app/f$a;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/f;->getLayoutInflater()Landroid/view/LayoutInflater;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    check-cast p1, Landroid/support/v4/app/f$a;
 
-    iget-object v1, p0, Landroid/support/v4/app/f$a;->a:Landroid/support/v4/app/f;
+    iget-object v0, p0, Landroid/support/v4/app/f$a;->c:Landroid/app/ActivityOptions;
 
-    invoke-virtual {v0, v1}, Landroid/view/LayoutInflater;->cloneInContext(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    iget-object v1, p1, Landroid/support/v4/app/f$a;->c:Landroid/app/ActivityOptions;
+
+    invoke-virtual {v0, v1}, Landroid/app/ActivityOptions;->update(Landroid/app/ActivityOptions;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public d()Landroid/os/Bundle;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/app/f$a;->c:Landroid/app/ActivityOptions;
+
+    invoke-virtual {v0}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public b(Landroid/support/v4/app/Fragment;)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/app/f$a;->a:Landroid/support/v4/app/f;
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/app/f;->a(Landroid/support/v4/app/Fragment;)V
-
-    return-void
-.end method
-
-.method public c()V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/app/f$a;->a:Landroid/support/v4/app/f;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/f;->c()V
-
-    return-void
-.end method
-
-.method public d()Z
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/app/f$a;->a:Landroid/support/v4/app/f;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/f;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public e()I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/app/f$a;->a:Landroid/support/v4/app/f;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/f;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
-
-    goto :goto_0
 .end method

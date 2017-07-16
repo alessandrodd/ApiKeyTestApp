@@ -1,18 +1,25 @@
 .class public Landroid/support/v4/app/v;
-.super Landroid/app/Activity;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field private a:Landroid/support/v4/g/l;
+.field private final a:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/support/v4/g/l",
+            "Ljava/util/List",
             "<",
-            "Ljava/lang/Class",
-            "<+",
-            "Ljava/lang/Object;",
-            ">;",
-            "Ljava/lang/Object;",
+            "Landroid/support/v4/app/Fragment;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final b:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Landroid/support/v4/app/v;",
             ">;"
         }
     .end annotation
@@ -20,16 +27,63 @@
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>(Ljava/util/List;Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Landroid/support/v4/app/Fragment;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/support/v4/app/v;",
+            ">;)V"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Landroid/app/Activity;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/support/v4/g/l;
+    iput-object p1, p0, Landroid/support/v4/app/v;->a:Ljava/util/List;
 
-    invoke-direct {v0}, Landroid/support/v4/g/l;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v4/app/v;->a:Landroid/support/v4/g/l;
+    iput-object p2, p0, Landroid/support/v4/app/v;->b:Ljava/util/List;
 
     return-void
+.end method
+
+
+# virtual methods
+.method a()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Landroid/support/v4/app/Fragment;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v4/app/v;->a:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method b()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Landroid/support/v4/app/v;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v4/app/v;->b:Ljava/util/List;
+
+    return-object v0
 .end method

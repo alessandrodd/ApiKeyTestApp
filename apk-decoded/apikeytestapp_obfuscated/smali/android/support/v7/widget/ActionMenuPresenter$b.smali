@@ -1,5 +1,5 @@
 .class Landroid/support/v7/widget/ActionMenuPresenter$b;
-.super Landroid/support/v7/e/a/b$b;
+.super Landroid/support/v7/view/menu/ActionMenuItemView$b;
 
 
 # annotations
@@ -23,14 +23,14 @@
 
     iput-object p1, p0, Landroid/support/v7/widget/ActionMenuPresenter$b;->a:Landroid/support/v7/widget/ActionMenuPresenter;
 
-    invoke-direct {p0}, Landroid/support/v7/e/a/b$b;-><init>()V
+    invoke-direct {p0}, Landroid/support/v7/view/menu/ActionMenuItemView$b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Landroid/support/v7/e/a/v;
+.method public a()Landroid/support/v7/view/menu/t;
     .locals 1
 
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuPresenter$b;->a:Landroid/support/v7/widget/ActionMenuPresenter;
@@ -43,7 +43,7 @@
 
     iget-object v0, v0, Landroid/support/v7/widget/ActionMenuPresenter;->i:Landroid/support/v7/widget/ActionMenuPresenter$a;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ActionMenuPresenter$a;->b()Landroid/support/v7/e/a/p;
+    invoke-virtual {v0}, Landroid/support/v7/widget/ActionMenuPresenter$a;->d()Landroid/support/v7/view/menu/n;
 
     move-result-object v0
 

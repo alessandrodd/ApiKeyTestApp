@@ -1,4 +1,4 @@
-.class public abstract Landroid/support/v4/app/j$a;
+.class final Landroid/support/v4/app/j$a;
 .super Ljava/lang/Object;
 
 
@@ -8,13 +8,27 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x409
+    accessFlags = 0x18
     name = "a"
 .end annotation
 
 
+# instance fields
+.field a:I
+
+.field b:Landroid/support/v4/app/Fragment;
+
+.field c:I
+
+.field d:I
+
+.field e:I
+
+.field f:I
+
+
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -22,88 +36,14 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public a(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;)V
+.method constructor <init>(ILandroid/support/v4/app/Fragment;)V
     .locals 0
 
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public a(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;Landroid/content/Context;)V
-    .locals 0
+    iput p1, p0, Landroid/support/v4/app/j$a;->a:I
 
-    return-void
-.end method
-
-.method public a(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;Landroid/view/View;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public b(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public b(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;Landroid/content/Context;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public b(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public c(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public c(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public d(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public d(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public e(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public f(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public g(Landroid/support/v4/app/j;Landroid/support/v4/app/Fragment;)V
-    .locals 0
+    iput-object p2, p0, Landroid/support/v4/app/j$a;->b:Landroid/support/v4/app/Fragment;
 
     return-void
 .end method

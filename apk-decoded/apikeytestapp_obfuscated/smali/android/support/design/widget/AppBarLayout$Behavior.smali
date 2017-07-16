@@ -1,5 +1,5 @@
 .class public Landroid/support/design/widget/AppBarLayout$Behavior;
-.super Landroid/support/design/widget/i;
+.super Landroid/support/design/widget/m;
 
 
 # annotations
@@ -21,7 +21,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Landroid/support/design/widget/i",
+        "Landroid/support/design/widget/m",
         "<",
         "Landroid/support/design/widget/AppBarLayout;",
         ">;"
@@ -29,18 +29,24 @@
 .end annotation
 
 
+# static fields
+.field private static final b:I = 0x258
+
+.field private static final c:I = -0x1
+
+
 # instance fields
-.field private b:I
-
-.field private c:Landroid/animation/ValueAnimator;
-
 .field private d:I
 
-.field private e:Z
+.field private e:Landroid/animation/ValueAnimator;
 
-.field private f:F
+.field private f:I
 
-.field private g:Ljava/lang/ref/WeakReference;
+.field private g:Z
+
+.field private h:F
+
+.field private i:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference",
@@ -51,18 +57,18 @@
     .end annotation
 .end field
 
-.field private h:Landroid/support/design/widget/AppBarLayout$Behavior$a;
+.field private j:Landroid/support/design/widget/AppBarLayout$Behavior$a;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Landroid/support/design/widget/i;-><init>()V
+    invoke-direct {p0}, Landroid/support/design/widget/m;-><init>()V
 
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->d:I
+    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->f:I
 
     return-void
 .end method
@@ -70,11 +76,11 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    invoke-direct {p0, p1, p2}, Landroid/support/design/widget/i;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Landroid/support/design/widget/m;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->d:I
+    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->f:I
 
     return-void
 .end method
@@ -82,7 +88,7 @@
 .method static synthetic a(Landroid/support/design/widget/AppBarLayout$Behavior;)I
     .locals 1
 
-    iget v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->b:I
+    iget v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->d:I
 
     return v0
 .end method
@@ -136,7 +142,7 @@
 .method private a(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;IF)V
     .locals 3
 
-    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->a()I
+    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->b()I
 
     move-result v0
 
@@ -202,17 +208,17 @@
 .method private a(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;II)V
     .locals 4
 
-    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->a()I
+    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->b()I
 
     move-result v0
 
     if-ne v0, p3, :cond_1
 
-    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->c:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->c:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
 
@@ -220,7 +226,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->c:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
@@ -229,7 +235,7 @@
     return-void
 
     :cond_1
-    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->c:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
 
     if-nez v1, :cond_2
 
@@ -237,15 +243,15 @@
 
     invoke-direct {v1}, Landroid/animation/ValueAnimator;-><init>()V
 
-    iput-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->c:Landroid/animation/ValueAnimator;
+    iput-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
 
-    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->c:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
 
     sget-object v2, Landroid/support/design/widget/a;->e:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->c:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
 
     new-instance v2, Landroid/support/design/widget/AppBarLayout$Behavior$1;
 
@@ -254,7 +260,7 @@
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     :goto_1
-    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->c:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
 
     const/16 v2, 0x258
 
@@ -266,7 +272,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->c:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
 
     const/4 v2, 0x2
 
@@ -282,14 +288,14 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setIntValues([I)V
 
-    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->c:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
     goto :goto_0
 
     :cond_2
-    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->c:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
@@ -323,7 +329,7 @@
 
     if-eqz v4, :cond_0
 
-    invoke-static {v3}, Landroid/support/v4/view/r;->i(Landroid/view/View;)I
+    invoke-static {v3}, Landroid/support/v4/view/ac;->z(Landroid/view/View;)I
 
     move-result v4
 
@@ -509,7 +515,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {v5}, Landroid/support/v4/view/r;->i(Landroid/view/View;)I
+    invoke-static {v5}, Landroid/support/v4/view/ac;->z(Landroid/view/View;)I
 
     move-result v1
 
@@ -517,7 +523,7 @@
 
     :cond_0
     :goto_1
-    invoke-static {v5}, Landroid/support/v4/view/r;->o(Landroid/view/View;)Z
+    invoke-static {v5}, Landroid/support/v4/view/ac;->P(Landroid/view/View;)Z
 
     move-result v1
 
@@ -637,7 +643,7 @@
 .method private c(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;)V
     .locals 7
 
-    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->a()I
+    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->b()I
 
     move-result v3
 
@@ -702,7 +708,7 @@
 
     if-eqz v1, :cond_3
 
-    invoke-static {v4}, Landroid/support/v4/view/r;->i(Landroid/view/View;)I
+    invoke-static {v4}, Landroid/support/v4/view/ac;->z(Landroid/view/View;)I
 
     move-result v1
 
@@ -727,7 +733,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Landroid/support/v4/d/a;->a(III)I
+    invoke-static {v0, v1, v2}, Landroid/support/v4/g/a;->a(III)I
 
     move-result v0
 
@@ -747,7 +753,7 @@
 
     if-eqz v1, :cond_5
 
-    invoke-static {v4}, Landroid/support/v4/view/r;->i(Landroid/view/View;)I
+    invoke-static {v4}, Landroid/support/v4/view/ac;->z(Landroid/view/View;)I
 
     move-result v1
 
@@ -800,9 +806,9 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$c;
+    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$e;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/CoordinatorLayout$c;->b()Landroid/support/design/widget/CoordinatorLayout$a;
+    invoke-virtual {v0}, Landroid/support/design/widget/CoordinatorLayout$e;->b()Landroid/support/design/widget/CoordinatorLayout$a;
 
     move-result-object v0
 
@@ -812,7 +818,7 @@
 
     check-cast v0, Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;->d()I
+    invoke-virtual {v0}, Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;->b()I
 
     move-result v0
 
@@ -843,26 +849,12 @@
 
 
 # virtual methods
-.method a()I
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->b()I
-
-    move-result v0
-
-    iget v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->b:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
 .method a(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I
     .locals 7
 
     const/4 v5, 0x0
 
-    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->a()I
+    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->b()I
 
     move-result v1
 
@@ -872,7 +864,7 @@
 
     if-gt v1, p5, :cond_4
 
-    invoke-static {p3, p4, p5}, Landroid/support/v4/d/a;->a(III)I
+    invoke-static {p3, p4, p5}, Landroid/support/v4/g/a;->a(III)I
 
     move-result v3
 
@@ -889,7 +881,7 @@
     move-result v0
 
     :goto_0
-    invoke-virtual {p0, v0}, Landroid/support/design/widget/AppBarLayout$Behavior;->a(I)Z
+    invoke-virtual {p0, v0}, Landroid/support/design/widget/AppBarLayout$Behavior;->b(I)Z
 
     move-result v2
 
@@ -897,7 +889,7 @@
 
     sub-int v0, v3, v0
 
-    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->b:I
+    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->d:I
 
     if-nez v2, :cond_0
 
@@ -910,7 +902,7 @@
     invoke-virtual {p1, p2}, Landroid/support/design/widget/CoordinatorLayout;->b(Landroid/view/View;)V
 
     :cond_0
-    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->b()I
+    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->d()I
 
     move-result v0
 
@@ -946,7 +938,7 @@
     goto :goto_1
 
     :cond_4
-    iput v5, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->b:I
+    iput v5, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->d:I
 
     goto :goto_2
 .end method
@@ -987,6 +979,18 @@
     return v0
 .end method
 
+.method public a(Landroid/support/design/widget/AppBarLayout$Behavior$a;)V
+    .locals 0
+    .param p1    # Landroid/support/design/widget/AppBarLayout$Behavior$a;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+
+    iput-object p1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->j:Landroid/support/design/widget/AppBarLayout$Behavior$a;
+
+    return-void
+.end method
+
 .method a(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;)V
     .locals 0
 
@@ -1008,29 +1012,29 @@
 
     move-result-object v0
 
-    invoke-super {p0, p1, p2, v0}, Landroid/support/design/widget/i;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/os/Parcelable;)V
+    invoke-super {p0, p1, p2, v0}, Landroid/support/design/widget/m;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/os/Parcelable;)V
 
     iget v0, p3, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->a:I
 
-    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->d:I
+    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->f:I
 
     iget v0, p3, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->b:F
 
-    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->f:F
+    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->h:F
 
     iget-boolean v0, p3, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->c:Z
 
-    iput-boolean v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Z
+    iput-boolean v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->g:Z
 
     :goto_0
     return-void
 
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Landroid/support/design/widget/i;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/os/Parcelable;)V
+    invoke-super {p0, p1, p2, p3}, Landroid/support/design/widget/m;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/os/Parcelable;)V
 
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->d:I
+    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->f:I
 
     goto :goto_0
 .end method
@@ -1047,7 +1051,7 @@
 
     invoke-direct {v0, p3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->g:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->i:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
@@ -1216,10 +1220,38 @@
     return-void
 .end method
 
+.method a()Z
+    .locals 1
+    .annotation build Landroid/support/annotation/as;
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public bridge synthetic a(I)Z
     .locals 1
 
-    invoke-super {p0, p1}, Landroid/support/design/widget/i;->a(I)Z
+    invoke-super {p0, p1}, Landroid/support/design/widget/m;->a(I)Z
 
     move-result v0
 
@@ -1231,11 +1263,11 @@
 
     const/4 v1, 0x1
 
-    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->h:Landroid/support/design/widget/AppBarLayout$Behavior$a;
+    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->j:Landroid/support/design/widget/AppBarLayout$Behavior$a;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->h:Landroid/support/design/widget/AppBarLayout$Behavior$a;
+    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->j:Landroid/support/design/widget/AppBarLayout$Behavior$a;
 
     invoke-virtual {v0, p1}, Landroid/support/design/widget/AppBarLayout$Behavior$a;->a(Landroid/support/design/widget/AppBarLayout;)Z
 
@@ -1245,11 +1277,11 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->g:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->i:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->g:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->i:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -1267,7 +1299,7 @@
 
     const/4 v2, -0x1
 
-    invoke-static {v0, v2}, Landroid/support/v4/view/r;->a(Landroid/view/View;I)Z
+    invoke-static {v0, v2}, Landroid/support/v4/view/ac;->b(Landroid/view/View;I)Z
 
     move-result v0
 
@@ -1297,7 +1329,7 @@
 
     const/4 v4, 0x0
 
-    invoke-super {p0, p1, p2, p3}, Landroid/support/design/widget/i;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;I)Z
+    invoke-super {p0, p1, p2, p3}, Landroid/support/design/widget/m;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;I)Z
 
     move-result v6
 
@@ -1305,7 +1337,7 @@
 
     move-result v1
 
-    iget v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->d:I
+    iget v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->f:I
 
     if-ltz v0, :cond_2
 
@@ -1313,7 +1345,7 @@
 
     if-nez v0, :cond_2
 
-    iget v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->d:I
+    iget v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->f:I
 
     invoke-virtual {p2, v0}, Landroid/support/design/widget/AppBarLayout;->getChildAt(I)Landroid/view/View;
 
@@ -1325,11 +1357,11 @@
 
     neg-int v1, v1
 
-    iget-boolean v2, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Z
+    iget-boolean v2, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->g:Z
 
     if-eqz v2, :cond_1
 
-    invoke-static {v0}, Landroid/support/v4/view/r;->i(Landroid/view/View;)I
+    invoke-static {v0}, Landroid/support/v4/view/ac;->z(Landroid/view/View;)I
 
     move-result v0
 
@@ -1350,9 +1382,9 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->d:I
+    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->f:I
 
-    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->b()I
+    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->d()I
 
     move-result v0
 
@@ -1362,13 +1394,13 @@
 
     neg-int v1, v1
 
-    invoke-static {v0, v1, v4}, Landroid/support/v4/d/a;->a(III)I
+    invoke-static {v0, v1, v4}, Landroid/support/v4/g/a;->a(III)I
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Landroid/support/design/widget/AppBarLayout$Behavior;->a(I)Z
+    invoke-virtual {p0, v0}, Landroid/support/design/widget/AppBarLayout$Behavior;->b(I)Z
 
-    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->b()I
+    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->d()I
 
     move-result v3
 
@@ -1380,7 +1412,7 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/support/design/widget/AppBarLayout$Behavior;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;IIZ)V
 
-    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->b()I
+    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->d()I
 
     move-result v0
 
@@ -1395,7 +1427,7 @@
 
     int-to-float v0, v0
 
-    iget v2, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->f:F
+    iget v2, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->h:F
 
     mul-float/2addr v0, v2
 
@@ -1469,9 +1501,9 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$c;
+    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$e;
 
-    iget v0, v0, Landroid/support/design/widget/CoordinatorLayout$c;->height:I
+    iget v0, v0, Landroid/support/design/widget/CoordinatorLayout$e;->height:I
 
     const/4 v1, -0x2
 
@@ -1499,7 +1531,7 @@
     return v0
 
     :cond_0
-    invoke-super/range {p0 .. p6}, Landroid/support/design/widget/i;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;IIII)Z
+    invoke-super/range {p0 .. p6}, Landroid/support/design/widget/m;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;IIII)Z
 
     move-result v0
 
@@ -1540,18 +1572,18 @@
     :goto_0
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->c:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->c:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->e:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
     :cond_0
     const/4 v1, 0x0
 
-    iput-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->g:Ljava/lang/ref/WeakReference;
+    iput-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->i:Ljava/lang/ref/WeakReference;
 
     return v0
 
@@ -1625,12 +1657,16 @@
     return v0
 .end method
 
-.method public bridge synthetic b()I
-    .locals 1
+.method b()I
+    .locals 2
 
-    invoke-super {p0}, Landroid/support/design/widget/i;->b()I
+    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->d()I
 
     move-result v0
+
+    iget v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior;->d:I
+
+    add-int/2addr v0, v1
 
     return v0
 .end method
@@ -1664,11 +1700,11 @@
 
     const/4 v0, 0x0
 
-    invoke-super {p0, p1, p2}, Landroid/support/design/widget/i;->b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)Landroid/os/Parcelable;
+    invoke-super {p0, p1, p2}, Landroid/support/design/widget/m;->b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)Landroid/os/Parcelable;
 
     move-result-object v2
 
-    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->b()I
+    invoke-virtual {p0}, Landroid/support/design/widget/AppBarLayout$Behavior;->d()I
 
     move-result v4
 
@@ -1707,7 +1743,7 @@
 
     iput v3, v1, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->a:I
 
-    invoke-static {v6}, Landroid/support/v4/view/r;->i(Landroid/view/View;)I
+    invoke-static {v6}, Landroid/support/v4/view/ac;->z(Landroid/view/View;)I
 
     move-result v2
 
@@ -1766,6 +1802,26 @@
     return-object v0
 .end method
 
+.method public bridge synthetic b(I)Z
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/support/design/widget/m;->b(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public bridge synthetic c()I
+    .locals 1
+
+    invoke-super {p0}, Landroid/support/design/widget/m;->c()I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method c(Landroid/support/design/widget/AppBarLayout;)I
     .locals 1
 
@@ -1782,6 +1838,16 @@
     check-cast p1, Landroid/support/design/widget/AppBarLayout;
 
     invoke-virtual {p0, p1}, Landroid/support/design/widget/AppBarLayout$Behavior;->a(Landroid/support/design/widget/AppBarLayout;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public bridge synthetic d()I
+    .locals 1
+
+    invoke-super {p0}, Landroid/support/design/widget/m;->d()I
 
     move-result v0
 

@@ -151,6 +151,14 @@
     return-void
 .end method
 
+.method public a(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Landroid/support/v7/widget/GridLayoutManager$c;->b:Z
+
+    return-void
+.end method
+
 .method b(I)I
     .locals 4
 
@@ -251,6 +259,14 @@
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseIntArray;->put(II)V
 
     goto :goto_0
+.end method
+
+.method public b()Z
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/v7/widget/GridLayoutManager$c;->b:Z
+
+    return v0
 .end method
 
 .method public c(II)I

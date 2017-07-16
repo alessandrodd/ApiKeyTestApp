@@ -1,4 +1,4 @@
-.class public abstract Landroid/support/v7/widget/RecyclerView$l;
+.class public interface abstract Landroid/support/v7/widget/RecyclerView$l;
 .super Ljava/lang/Object;
 
 
@@ -8,30 +8,17 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x409
+    accessFlags = 0x609
     name = "l"
 .end annotation
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public a(Landroid/support/v7/widget/RecyclerView;I)V
-    .locals 0
-
-    return-void
+.method public abstract a(Z)V
 .end method
 
-.method public a(Landroid/support/v7/widget/RecyclerView;II)V
-    .locals 0
+.method public abstract a(Landroid/support/v7/widget/RecyclerView;Landroid/view/MotionEvent;)Z
+.end method
 
-    return-void
+.method public abstract b(Landroid/support/v7/widget/RecyclerView;Landroid/view/MotionEvent;)V
 .end method

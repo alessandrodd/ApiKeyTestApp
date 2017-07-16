@@ -11,12 +11,16 @@
 .end annotation
 
 
+# static fields
+.field private static final a:Ljava/lang/String; = "ActionProvider(support)"
+
+
 # instance fields
-.field private final a:Landroid/content/Context;
+.field private final b:Landroid/content/Context;
 
-.field private b:Landroid/support/v4/view/b$a;
+.field private c:Landroid/support/v4/view/b$a;
 
-.field private c:Landroid/support/v4/view/b$b;
+.field private d:Landroid/support/v4/view/b$b;
 
 
 # direct methods
@@ -25,20 +29,25 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroid/support/v4/view/b;->a:Landroid/content/Context;
+    iput-object p1, p0, Landroid/support/v4/view/b;->b:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()Landroid/view/View;
+.method public a()Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/view/b;->b:Landroid/content/Context;
+
+    return-object v0
 .end method
 
 .method public a(Landroid/view/MenuItem;)Landroid/view/View;
     .locals 1
 
-    invoke-virtual {p0}, Landroid/support/v4/view/b;->a()Landroid/view/View;
+    invoke-virtual {p0}, Landroid/support/v4/view/b;->b()Landroid/view/View;
 
     move-result-object v0
 
@@ -47,8 +56,13 @@
 
 .method public a(Landroid/support/v4/view/b$a;)V
     .locals 0
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
 
-    iput-object p1, p0, Landroid/support/v4/view/b;->b:Landroid/support/v4/view/b$a;
+    iput-object p1, p0, Landroid/support/v4/view/b;->c:Landroid/support/v4/view/b$a;
 
     return-void
 .end method
@@ -56,7 +70,7 @@
 .method public a(Landroid/support/v4/view/b$b;)V
     .locals 3
 
-    iget-object v0, p0, Landroid/support/v4/view/b;->c:Landroid/support/v4/view/b$b;
+    iget-object v0, p0, Landroid/support/v4/view/b;->d:Landroid/support/v4/view/b$b;
 
     if-eqz v0, :cond_0
 
@@ -99,7 +113,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iput-object p1, p0, Landroid/support/v4/view/b;->c:Landroid/support/v4/view/b$b;
+    iput-object p1, p0, Landroid/support/v4/view/b;->d:Landroid/support/v4/view/b$b;
 
     return-void
 .end method
@@ -110,18 +124,33 @@
     return-void
 .end method
 
-.method public b()Z
+.method public a(Z)V
     .locals 1
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Landroid/support/v4/view/b;->c:Landroid/support/v4/view/b$a;
 
-    return v0
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v4/view/b;->c:Landroid/support/v4/view/b$a;
+
+    invoke-interface {v0, p1}, Landroid/support/v4/view/b$a;->b(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public abstract b()Landroid/view/View;
 .end method
 
 .method public c()Z
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     return v0
 .end method
@@ -129,12 +158,37 @@
 .method public d()Z
     .locals 1
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     return v0
 .end method
 
-.method public e()Z
+.method public e()V
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v4/view/b;->d:Landroid/support/v4/view/b$b;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/support/v4/view/b;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v4/view/b;->d:Landroid/support/v4/view/b$b;
+
+    invoke-virtual {p0}, Landroid/support/v4/view/b;->d()Z
+
+    move-result v1
+
+    invoke-interface {v0, v1}, Landroid/support/v4/view/b$b;->a(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public f()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -142,14 +196,27 @@
     return v0
 .end method
 
-.method public f()V
+.method public g()Z
     .locals 1
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroid/support/v4/view/b;->c:Landroid/support/v4/view/b$b;
+    return v0
+.end method
 
-    iput-object v0, p0, Landroid/support/v4/view/b;->b:Landroid/support/v4/view/b$a;
+.method public h()V
+    .locals 1
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Landroid/support/v4/view/b;->d:Landroid/support/v4/view/b$b;
+
+    iput-object v0, p0, Landroid/support/v4/view/b;->c:Landroid/support/v4/view/b$a;
 
     return-void
 .end method

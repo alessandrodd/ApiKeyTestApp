@@ -1,287 +1,834 @@
-.class Landroid/support/v7/widget/ax;
-.super Ljava/lang/Object;
+.class public Landroid/support/v7/widget/ax;
+.super Landroid/widget/ListView;
+
+
+# annotations
+.annotation build Landroid/support/annotation/ak;
+    a = {
+        .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/support/v7/widget/ax$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final a:I = -0x1
+
+.field public static final b:I = -0x1
+
+.field private static final i:[I
+
+
+# instance fields
+.field final c:Landroid/graphics/Rect;
+
+.field d:I
+
+.field e:I
+
+.field f:I
+
+.field g:I
+
+.field protected h:I
+
+.field private j:Ljava/lang/reflect/Field;
+
+.field private k:Landroid/support/v7/widget/ax$a;
 
 
 # direct methods
-.method static a(Landroid/support/v7/widget/RecyclerView$r;Landroid/support/v7/widget/at;Landroid/view/View;Landroid/view/View;Landroid/support/v7/widget/RecyclerView$g;Z)I
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-virtual {p4}, Landroid/support/v7/widget/RecyclerView$g;->u()I
+    const/4 v1, 0x0
 
-    move-result v0
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    new-array v0, v0, [I
 
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$r;->e()I
+    aput v1, v0, v1
 
-    move-result v0
+    sput-object v0, Landroid/support/v7/widget/ax;->i:[I
 
-    if-eqz v0, :cond_0
+    return-void
+.end method
 
-    if-eqz p2, :cond_0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    if-nez p3, :cond_1
-
-    :cond_0
     const/4 v0, 0x0
 
+    invoke-direct {p0, p1, v0}, Landroid/support/v7/widget/ax;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v0}, Landroid/support/v7/widget/ax;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 2
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/ListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Landroid/support/v7/widget/ax;->c:Landroid/graphics/Rect;
+
+    iput v1, p0, Landroid/support/v7/widget/ax;->d:I
+
+    iput v1, p0, Landroid/support/v7/widget/ax;->e:I
+
+    iput v1, p0, Landroid/support/v7/widget/ax;->f:I
+
+    iput v1, p0, Landroid/support/v7/widget/ax;->g:I
+
+    :try_start_0
+    const-class v0, Landroid/widget/AbsListView;
+
+    const-string v1, "mIsChildViewEnabled"
+
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v7/widget/ax;->j:Ljava/lang/reflect/Field;
+
+    iget-object v0, p0, Landroid/support/v7/widget/ax;->j:Ljava/lang/reflect/Field;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
+
     :goto_0
-    return v0
+    return-void
 
-    :cond_1
-    if-nez p5, :cond_2
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {p4, p2}, Landroid/support/v7/widget/RecyclerView$g;->d(Landroid/view/View;)I
-
-    move-result v0
-
-    invoke-virtual {p4, p3}, Landroid/support/v7/widget/RecyclerView$g;->d(Landroid/view/View;)I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, p3}, Landroid/support/v7/widget/at;->b(Landroid/view/View;)I
-
-    move-result v0
-
-    invoke-virtual {p1, p2}, Landroid/support/v7/widget/at;->a(Landroid/view/View;)I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    invoke-virtual {p1}, Landroid/support/v7/widget/at;->f()I
-
-    move-result v1
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
+    invoke-virtual {v0}, Ljava/lang/NoSuchFieldException;->printStackTrace()V
 
     goto :goto_0
 .end method
 
-.method static a(Landroid/support/v7/widget/RecyclerView$r;Landroid/support/v7/widget/at;Landroid/view/View;Landroid/view/View;Landroid/support/v7/widget/RecyclerView$g;ZZ)I
-    .locals 4
 
-    const/4 v0, 0x0
+# virtual methods
+.method public a(IIIII)I
+    .locals 12
 
-    invoke-virtual {p4}, Landroid/support/v7/widget/RecyclerView$g;->u()I
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getListPaddingTop()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getListPaddingBottom()I
+
+    move-result v3
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getListPaddingLeft()I
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getListPaddingRight()I
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getDividerHeight()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getDivider()Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$r;->e()I
+    move-result-object v4
 
-    move-result v1
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getAdapter()Landroid/widget/ListAdapter;
 
-    if-eqz v1, :cond_0
+    move-result-object v8
 
-    if-eqz p2, :cond_0
+    if-nez v8, :cond_1
 
-    if-nez p3, :cond_1
+    add-int p4, v2, v3
 
     :cond_0
     :goto_0
-    return v0
+    return p4
 
     :cond_1
-    invoke-virtual {p4, p2}, Landroid/support/v7/widget/RecyclerView$g;->d(Landroid/view/View;)I
+    add-int/2addr v3, v2
 
-    move-result v1
+    if-lez v1, :cond_3
 
-    invoke-virtual {p4, p3}, Landroid/support/v7/widget/RecyclerView$g;->d(Landroid/view/View;)I
-
-    move-result v2
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    invoke-virtual {p4, p2}, Landroid/support/v7/widget/RecyclerView$g;->d(Landroid/view/View;)I
-
-    move-result v2
-
-    invoke-virtual {p4, p3}, Landroid/support/v7/widget/RecyclerView$g;->d(Landroid/view/View;)I
-
-    move-result v3
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result v2
-
-    if-eqz p6, :cond_2
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$r;->e()I
-
-    move-result v1
-
-    sub-int/2addr v1, v2
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
+    if-eqz v4, :cond_3
 
     :goto_1
-    if-eqz p5, :cond_0
+    const/4 v4, 0x0
 
-    invoke-virtual {p1, p3}, Landroid/support/v7/widget/at;->b(Landroid/view/View;)I
+    const/4 v6, 0x0
 
-    move-result v1
+    const/4 v5, 0x0
 
-    invoke-virtual {p1, p2}, Landroid/support/v7/widget/at;->a(Landroid/view/View;)I
+    invoke-interface {v8}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v9
+
+    const/4 v2, 0x0
+
+    move v7, v2
+
+    :goto_2
+    if-ge v7, v9, :cond_7
+
+    invoke-interface {v8, v7}, Landroid/widget/ListAdapter;->getItemViewType(I)I
 
     move-result v2
 
-    sub-int/2addr v1, v2
+    if-eq v2, v5, :cond_8
 
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
+    const/4 v5, 0x0
 
-    move-result v1
+    move v11, v2
 
-    invoke-virtual {p4, p2}, Landroid/support/v7/widget/RecyclerView$g;->d(Landroid/view/View;)I
+    move-object v2, v5
+
+    move v5, v11
+
+    :goto_3
+    invoke-interface {v8, v7, v2, p0}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    if-nez v2, :cond_2
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    invoke-virtual {v6, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_2
+    iget v10, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    if-lez v10, :cond_4
+
+    iget v2, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    const/high16 v10, 0x40000000    # 2.0f
+
+    invoke-static {v2, v10}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v2
 
-    invoke-virtual {p4, p3}, Landroid/support/v7/widget/RecyclerView$g;->d(Landroid/view/View;)I
+    :goto_4
+    invoke-virtual {v6, p1, v2}, Landroid/view/View;->measure(II)V
+
+    invoke-virtual {v6}, Landroid/view/View;->forceLayout()V
+
+    if-lez v7, :cond_9
+
+    add-int v2, v3, v1
+
+    :goto_5
+    invoke-virtual {v6}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v3
 
-    sub-int/2addr v2, v3
+    add-int/2addr v2, v3
 
-    invoke-static {v2}, Ljava/lang/Math;->abs(I)I
+    move/from16 v0, p4
 
-    move-result v2
+    if-lt v2, v0, :cond_5
 
-    add-int/lit8 v2, v2, 0x1
+    if-ltz p5, :cond_0
 
-    int-to-float v1, v1
+    move/from16 v0, p5
 
-    int-to-float v2, v2
+    if-le v7, v0, :cond_0
 
-    div-float/2addr v1, v2
+    if-lez v4, :cond_0
 
-    int-to-float v0, v0
+    move/from16 v0, p4
 
-    mul-float/2addr v0, v1
+    if-eq v2, v0, :cond_0
 
-    invoke-virtual {p1}, Landroid/support/v7/widget/at;->c()I
-
-    move-result v1
-
-    invoke-virtual {p1, p2}, Landroid/support/v7/widget/at;->a(Landroid/view/View;)I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    int-to-float v1, v1
-
-    add-float/2addr v0, v1
-
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
-
-    move-result v0
+    move/from16 p4, v4
 
     goto :goto_0
 
-    :cond_2
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+    :cond_3
+    const/4 v1, 0x0
 
-    move-result v0
+    goto :goto_1
+
+    :cond_4
+    const/4 v2, 0x0
+
+    const/4 v10, 0x0
+
+    invoke-static {v2, v10}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v2
+
+    goto :goto_4
+
+    :cond_5
+    if-ltz p5, :cond_6
+
+    move/from16 v0, p5
+
+    if-lt v7, v0, :cond_6
+
+    move v4, v2
+
+    :cond_6
+    add-int/lit8 v3, v7, 0x1
+
+    move v7, v3
+
+    move v3, v2
+
+    goto :goto_2
+
+    :cond_7
+    move/from16 p4, v3
+
+    goto :goto_0
+
+    :cond_8
+    move-object v2, v6
+
+    goto :goto_3
+
+    :cond_9
+    move v2, v3
+
+    goto :goto_5
+.end method
+
+.method public a(IZ)I
+    .locals 4
+
+    const/4 v0, -0x1
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->isInTouchMode()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    :cond_0
+    move p1, v0
+
+    :cond_1
+    :goto_0
+    return p1
+
+    :cond_2
+    invoke-interface {v1}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Landroid/widget/ListAdapter;->areAllItemsEnabled()Z
+
+    move-result v3
+
+    if-nez v3, :cond_6
+
+    if-eqz p2, :cond_3
+
+    const/4 v3, 0x0
+
+    invoke-static {v3, p1}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    :goto_1
+    if-ge p1, v2, :cond_4
+
+    invoke-interface {v1, p1}, Landroid/widget/ListAdapter;->isEnabled(I)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    add-int/lit8 p1, p1, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    add-int/lit8 v3, v2, -0x1
+
+    invoke-static {p1, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    :goto_2
+    if-ltz p1, :cond_4
+
+    invoke-interface {v1, p1}, Landroid/widget/ListAdapter;->isEnabled(I)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    add-int/lit8 p1, p1, -0x1
+
+    goto :goto_2
+
+    :cond_4
+    if-ltz p1, :cond_5
+
+    if-lt p1, v2, :cond_1
+
+    :cond_5
+    move p1, v0
+
+    goto :goto_0
+
+    :cond_6
+    if-ltz p1, :cond_7
+
+    if-lt p1, v2, :cond_1
+
+    :cond_7
+    move p1, v0
+
+    goto :goto_0
+.end method
+
+.method protected a(ILandroid/view/View;)V
+    .locals 6
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getSelector()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    const/4 v2, -0x1
+
+    if-eq p1, v2, :cond_2
+
+    move v2, v0
+
+    :goto_0
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v3, v1, v1}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
+
+    :cond_0
+    invoke-virtual {p0, p1, p2}, Landroid/support/v7/widget/ax;->b(ILandroid/view/View;)V
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Landroid/support/v7/widget/ax;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->exactCenterX()F
+
+    move-result v4
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->exactCenterY()F
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getVisibility()I
+
+    move-result v5
+
+    if-nez v5, :cond_3
+
+    :goto_1
+    invoke-virtual {v3, v0, v1}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
+
+    invoke-static {v3, v4, v2}, Landroid/support/v4/d/a/a;->a(Landroid/graphics/drawable/Drawable;FF)V
+
+    :cond_1
+    return-void
+
+    :cond_2
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_3
+    move v0, v1
 
     goto :goto_1
 .end method
 
-.method static b(Landroid/support/v7/widget/RecyclerView$r;Landroid/support/v7/widget/at;Landroid/view/View;Landroid/view/View;Landroid/support/v7/widget/RecyclerView$g;Z)I
-    .locals 3
+.method protected a(ILandroid/view/View;FF)V
+    .locals 2
 
-    invoke-virtual {p4}, Landroid/support/v7/widget/RecyclerView$g;->u()I
+    invoke-virtual {p0, p1, p2}, Landroid/support/v7/widget/ax;->a(ILandroid/view/View;)V
 
-    move-result v0
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getSelector()Landroid/graphics/drawable/Drawable;
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$r;->e()I
-
-    move-result v0
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    if-eqz p2, :cond_0
+    const/4 v1, -0x1
 
-    if-nez p3, :cond_1
+    if-eq p1, v1, :cond_0
+
+    invoke-static {v0, p3, p4}, Landroid/support/v4/d/a/a;->a(Landroid/graphics/drawable/Drawable;FF)V
 
     :cond_0
+    return-void
+.end method
+
+.method protected a(Landroid/graphics/Canvas;)V
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v7/widget/ax;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getSelector()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Landroid/support/v7/widget/ax;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method protected a()Z
+    .locals 1
+
     const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method protected b()V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getSelector()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->c()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->getDrawableState()[I
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method protected b(ILandroid/view/View;)V
+    .locals 5
+
+    iget-object v0, p0, Landroid/support/v7/widget/ax;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {p2}, Landroid/view/View;->getLeft()I
+
+    move-result v1
+
+    invoke-virtual {p2}, Landroid/view/View;->getTop()I
+
+    move-result v2
+
+    invoke-virtual {p2}, Landroid/view/View;->getRight()I
+
+    move-result v3
+
+    invoke-virtual {p2}, Landroid/view/View;->getBottom()I
+
+    move-result v4
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
+
+    iget v1, v0, Landroid/graphics/Rect;->left:I
+
+    iget v2, p0, Landroid/support/v7/widget/ax;->d:I
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Landroid/graphics/Rect;->left:I
+
+    iget v1, v0, Landroid/graphics/Rect;->top:I
+
+    iget v2, p0, Landroid/support/v7/widget/ax;->e:I
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Landroid/graphics/Rect;->top:I
+
+    iget v1, v0, Landroid/graphics/Rect;->right:I
+
+    iget v2, p0, Landroid/support/v7/widget/ax;->f:I
+
+    add-int/2addr v1, v2
+
+    iput v1, v0, Landroid/graphics/Rect;->right:I
+
+    iget v1, v0, Landroid/graphics/Rect;->bottom:I
+
+    iget v2, p0, Landroid/support/v7/widget/ax;->g:I
+
+    add-int/2addr v1, v2
+
+    iput v1, v0, Landroid/graphics/Rect;->bottom:I
+
+    :try_start_0
+    iget-object v0, p0, Landroid/support/v7/widget/ax;->j:Ljava/lang/reflect/Field;
+
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->getBoolean(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    invoke-virtual {p2}, Landroid/view/View;->isEnabled()Z
+
+    move-result v1
+
+    if-eq v1, v0, :cond_0
+
+    iget-object v1, p0, Landroid/support/v7/widget/ax;->j:Ljava/lang/reflect/Field;
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v1, p0, v0}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const/4 v0, -0x1
+
+    if-eq p1, v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->refreshDrawableState()V
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_1
+    return-void
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
+
+    goto :goto_1
+.end method
+
+.method protected c()Z
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->isPressed()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    :cond_1
-    if-nez p5, :cond_2
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$r;->e()I
-
-    move-result v0
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
+.end method
 
-    :cond_2
-    invoke-virtual {p1, p3}, Landroid/support/v7/widget/at;->b(Landroid/view/View;)I
+.method protected dispatchDraw(Landroid/graphics/Canvas;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/ax;->a(Landroid/graphics/Canvas;)V
+
+    invoke-super {p0, p1}, Landroid/widget/ListView;->dispatchDraw(Landroid/graphics/Canvas;)V
+
+    return-void
+.end method
+
+.method protected drawableStateChanged()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/widget/ListView;->drawableStateChanged()V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/support/v7/widget/ax;->setSelectorEnabled(Z)V
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/ax;->b()V
+
+    return-void
+.end method
+
+.method public onTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 2
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    invoke-virtual {p1, p2}, Landroid/support/v7/widget/at;->a(Landroid/view/View;)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v1
+    :goto_0
+    invoke-super {p0, p1}, Landroid/widget/ListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    sub-int/2addr v0, v1
+    move-result v0
 
-    invoke-virtual {p4, p2}, Landroid/support/v7/widget/RecyclerView$g;->d(Landroid/view/View;)I
+    return v0
 
-    move-result v1
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    invoke-virtual {p4, p3}, Landroid/support/v7/widget/RecyclerView$g;->d(Landroid/view/View;)I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    int-to-float v0, v0
-
-    int-to-float v1, v1
-
-    div-float/2addr v0, v1
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$r;->e()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    mul-float/2addr v0, v1
+    move-result v0
 
     float-to-int v0, v0
 
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    invoke-virtual {p0, v0, v1}, Landroid/support/v7/widget/ax;->pointToPosition(II)I
+
+    move-result v0
+
+    iput v0, p0, Landroid/support/v7/widget/ax;->h:I
+
     goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public setSelector(Landroid/graphics/drawable/Drawable;)V
+    .locals 2
+
+    if-eqz p1, :cond_1
+
+    new-instance v0, Landroid/support/v7/widget/ax$a;
+
+    invoke-direct {v0, p1}, Landroid/support/v7/widget/ax$a;-><init>(Landroid/graphics/drawable/Drawable;)V
+
+    :goto_0
+    iput-object v0, p0, Landroid/support/v7/widget/ax;->k:Landroid/support/v7/widget/ax$a;
+
+    iget-object v0, p0, Landroid/support/v7/widget/ax;->k:Landroid/support/v7/widget/ax$a;
+
+    invoke-super {p0, v0}, Landroid/widget/ListView;->setSelector(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+
+    :cond_0
+    iget v1, v0, Landroid/graphics/Rect;->left:I
+
+    iput v1, p0, Landroid/support/v7/widget/ax;->d:I
+
+    iget v1, v0, Landroid/graphics/Rect;->top:I
+
+    iput v1, p0, Landroid/support/v7/widget/ax;->e:I
+
+    iget v1, v0, Landroid/graphics/Rect;->right:I
+
+    iput v1, p0, Landroid/support/v7/widget/ax;->f:I
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    iput v0, p0, Landroid/support/v7/widget/ax;->g:I
+
+    return-void
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method protected setSelectorEnabled(Z)V
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/widget/ax;->k:Landroid/support/v7/widget/ax$a;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/ax;->k:Landroid/support/v7/widget/ax$a;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/ax$a;->a(Z)V
+
+    :cond_0
+    return-void
 .end method

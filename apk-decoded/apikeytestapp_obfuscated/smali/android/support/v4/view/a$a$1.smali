@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Landroid/support/v4/view/a$a$1;->a:Landroid/support/v4/view/a;
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->b(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->d(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
 
     move-result v0
 
@@ -51,13 +51,13 @@
 
     iget-object v0, p0, Landroid/support/v4/view/a$a$1;->a:Landroid/support/v4/view/a;
 
-    invoke-virtual {v0, p1}, Landroid/support/v4/view/a;->a(Landroid/view/View;)Landroid/support/v4/view/a/d;
+    invoke-virtual {v0, p1}, Landroid/support/v4/view/a;->a(Landroid/view/View;)Landroid/support/v4/view/a/e;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/support/v4/view/a/d;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/support/v4/view/a/e;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
 
     iget-object v0, p0, Landroid/support/v4/view/a$a$1;->a:Landroid/support/v4/view/a;
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->d(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     return-void
 .end method
@@ -101,7 +101,7 @@
 
     iget-object v0, p0, Landroid/support/v4/view/a$a$1;->a:Landroid/support/v4/view/a;
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->b(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     return-void
 .end method
@@ -145,7 +145,7 @@
 
     iget-object v0, p0, Landroid/support/v4/view/a$a$1;->a:Landroid/support/v4/view/a;
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     return-void
 .end method

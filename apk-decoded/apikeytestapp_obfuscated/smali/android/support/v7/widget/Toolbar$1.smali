@@ -2,12 +2,12 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/support/v7/widget/ActionMenuView$e;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroid/support/v7/widget/Toolbar;->i()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/support/v7/widget/Toolbar;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,12 +33,28 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public a(Landroid/view/MenuItem;)Z
     .locals 1
 
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$1;->a:Landroid/support/v7/widget/Toolbar;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/Toolbar;->h()V
+    iget-object v0, v0, Landroid/support/v7/widget/Toolbar;->d:Landroid/support/v7/widget/Toolbar$c;
 
-    return-void
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/Toolbar$1;->a:Landroid/support/v7/widget/Toolbar;
+
+    iget-object v0, v0, Landroid/support/v7/widget/Toolbar;->d:Landroid/support/v7/widget/Toolbar$c;
+
+    invoke-interface {v0, p1}, Landroid/support/v7/widget/Toolbar$c;->a(Landroid/view/MenuItem;)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

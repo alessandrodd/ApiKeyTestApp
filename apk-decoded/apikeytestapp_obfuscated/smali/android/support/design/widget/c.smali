@@ -1,461 +1,441 @@
-.class Landroid/support/design/widget/c;
-.super Landroid/graphics/drawable/Drawable;
+.class public Landroid/support/design/widget/c;
+.super Landroid/support/v7/app/m;
 
 
 # instance fields
-.field final a:Landroid/graphics/Paint;
+.field a:Z
 
-.field final b:Landroid/graphics/Rect;
+.field private b:Landroid/support/design/widget/BottomSheetBehavior;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/support/design/widget/BottomSheetBehavior",
+            "<",
+            "Landroid/widget/FrameLayout;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field final c:Landroid/graphics/RectF;
+.field private c:Z
 
-.field d:F
+.field private d:Z
 
-.field private e:I
-
-.field private f:I
-
-.field private g:I
-
-.field private h:I
-
-.field private i:Landroid/content/res/ColorStateList;
-
-.field private j:I
-
-.field private k:Z
-
-.field private l:F
+.field private e:Landroid/support/design/widget/BottomSheetBehavior$a;
 
 
 # direct methods
-.method private a()Landroid/graphics/Shader;
-    .locals 11
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
 
-    const/4 v10, 0x1
+    const/4 v0, 0x0
 
-    const/high16 v9, 0x3f800000    # 1.0f
+    invoke-direct {p0, p1, v0}, Landroid/support/design/widget/c;-><init>(Landroid/content/Context;I)V
 
-    const/high16 v8, 0x3f000000    # 0.5f
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroid/support/annotation/ao;
+        .end annotation
+    .end param
 
-    const/4 v7, 0x0
+    const/4 v1, 0x1
 
-    iget-object v3, p0, Landroid/support/design/widget/c;->b:Landroid/graphics/Rect;
+    invoke-static {p1, p2}, Landroid/support/design/widget/c;->a(Landroid/content/Context;I)I
 
-    invoke-virtual {p0, v3}, Landroid/support/design/widget/c;->copyBounds(Landroid/graphics/Rect;)V
+    move-result v0
 
-    iget v0, p0, Landroid/support/design/widget/c;->d:F
+    invoke-direct {p0, p1, v0}, Landroid/support/v7/app/m;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
+    iput-boolean v1, p0, Landroid/support/design/widget/c;->a:Z
 
-    move-result v2
+    iput-boolean v1, p0, Landroid/support/design/widget/c;->c:Z
 
-    int-to-float v2, v2
+    new-instance v0, Landroid/support/design/widget/c$4;
 
-    div-float/2addr v0, v2
+    invoke-direct {v0, p0}, Landroid/support/design/widget/c$4;-><init>(Landroid/support/design/widget/c;)V
 
-    const/4 v2, 0x6
+    iput-object v0, p0, Landroid/support/design/widget/c;->e:Landroid/support/design/widget/BottomSheetBehavior$a;
 
-    new-array v5, v2, [I
+    invoke-virtual {p0, v1}, Landroid/support/design/widget/c;->e(I)Z
 
-    iget v2, p0, Landroid/support/design/widget/c;->e:I
+    return-void
+.end method
 
-    iget v4, p0, Landroid/support/design/widget/c;->j:I
+.method protected constructor <init>(Landroid/content/Context;ZLandroid/content/DialogInterface$OnCancelListener;)V
+    .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
 
-    invoke-static {v2, v4}, Landroid/support/v4/b/a;->a(II)I
+    const/4 v1, 0x1
 
-    move-result v2
+    invoke-direct {p0, p1, p2, p3}, Landroid/support/v7/app/m;-><init>(Landroid/content/Context;ZLandroid/content/DialogInterface$OnCancelListener;)V
 
-    aput v2, v5, v7
+    iput-boolean v1, p0, Landroid/support/design/widget/c;->a:Z
 
-    iget v2, p0, Landroid/support/design/widget/c;->f:I
+    iput-boolean v1, p0, Landroid/support/design/widget/c;->c:Z
 
-    iget v4, p0, Landroid/support/design/widget/c;->j:I
+    new-instance v0, Landroid/support/design/widget/c$4;
 
-    invoke-static {v2, v4}, Landroid/support/v4/b/a;->a(II)I
+    invoke-direct {v0, p0}, Landroid/support/design/widget/c$4;-><init>(Landroid/support/design/widget/c;)V
 
-    move-result v2
+    iput-object v0, p0, Landroid/support/design/widget/c;->e:Landroid/support/design/widget/BottomSheetBehavior$a;
 
-    aput v2, v5, v10
+    invoke-virtual {p0, v1}, Landroid/support/design/widget/c;->e(I)Z
 
-    const/4 v2, 0x2
+    iput-boolean p2, p0, Landroid/support/design/widget/c;->a:Z
 
-    iget v4, p0, Landroid/support/design/widget/c;->f:I
+    return-void
+.end method
 
-    invoke-static {v4, v7}, Landroid/support/v4/b/a;->b(II)I
+.method private static a(Landroid/content/Context;I)I
+    .locals 4
 
-    move-result v4
+    if-nez p1, :cond_0
 
-    iget v6, p0, Landroid/support/design/widget/c;->j:I
+    new-instance v0, Landroid/util/TypedValue;
 
-    invoke-static {v4, v6}, Landroid/support/v4/b/a;->a(II)I
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
-    move-result v4
+    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
-    aput v4, v5, v2
+    move-result-object v1
 
-    const/4 v2, 0x3
+    sget v2, Landroid/support/design/b$c;->bottomSheetDialogTheme:I
 
-    iget v4, p0, Landroid/support/design/widget/c;->h:I
+    const/4 v3, 0x1
 
-    invoke-static {v4, v7}, Landroid/support/v4/b/a;->b(II)I
+    invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    move-result v4
+    move-result v1
 
-    iget v6, p0, Landroid/support/design/widget/c;->j:I
+    if-eqz v1, :cond_1
 
-    invoke-static {v4, v6}, Landroid/support/v4/b/a;->a(II)I
+    iget p1, v0, Landroid/util/TypedValue;->resourceId:I
 
-    move-result v4
+    :cond_0
+    :goto_0
+    return p1
 
-    aput v4, v5, v2
+    :cond_1
+    sget p1, Landroid/support/design/b$l;->Theme_Design_Light_BottomSheetDialog:I
 
-    const/4 v2, 0x4
+    goto :goto_0
+.end method
 
-    iget v4, p0, Landroid/support/design/widget/c;->h:I
+.method private a(ILandroid/view/View;Landroid/view/ViewGroup$LayoutParams;)Landroid/view/View;
+    .locals 5
 
-    iget v6, p0, Landroid/support/design/widget/c;->j:I
+    invoke-virtual {p0}, Landroid/support/design/widget/c;->getContext()Landroid/content/Context;
 
-    invoke-static {v4, v6}, Landroid/support/v4/b/a;->a(II)I
+    move-result-object v0
 
-    move-result v4
+    sget v1, Landroid/support/design/b$j;->design_bottom_sheet_dialog:I
 
-    aput v4, v5, v2
+    const/4 v2, 0x0
 
-    const/4 v2, 0x5
+    invoke-static {v0, v1, v2}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    iget v4, p0, Landroid/support/design/widget/c;->g:I
+    move-result-object v0
 
-    iget v6, p0, Landroid/support/design/widget/c;->j:I
+    check-cast v0, Landroid/widget/FrameLayout;
 
-    invoke-static {v4, v6}, Landroid/support/v4/b/a;->a(II)I
+    sget v1, Landroid/support/design/b$h;->coordinator:I
 
-    move-result v4
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
-    aput v4, v5, v2
+    move-result-object v1
 
-    const/4 v2, 0x6
+    check-cast v1, Landroid/support/design/widget/CoordinatorLayout;
 
-    new-array v6, v2, [F
+    if-eqz p1, :cond_0
 
-    aput v1, v6, v7
+    if-nez p2, :cond_0
 
-    aput v0, v6, v10
+    invoke-virtual {p0}, Landroid/support/design/widget/c;->getLayoutInflater()Landroid/view/LayoutInflater;
 
-    const/4 v2, 0x2
+    move-result-object v2
 
-    aput v8, v6, v2
+    const/4 v3, 0x0
 
-    const/4 v2, 0x3
+    invoke-virtual {v2, p1, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    aput v8, v6, v2
+    move-result-object p2
 
-    const/4 v2, 0x4
+    :cond_0
+    sget v2, Landroid/support/design/b$h;->design_bottom_sheet:I
 
-    sub-float v0, v9, v0
+    invoke-virtual {v1, v2}, Landroid/support/design/widget/CoordinatorLayout;->findViewById(I)Landroid/view/View;
 
-    aput v0, v6, v2
+    move-result-object v2
 
-    const/4 v0, 0x5
+    check-cast v2, Landroid/widget/FrameLayout;
 
-    aput v9, v6, v0
+    invoke-static {v2}, Landroid/support/design/widget/BottomSheetBehavior;->b(Landroid/view/View;)Landroid/support/design/widget/BottomSheetBehavior;
 
-    new-instance v0, Landroid/graphics/LinearGradient;
+    move-result-object v3
 
-    iget v2, v3, Landroid/graphics/Rect;->top:I
+    iput-object v3, p0, Landroid/support/design/widget/c;->b:Landroid/support/design/widget/BottomSheetBehavior;
 
-    int-to-float v2, v2
+    iget-object v3, p0, Landroid/support/design/widget/c;->b:Landroid/support/design/widget/BottomSheetBehavior;
 
-    iget v3, v3, Landroid/graphics/Rect;->bottom:I
+    iget-object v4, p0, Landroid/support/design/widget/c;->e:Landroid/support/design/widget/BottomSheetBehavior$a;
 
-    int-to-float v4, v3
+    invoke-virtual {v3, v4}, Landroid/support/design/widget/BottomSheetBehavior;->a(Landroid/support/design/widget/BottomSheetBehavior$a;)V
 
-    sget-object v7, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+    iget-object v3, p0, Landroid/support/design/widget/c;->b:Landroid/support/design/widget/BottomSheetBehavior;
 
-    move v3, v1
+    iget-boolean v4, p0, Landroid/support/design/widget/c;->a:Z
 
-    invoke-direct/range {v0 .. v7}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
+    invoke-virtual {v3, v4}, Landroid/support/design/widget/BottomSheetBehavior;->a(Z)V
+
+    if-nez p3, :cond_1
+
+    invoke-virtual {v2, p2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+
+    :goto_0
+    sget v3, Landroid/support/design/b$h;->touch_outside:I
+
+    invoke-virtual {v1, v3}, Landroid/support/design/widget/CoordinatorLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    new-instance v3, Landroid/support/design/widget/c$1;
+
+    invoke-direct {v3, p0}, Landroid/support/design/widget/c$1;-><init>(Landroid/support/design/widget/c;)V
+
+    invoke-virtual {v1, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    new-instance v1, Landroid/support/design/widget/c$2;
+
+    invoke-direct {v1, p0}, Landroid/support/design/widget/c$2;-><init>(Landroid/support/design/widget/c;)V
+
+    invoke-static {v2, v1}, Landroid/support/v4/view/ac;->a(Landroid/view/View;Landroid/support/v4/view/a;)V
+
+    new-instance v1, Landroid/support/design/widget/c$3;
+
+    invoke-direct {v1, p0}, Landroid/support/design/widget/c$3;-><init>(Landroid/support/design/widget/c;)V
+
+    invoke-virtual {v2, v1}, Landroid/widget/FrameLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     return-object v0
+
+    :cond_1
+    invoke-virtual {v2, p2, p3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method final a(F)V
-    .locals 1
+.method a()Z
+    .locals 5
 
-    iget v0, p0, Landroid/support/design/widget/c;->l:F
+    const/4 v4, 0x0
 
-    cmpl-float v0, p1, v0
+    const/4 v3, 0x1
 
-    if-eqz v0, :cond_0
+    iget-boolean v0, p0, Landroid/support/design/widget/c;->d:Z
 
-    iput p1, p0, Landroid/support/design/widget/c;->l:F
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/support/design/widget/c;->invalidateSelf()V
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0xb
+
+    if-ge v0, v1, :cond_1
+
+    iput-boolean v3, p0, Landroid/support/design/widget/c;->c:Z
+
+    :goto_0
+    iput-boolean v3, p0, Landroid/support/design/widget/c;->d:Z
 
     :cond_0
-    return-void
-.end method
+    iget-boolean v0, p0, Landroid/support/design/widget/c;->c:Z
 
-.method a(Landroid/content/res/ColorStateList;)V
-    .locals 2
+    return v0
 
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Landroid/support/design/widget/c;->getState()[I
+    :cond_1
+    invoke-virtual {p0}, Landroid/support/design/widget/c;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iget v1, p0, Landroid/support/design/widget/c;->j:I
+    new-array v1, v3, [I
 
-    invoke-virtual {p1, v0, v1}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+    const v2, 0x101035b
 
-    move-result v0
+    aput v2, v1, v4
 
-    iput v0, p0, Landroid/support/design/widget/c;->j:I
+    invoke-virtual {v0, v1}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
-    :cond_0
-    iput-object p1, p0, Landroid/support/design/widget/c;->i:Landroid/content/res/ColorStateList;
+    move-result-object v0
 
-    const/4 v0, 0x1
+    invoke-virtual {v0, v4, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    iput-boolean v0, p0, Landroid/support/design/widget/c;->k:Z
+    move-result v1
 
-    invoke-virtual {p0}, Landroid/support/design/widget/c;->invalidateSelf()V
+    iput-boolean v1, p0, Landroid/support/design/widget/c;->c:Z
 
-    return-void
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    goto :goto_0
 .end method
 
-.method public draw(Landroid/graphics/Canvas;)V
+.method protected onCreate(Landroid/os/Bundle;)V
     .locals 4
 
-    iget-boolean v0, p0, Landroid/support/design/widget/c;->k:Z
+    const/4 v3, -0x1
 
-    if-eqz v0, :cond_0
+    invoke-super {p0, p1}, Landroid/support/v7/app/m;->onCreate(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Landroid/support/design/widget/c;->a:Landroid/graphics/Paint;
+    invoke-virtual {p0}, Landroid/support/design/widget/c;->getWindow()Landroid/view/Window;
 
-    invoke-direct {p0}, Landroid/support/design/widget/c;->a()Landroid/graphics/Shader;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Landroid/support/design/widget/c;->k:Z
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/design/widget/c;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getStrokeWidth()F
-
-    move-result v0
-
-    const/high16 v1, 0x40000000    # 2.0f
-
-    div-float/2addr v0, v1
-
-    iget-object v1, p0, Landroid/support/design/widget/c;->c:Landroid/graphics/RectF;
-
-    iget-object v2, p0, Landroid/support/design/widget/c;->b:Landroid/graphics/Rect;
-
-    invoke-virtual {p0, v2}, Landroid/support/design/widget/c;->copyBounds(Landroid/graphics/Rect;)V
-
-    iget-object v2, p0, Landroid/support/design/widget/c;->b:Landroid/graphics/Rect;
-
-    invoke-virtual {v1, v2}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
-
-    iget v2, v1, Landroid/graphics/RectF;->left:F
-
-    add-float/2addr v2, v0
-
-    iput v2, v1, Landroid/graphics/RectF;->left:F
-
-    iget v2, v1, Landroid/graphics/RectF;->top:F
-
-    add-float/2addr v2, v0
-
-    iput v2, v1, Landroid/graphics/RectF;->top:F
-
-    iget v2, v1, Landroid/graphics/RectF;->right:F
-
-    sub-float/2addr v2, v0
-
-    iput v2, v1, Landroid/graphics/RectF;->right:F
-
-    iget v2, v1, Landroid/graphics/RectF;->bottom:F
-
-    sub-float v0, v2, v0
-
-    iput v0, v1, Landroid/graphics/RectF;->bottom:F
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    iget v0, p0, Landroid/support/design/widget/c;->l:F
-
-    invoke-virtual {v1}, Landroid/graphics/RectF;->centerX()F
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/graphics/RectF;->centerY()F
-
-    move-result v3
-
-    invoke-virtual {p1, v0, v2, v3}, Landroid/graphics/Canvas;->rotate(FFF)V
-
-    iget-object v0, p0, Landroid/support/design/widget/c;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v1, v0}, Landroid/graphics/Canvas;->drawOval(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    return-void
-.end method
-
-.method public getOpacity()I
-    .locals 2
-
-    iget v0, p0, Landroid/support/design/widget/c;->d:F
-
-    const/4 v1, 0x0
-
-    cmpl-float v0, v0, v1
-
-    if-lez v0, :cond_0
-
-    const/4 v0, -0x3
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, -0x2
-
-    goto :goto_0
-.end method
-
-.method public getPadding(Landroid/graphics/Rect;)Z
-    .locals 1
-
-    iget v0, p0, Landroid/support/design/widget/c;->d:F
-
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
-
-    move-result v0
-
-    invoke-virtual {p1, v0, v0, v0, v0}, Landroid/graphics/Rect;->set(IIII)V
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public isStateful()Z
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/design/widget/c;->i:Landroid/content/res/ColorStateList;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/design/widget/c;->i:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {v0}, Landroid/content/res/ColorStateList;->isStateful()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    invoke-super {p0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method protected onBoundsChange(Landroid/graphics/Rect;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Landroid/support/design/widget/c;->k:Z
-
-    return-void
-.end method
-
-.method protected onStateChange([I)Z
-    .locals 2
-
-    iget-object v0, p0, Landroid/support/design/widget/c;->i:Landroid/content/res/ColorStateList;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/design/widget/c;->i:Landroid/content/res/ColorStateList;
-
-    iget v1, p0, Landroid/support/design/widget/c;->j:I
-
-    invoke-virtual {v0, p1, v1}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result v0
-
-    iget v1, p0, Landroid/support/design/widget/c;->j:I
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Landroid/support/design/widget/c;->k:Z
-
-    iput v0, p0, Landroid/support/design/widget/c;->j:I
-
-    :cond_0
-    iget-boolean v0, p0, Landroid/support/design/widget/c;->k:Z
+    move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Landroid/support/design/widget/c;->invalidateSelf()V
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x15
+
+    if-lt v1, v2, :cond_0
+
+    const/high16 v1, 0x4000000
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->clearFlags(I)V
+
+    const/high16 v1, -0x80000000
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
+
+    :cond_0
+    invoke-virtual {v0, v3, v3}, Landroid/view/Window;->setLayout(II)V
 
     :cond_1
-    iget-boolean v0, p0, Landroid/support/design/widget/c;->k:Z
-
-    return v0
+    return-void
 .end method
 
-.method public setAlpha(I)V
+.method protected onStart()V
+    .locals 2
+
+    invoke-super {p0}, Landroid/support/v7/app/m;->onStart()V
+
+    iget-object v0, p0, Landroid/support/design/widget/c;->b:Landroid/support/design/widget/BottomSheetBehavior;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/design/widget/c;->b:Landroid/support/design/widget/BottomSheetBehavior;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/BottomSheetBehavior;->b(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setCancelable(Z)V
     .locals 1
 
-    iget-object v0, p0, Landroid/support/design/widget/c;->a:Landroid/graphics/Paint;
+    invoke-super {p0, p1}, Landroid/support/v7/app/m;->setCancelable(Z)V
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
+    iget-boolean v0, p0, Landroid/support/design/widget/c;->a:Z
 
-    invoke-virtual {p0}, Landroid/support/design/widget/c;->invalidateSelf()V
+    if-eq v0, p1, :cond_0
+
+    iput-boolean p1, p0, Landroid/support/design/widget/c;->a:Z
+
+    iget-object v0, p0, Landroid/support/design/widget/c;->b:Landroid/support/design/widget/BottomSheetBehavior;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/design/widget/c;->b:Landroid/support/design/widget/BottomSheetBehavior;
+
+    invoke-virtual {v0, p1}, Landroid/support/design/widget/BottomSheetBehavior;->a(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setCanceledOnTouchOutside(Z)V
+    .locals 2
+
+    const/4 v1, 0x1
+
+    invoke-super {p0, p1}, Landroid/support/v7/app/m;->setCanceledOnTouchOutside(Z)V
+
+    if-eqz p1, :cond_0
+
+    iget-boolean v0, p0, Landroid/support/design/widget/c;->a:Z
+
+    if-nez v0, :cond_0
+
+    iput-boolean v1, p0, Landroid/support/design/widget/c;->a:Z
+
+    :cond_0
+    iput-boolean p1, p0, Landroid/support/design/widget/c;->c:Z
+
+    iput-boolean v1, p0, Landroid/support/design/widget/c;->d:Z
 
     return-void
 .end method
 
-.method public setColorFilter(Landroid/graphics/ColorFilter;)V
+.method public setContentView(I)V
+    .locals 1
+    .param p1    # I
+        .annotation build Landroid/support/annotation/aa;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0, v0}, Landroid/support/design/widget/c;->a(ILandroid/view/View;Landroid/view/ViewGroup$LayoutParams;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-super {p0, v0}, Landroid/support/v7/app/m;->setContentView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public setContentView(Landroid/view/View;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, p1, v1}, Landroid/support/design/widget/c;->a(ILandroid/view/View;Landroid/view/ViewGroup$LayoutParams;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-super {p0, v0}, Landroid/support/v7/app/m;->setContentView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
     .locals 1
 
-    iget-object v0, p0, Landroid/support/design/widget/c;->a:Landroid/graphics/Paint;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
+    invoke-direct {p0, v0, p1, p2}, Landroid/support/design/widget/c;->a(ILandroid/view/View;Landroid/view/ViewGroup$LayoutParams;)Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/support/design/widget/c;->invalidateSelf()V
+    move-result-object v0
+
+    invoke-super {p0, v0}, Landroid/support/v7/app/m;->setContentView(Landroid/view/View;)V
 
     return-void
 .end method

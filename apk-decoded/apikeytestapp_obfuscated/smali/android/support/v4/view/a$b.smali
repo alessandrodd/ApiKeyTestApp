@@ -24,7 +24,7 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View$AccessibilityDelegate;Landroid/view/View;)Landroid/support/v4/view/a/d;
+.method public a(Landroid/view/View$AccessibilityDelegate;Landroid/view/View;)Landroid/support/v4/view/a/e;
     .locals 1
 
     const/4 v0, 0x0

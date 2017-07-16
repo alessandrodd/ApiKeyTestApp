@@ -42,7 +42,7 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuPresenter$c;->a:Landroid/support/v7/widget/ActionMenuPresenter;
 
-    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->d(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/e/a/k;
+    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->d(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/view/menu/h;
 
     move-result-object v0
 
@@ -50,16 +50,16 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuPresenter$c;->a:Landroid/support/v7/widget/ActionMenuPresenter;
 
-    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->e(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/e/a/k;
+    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->e(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/view/menu/h;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v7/e/a/k;->f()V
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/h;->g()V
 
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuPresenter$c;->a:Landroid/support/v7/widget/ActionMenuPresenter;
 
-    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->f(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/e/a/s;
+    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->f(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/view/menu/q;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuPresenter$c;->b:Landroid/support/v7/widget/ActionMenuPresenter$e;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ActionMenuPresenter$e;->c()Z
+    invoke-virtual {v0}, Landroid/support/v7/widget/ActionMenuPresenter$e;->e()Z
 
     move-result v0
 

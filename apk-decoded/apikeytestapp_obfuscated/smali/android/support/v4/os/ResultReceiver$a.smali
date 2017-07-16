@@ -1,5 +1,5 @@
 .class Landroid/support/v4/os/ResultReceiver$a;
-.super Landroid/support/v4/os/b$a;
+.super Landroid/support/v4/os/f$a;
 
 
 # annotations
@@ -14,16 +14,16 @@
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/os/ResultReceiver;
+.field final synthetic b:Landroid/support/v4/os/ResultReceiver;
 
 
 # direct methods
 .method constructor <init>(Landroid/support/v4/os/ResultReceiver;)V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/os/ResultReceiver$a;->a:Landroid/support/v4/os/ResultReceiver;
+    iput-object p1, p0, Landroid/support/v4/os/ResultReceiver$a;->b:Landroid/support/v4/os/ResultReceiver;
 
-    invoke-direct {p0}, Landroid/support/v4/os/b$a;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/os/f$a;-><init>()V
 
     return-void
 .end method
@@ -33,19 +33,19 @@
 .method public a(ILandroid/os/Bundle;)V
     .locals 3
 
-    iget-object v0, p0, Landroid/support/v4/os/ResultReceiver$a;->a:Landroid/support/v4/os/ResultReceiver;
+    iget-object v0, p0, Landroid/support/v4/os/ResultReceiver$a;->b:Landroid/support/v4/os/ResultReceiver;
 
     iget-object v0, v0, Landroid/support/v4/os/ResultReceiver;->b:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v4/os/ResultReceiver$a;->a:Landroid/support/v4/os/ResultReceiver;
+    iget-object v0, p0, Landroid/support/v4/os/ResultReceiver$a;->b:Landroid/support/v4/os/ResultReceiver;
 
     iget-object v0, v0, Landroid/support/v4/os/ResultReceiver;->b:Landroid/os/Handler;
 
     new-instance v1, Landroid/support/v4/os/ResultReceiver$b;
 
-    iget-object v2, p0, Landroid/support/v4/os/ResultReceiver$a;->a:Landroid/support/v4/os/ResultReceiver;
+    iget-object v2, p0, Landroid/support/v4/os/ResultReceiver$a;->b:Landroid/support/v4/os/ResultReceiver;
 
     invoke-direct {v1, v2, p1, p2}, Landroid/support/v4/os/ResultReceiver$b;-><init>(Landroid/support/v4/os/ResultReceiver;ILandroid/os/Bundle;)V
 
@@ -55,7 +55,7 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/os/ResultReceiver$a;->a:Landroid/support/v4/os/ResultReceiver;
+    iget-object v0, p0, Landroid/support/v4/os/ResultReceiver$a;->b:Landroid/support/v4/os/ResultReceiver;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/os/ResultReceiver;->a(ILandroid/os/Bundle;)V
 

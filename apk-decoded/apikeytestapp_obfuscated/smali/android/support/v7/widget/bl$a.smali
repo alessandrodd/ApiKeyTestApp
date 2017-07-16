@@ -1,5 +1,5 @@
 .class Landroid/support/v7/widget/bl$a;
-.super Ljava/lang/Object;
+.super Landroid/widget/BaseAdapter;
 
 
 # annotations
@@ -8,199 +8,104 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x2
     name = "a"
 .end annotation
 
 
 # instance fields
-.field a:I
-
-.field b:I
-
-.field c:I
-
-.field d:I
-
-.field e:I
+.field final synthetic a:Landroid/support/v7/widget/bl;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 1
+.method constructor <init>(Landroid/support/v7/widget/bl;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Landroid/support/v7/widget/bl$a;->a:Landroid/support/v7/widget/bl;
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroid/support/v7/widget/bl$a;->a:I
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method a(II)I
+.method public getCount()I
     .locals 1
 
-    if-le p1, p2, :cond_0
+    iget-object v0, p0, Landroid/support/v7/widget/bl$a;->a:Landroid/support/v7/widget/bl;
 
-    const/4 v0, 0x1
+    iget-object v0, v0, Landroid/support/v7/widget/bl;->b:Landroid/support/v7/widget/at;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/at;->getChildCount()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getItem(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/widget/bl$a;->a:Landroid/support/v7/widget/bl;
+
+    iget-object v0, v0, Landroid/support/v7/widget/bl;->b:Landroid/support/v7/widget/at;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/at;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/bl$c;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/bl$c;->b()Landroid/support/v7/app/a$f;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getItemId(I)J
+    .locals 2
+
+    int-to-long v0, p1
+
+    return-wide v0
+.end method
+
+.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 3
+
+    if-nez p2, :cond_0
+
+    iget-object v1, p0, Landroid/support/v7/widget/bl$a;->a:Landroid/support/v7/widget/bl;
+
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bl$a;->getItem(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/app/a$f;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2}, Landroid/support/v7/widget/bl;->a(Landroid/support/v7/app/a$f;Z)Landroid/support/v7/widget/bl$c;
+
+    move-result-object p2
 
     :goto_0
-    return v0
+    return-object p2
 
     :cond_0
-    if-ne p1, p2, :cond_1
+    move-object v0, p2
 
-    const/4 v0, 0x2
+    check-cast v0, Landroid/support/v7/widget/bl$c;
 
-    goto :goto_0
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bl$a;->getItem(I)Ljava/lang/Object;
 
-    :cond_1
-    const/4 v0, 0x4
+    move-result-object v1
 
-    goto :goto_0
-.end method
+    check-cast v1, Landroid/support/v7/app/a$f;
 
-.method a()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroid/support/v7/widget/bl$a;->a:I
-
-    return-void
-.end method
-
-.method a(I)V
-    .locals 1
-
-    iget v0, p0, Landroid/support/v7/widget/bl$a;->a:I
-
-    or-int/2addr v0, p1
-
-    iput v0, p0, Landroid/support/v7/widget/bl$a;->a:I
-
-    return-void
-.end method
-
-.method a(IIII)V
-    .locals 0
-
-    iput p1, p0, Landroid/support/v7/widget/bl$a;->b:I
-
-    iput p2, p0, Landroid/support/v7/widget/bl$a;->c:I
-
-    iput p3, p0, Landroid/support/v7/widget/bl$a;->d:I
-
-    iput p4, p0, Landroid/support/v7/widget/bl$a;->e:I
-
-    return-void
-.end method
-
-.method b()Z
-    .locals 4
-
-    const/4 v0, 0x0
-
-    iget v1, p0, Landroid/support/v7/widget/bl$a;->a:I
-
-    and-int/lit8 v1, v1, 0x7
-
-    if-eqz v1, :cond_1
-
-    iget v1, p0, Landroid/support/v7/widget/bl$a;->a:I
-
-    iget v2, p0, Landroid/support/v7/widget/bl$a;->d:I
-
-    iget v3, p0, Landroid/support/v7/widget/bl$a;->b:I
-
-    invoke-virtual {p0, v2, v3}, Landroid/support/v7/widget/bl$a;->a(II)I
-
-    move-result v2
-
-    shl-int/lit8 v2, v2, 0x0
-
-    and-int/2addr v1, v2
-
-    if-nez v1, :cond_1
-
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    iget v1, p0, Landroid/support/v7/widget/bl$a;->a:I
-
-    and-int/lit8 v1, v1, 0x70
-
-    if-eqz v1, :cond_2
-
-    iget v1, p0, Landroid/support/v7/widget/bl$a;->a:I
-
-    iget v2, p0, Landroid/support/v7/widget/bl$a;->d:I
-
-    iget v3, p0, Landroid/support/v7/widget/bl$a;->c:I
-
-    invoke-virtual {p0, v2, v3}, Landroid/support/v7/widget/bl$a;->a(II)I
-
-    move-result v2
-
-    shl-int/lit8 v2, v2, 0x4
-
-    and-int/2addr v1, v2
-
-    if-eqz v1, :cond_0
-
-    :cond_2
-    iget v1, p0, Landroid/support/v7/widget/bl$a;->a:I
-
-    and-int/lit16 v1, v1, 0x700
-
-    if-eqz v1, :cond_3
-
-    iget v1, p0, Landroid/support/v7/widget/bl$a;->a:I
-
-    iget v2, p0, Landroid/support/v7/widget/bl$a;->e:I
-
-    iget v3, p0, Landroid/support/v7/widget/bl$a;->b:I
-
-    invoke-virtual {p0, v2, v3}, Landroid/support/v7/widget/bl$a;->a(II)I
-
-    move-result v2
-
-    shl-int/lit8 v2, v2, 0x8
-
-    and-int/2addr v1, v2
-
-    if-eqz v1, :cond_0
-
-    :cond_3
-    iget v1, p0, Landroid/support/v7/widget/bl$a;->a:I
-
-    and-int/lit16 v1, v1, 0x7000
-
-    if-eqz v1, :cond_4
-
-    iget v1, p0, Landroid/support/v7/widget/bl$a;->a:I
-
-    iget v2, p0, Landroid/support/v7/widget/bl$a;->e:I
-
-    iget v3, p0, Landroid/support/v7/widget/bl$a;->c:I
-
-    invoke-virtual {p0, v2, v3}, Landroid/support/v7/widget/bl$a;->a(II)I
-
-    move-result v2
-
-    shl-int/lit8 v2, v2, 0xc
-
-    and-int/2addr v1, v2
-
-    if-eqz v1, :cond_0
-
-    :cond_4
-    const/4 v0, 0x1
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bl$c;->a(Landroid/support/v7/app/a$f;)V
 
     goto :goto_0
 .end method

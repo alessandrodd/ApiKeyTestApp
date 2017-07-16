@@ -6,8 +6,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroid/support/v7/app/b;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroid/support/v7/app/b;-><init>(Landroid/app/Activity;Landroid/support/v7/widget/Toolbar;Landroid/support/v4/widget/DrawerLayout;Landroid/support/v7/d/a/b;II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,100 +34,34 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 3
+    .locals 1
 
     iget-object v0, p0, Landroid/support/v7/app/b$1;->a:Landroid/support/v7/app/b;
 
-    iget-object v0, v0, Landroid/support/v7/app/b;->c:Landroid/widget/Button;
-
-    if-ne p1, v0, :cond_1
-
-    iget-object v0, p0, Landroid/support/v7/app/b$1;->a:Landroid/support/v7/app/b;
-
-    iget-object v0, v0, Landroid/support/v7/app/b;->d:Landroid/os/Message;
+    iget-boolean v0, v0, Landroid/support/v7/app/b;->a:Z
 
     if-eqz v0, :cond_1
 
     iget-object v0, p0, Landroid/support/v7/app/b$1;->a:Landroid/support/v7/app/b;
 
-    iget-object v0, v0, Landroid/support/v7/app/b;->d:Landroid/os/Message;
-
-    invoke-static {v0}, Landroid/os/Message;->obtain(Landroid/os/Message;)Landroid/os/Message;
-
-    move-result-object v0
-
-    :goto_0
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+    invoke-virtual {v0}, Landroid/support/v7/app/b;->b()V
 
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/app/b$1;->a:Landroid/support/v7/app/b;
-
-    iget-object v0, v0, Landroid/support/v7/app/b;->p:Landroid/os/Handler;
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Landroid/support/v7/app/b$1;->a:Landroid/support/v7/app/b;
-
-    iget-object v2, v2, Landroid/support/v7/app/b;->a:Landroid/support/v7/app/k;
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
-
+    :goto_0
     return-void
 
     :cond_1
     iget-object v0, p0, Landroid/support/v7/app/b$1;->a:Landroid/support/v7/app/b;
 
-    iget-object v0, v0, Landroid/support/v7/app/b;->e:Landroid/widget/Button;
+    iget-object v0, v0, Landroid/support/v7/app/b;->b:Landroid/view/View$OnClickListener;
 
-    if-ne p1, v0, :cond_2
-
-    iget-object v0, p0, Landroid/support/v7/app/b$1;->a:Landroid/support/v7/app/b;
-
-    iget-object v0, v0, Landroid/support/v7/app/b;->f:Landroid/os/Message;
-
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Landroid/support/v7/app/b$1;->a:Landroid/support/v7/app/b;
 
-    iget-object v0, v0, Landroid/support/v7/app/b;->f:Landroid/os/Message;
+    iget-object v0, v0, Landroid/support/v7/app/b;->b:Landroid/view/View$OnClickListener;
 
-    invoke-static {v0}, Landroid/os/Message;->obtain(Landroid/os/Message;)Landroid/os/Message;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Landroid/support/v7/app/b$1;->a:Landroid/support/v7/app/b;
-
-    iget-object v0, v0, Landroid/support/v7/app/b;->g:Landroid/widget/Button;
-
-    if-ne p1, v0, :cond_3
-
-    iget-object v0, p0, Landroid/support/v7/app/b$1;->a:Landroid/support/v7/app/b;
-
-    iget-object v0, v0, Landroid/support/v7/app/b;->h:Landroid/os/Message;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Landroid/support/v7/app/b$1;->a:Landroid/support/v7/app/b;
-
-    iget-object v0, v0, Landroid/support/v7/app/b;->h:Landroid/os/Message;
-
-    invoke-static {v0}, Landroid/os/Message;->obtain(Landroid/os/Message;)Landroid/os/Message;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v0, 0x0
+    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
     goto :goto_0
 .end method

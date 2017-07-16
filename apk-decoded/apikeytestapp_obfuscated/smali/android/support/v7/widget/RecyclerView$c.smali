@@ -29,3 +29,35 @@
 
     return-void
 .end method
+
+.method public a(II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(III)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(IILjava/lang/Object;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/support/v7/widget/RecyclerView$c;->a(II)V
+
+    return-void
+.end method
+
+.method public b(II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public c(II)V
+    .locals 0
+
+    return-void
+.end method

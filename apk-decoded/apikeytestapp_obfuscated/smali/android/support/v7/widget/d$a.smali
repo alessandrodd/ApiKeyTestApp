@@ -14,20 +14,5 @@
 
 
 # virtual methods
-.method public abstract a(I)V
-.end method
-
-.method public abstract f()V
-.end method
-
-.method public abstract g()V
-.end method
-
-.method public abstract g(Z)V
-.end method
-
-.method public abstract h()V
-.end method
-
-.method public abstract i()V
+.method public abstract setActivityChooserModel(Landroid/support/v7/widget/d;)V
 .end method

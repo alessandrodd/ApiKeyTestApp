@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Landroid/support/v4/view/a$b$1;->a:Landroid/support/v4/view/a;
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->b(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->d(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
 
     move-result v0
 
@@ -51,7 +51,7 @@
 
     iget-object v0, p0, Landroid/support/v4/view/a$b$1;->a:Landroid/support/v4/view/a;
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->d(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     return-void
 .end method
@@ -75,7 +75,7 @@
 
     iget-object v0, p0, Landroid/support/v4/view/a$b$1;->a:Landroid/support/v4/view/a;
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->b(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     return-void
 .end method
@@ -107,7 +107,7 @@
 
     iget-object v0, p0, Landroid/support/v4/view/a$b$1;->a:Landroid/support/v4/view/a;
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     return-void
 .end method

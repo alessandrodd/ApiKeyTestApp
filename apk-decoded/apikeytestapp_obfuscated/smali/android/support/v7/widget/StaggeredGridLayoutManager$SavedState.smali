@@ -6,6 +6,12 @@
 
 
 # annotations
+.annotation build Landroid/support/annotation/ak;
+    a = {
+        .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroid/support/v7/widget/StaggeredGridLayoutManager;
 .end annotation

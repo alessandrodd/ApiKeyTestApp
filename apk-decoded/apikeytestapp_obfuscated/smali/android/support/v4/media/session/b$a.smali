@@ -22,7 +22,119 @@
 .end annotation
 
 
+# static fields
+.field static final A:I = 0x21
+
+.field static final B:I = 0x22
+
+.field static final C:I = 0x23
+
+.field static final D:I = 0x24
+
+.field static final E:I = 0xd
+
+.field static final F:I = 0xe
+
+.field static final G:I = 0xf
+
+.field static final H:I = 0x10
+
+.field static final I:I = 0x11
+
+.field static final J:I = 0x12
+
+.field static final K:I = 0x13
+
+.field static final L:I = 0x14
+
+.field static final M:I = 0x15
+
+.field static final N:I = 0x16
+
+.field static final O:I = 0x17
+
+.field static final P:I = 0x18
+
+.field static final Q:I = 0x19
+
+.field static final R:I = 0x2e
+
+.field static final S:I = 0x27
+
+.field static final T:I = 0x28
+
+.field static final U:I = 0x30
+
+.field static final V:I = 0x1a
+
+.field private static final W:Ljava/lang/String; = "android.support.v4.media.session.IMediaSession"
+
+.field static final a:I = 0x1
+
+.field static final b:I = 0x2
+
+.field static final c:I = 0x3
+
+.field static final d:I = 0x4
+
+.field static final e:I = 0x5
+
+.field static final f:I = 0x6
+
+.field static final g:I = 0x7
+
+.field static final h:I = 0x8
+
+.field static final i:I = 0x9
+
+.field static final j:I = 0xa
+
+.field static final k:I = 0xb
+
+.field static final l:I = 0xc
+
+.field static final m:I = 0x1b
+
+.field static final n:I = 0x1c
+
+.field static final o:I = 0x1d
+
+.field static final p:I = 0x1e
+
+.field static final q:I = 0x1f
+
+.field static final r:I = 0x20
+
+.field static final s:I = 0x2d
+
+.field static final t:I = 0x25
+
+.field static final u:I = 0x26
+
+.field static final v:I = 0x2f
+
+.field static final w:I = 0x29
+
+.field static final x:I = 0x2a
+
+.field static final y:I = 0x2b
+
+.field static final z:I = 0x2c
+
+
 # direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+
+    const-string v0, "android.support.v4.media.session.IMediaSession"
+
+    invoke-virtual {p0, p0, v0}, Landroid/support/v4/media/session/b$a;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+
+    return-void
+.end method
+
 .method public static a(Landroid/os/IBinder;)Landroid/support/v4/media/session/b;
     .locals 2
 

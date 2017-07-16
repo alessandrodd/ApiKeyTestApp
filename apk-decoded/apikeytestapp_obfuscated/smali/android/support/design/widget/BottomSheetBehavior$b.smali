@@ -46,17 +46,17 @@
 
     iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior$b;->a:Landroid/support/design/widget/BottomSheetBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/BottomSheetBehavior;->e:Landroid/support/v4/widget/p;
+    iget-object v0, v0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ac;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior$b;->a:Landroid/support/design/widget/BottomSheetBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/BottomSheetBehavior;->e:Landroid/support/v4/widget/p;
+    iget-object v0, v0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ac;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/p;->a(Z)Z
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ac;->a(Z)Z
 
     move-result v0
 
@@ -64,7 +64,7 @@
 
     iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior$b;->b:Landroid/view/View;
 
-    invoke-static {v0, p0}, Landroid/support/v4/view/r;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {v0, p0}, Landroid/support/v4/view/ac;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
     :goto_0
     return-void
@@ -74,7 +74,7 @@
 
     iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior$b;->c:I
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/BottomSheetBehavior;->b(I)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/BottomSheetBehavior;->c(I)V
 
     goto :goto_0
 .end method

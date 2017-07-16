@@ -2,10 +2,14 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/widget/DrawerLayout$b;
+.implements Landroid/support/v4/widget/DrawerLayout$c;
 
 
 # annotations
+.annotation build Landroid/support/annotation/ai;
+    a = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroid/support/v4/widget/DrawerLayout;
 .end annotation
@@ -30,19 +34,43 @@
 .method public a(Ljava/lang/Object;)I
     .locals 1
 
-    const/4 v0, 0x0
+    invoke-static {p1}, Landroid/support/v4/widget/h;->a(Ljava/lang/Object;)I
+
+    move-result v0
 
     return v0
 .end method
 
+.method public a(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/widget/h;->a(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public a(Landroid/view/View;)V
+    .locals 0
+
+    invoke-static {p1}, Landroid/support/v4/widget/h;->a(Landroid/view/View;)V
+
+    return-void
+.end method
+
 .method public a(Landroid/view/View;Ljava/lang/Object;I)V
     .locals 0
+
+    invoke-static {p1, p2, p3}, Landroid/support/v4/widget/h;->a(Landroid/view/View;Ljava/lang/Object;I)V
 
     return-void
 .end method
 
 .method public a(Landroid/view/ViewGroup$MarginLayoutParams;Ljava/lang/Object;I)V
     .locals 0
+
+    invoke-static {p1, p2, p3}, Landroid/support/v4/widget/h;->a(Landroid/view/ViewGroup$MarginLayoutParams;Ljava/lang/Object;I)V
 
     return-void
 .end method

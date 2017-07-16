@@ -15,43 +15,75 @@
 
 
 # static fields
-.field private static final r:I
+.field private static final A:I = 0x13b
+
+.field private static final B:I = 0x627
+
+.field private static final C:F = 3.4028235E38f
+
+.field private static final D:F = 0.2f
+
+.field private static final E:F = 1.0f
+
+.field private static final F:I
+
+.field private static final G:I = 0x1f4
+
+.field private static final H:I = 0x1f4
+
+.field public static final a:F = 0.0f
+
+.field public static final b:F = 3.4028235E38f
+
+.field public static final c:F = 0.0f
+
+.field public static final d:I = 0x0
+
+.field public static final e:I = 0x1
+
+.field public static final f:I = 0x2
+
+.field private static final l:I = 0x0
+
+.field private static final m:I = 0x1
+
+.field private static final z:I = 0x1
 
 
 # instance fields
-.field final a:Landroid/support/v4/widget/a$a;
+.field final g:Landroid/support/v4/widget/a$a;
 
-.field final b:Landroid/view/View;
+.field final h:Landroid/view/View;
 
-.field c:Z
+.field i:Z
 
-.field d:Z
+.field j:Z
 
-.field e:Z
+.field k:Z
 
-.field private final f:Landroid/view/animation/Interpolator;
+.field private final n:Landroid/view/animation/Interpolator;
 
-.field private g:Ljava/lang/Runnable;
+.field private o:Ljava/lang/Runnable;
 
-.field private h:[F
+.field private p:[F
 
-.field private i:[F
+.field private q:[F
 
-.field private j:I
+.field private r:I
 
-.field private k:I
+.field private s:I
 
-.field private l:[F
+.field private t:[F
 
-.field private m:[F
+.field private u:[F
 
-.field private n:[F
+.field private v:[F
 
-.field private o:Z
+.field private w:Z
 
-.field private p:Z
+.field private x:Z
 
-.field private q:Z
+.field private y:Z
 
 
 # direct methods
@@ -62,7 +94,7 @@
 
     move-result v0
 
-    sput v0, Landroid/support/v4/widget/a;->r:I
+    sput v0, Landroid/support/v4/widget/a;->F:I
 
     return-void
 .end method
@@ -86,45 +118,45 @@
 
     invoke-direct {v0}, Landroid/support/v4/widget/a$a;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v4/widget/a;->a:Landroid/support/v4/widget/a$a;
+    iput-object v0, p0, Landroid/support/v4/widget/a;->g:Landroid/support/v4/widget/a$a;
 
     new-instance v0, Landroid/view/animation/AccelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v4/widget/a;->f:Landroid/view/animation/Interpolator;
+    iput-object v0, p0, Landroid/support/v4/widget/a;->n:Landroid/view/animation/Interpolator;
 
     new-array v0, v1, [F
 
     fill-array-data v0, :array_0
 
-    iput-object v0, p0, Landroid/support/v4/widget/a;->h:[F
+    iput-object v0, p0, Landroid/support/v4/widget/a;->p:[F
 
     new-array v0, v1, [F
 
     fill-array-data v0, :array_1
 
-    iput-object v0, p0, Landroid/support/v4/widget/a;->i:[F
+    iput-object v0, p0, Landroid/support/v4/widget/a;->q:[F
 
     new-array v0, v1, [F
 
     fill-array-data v0, :array_2
 
-    iput-object v0, p0, Landroid/support/v4/widget/a;->l:[F
+    iput-object v0, p0, Landroid/support/v4/widget/a;->t:[F
 
     new-array v0, v1, [F
 
     fill-array-data v0, :array_3
 
-    iput-object v0, p0, Landroid/support/v4/widget/a;->m:[F
+    iput-object v0, p0, Landroid/support/v4/widget/a;->u:[F
 
     new-array v0, v1, [F
 
     fill-array-data v0, :array_4
 
-    iput-object v0, p0, Landroid/support/v4/widget/a;->n:[F
+    iput-object v0, p0, Landroid/support/v4/widget/a;->v:[F
 
-    iput-object p1, p0, Landroid/support/v4/widget/a;->b:Landroid/view/View;
+    iput-object p1, p0, Landroid/support/v4/widget/a;->h:Landroid/view/View;
 
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -176,7 +208,7 @@
 
     invoke-virtual {p0, v5, v5}, Landroid/support/v4/widget/a;->c(FF)Landroid/support/v4/widget/a;
 
-    sget v0, Landroid/support/v4/widget/a;->r:I
+    sget v0, Landroid/support/v4/widget/a;->F:I
 
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/a;->b(I)Landroid/support/v4/widget/a;
 
@@ -273,7 +305,7 @@
 
     if-gez v2, :cond_1
 
-    iget-object v0, p0, Landroid/support/v4/widget/a;->f:Landroid/view/animation/Interpolator;
+    iget-object v0, p0, Landroid/support/v4/widget/a;->n:Landroid/view/animation/Interpolator;
 
     neg-float v1, v1
 
@@ -300,7 +332,7 @@
 
     if-lez v2, :cond_0
 
-    iget-object v0, p0, Landroid/support/v4/widget/a;->f:Landroid/view/animation/Interpolator;
+    iget-object v0, p0, Landroid/support/v4/widget/a;->n:Landroid/view/animation/Interpolator;
 
     invoke-interface {v0, v1}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
 
@@ -314,11 +346,11 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Landroid/support/v4/widget/a;->h:[F
+    iget-object v1, p0, Landroid/support/v4/widget/a;->p:[F
 
     aget v1, v1, p1
 
-    iget-object v2, p0, Landroid/support/v4/widget/a;->i:[F
+    iget-object v2, p0, Landroid/support/v4/widget/a;->q:[F
 
     aget v2, v2, p1
 
@@ -334,15 +366,15 @@
     return v0
 
     :cond_0
-    iget-object v2, p0, Landroid/support/v4/widget/a;->l:[F
+    iget-object v2, p0, Landroid/support/v4/widget/a;->t:[F
 
     aget v2, v2, p1
 
-    iget-object v3, p0, Landroid/support/v4/widget/a;->m:[F
+    iget-object v3, p0, Landroid/support/v4/widget/a;->u:[F
 
     aget v3, v3, p1
 
-    iget-object v4, p0, Landroid/support/v4/widget/a;->n:[F
+    iget-object v4, p0, Landroid/support/v4/widget/a;->v:[F
 
     aget v4, v4, p1
 
@@ -395,12 +427,12 @@
     goto :goto_0
 .end method
 
-.method private c()V
+.method private e()V
     .locals 5
 
     const/4 v4, 0x1
 
-    iget-object v0, p0, Landroid/support/v4/widget/a;->g:Ljava/lang/Runnable;
+    iget-object v0, p0, Landroid/support/v4/widget/a;->o:Ljava/lang/Runnable;
 
     if-nez v0, :cond_0
 
@@ -408,62 +440,40 @@
 
     invoke-direct {v0, p0}, Landroid/support/v4/widget/a$b;-><init>(Landroid/support/v4/widget/a;)V
 
-    iput-object v0, p0, Landroid/support/v4/widget/a;->g:Ljava/lang/Runnable;
+    iput-object v0, p0, Landroid/support/v4/widget/a;->o:Ljava/lang/Runnable;
 
     :cond_0
-    iput-boolean v4, p0, Landroid/support/v4/widget/a;->e:Z
+    iput-boolean v4, p0, Landroid/support/v4/widget/a;->k:Z
 
-    iput-boolean v4, p0, Landroid/support/v4/widget/a;->c:Z
+    iput-boolean v4, p0, Landroid/support/v4/widget/a;->i:Z
 
-    iget-boolean v0, p0, Landroid/support/v4/widget/a;->o:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/a;->w:Z
 
     if-nez v0, :cond_1
 
-    iget v0, p0, Landroid/support/v4/widget/a;->k:I
+    iget v0, p0, Landroid/support/v4/widget/a;->s:I
 
     if-lez v0, :cond_1
 
-    iget-object v0, p0, Landroid/support/v4/widget/a;->b:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v4/widget/a;->h:Landroid/view/View;
 
-    iget-object v1, p0, Landroid/support/v4/widget/a;->g:Ljava/lang/Runnable;
+    iget-object v1, p0, Landroid/support/v4/widget/a;->o:Ljava/lang/Runnable;
 
-    iget v2, p0, Landroid/support/v4/widget/a;->k:I
+    iget v2, p0, Landroid/support/v4/widget/a;->s:I
 
     int-to-long v2, v2
 
-    invoke-static {v0, v1, v2, v3}, Landroid/support/v4/view/r;->a(Landroid/view/View;Ljava/lang/Runnable;J)V
+    invoke-static {v0, v1, v2, v3}, Landroid/support/v4/view/ac;->a(Landroid/view/View;Ljava/lang/Runnable;J)V
 
     :goto_0
-    iput-boolean v4, p0, Landroid/support/v4/widget/a;->o:Z
+    iput-boolean v4, p0, Landroid/support/v4/widget/a;->w:Z
 
     return-void
 
     :cond_1
-    iget-object v0, p0, Landroid/support/v4/widget/a;->g:Ljava/lang/Runnable;
+    iget-object v0, p0, Landroid/support/v4/widget/a;->o:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    goto :goto_0
-.end method
-
-.method private d()V
-    .locals 1
-
-    iget-boolean v0, p0, Landroid/support/v4/widget/a;->c:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Landroid/support/v4/widget/a;->e:Z
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/a;->a:Landroid/support/v4/widget/a$a;
-
-    invoke-virtual {v0}, Landroid/support/v4/widget/a$a;->b()V
 
     goto :goto_0
 .end method
@@ -484,7 +494,7 @@
     return v0
 
     :cond_1
-    iget v2, p0, Landroid/support/v4/widget/a;->j:I
+    iget v2, p0, Landroid/support/v4/widget/a;->r:I
 
     packed-switch v2, :pswitch_data_0
 
@@ -506,11 +516,11 @@
     goto :goto_0
 
     :cond_2
-    iget-boolean v2, p0, Landroid/support/v4/widget/a;->e:Z
+    iget-boolean v2, p0, Landroid/support/v4/widget/a;->k:Z
 
     if-eqz v2, :cond_0
 
-    iget v2, p0, Landroid/support/v4/widget/a;->j:I
+    iget v2, p0, Landroid/support/v4/widget/a;->r:I
 
     const/4 v3, 0x1
 
@@ -539,6 +549,28 @@
     .end packed-switch
 .end method
 
+.method private f()V
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/v4/widget/a;->i:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroid/support/v4/widget/a;->k:Z
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/widget/a;->g:Landroid/support/v4/widget/a$a;
+
+    invoke-virtual {v0}, Landroid/support/v4/widget/a$a;->b()V
+
+    goto :goto_0
+.end method
+
 
 # virtual methods
 .method public a(FF)Landroid/support/v4/widget/a;
@@ -546,7 +578,7 @@
 
     const/high16 v3, 0x447a0000    # 1000.0f
 
-    iget-object v0, p0, Landroid/support/v4/widget/a;->n:[F
+    iget-object v0, p0, Landroid/support/v4/widget/a;->v:[F
 
     const/4 v1, 0x0
 
@@ -554,7 +586,7 @@
 
     aput v2, v0, v1
 
-    iget-object v0, p0, Landroid/support/v4/widget/a;->n:[F
+    iget-object v0, p0, Landroid/support/v4/widget/a;->v:[F
 
     const/4 v1, 0x1
 
@@ -568,7 +600,7 @@
 .method public a(I)Landroid/support/v4/widget/a;
     .locals 0
 
-    iput p1, p0, Landroid/support/v4/widget/a;->j:I
+    iput p1, p0, Landroid/support/v4/widget/a;->r:I
 
     return-object p0
 .end method
@@ -576,16 +608,16 @@
 .method public a(Z)Landroid/support/v4/widget/a;
     .locals 1
 
-    iget-boolean v0, p0, Landroid/support/v4/widget/a;->p:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/a;->x:Z
 
     if-eqz v0, :cond_0
 
     if-nez p1, :cond_0
 
-    invoke-direct {p0}, Landroid/support/v4/widget/a;->d()V
+    invoke-direct {p0}, Landroid/support/v4/widget/a;->f()V
 
     :cond_0
-    iput-boolean p1, p0, Landroid/support/v4/widget/a;->p:Z
+    iput-boolean p1, p0, Landroid/support/v4/widget/a;->x:Z
 
     return-object p0
 .end method
@@ -593,10 +625,100 @@
 .method public abstract a(II)V
 .end method
 
-.method a()Z
+.method public a()Z
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/v4/widget/a;->x:Z
+
+    return v0
+.end method
+
+.method public b(FF)Landroid/support/v4/widget/a;
+    .locals 4
+
+    const/high16 v3, 0x447a0000    # 1000.0f
+
+    iget-object v0, p0, Landroid/support/v4/widget/a;->u:[F
+
+    const/4 v1, 0x0
+
+    div-float v2, p1, v3
+
+    aput v2, v0, v1
+
+    iget-object v0, p0, Landroid/support/v4/widget/a;->u:[F
+
+    const/4 v1, 0x1
+
+    div-float v2, p2, v3
+
+    aput v2, v0, v1
+
+    return-object p0
+.end method
+
+.method public b(I)Landroid/support/v4/widget/a;
+    .locals 0
+
+    iput p1, p0, Landroid/support/v4/widget/a;->s:I
+
+    return-object p0
+.end method
+
+.method public b(Z)Landroid/support/v4/widget/a;
+    .locals 0
+
+    iput-boolean p1, p0, Landroid/support/v4/widget/a;->y:Z
+
+    return-object p0
+.end method
+
+.method public b()Z
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/v4/widget/a;->y:Z
+
+    return v0
+.end method
+
+.method public c(FF)Landroid/support/v4/widget/a;
+    .locals 4
+
+    const/high16 v3, 0x447a0000    # 1000.0f
+
+    iget-object v0, p0, Landroid/support/v4/widget/a;->t:[F
+
+    const/4 v1, 0x0
+
+    div-float v2, p1, v3
+
+    aput v2, v0, v1
+
+    iget-object v0, p0, Landroid/support/v4/widget/a;->t:[F
+
+    const/4 v1, 0x1
+
+    div-float v2, p2, v3
+
+    aput v2, v0, v1
+
+    return-object p0
+.end method
+
+.method public c(I)Landroid/support/v4/widget/a;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/widget/a;->g:Landroid/support/v4/widget/a$a;
+
+    invoke-virtual {v0, p1}, Landroid/support/v4/widget/a$a;->a(I)V
+
+    return-object p0
+.end method
+
+.method c()Z
     .locals 2
 
-    iget-object v0, p0, Landroid/support/v4/widget/a;->a:Landroid/support/v4/widget/a$a;
+    iget-object v0, p0, Landroid/support/v4/widget/a;->g:Landroid/support/v4/widget/a$a;
 
     invoke-virtual {v0}, Landroid/support/v4/widget/a$a;->f()I
 
@@ -635,39 +757,35 @@
     goto :goto_0
 .end method
 
-.method public b(FF)Landroid/support/v4/widget/a;
-    .locals 4
+.method public d(FF)Landroid/support/v4/widget/a;
+    .locals 2
 
-    const/high16 v3, 0x447a0000    # 1000.0f
-
-    iget-object v0, p0, Landroid/support/v4/widget/a;->m:[F
+    iget-object v0, p0, Landroid/support/v4/widget/a;->p:[F
 
     const/4 v1, 0x0
 
-    div-float v2, p1, v3
+    aput p1, v0, v1
 
-    aput v2, v0, v1
-
-    iget-object v0, p0, Landroid/support/v4/widget/a;->m:[F
+    iget-object v0, p0, Landroid/support/v4/widget/a;->p:[F
 
     const/4 v1, 0x1
 
-    div-float v2, p2, v3
-
-    aput v2, v0, v1
+    aput p2, v0, v1
 
     return-object p0
 .end method
 
-.method public b(I)Landroid/support/v4/widget/a;
-    .locals 0
+.method public d(I)Landroid/support/v4/widget/a;
+    .locals 1
 
-    iput p1, p0, Landroid/support/v4/widget/a;->k:I
+    iget-object v0, p0, Landroid/support/v4/widget/a;->g:Landroid/support/v4/widget/a$a;
+
+    invoke-virtual {v0, p1}, Landroid/support/v4/widget/a$a;->b(I)V
 
     return-object p0
 .end method
 
-.method b()V
+.method d()V
     .locals 8
 
     const/4 v5, 0x0
@@ -688,7 +806,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v4/widget/a;->b:Landroid/view/View;
+    iget-object v1, p0, Landroid/support/v4/widget/a;->h:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -697,78 +815,16 @@
     return-void
 .end method
 
-.method public c(FF)Landroid/support/v4/widget/a;
-    .locals 4
-
-    const/high16 v3, 0x447a0000    # 1000.0f
-
-    iget-object v0, p0, Landroid/support/v4/widget/a;->l:[F
-
-    const/4 v1, 0x0
-
-    div-float v2, p1, v3
-
-    aput v2, v0, v1
-
-    iget-object v0, p0, Landroid/support/v4/widget/a;->l:[F
-
-    const/4 v1, 0x1
-
-    div-float v2, p2, v3
-
-    aput v2, v0, v1
-
-    return-object p0
-.end method
-
-.method public c(I)Landroid/support/v4/widget/a;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/widget/a;->a:Landroid/support/v4/widget/a$a;
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/widget/a$a;->a(I)V
-
-    return-object p0
-.end method
-
-.method public d(FF)Landroid/support/v4/widget/a;
-    .locals 2
-
-    iget-object v0, p0, Landroid/support/v4/widget/a;->h:[F
-
-    const/4 v1, 0x0
-
-    aput p1, v0, v1
-
-    iget-object v0, p0, Landroid/support/v4/widget/a;->h:[F
-
-    const/4 v1, 0x1
-
-    aput p2, v0, v1
-
-    return-object p0
-.end method
-
-.method public d(I)Landroid/support/v4/widget/a;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/widget/a;->a:Landroid/support/v4/widget/a$a;
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/widget/a$a;->b(I)V
-
-    return-object p0
-.end method
-
 .method public e(FF)Landroid/support/v4/widget/a;
     .locals 2
 
-    iget-object v0, p0, Landroid/support/v4/widget/a;->i:[F
+    iget-object v0, p0, Landroid/support/v4/widget/a;->q:[F
 
     const/4 v1, 0x0
 
     aput p1, v0, v1
 
-    iget-object v0, p0, Landroid/support/v4/widget/a;->i:[F
+    iget-object v0, p0, Landroid/support/v4/widget/a;->q:[F
 
     const/4 v1, 0x1
 
@@ -790,7 +846,7 @@
 
     const/4 v1, 0x0
 
-    iget-boolean v2, p0, Landroid/support/v4/widget/a;->p:Z
+    iget-boolean v2, p0, Landroid/support/v4/widget/a;->x:Z
 
     if-nez v2, :cond_0
 
@@ -806,11 +862,11 @@
 
     :cond_1
     :goto_1
-    iget-boolean v2, p0, Landroid/support/v4/widget/a;->q:Z
+    iget-boolean v2, p0, Landroid/support/v4/widget/a;->y:Z
 
     if-eqz v2, :cond_2
 
-    iget-boolean v2, p0, Landroid/support/v4/widget/a;->e:Z
+    iget-boolean v2, p0, Landroid/support/v4/widget/a;->k:Z
 
     if-eqz v2, :cond_2
 
@@ -820,9 +876,9 @@
     goto :goto_0
 
     :pswitch_0
-    iput-boolean v0, p0, Landroid/support/v4/widget/a;->d:Z
+    iput-boolean v0, p0, Landroid/support/v4/widget/a;->j:Z
 
-    iput-boolean v1, p0, Landroid/support/v4/widget/a;->o:Z
+    iput-boolean v1, p0, Landroid/support/v4/widget/a;->w:Z
 
     :pswitch_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
@@ -835,7 +891,7 @@
 
     int-to-float v3, v3
 
-    iget-object v4, p0, Landroid/support/v4/widget/a;->b:Landroid/view/View;
+    iget-object v4, p0, Landroid/support/v4/widget/a;->h:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getWidth()I
 
@@ -857,7 +913,7 @@
 
     int-to-float v4, v4
 
-    iget-object v5, p0, Landroid/support/v4/widget/a;->b:Landroid/view/View;
+    iget-object v5, p0, Landroid/support/v4/widget/a;->h:Landroid/view/View;
 
     invoke-virtual {v5}, Landroid/view/View;->getHeight()I
 
@@ -869,26 +925,26 @@
 
     move-result v3
 
-    iget-object v4, p0, Landroid/support/v4/widget/a;->a:Landroid/support/v4/widget/a$a;
+    iget-object v4, p0, Landroid/support/v4/widget/a;->g:Landroid/support/v4/widget/a$a;
 
     invoke-virtual {v4, v2, v3}, Landroid/support/v4/widget/a$a;->a(FF)V
 
-    iget-boolean v2, p0, Landroid/support/v4/widget/a;->e:Z
+    iget-boolean v2, p0, Landroid/support/v4/widget/a;->k:Z
 
     if-nez v2, :cond_1
 
-    invoke-virtual {p0}, Landroid/support/v4/widget/a;->a()Z
+    invoke-virtual {p0}, Landroid/support/v4/widget/a;->c()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    invoke-direct {p0}, Landroid/support/v4/widget/a;->c()V
+    invoke-direct {p0}, Landroid/support/v4/widget/a;->e()V
 
     goto :goto_1
 
     :pswitch_2
-    invoke-direct {p0}, Landroid/support/v4/widget/a;->d()V
+    invoke-direct {p0}, Landroid/support/v4/widget/a;->f()V
 
     goto :goto_1
 

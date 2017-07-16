@@ -1,130 +1,628 @@
-.class Landroid/support/v7/widget/aa;
-.super Landroid/support/v7/widget/z;
+.class public Landroid/support/v7/widget/aa;
+.super Landroid/widget/TextView;
+
+# interfaces
+.implements Landroid/support/v4/view/aa;
+.implements Landroid/support/v4/widget/b;
 
 
 # instance fields
-.field private b:Landroid/support/v7/widget/bd;
+.field private final a:Landroid/support/v7/widget/g;
 
-.field private c:Landroid/support/v7/widget/bd;
+.field private final b:Landroid/support/v7/widget/y;
 
 
 # direct methods
-.method constructor <init>(Landroid/widget/TextView;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    invoke-direct {p0, p1}, Landroid/support/v7/widget/z;-><init>(Landroid/widget/TextView;)V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroid/support/v7/widget/aa;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
+
+    const v0, 0x1010084
+
+    invoke-direct {p0, p1, p2, v0}, Landroid/support/v7/widget/aa;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v7/widget/bt;->a(Landroid/content/Context;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    new-instance v0, Landroid/support/v7/widget/g;
+
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/g;-><init>(Landroid/view/View;)V
+
+    iput-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/g;->a(Landroid/util/AttributeSet;I)V
+
+    invoke-static {p0}, Landroid/support/v7/widget/y;->a(Landroid/widget/TextView;)Landroid/support/v7/widget/y;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/y;->a(Landroid/util/AttributeSet;I)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/y;->a()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method a()V
-    .locals 3
+.method protected drawableStateChanged()V
+    .locals 1
 
-    invoke-super {p0}, Landroid/support/v7/widget/z;->a()V
+    invoke-super {p0}, Landroid/widget/TextView;->drawableStateChanged()V
 
-    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/bd;
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/aa;->c:Landroid/support/v7/widget/bd;
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/g;->c()V
+
+    :cond_0
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
 
     if-eqz v0, :cond_1
 
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/widget/TextView;
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getCompoundDrawablesRelative()[Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    aget-object v1, v0, v1
-
-    iget-object v2, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/bd;
-
-    invoke-virtual {p0, v1, v2}, Landroid/support/v7/widget/aa;->a(Landroid/graphics/drawable/Drawable;Landroid/support/v7/widget/bd;)V
-
-    const/4 v1, 0x2
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Landroid/support/v7/widget/aa;->c:Landroid/support/v7/widget/bd;
-
-    invoke-virtual {p0, v0, v1}, Landroid/support/v7/widget/aa;->a(Landroid/graphics/drawable/Drawable;Landroid/support/v7/widget/bd;)V
+    invoke-virtual {v0}, Landroid/support/v7/widget/y;->a()V
 
     :cond_1
     return-void
 .end method
 
-.method a(Landroid/util/AttributeSet;I)V
-    .locals 5
+.method public getAutoSizeMaxTextSize()I
+    .locals 1
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
 
-    const/4 v4, 0x0
+    invoke-static {}, Landroid/support/v4/os/b;->c()Z
 
-    invoke-super {p0, p1, p2}, Landroid/support/v7/widget/z;->a(Landroid/util/AttributeSet;I)V
+    move-result v0
 
-    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/widget/TextView;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+    invoke-super {p0}, Landroid/widget/TextView;->getAutoSizeMaxTextSize()I
 
-    move-result-object v0
+    move-result v0
 
-    invoke-static {}, Landroid/support/v7/widget/m;->a()Landroid/support/v7/widget/m;
-
-    move-result-object v1
-
-    sget-object v2, Landroid/support/v7/a/a$j;->AppCompatTextHelper:[I
-
-    invoke-virtual {v0, p1, v2, p2, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object v2
-
-    sget v3, Landroid/support/v7/a/a$j;->AppCompatTextHelper_android_drawableStart:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    sget v3, Landroid/support/v7/a/a$j;->AppCompatTextHelper_android_drawableStart:I
-
-    invoke-virtual {v2, v3, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v3
-
-    invoke-static {v0, v1, v3}, Landroid/support/v7/widget/aa;->a(Landroid/content/Context;Landroid/support/v7/widget/m;I)Landroid/support/v7/widget/bd;
-
-    move-result-object v3
-
-    iput-object v3, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/bd;
+    :goto_0
+    return v0
 
     :cond_0
-    sget v3, Landroid/support/v7/a/a$j;->AppCompatTextHelper_android_drawableEnd:I
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
 
-    invoke-virtual {v2, v3}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    if-eqz v0, :cond_1
 
-    move-result v3
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
 
-    if-eqz v3, :cond_1
+    invoke-virtual {v0}, Landroid/support/v7/widget/y;->e()I
 
-    sget v3, Landroid/support/v7/a/a$j;->AppCompatTextHelper_android_drawableEnd:I
+    move-result v0
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    goto :goto_0
 
-    move-result v3
+    :cond_1
+    const/4 v0, -0x1
 
-    invoke-static {v0, v1, v3}, Landroid/support/v7/widget/aa;->a(Landroid/content/Context;Landroid/support/v7/widget/m;I)Landroid/support/v7/widget/bd;
+    goto :goto_0
+.end method
+
+.method public getAutoSizeMinTextSize()I
+    .locals 1
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/support/v4/os/b;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0}, Landroid/widget/TextView;->getAutoSizeMinTextSize()I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/y;->d()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, -0x1
+
+    goto :goto_0
+.end method
+
+.method public getAutoSizeStepGranularity()I
+    .locals 1
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/support/v4/os/b;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0}, Landroid/widget/TextView;->getAutoSizeStepGranularity()I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/y;->c()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, -0x1
+
+    goto :goto_0
+.end method
+
+.method public getAutoSizeTextAvailableSizes()[I
+    .locals 1
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/support/v4/os/b;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0}, Landroid/widget/TextView;->getAutoSizeTextAvailableSizes()[I
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/widget/aa;->c:Landroid/support/v7/widget/bd;
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/y;->f()[I
+
+    move-result-object v0
+
+    goto :goto_0
 
     :cond_1
-    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
+    const/4 v0, 0x0
 
+    new-array v0, v0, [I
+
+    goto :goto_0
+.end method
+
+.method public getAutoSizeTextType()I
+    .locals 3
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-static {}, Landroid/support/v4/os/b;->c()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-super {p0}, Landroid/widget/TextView;->getAutoSizeTextType()I
+
+    move-result v2
+
+    if-ne v2, v0, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/y;->b()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_2
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
+    .locals 1
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
+
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/g;->a()Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
+    .locals 1
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
+
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/g;->b()Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method protected onLayout(ZIIII)V
+    .locals 6
+
+    invoke-super/range {p0 .. p5}, Landroid/widget/TextView;->onLayout(ZIIII)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    move v1, p1
+
+    move v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    move v5, p5
+
+    invoke-virtual/range {v0 .. v5}, Landroid/support/v7/widget/y;->a(ZIIII)V
+
+    :cond_0
     return-void
+.end method
+
+.method public setAutoSizeTextTypeUniformWithConfiguration(IIII)V
+    .locals 1
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/support/v4/os/b;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithConfiguration(IIII)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/support/v7/widget/y;->a(IIII)V
+
+    goto :goto_0
+.end method
+
+.method public setAutoSizeTextTypeUniformWithPresetSizes([II)V
+    .locals 1
+    .param p1    # [I
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/support/v4/os/b;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithPresetSizes([II)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/y;->a([II)V
+
+    goto :goto_0
+.end method
+
+.method public setAutoSizeTextTypeWithDefaults(I)V
+    .locals 1
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/support/v4/os/b;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->setAutoSizeTextTypeWithDefaults(I)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/y;->a(I)V
+
+    goto :goto_0
+.end method
+
+.method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/g;->a(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setBackgroundResource(I)V
+    .locals 1
+    .param p1    # I
+        .annotation build Landroid/support/annotation/p;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->setBackgroundResource(I)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/g;->a(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
+    .locals 1
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/g;->a(Landroid/content/res/ColorStateList;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    .locals 1
+    .param p1    # Landroid/graphics/PorterDuff$Mode;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->a:Landroid/support/v7/widget/g;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/g;->a(Landroid/graphics/PorterDuff$Mode;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setTextAppearance(Landroid/content/Context;I)V
+    .locals 1
+
+    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/y;->a(Landroid/content/Context;I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setTextSize(IF)V
+    .locals 1
+
+    invoke-static {}, Landroid/support/v4/os/b;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/aa;->b:Landroid/support/v7/widget/y;
+
+    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/y;->a(IF)V
+
+    goto :goto_0
 .end method

@@ -44,6 +44,10 @@
 # virtual methods
 .method public a(Landroid/graphics/Bitmap;)Landroid/support/v4/media/MediaDescriptionCompat$a;
     .locals 0
+    .param p1    # Landroid/graphics/Bitmap;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$a;->e:Landroid/graphics/Bitmap;
 
@@ -52,6 +56,10 @@
 
 .method public a(Landroid/net/Uri;)Landroid/support/v4/media/MediaDescriptionCompat$a;
     .locals 0
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$a;->f:Landroid/net/Uri;
 
@@ -60,6 +68,10 @@
 
 .method public a(Landroid/os/Bundle;)Landroid/support/v4/media/MediaDescriptionCompat$a;
     .locals 0
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$a;->g:Landroid/os/Bundle;
 
@@ -68,6 +80,10 @@
 
 .method public a(Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaDescriptionCompat$a;
     .locals 0
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$a;->b:Ljava/lang/CharSequence;
 
@@ -76,6 +92,10 @@
 
 .method public a(Ljava/lang/String;)Landroid/support/v4/media/MediaDescriptionCompat$a;
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$a;->a:Ljava/lang/String;
 
@@ -110,6 +130,10 @@
 
 .method public b(Landroid/net/Uri;)Landroid/support/v4/media/MediaDescriptionCompat$a;
     .locals 0
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$a;->h:Landroid/net/Uri;
 
@@ -118,6 +142,10 @@
 
 .method public b(Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaDescriptionCompat$a;
     .locals 0
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$a;->c:Ljava/lang/CharSequence;
 
@@ -126,6 +154,10 @@
 
 .method public c(Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaDescriptionCompat$a;
     .locals 0
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$a;->d:Ljava/lang/CharSequence;
 

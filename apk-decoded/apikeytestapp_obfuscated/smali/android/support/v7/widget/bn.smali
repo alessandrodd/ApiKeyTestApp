@@ -1,270 +1,460 @@
-.class public final Landroid/support/v7/widget/bn;
-.super Landroid/view/View;
+.class public abstract Landroid/support/v7/widget/bn;
+.super Landroid/support/v7/widget/RecyclerView$e;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroid/support/v7/widget/bn$a;
-    }
-.end annotation
+# static fields
+.field private static final a:Z = false
+
+.field private static final b:Ljava/lang/String; = "SimpleItemAnimator"
 
 
 # instance fields
-.field private a:I
+.field m:Z
 
-.field private b:I
 
-.field private c:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference",
-            "<",
-            "Landroid/view/View;",
-            ">;"
-        }
-    .end annotation
-.end field
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.field private d:Landroid/view/LayoutInflater;
+    invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$e;-><init>()V
 
-.field private e:Landroid/support/v7/widget/bn$a;
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/support/v7/widget/bn;->m:Z
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public a()Landroid/view/View;
-    .locals 4
+.method public final a(Landroid/support/v7/widget/RecyclerView$w;Z)V
+    .locals 0
 
-    invoke-virtual {p0}, Landroid/support/v7/widget/bn;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p0, p1, p2}, Landroid/support/v7/widget/bn;->d(Landroid/support/v7/widget/RecyclerView$w;Z)V
 
-    move-result-object v0
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bn;->f(Landroid/support/v7/widget/RecyclerView$w;)V
 
-    if-eqz v0, :cond_5
+    return-void
+.end method
 
-    instance-of v1, v0, Landroid/view/ViewGroup;
+.method public a(Z)V
+    .locals 0
 
-    if-eqz v1, :cond_5
+    iput-boolean p1, p0, Landroid/support/v7/widget/bn;->m:Z
 
-    iget v1, p0, Landroid/support/v7/widget/bn;->a:I
+    return-void
+.end method
 
-    if-eqz v1, :cond_4
+.method public abstract a(Landroid/support/v7/widget/RecyclerView$w;)Z
+.end method
 
-    check-cast v0, Landroid/view/ViewGroup;
+.method public abstract a(Landroid/support/v7/widget/RecyclerView$w;IIII)Z
+.end method
 
-    iget-object v1, p0, Landroid/support/v7/widget/bn;->d:Landroid/view/LayoutInflater;
+.method public a(Landroid/support/v7/widget/RecyclerView$w;Landroid/support/v7/widget/RecyclerView$e$d;Landroid/support/v7/widget/RecyclerView$e$d;)Z
+    .locals 7
+    .param p1    # Landroid/support/v7/widget/RecyclerView$w;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/support/v7/widget/RecyclerView$e$d;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/support/v7/widget/RecyclerView$e$d;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 
-    if-eqz v1, :cond_2
+    iget v2, p2, Landroid/support/v7/widget/RecyclerView$e$d;->a:I
 
-    iget-object v1, p0, Landroid/support/v7/widget/bn;->d:Landroid/view/LayoutInflater;
+    iget v3, p2, Landroid/support/v7/widget/RecyclerView$e$d;->b:I
+
+    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView$w;->a:Landroid/view/View;
+
+    if-nez p3, :cond_1
+
+    invoke-virtual {v0}, Landroid/view/View;->getLeft()I
+
+    move-result v4
 
     :goto_0
-    iget v2, p0, Landroid/support/v7/widget/bn;->a:I
+    if-nez p3, :cond_2
 
-    const/4 v3, 0x0
+    invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
-    invoke-virtual {v1, v2, v0, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v1
-
-    iget v2, p0, Landroid/support/v7/widget/bn;->b:I
-
-    const/4 v3, -0x1
-
-    if-eq v2, v3, :cond_0
-
-    iget v2, p0, Landroid/support/v7/widget/bn;->b:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
-
-    :cond_0
-    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
-
-    move-result v2
-
-    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->removeViewInLayout(Landroid/view/View;)V
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/bn;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
+    move-result v5
 
     :goto_1
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$w;->s()Z
 
-    invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    move-result v1
 
-    iput-object v0, p0, Landroid/support/v7/widget/bn;->c:Ljava/lang/ref/WeakReference;
+    if-nez v1, :cond_3
 
-    iget-object v0, p0, Landroid/support/v7/widget/bn;->e:Landroid/support/v7/widget/bn$a;
+    if-ne v2, v4, :cond_0
 
-    if-eqz v0, :cond_1
+    if-eq v3, v5, :cond_3
 
-    iget-object v0, p0, Landroid/support/v7/widget/bn;->e:Landroid/support/v7/widget/bn$a;
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
-    invoke-interface {v0, p0, v1}, Landroid/support/v7/widget/bn$a;->a(Landroid/support/v7/widget/bn;Landroid/view/View;)V
+    move-result v1
+
+    add-int/2addr v1, v4
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v6
+
+    add-int/2addr v6, v5
+
+    invoke-virtual {v0, v4, v5, v1, v6}, Landroid/view/View;->layout(IIII)V
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/support/v7/widget/bn;->a(Landroid/support/v7/widget/RecyclerView$w;IIII)Z
+
+    move-result v0
+
+    :goto_2
+    return v0
 
     :cond_1
-    return-object v1
-
-    :cond_2
-    invoke-virtual {p0}, Landroid/support/v7/widget/bn;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v1
+    iget v4, p3, Landroid/support/v7/widget/RecyclerView$e$d;->a:I
 
     goto :goto_0
 
-    :cond_3
-    invoke-virtual {v0, v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
+    :cond_2
+    iget v5, p3, Landroid/support/v7/widget/RecyclerView$e$d;->b:I
 
     goto :goto_1
 
-    :cond_4
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    :cond_3
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bn;->a(Landroid/support/v7/widget/RecyclerView$w;)Z
 
-    const-string v1, "ViewStub must have a valid layoutResource"
+    move-result v0
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_5
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "ViewStub must have a non-null ViewGroup viewParent"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    goto :goto_2
 .end method
 
-.method protected dispatchDraw(Landroid/graphics/Canvas;)V
+.method public abstract a(Landroid/support/v7/widget/RecyclerView$w;Landroid/support/v7/widget/RecyclerView$w;IIII)Z
+.end method
+
+.method public a(Landroid/support/v7/widget/RecyclerView$w;Landroid/support/v7/widget/RecyclerView$w;Landroid/support/v7/widget/RecyclerView$e$d;Landroid/support/v7/widget/RecyclerView$e$d;)Z
+    .locals 7
+    .param p1    # Landroid/support/v7/widget/RecyclerView$w;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/support/v7/widget/RecyclerView$w;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/support/v7/widget/RecyclerView$e$d;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p4    # Landroid/support/v7/widget/RecyclerView$e$d;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+
+    iget v3, p3, Landroid/support/v7/widget/RecyclerView$e$d;->a:I
+
+    iget v4, p3, Landroid/support/v7/widget/RecyclerView$e$d;->b:I
+
+    invoke-virtual {p2}, Landroid/support/v7/widget/RecyclerView$w;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v5, p3, Landroid/support/v7/widget/RecyclerView$e$d;->a:I
+
+    iget v6, p3, Landroid/support/v7/widget/RecyclerView$e$d;->b:I
+
+    :goto_0
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    invoke-virtual/range {v0 .. v6}, Landroid/support/v7/widget/bn;->a(Landroid/support/v7/widget/RecyclerView$w;Landroid/support/v7/widget/RecyclerView$w;IIII)Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    iget v5, p4, Landroid/support/v7/widget/RecyclerView$e$d;->a:I
+
+    iget v6, p4, Landroid/support/v7/widget/RecyclerView$e$d;->b:I
+
+    goto :goto_0
+.end method
+
+.method public final b(Landroid/support/v7/widget/RecyclerView$w;Z)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/support/v7/widget/bn;->c(Landroid/support/v7/widget/RecyclerView$w;Z)V
+
+    return-void
+.end method
+
+.method public abstract b(Landroid/support/v7/widget/RecyclerView$w;)Z
+.end method
+
+.method public b(Landroid/support/v7/widget/RecyclerView$w;Landroid/support/v7/widget/RecyclerView$e$d;Landroid/support/v7/widget/RecyclerView$e$d;)Z
+    .locals 6
+    .param p1    # Landroid/support/v7/widget/RecyclerView$w;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/support/v7/widget/RecyclerView$e$d;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .param p3    # Landroid/support/v7/widget/RecyclerView$e$d;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+
+    if-eqz p2, :cond_1
+
+    iget v0, p2, Landroid/support/v7/widget/RecyclerView$e$d;->a:I
+
+    iget v1, p3, Landroid/support/v7/widget/RecyclerView$e$d;->a:I
+
+    if-ne v0, v1, :cond_0
+
+    iget v0, p2, Landroid/support/v7/widget/RecyclerView$e$d;->b:I
+
+    iget v1, p3, Landroid/support/v7/widget/RecyclerView$e$d;->b:I
+
+    if-eq v0, v1, :cond_1
+
+    :cond_0
+    iget v2, p2, Landroid/support/v7/widget/RecyclerView$e$d;->a:I
+
+    iget v3, p2, Landroid/support/v7/widget/RecyclerView$e$d;->b:I
+
+    iget v4, p3, Landroid/support/v7/widget/RecyclerView$e$d;->a:I
+
+    iget v5, p3, Landroid/support/v7/widget/RecyclerView$e$d;->b:I
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/support/v7/widget/bn;->a(Landroid/support/v7/widget/RecyclerView$w;IIII)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_1
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bn;->b(Landroid/support/v7/widget/RecyclerView$w;)Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public c(Landroid/support/v7/widget/RecyclerView$w;Z)V
     .locals 0
 
     return-void
 .end method
 
-.method public draw(Landroid/graphics/Canvas;)V
-    .locals 0
+.method public c(Landroid/support/v7/widget/RecyclerView$w;Landroid/support/v7/widget/RecyclerView$e$d;Landroid/support/v7/widget/RecyclerView$e$d;)Z
+    .locals 6
+    .param p1    # Landroid/support/v7/widget/RecyclerView$w;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/support/v7/widget/RecyclerView$e$d;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/support/v7/widget/RecyclerView$e$d;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
 
-    return-void
-.end method
+    iget v0, p2, Landroid/support/v7/widget/RecyclerView$e$d;->a:I
 
-.method public getInflatedId()I
-    .locals 1
+    iget v1, p3, Landroid/support/v7/widget/RecyclerView$e$d;->a:I
 
-    iget v0, p0, Landroid/support/v7/widget/bn;->b:I
+    if-ne v0, v1, :cond_0
 
+    iget v0, p2, Landroid/support/v7/widget/RecyclerView$e$d;->b:I
+
+    iget v1, p3, Landroid/support/v7/widget/RecyclerView$e$d;->b:I
+
+    if-eq v0, v1, :cond_1
+
+    :cond_0
+    iget v2, p2, Landroid/support/v7/widget/RecyclerView$e$d;->a:I
+
+    iget v3, p2, Landroid/support/v7/widget/RecyclerView$e$d;->b:I
+
+    iget v4, p3, Landroid/support/v7/widget/RecyclerView$e$d;->a:I
+
+    iget v5, p3, Landroid/support/v7/widget/RecyclerView$e$d;->b:I
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/support/v7/widget/bn;->a(Landroid/support/v7/widget/RecyclerView$w;IIII)Z
+
+    move-result v0
+
+    :goto_0
     return v0
-.end method
 
-.method public getLayoutInflater()Landroid/view/LayoutInflater;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/widget/bn;->d:Landroid/view/LayoutInflater;
-
-    return-object v0
-.end method
-
-.method public getLayoutResource()I
-    .locals 1
-
-    iget v0, p0, Landroid/support/v7/widget/bn;->a:I
-
-    return v0
-.end method
-
-.method protected onMeasure(II)V
-    .locals 1
+    :cond_1
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bn;->l(Landroid/support/v7/widget/RecyclerView$w;)V
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0, v0}, Landroid/support/v7/widget/bn;->setMeasuredDimension(II)V
-
-    return-void
+    goto :goto_0
 .end method
 
-.method public setInflatedId(I)V
+.method public d(Landroid/support/v7/widget/RecyclerView$w;Z)V
     .locals 0
 
-    iput p1, p0, Landroid/support/v7/widget/bn;->b:I
-
     return-void
 .end method
 
-.method public setLayoutInflater(Landroid/view/LayoutInflater;)V
-    .locals 0
+.method public j(Landroid/support/v7/widget/RecyclerView$w;)Z
+    .locals 1
+    .param p1    # Landroid/support/v7/widget/RecyclerView$w;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
 
-    iput-object p1, p0, Landroid/support/v7/widget/bn;->d:Landroid/view/LayoutInflater;
+    iget-boolean v0, p0, Landroid/support/v7/widget/bn;->m:Z
 
-    return-void
-.end method
+    if-eqz v0, :cond_0
 
-.method public setLayoutResource(I)V
-    .locals 0
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$w;->p()Z
 
-    iput p1, p0, Landroid/support/v7/widget/bn;->a:I
-
-    return-void
-.end method
-
-.method public setOnInflateListener(Landroid/support/v7/widget/bn$a;)V
-    .locals 0
-
-    iput-object p1, p0, Landroid/support/v7/widget/bn;->e:Landroid/support/v7/widget/bn$a;
-
-    return-void
-.end method
-
-.method public setVisibility(I)V
-    .locals 2
-
-    iget-object v0, p0, Landroid/support/v7/widget/bn;->c:Ljava/lang/ref/WeakReference;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Landroid/support/v7/widget/bn;->c:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
     :cond_0
+    const/4 v0, 0x1
+
     :goto_0
-    return-void
+    return v0
 
     :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "setVisibility called on un-referenced view"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    if-eqz p1, :cond_3
-
-    const/4 v0, 0x4
-
-    if-ne p1, v0, :cond_0
-
-    :cond_3
-    invoke-virtual {p0}, Landroid/support/v7/widget/bn;->a()Landroid/view/View;
+    const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public final k(Landroid/support/v7/widget/RecyclerView$w;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bn;->r(Landroid/support/v7/widget/RecyclerView$w;)V
+
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bn;->f(Landroid/support/v7/widget/RecyclerView$w;)V
+
+    return-void
+.end method
+
+.method public k()Z
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/v7/widget/bn;->m:Z
+
+    return v0
+.end method
+
+.method public final l(Landroid/support/v7/widget/RecyclerView$w;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bn;->v(Landroid/support/v7/widget/RecyclerView$w;)V
+
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bn;->f(Landroid/support/v7/widget/RecyclerView$w;)V
+
+    return-void
+.end method
+
+.method public final m(Landroid/support/v7/widget/RecyclerView$w;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bn;->t(Landroid/support/v7/widget/RecyclerView$w;)V
+
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bn;->f(Landroid/support/v7/widget/RecyclerView$w;)V
+
+    return-void
+.end method
+
+.method public final n(Landroid/support/v7/widget/RecyclerView$w;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bn;->q(Landroid/support/v7/widget/RecyclerView$w;)V
+
+    return-void
+.end method
+
+.method public final o(Landroid/support/v7/widget/RecyclerView$w;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bn;->u(Landroid/support/v7/widget/RecyclerView$w;)V
+
+    return-void
+.end method
+
+.method public final p(Landroid/support/v7/widget/RecyclerView$w;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/bn;->s(Landroid/support/v7/widget/RecyclerView$w;)V
+
+    return-void
+.end method
+
+.method public q(Landroid/support/v7/widget/RecyclerView$w;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public r(Landroid/support/v7/widget/RecyclerView$w;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public s(Landroid/support/v7/widget/RecyclerView$w;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public t(Landroid/support/v7/widget/RecyclerView$w;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public u(Landroid/support/v7/widget/RecyclerView$w;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public v(Landroid/support/v7/widget/RecyclerView$w;)V
+    .locals 0
+
+    return-void
 .end method

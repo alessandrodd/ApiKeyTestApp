@@ -1,33 +1,33 @@
 Manifest-Version: 1.0
 Built-By: Generated-by-ADT
-Created-By: Android Gradle 3.0.0-alpha3
+Created-By: Android Gradle 3.0.0-alpha6
 
 Name: AndroidManifest.xml
 SHA1-Digest: Ou/yOIBH3dKIU3S7fMGPpVlYNyU=
 
 Name: classes.dex
-SHA1-Digest: +2T7SlrRmeHFsoGPrxTw5x6Uws0=
+SHA1-Digest: hLP7m6aoVJvhmNertni9/6ibyjY=
 
 Name: lib/arm64-v8a/libnative-lib.so
-SHA1-Digest: XS2P6fjMYAx/mPllfsXgoDxPDxM=
+SHA1-Digest: HRl1qRc3vW9NUEC/nRQOKtwktDQ=
 
 Name: lib/armeabi-v7a/libnative-lib.so
-SHA1-Digest: 5j4kKt351gdp4gOVg6U11PdXihs=
+SHA1-Digest: 1+clMSvik/0bC7L1vFGmz4XXYE8=
 
 Name: lib/armeabi/libnative-lib.so
-SHA1-Digest: 2BPzC90Schh2gmeyqnVAxJlMXPg=
+SHA1-Digest: NAa6gSKLx109xla/SNWXBJXTWlU=
 
 Name: lib/mips/libnative-lib.so
-SHA1-Digest: bgn5lY8xEjDihTS8OQnKH4uL/TA=
+SHA1-Digest: 1FLfRO70vZWItmH3TDtJLWPeQOQ=
 
 Name: lib/mips64/libnative-lib.so
-SHA1-Digest: GQKc2Jos1pI3Npw8wvgvt1Ba+88=
+SHA1-Digest: UENSh3Tus90/hTSRUsiMxYdZIyE=
 
 Name: lib/x86/libnative-lib.so
-SHA1-Digest: OoKHZqaI5aaJ2qVm9wK46N5QTeY=
+SHA1-Digest: 4szjU/XiA6Bpl1slJmlV8mWji8M=
 
 Name: lib/x86_64/libnative-lib.so
-SHA1-Digest: WQtxX3Afuoc/VDbq6l52t4orvtc=
+SHA1-Digest: Yy750LRk36wmH7cc0KGkz/1FZAw=
 
 Name: res/anim-v21/design_bottom_sheet_slide_in.xml
 SHA1-Digest: d7lJ4yjVYYnLa1PSHjxdywHFj/4=
@@ -1498,5 +1498,5 @@ Name: res/mipmap-xxxhdpi-v4/ic_launcher_round.png
 SHA1-Digest: 7tjrvLmnbDWwVVVtpG7cGVxbVcI=
 
 Name: resources.arsc
-SHA1-Digest: fhMhd15LNAM+5hAoBhnz7Z7JH2U=
+SHA1-Digest: 4EvISWEfhgXysM5IvM6phLrZJ9I=
 

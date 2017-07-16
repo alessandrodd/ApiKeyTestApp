@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="abc_action_bar_home_description">హోమ్‌కు నావిగేట్ చేయండి</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
     <string name="abc_action_bar_up_description">పైకి నావిగేట్ చేయండి</string>
     <string name="abc_action_menu_overflow_description">మరిన్ని ఎంపికలు</string>
     <string name="abc_action_mode_done">పూర్తయింది</string>
@@ -18,4 +20,5 @@
     <string name="abc_shareactionprovider_share_with_application">%sతో భాగస్వామ్యం చేయి</string>
     <string name="abc_toolbar_collapse_description">కుదించండి</string>
     <string name="search_menu_title">శోధించు</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

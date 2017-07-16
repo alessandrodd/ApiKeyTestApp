@@ -3,6 +3,10 @@
 
 
 # annotations
+.annotation build Landroid/support/annotation/ai;
+    a = 0x10
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroid/support/v4/view/a;
 .end annotation
@@ -24,7 +28,7 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View$AccessibilityDelegate;Landroid/view/View;)Landroid/support/v4/view/a/d;
+.method public a(Landroid/view/View$AccessibilityDelegate;Landroid/view/View;)Landroid/support/v4/view/a/e;
     .locals 2
 
     invoke-virtual {p1, p2}, Landroid/view/View$AccessibilityDelegate;->getAccessibilityNodeProvider(Landroid/view/View;)Landroid/view/accessibility/AccessibilityNodeProvider;
@@ -33,9 +37,9 @@
 
     if-eqz v1, :cond_0
 
-    new-instance v0, Landroid/support/v4/view/a/d;
+    new-instance v0, Landroid/support/v4/view/a/e;
 
-    invoke-direct {v0, v1}, Landroid/support/v4/view/a/d;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Landroid/support/v4/view/a/e;-><init>(Ljava/lang/Object;)V
 
     :goto_0
     return-object v0

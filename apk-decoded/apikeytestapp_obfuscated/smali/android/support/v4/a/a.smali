@@ -1,41 +1,66 @@
-.class public Landroid/support/v4/a/a;
+.class public final Landroid/support/v4/a/a;
 .super Ljava/lang/Object;
 
 
-# static fields
-.field private static final a:Ljava/lang/Object;
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/support/v4/a/a$b;,
+        Landroid/support/v4/a/a$a;,
+        Landroid/support/v4/a/a$c;
+    }
+.end annotation
 
-.field private static b:Landroid/util/TypedValue;
+
+# static fields
+.field public static final a:I = 0x1
+
+.field public static final b:I = 0x2
+
+.field public static final c:I = 0x4
+
+.field public static final d:I = 0x8
+
+.field public static final e:I = 0x20
+
+.field public static final f:I = -0x1
+
+.field public static final g:I = 0x1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
+
+.field public static final h:I = 0x2
+
+.field public static final i:I = 0x4
+
+.field public static final j:I = 0x8
+
+.field public static final k:I = 0x10
+
+.field public static final l:I = 0x20
+
+.field private static final m:Landroid/support/v4/a/a$c;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Landroid/support/v4/a/a;->a:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public static final a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-    .locals 4
+    .locals 2
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v1, 0x15
+    const/16 v1, 0x12
 
     if-lt v0, v1, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    new-instance v0, Landroid/support/v4/a/a$b;
 
-    move-result-object v0
+    invoke-direct {v0}, Landroid/support/v4/a/a$b;-><init>()V
+
+    sput-object v0, Landroid/support/v4/a/a;->m:Landroid/support/v4/a/a$c;
 
     :goto_0
-    return-object v0
+    return-void
 
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -44,124 +69,308 @@
 
     if-lt v0, v1, :cond_1
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    new-instance v0, Landroid/support/v4/a/a$a;
 
-    move-result-object v0
+    invoke-direct {v0}, Landroid/support/v4/a/a$a;-><init>()V
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
+    sput-object v0, Landroid/support/v4/a/a;->m:Landroid/support/v4/a/a$c;
 
     goto :goto_0
 
     :cond_1
-    sget-object v1, Landroid/support/v4/a/a;->a:Ljava/lang/Object;
+    new-instance v0, Landroid/support/v4/a/a$c;
 
-    monitor-enter v1
+    invoke-direct {v0}, Landroid/support/v4/a/a$c;-><init>()V
 
-    :try_start_0
-    sget-object v0, Landroid/support/v4/a/a;->b:Landroid/util/TypedValue;
+    sput-object v0, Landroid/support/v4/a/a;->m:Landroid/support/v4/a/a$c;
 
-    if-nez v0, :cond_2
+    goto :goto_0
+.end method
 
-    new-instance v0, Landroid/util/TypedValue;
+.method private constructor <init>()V
+    .locals 0
 
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Landroid/support/v4/a/a;->b:Landroid/util/TypedValue;
+    return-void
+.end method
 
-    :cond_2
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget-object v2, Landroid/support/v4/a/a;->b:Landroid/util/TypedValue;
+.method public static a(I)Ljava/lang/String;
+    .locals 4
 
     const/4 v3, 0x1
 
-    invoke-virtual {v0, p1, v2, v3}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object v0, Landroid/support/v4/a/a;->b:Landroid/util/TypedValue;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v0, v0, Landroid/util/TypedValue;->resourceId:I
+    const-string v1, "["
 
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    :goto_0
+    if-lez p0, :cond_1
 
-    move-result-object v1
+    invoke-static {p0}, Ljava/lang/Integer;->numberOfTrailingZeros(I)I
 
-    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    move-result v1
 
-    move-result-object v0
+    shl-int v1, v3, v1
+
+    xor-int/lit8 v2, v1, -0x1
+
+    and-int/2addr p0, v2
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v2
+
+    if-le v2, v3, :cond_0
+
+    const-string v2, ", "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    sparse-switch v1, :sswitch_data_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :sswitch_0
+    const-string v1, "FEEDBACK_SPOKEN"
 
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    throw v0
-.end method
+    goto :goto_0
 
-.method public static final b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
-    .locals 2
+    :sswitch_1
+    const-string v1, "FEEDBACK_AUDIBLE"
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x17
+    goto :goto_0
 
-    if-lt v0, v1, :cond_0
+    :sswitch_2
+    const-string v1, "FEEDBACK_HAPTIC"
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getColorStateList(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v1, "FEEDBACK_GENERIC"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v1, "FEEDBACK_VISUAL"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_0
+        0x2 -> :sswitch_2
+        0x4 -> :sswitch_1
+        0x8 -> :sswitch_4
+        0x10 -> :sswitch_3
+    .end sparse-switch
+.end method
+
+.method public static a(Landroid/accessibilityservice/AccessibilityServiceInfo;)Ljava/lang/String;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static a(Landroid/accessibilityservice/AccessibilityServiceInfo;Landroid/content/pm/PackageManager;)Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Landroid/support/v4/a/a;->m:Landroid/support/v4/a/a$c;
+
+    invoke-virtual {v0, p0, p1}, Landroid/support/v4/a/a$c;->a(Landroid/accessibilityservice/AccessibilityServiceInfo;Landroid/content/pm/PackageManager;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static b(Landroid/accessibilityservice/AccessibilityServiceInfo;)Landroid/content/pm/ResolveInfo;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static b(I)Ljava/lang/String;
+    .locals 1
+
+    sparse-switch p0, :sswitch_data_0
+
+    const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    :cond_0
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v0
+    :sswitch_0
+    const-string v0, "DEFAULT"
 
     goto :goto_0
+
+    :sswitch_1
+    const-string v0, "FLAG_INCLUDE_NOT_IMPORTANT_VIEWS"
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "FLAG_REQUEST_TOUCH_EXPLORATION_MODE"
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "FLAG_REQUEST_ENHANCED_WEB_ACCESSIBILITY"
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v0, "FLAG_REPORT_VIEW_IDS"
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v0, "FLAG_REQUEST_FILTER_KEY_EVENTS"
+
+    goto :goto_0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_0
+        0x2 -> :sswitch_1
+        0x4 -> :sswitch_2
+        0x8 -> :sswitch_3
+        0x10 -> :sswitch_4
+        0x20 -> :sswitch_5
+    .end sparse-switch
 .end method
 
-.method public static final c(Landroid/content/Context;I)I
-    .locals 2
+.method public static c(I)Ljava/lang/String;
+    .locals 1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    packed-switch p0, :pswitch_data_0
 
-    const/16 v1, 0x17
-
-    if-lt v0, v1, :cond_0
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getColor(I)I
-
-    move-result v0
+    :pswitch_0
+    const-string v0, "UNKNOWN"
 
     :goto_0
-    return v0
+    return-object v0
 
-    :cond_0
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    :pswitch_1
+    const-string v0, "CAPABILITY_CAN_RETRIEVE_WINDOW_CONTENT"
+
+    goto :goto_0
+
+    :pswitch_2
+    const-string v0, "CAPABILITY_CAN_REQUEST_TOUCH_EXPLORATION"
+
+    goto :goto_0
+
+    :pswitch_3
+    const-string v0, "CAPABILITY_CAN_REQUEST_ENHANCED_WEB_ACCESSIBILITY"
+
+    goto :goto_0
+
+    :pswitch_4
+    const-string v0, "CAPABILITY_CAN_FILTER_KEY_EVENTS"
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_3
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_4
+    .end packed-switch
+.end method
+
+.method public static c(Landroid/accessibilityservice/AccessibilityServiceInfo;)Ljava/lang/String;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getSettingsActivityName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
+    return-object v0
+.end method
+
+.method public static d(Landroid/accessibilityservice/AccessibilityServiceInfo;)Z
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getCanRetrieveWindowContent()Z
 
     move-result v0
 
-    goto :goto_0
+    return v0
+.end method
+
+.method public static e(Landroid/accessibilityservice/AccessibilityServiceInfo;)Ljava/lang/String;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getDescription()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static f(Landroid/accessibilityservice/AccessibilityServiceInfo;)I
+    .locals 1
+
+    sget-object v0, Landroid/support/v4/a/a;->m:Landroid/support/v4/a/a$c;
+
+    invoke-virtual {v0, p0}, Landroid/support/v4/a/a$c;->a(Landroid/accessibilityservice/AccessibilityServiceInfo;)I
+
+    move-result v0
+
+    return v0
 .end method

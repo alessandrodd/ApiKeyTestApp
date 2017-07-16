@@ -1,191 +1,200 @@
 .class public Landroid/support/design/internal/i;
-.super Landroid/widget/FrameLayout;
+.super Landroid/support/h/ao;
 
 
-# instance fields
-.field a:Landroid/graphics/drawable/Drawable;
+# annotations
+.annotation build Landroid/support/annotation/ai;
+    a = 0xe
+.end annotation
 
-.field b:Landroid/graphics/Rect;
+.annotation build Landroid/support/annotation/ak;
+    a = {
+        .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+    }
+.end annotation
 
-.field private c:Landroid/graphics/Rect;
+
+# static fields
+.field private static final a:Ljava/lang/String; = "android:textscale:scale"
 
 
-# virtual methods
-.method public draw(Landroid/graphics/Canvas;)V
-    .locals 8
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-    const/4 v7, 0x0
+    invoke-direct {p0}, Landroid/support/h/ao;-><init>()V
 
-    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->draw(Landroid/graphics/Canvas;)V
+    return-void
+.end method
 
-    invoke-virtual {p0}, Landroid/support/design/internal/i;->getWidth()I
+.method private d(Landroid/support/h/au;)V
+    .locals 3
+
+    iget-object v0, p1, Landroid/support/h/au;->b:Landroid/view/View;
+
+    instance-of v0, v0, Landroid/widget/TextView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Landroid/support/h/au;->b:Landroid/view/View;
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iget-object v1, p1, Landroid/support/h/au;->a:Ljava/util/Map;
+
+    const-string v2, "android:textscale:scale"
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getScaleX()F
 
     move-result v0
 
-    invoke-virtual {p0}, Landroid/support/design/internal/i;->getHeight()I
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Landroid/view/ViewGroup;Landroid/support/h/au;Landroid/support/h/au;)Landroid/animation/Animator;
+    .locals 6
+
+    const/4 v4, 0x0
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    if-eqz p2, :cond_0
+
+    if-eqz p3, :cond_0
+
+    iget-object v0, p2, Landroid/support/h/au;->b:Landroid/view/View;
+
+    instance-of v0, v0, Landroid/widget/TextView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p3, Landroid/support/h/au;->b:Landroid/view/View;
+
+    instance-of v0, v0, Landroid/widget/TextView;
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    move-object v0, v4
+
+    :goto_0
+    return-object v0
+
+    :cond_1
+    iget-object v0, p3, Landroid/support/h/au;->b:Landroid/view/View;
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iget-object v1, p2, Landroid/support/h/au;->a:Ljava/util/Map;
+
+    iget-object v5, p3, Landroid/support/h/au;->a:Ljava/util/Map;
+
+    const-string v2, "android:textscale:scale"
+
+    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_3
+
+    const-string v2, "android:textscale:scale"
+
+    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Float;
+
+    invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
 
     move-result v1
 
-    iget-object v2, p0, Landroid/support/design/internal/i;->b:Landroid/graphics/Rect;
+    move v2, v1
 
-    if-eqz v2, :cond_0
+    :goto_1
+    const-string v1, "android:textscale:scale"
 
-    iget-object v2, p0, Landroid/support/design/internal/i;->a:Landroid/graphics/drawable/Drawable;
+    invoke-interface {v5, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v2, :cond_0
+    move-result-object v1
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    if-eqz v1, :cond_2
 
-    move-result v2
+    const-string v1, "android:textscale:scale"
 
-    invoke-virtual {p0}, Landroid/support/design/internal/i;->getScrollX()I
+    invoke-interface {v5, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Float;
+
+    invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
 
     move-result v3
 
-    int-to-float v3, v3
+    :cond_2
+    cmpl-float v1, v2, v3
 
-    invoke-virtual {p0}, Landroid/support/design/internal/i;->getScrollY()I
+    if-nez v1, :cond_4
 
-    move-result v4
+    move-object v0, v4
 
-    int-to-float v4, v4
+    goto :goto_0
 
-    invoke-virtual {p1, v3, v4}, Landroid/graphics/Canvas;->translate(FF)V
+    :cond_3
+    move v2, v3
 
-    iget-object v3, p0, Landroid/support/design/internal/i;->c:Landroid/graphics/Rect;
+    goto :goto_1
 
-    iget-object v4, p0, Landroid/support/design/internal/i;->b:Landroid/graphics/Rect;
+    :cond_4
+    const/4 v1, 0x2
 
-    iget v4, v4, Landroid/graphics/Rect;->top:I
+    new-array v1, v1, [F
 
-    invoke-virtual {v3, v7, v7, v0, v4}, Landroid/graphics/Rect;->set(IIII)V
+    const/4 v4, 0x0
 
-    iget-object v3, p0, Landroid/support/design/internal/i;->a:Landroid/graphics/drawable/Drawable;
+    aput v2, v1, v4
 
-    iget-object v4, p0, Landroid/support/design/internal/i;->c:Landroid/graphics/Rect;
+    const/4 v2, 0x1
 
-    invoke-virtual {v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    aput v3, v1, v2
 
-    iget-object v3, p0, Landroid/support/design/internal/i;->a:Landroid/graphics/drawable/Drawable;
+    invoke-static {v1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
-    invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    move-result-object v1
 
-    iget-object v3, p0, Landroid/support/design/internal/i;->c:Landroid/graphics/Rect;
+    new-instance v2, Landroid/support/design/internal/i$1;
 
-    iget-object v4, p0, Landroid/support/design/internal/i;->b:Landroid/graphics/Rect;
+    invoke-direct {v2, p0, v0}, Landroid/support/design/internal/i$1;-><init>(Landroid/support/design/internal/i;Landroid/widget/TextView;)V
 
-    iget v4, v4, Landroid/graphics/Rect;->bottom:I
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    sub-int v4, v1, v4
+    move-object v0, v1
 
-    invoke-virtual {v3, v7, v4, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
+    goto :goto_0
+.end method
 
-    iget-object v3, p0, Landroid/support/design/internal/i;->a:Landroid/graphics/drawable/Drawable;
+.method public a(Landroid/support/h/au;)V
+    .locals 0
 
-    iget-object v4, p0, Landroid/support/design/internal/i;->c:Landroid/graphics/Rect;
+    invoke-direct {p0, p1}, Landroid/support/design/internal/i;->d(Landroid/support/h/au;)V
 
-    invoke-virtual {v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
-
-    iget-object v3, p0, Landroid/support/design/internal/i;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    iget-object v3, p0, Landroid/support/design/internal/i;->c:Landroid/graphics/Rect;
-
-    iget-object v4, p0, Landroid/support/design/internal/i;->b:Landroid/graphics/Rect;
-
-    iget v4, v4, Landroid/graphics/Rect;->top:I
-
-    iget-object v5, p0, Landroid/support/design/internal/i;->b:Landroid/graphics/Rect;
-
-    iget v5, v5, Landroid/graphics/Rect;->left:I
-
-    iget-object v6, p0, Landroid/support/design/internal/i;->b:Landroid/graphics/Rect;
-
-    iget v6, v6, Landroid/graphics/Rect;->bottom:I
-
-    sub-int v6, v1, v6
-
-    invoke-virtual {v3, v7, v4, v5, v6}, Landroid/graphics/Rect;->set(IIII)V
-
-    iget-object v3, p0, Landroid/support/design/internal/i;->a:Landroid/graphics/drawable/Drawable;
-
-    iget-object v4, p0, Landroid/support/design/internal/i;->c:Landroid/graphics/Rect;
-
-    invoke-virtual {v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
-
-    iget-object v3, p0, Landroid/support/design/internal/i;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    iget-object v3, p0, Landroid/support/design/internal/i;->c:Landroid/graphics/Rect;
-
-    iget-object v4, p0, Landroid/support/design/internal/i;->b:Landroid/graphics/Rect;
-
-    iget v4, v4, Landroid/graphics/Rect;->right:I
-
-    sub-int v4, v0, v4
-
-    iget-object v5, p0, Landroid/support/design/internal/i;->b:Landroid/graphics/Rect;
-
-    iget v5, v5, Landroid/graphics/Rect;->top:I
-
-    iget-object v6, p0, Landroid/support/design/internal/i;->b:Landroid/graphics/Rect;
-
-    iget v6, v6, Landroid/graphics/Rect;->bottom:I
-
-    sub-int/2addr v1, v6
-
-    invoke-virtual {v3, v4, v5, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
-
-    iget-object v0, p0, Landroid/support/design/internal/i;->a:Landroid/graphics/drawable/Drawable;
-
-    iget-object v1, p0, Landroid/support/design/internal/i;->c:Landroid/graphics/Rect;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
-
-    iget-object v0, p0, Landroid/support/design/internal/i;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    :cond_0
     return-void
 .end method
 
-.method protected onAttachedToWindow()V
-    .locals 1
+.method public b(Landroid/support/h/au;)V
+    .locals 0
 
-    invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
+    invoke-direct {p0, p1}, Landroid/support/design/internal/i;->d(Landroid/support/h/au;)V
 
-    iget-object v0, p0, Landroid/support/design/internal/i;->a:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/design/internal/i;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method protected onDetachedFromWindow()V
-    .locals 2
-
-    invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
-
-    iget-object v0, p0, Landroid/support/design/internal/i;->a:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/design/internal/i;->a:Landroid/graphics/drawable/Drawable;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    :cond_0
     return-void
 .end method

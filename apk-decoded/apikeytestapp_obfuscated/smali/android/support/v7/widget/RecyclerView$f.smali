@@ -1,5 +1,8 @@
-.class public abstract Landroid/support/v7/widget/RecyclerView$f;
+.class Landroid/support/v7/widget/RecyclerView$f;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/support/v7/widget/RecyclerView$e$c;
 
 
 # annotations
@@ -8,14 +11,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x409
+    accessFlags = 0x2
     name = "f"
 .end annotation
 
 
+# instance fields
+.field final synthetic a:Landroid/support/v7/widget/RecyclerView;
+
+
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Landroid/support/v7/widget/RecyclerView;)V
     .locals 0
+
+    iput-object p1, p0, Landroid/support/v7/widget/RecyclerView$f;->a:Landroid/support/v7/widget/RecyclerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -24,64 +33,58 @@
 
 
 # virtual methods
-.method public a(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+.method public a(Landroid/support/v7/widget/RecyclerView$w;)V
+    .locals 3
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
-.method public a(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;Landroid/support/v7/widget/RecyclerView$r;)V
-    .locals 0
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Landroid/support/v7/widget/RecyclerView$f;->a(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V
+    invoke-virtual {p1, v0}, Landroid/support/v7/widget/RecyclerView$w;->a(Z)V
 
-    return-void
-.end method
+    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView$w;->h:Landroid/support/v7/widget/RecyclerView$w;
 
-.method public a(Landroid/graphics/Rect;ILandroid/support/v7/widget/RecyclerView;)V
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x0
+    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView$w;->i:Landroid/support/v7/widget/RecyclerView$w;
 
-    invoke-virtual {p1, v0, v0, v0, v0}, Landroid/graphics/Rect;->set(IIII)V
+    if-nez v0, :cond_0
 
-    return-void
-.end method
+    iput-object v1, p1, Landroid/support/v7/widget/RecyclerView$w;->h:Landroid/support/v7/widget/RecyclerView$w;
 
-.method public a(Landroid/graphics/Rect;Landroid/view/View;Landroid/support/v7/widget/RecyclerView;Landroid/support/v7/widget/RecyclerView$r;)V
-    .locals 1
+    :cond_0
+    iput-object v1, p1, Landroid/support/v7/widget/RecyclerView$w;->i:Landroid/support/v7/widget/RecyclerView$w;
 
-    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/support/v7/widget/RecyclerView$h;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$h;->f()I
+    invoke-static {p1}, Landroid/support/v7/widget/RecyclerView$w;->c(Landroid/support/v7/widget/RecyclerView$w;)Z
 
     move-result v0
 
-    invoke-virtual {p0, p1, v0, p3}, Landroid/support/v7/widget/RecyclerView$f;->a(Landroid/graphics/Rect;ILandroid/support/v7/widget/RecyclerView;)V
+    if-nez v0, :cond_1
 
-    return-void
-.end method
+    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$f;->a:Landroid/support/v7/widget/RecyclerView;
 
-.method public b(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+    iget-object v1, p1, Landroid/support/v7/widget/RecyclerView$w;->a:Landroid/view/View;
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->a(Landroid/view/View;)Z
 
-.method public b(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;Landroid/support/v7/widget/RecyclerView$r;)V
-    .locals 0
+    move-result v0
 
-    invoke-virtual {p0, p1, p2}, Landroid/support/v7/widget/RecyclerView$f;->b(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V
+    if-nez v0, :cond_1
 
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$w;->t()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$f;->a:Landroid/support/v7/widget/RecyclerView;
+
+    iget-object v1, p1, Landroid/support/v7/widget/RecyclerView$w;->a:Landroid/view/View;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/support/v7/widget/RecyclerView;->removeDetachedView(Landroid/view/View;Z)V
+
+    :cond_1
     return-void
 .end method

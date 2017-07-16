@@ -1,5 +1,5 @@
 .class Landroid/support/v7/app/i$a;
-.super Landroid/support/v7/app/f$a;
+.super Landroid/support/v7/app/l$a;
 
 
 # annotations
@@ -14,76 +14,61 @@
 
 
 # instance fields
-.field final synthetic c:Landroid/support/v7/app/i;
+.field final synthetic b:Landroid/support/v7/app/i;
 
 
 # direct methods
 .method constructor <init>(Landroid/support/v7/app/i;Landroid/view/Window$Callback;)V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v7/app/i$a;->c:Landroid/support/v7/app/i;
+    iput-object p1, p0, Landroid/support/v7/app/i$a;->b:Landroid/support/v7/app/i;
 
-    invoke-direct {p0, p1, p2}, Landroid/support/v7/app/f$a;-><init>(Landroid/support/v7/app/f;Landroid/view/Window$Callback;)V
+    invoke-direct {p0, p1, p2}, Landroid/support/v7/app/l$a;-><init>(Landroid/support/v7/app/l;Landroid/view/Window$Callback;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method final a(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
-    .locals 2
+.method public onProvideKeyboardShortcuts(Ljava/util/List;Landroid/view/Menu;I)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/KeyboardShortcutGroup;",
+            ">;",
+            "Landroid/view/Menu;",
+            "I)V"
+        }
+    .end annotation
 
-    new-instance v0, Landroid/support/v7/e/f$a;
+    iget-object v0, p0, Landroid/support/v7/app/i$a;->b:Landroid/support/v7/app/i;
 
-    iget-object v1, p0, Landroid/support/v7/app/i$a;->c:Landroid/support/v7/app/i;
+    const/4 v1, 0x0
 
-    iget-object v1, v1, Landroid/support/v7/app/i;->a:Landroid/content/Context;
+    const/4 v2, 0x1
 
-    invoke-direct {v0, v1, p1}, Landroid/support/v7/e/f$a;-><init>(Landroid/content/Context;Landroid/view/ActionMode$Callback;)V
-
-    iget-object v1, p0, Landroid/support/v7/app/i$a;->c:Landroid/support/v7/app/i;
-
-    invoke-virtual {v1, v0}, Landroid/support/v7/app/i;->b(Landroid/support/v7/e/b$a;)Landroid/support/v7/e/b;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/e/f$a;->b(Landroid/support/v7/e/b;)Landroid/view/ActionMode;
+    invoke-virtual {v0, v1, v2}, Landroid/support/v7/app/i;->a(IZ)Landroid/support/v7/app/AppCompatDelegateImplV9$PanelFeatureState;
 
     move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/app/i$a;->c:Landroid/support/v7/app/i;
-
-    invoke-virtual {v0}, Landroid/support/v7/app/i;->k()Z
-
-    move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/support/v7/app/i$a;->a(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
+    iget-object v1, v0, Landroid/support/v7/app/AppCompatDelegateImplV9$PanelFeatureState;->j:Landroid/support/v7/view/menu/h;
 
-    move-result-object v0
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Landroid/support/v7/app/AppCompatDelegateImplV9$PanelFeatureState;->j:Landroid/support/v7/view/menu/h;
+
+    invoke-super {p0, p1, v0, p3}, Landroid/support/v7/app/l$a;->onProvideKeyboardShortcuts(Ljava/util/List;Landroid/view/Menu;I)V
 
     :goto_0
-    return-object v0
+    return-void
 
     :cond_0
-    invoke-super {p0, p1}, Landroid/support/v7/app/f$a;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
-
-    move-result-object v0
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v7/app/l$a;->onProvideKeyboardShortcuts(Ljava/util/List;Landroid/view/Menu;I)V
 
     goto :goto_0
 .end method

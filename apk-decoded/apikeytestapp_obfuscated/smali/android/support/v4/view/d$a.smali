@@ -1,5 +1,5 @@
-.class Landroid/support/v4/view/d$a;
-.super Landroid/support/v4/view/d$b;
+.class interface abstract Landroid/support/v4/view/d$a;
+.super Ljava/lang/Object;
 
 
 # annotations
@@ -8,26 +8,20 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x608
     name = "a"
 .end annotation
 
 
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Landroid/support/v4/view/d$b;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract a(Landroid/view/GestureDetector$OnDoubleTapListener;)V
 .end method
 
+.method public abstract a(Z)V
+.end method
 
-# virtual methods
-.method public a(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
-    .locals 0
+.method public abstract a()Z
+.end method
 
-    invoke-virtual {p1, p2}, Landroid/view/LayoutInflater;->setFactory2(Landroid/view/LayoutInflater$Factory2;)V
-
-    return-void
+.method public abstract a(Landroid/view/MotionEvent;)Z
 .end method

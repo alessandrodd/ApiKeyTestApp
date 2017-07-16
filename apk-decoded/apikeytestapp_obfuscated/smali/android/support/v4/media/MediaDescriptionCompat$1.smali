@@ -54,7 +54,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {p1}, Landroid/support/v4/media/a;->a(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-static {p1}, Landroid/support/v4/media/l;->a(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object v0
 

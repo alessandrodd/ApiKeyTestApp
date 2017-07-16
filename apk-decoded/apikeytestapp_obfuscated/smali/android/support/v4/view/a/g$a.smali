@@ -1,5 +1,5 @@
-.class Landroid/support/v4/view/a/g$a;
-.super Landroid/support/v4/view/a/g$c;
+.class interface abstract Landroid/support/v4/view/a/g$a;
+.super Ljava/lang/Object;
 
 
 # annotations
@@ -8,34 +8,31 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x608
     name = "a"
 .end annotation
 
 
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Landroid/support/v4/view/a/g$c;-><init>()V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public a(Landroid/view/accessibility/AccessibilityRecord;I)V
-    .locals 0
-
-    invoke-virtual {p1, p2}, Landroid/view/accessibility/AccessibilityRecord;->setMaxScrollX(I)V
-
-    return-void
+.method public abstract a(I)Ljava/lang/Object;
 .end method
 
-.method public b(Landroid/view/accessibility/AccessibilityRecord;I)V
-    .locals 0
+.method public abstract a(Ljava/lang/String;I)Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "I)",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    invoke-virtual {p1, p2}, Landroid/view/accessibility/AccessibilityRecord;->setMaxScrollY(I)V
+.method public abstract a(IILandroid/os/Bundle;)Z
+.end method
 
-    return-void
+.method public abstract b(I)Ljava/lang/Object;
 .end method

@@ -1,25 +1,22 @@
-.class public interface abstract Landroid/support/v4/view/k;
+.class public final Landroid/support/v4/view/k;
 .super Ljava/lang/Object;
 
 
-# virtual methods
-.method public abstract onNestedFling(Landroid/view/View;FFZ)Z
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method
 
-.method public abstract onNestedPreFling(Landroid/view/View;FF)Z
-.end method
+.method public static a(Landroid/view/MenuItem;I)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-.method public abstract onNestedPreScroll(Landroid/view/View;II[I)V
-.end method
+    invoke-interface {p0, p1}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
-.method public abstract onNestedScroll(Landroid/view/View;IIII)V
-.end method
-
-.method public abstract onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;I)V
-.end method
-
-.method public abstract onStartNestedScroll(Landroid/view/View;Landroid/view/View;I)Z
-.end method
-
-.method public abstract onStopNestedScroll(Landroid/view/View;)V
+    return-void
 .end method

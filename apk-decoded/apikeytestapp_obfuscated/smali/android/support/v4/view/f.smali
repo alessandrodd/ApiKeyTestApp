@@ -2,203 +2,55 @@
 .super Ljava/lang/Object;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroid/support/v4/view/f$a;,
-        Landroid/support/v4/view/f$b;,
-        Landroid/support/v4/view/f$c;
-    }
-.end annotation
-
-
 # static fields
-.field static final a:Landroid/support/v4/view/f$c;
+.field public static final a:I = 0xff
+
+.field public static final b:I = 0x0
+
+.field public static final c:I = 0x1
+
+.field public static final d:I = 0x2
+
+.field public static final e:I = 0x4
+
+.field public static final f:I = 0x8
+
+.field public static final g:I = 0x10
+
+.field public static final h:I = 0x0
+
+.field public static final i:I = 0x101
+
+.field public static final j:I = 0x201
+
+.field public static final k:I = 0x401
+
+.field public static final l:I = 0x1002
+
+.field public static final m:I = 0x2002
+
+.field public static final n:I = 0x4002
+
+.field public static final o:I = 0x10004
+
+.field public static final p:I = 0x100008
+
+.field public static final q:I = 0x200000
+
+.field public static final r:I = 0x400000
+
+.field public static final s:I = 0x1000010
+
+.field public static final t:I = 0x2000001
+
+.field public static final u:I = -0x100
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method private constructor <init>()V
+    .locals 0
 
-    invoke-static {}, Landroid/support/v4/os/a;->a()Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Landroid/support/v4/view/f$a;
-
-    invoke-direct {v0}, Landroid/support/v4/view/f$a;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/f$c;
-
-    :goto_0
     return-void
-
-    :cond_0
-    new-instance v0, Landroid/support/v4/view/f$b;
-
-    invoke-direct {v0}, Landroid/support/v4/view/f$b;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/f$c;
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/view/MenuItem;Landroid/support/v4/view/b;)Landroid/view/MenuItem;
-    .locals 2
-
-    instance-of v0, p0, Landroid/support/v4/c/a/b;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Landroid/support/v4/c/a/b;
-
-    invoke-interface {p0, p1}, Landroid/support/v4/c/a/b;->a(Landroid/support/v4/view/b;)Landroid/support/v4/c/a/b;
-
-    move-result-object p0
-
-    :goto_0
-    return-object p0
-
-    :cond_0
-    const-string v0, "MenuItemCompat"
-
-    const-string v1, "setActionProvider: item does not implement SupportMenuItem; ignoring"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/view/MenuItem;CI)V
-    .locals 1
-
-    instance-of v0, p0, Landroid/support/v4/c/a/b;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Landroid/support/v4/c/a/b;
-
-    invoke-interface {p0, p1, p2}, Landroid/support/v4/c/a/b;->setNumericShortcut(CI)Landroid/view/MenuItem;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    sget-object v0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/f$c;
-
-    invoke-interface {v0, p0, p1, p2}, Landroid/support/v4/view/f$c;->b(Landroid/view/MenuItem;CI)V
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/view/MenuItem;Landroid/content/res/ColorStateList;)V
-    .locals 1
-
-    instance-of v0, p0, Landroid/support/v4/c/a/b;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Landroid/support/v4/c/a/b;
-
-    invoke-interface {p0, p1}, Landroid/support/v4/c/a/b;->setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    sget-object v0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/f$c;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/f$c;->a(Landroid/view/MenuItem;Landroid/content/res/ColorStateList;)V
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/view/MenuItem;Landroid/graphics/PorterDuff$Mode;)V
-    .locals 1
-
-    instance-of v0, p0, Landroid/support/v4/c/a/b;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Landroid/support/v4/c/a/b;
-
-    invoke-interface {p0, p1}, Landroid/support/v4/c/a/b;->setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    sget-object v0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/f$c;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/f$c;->a(Landroid/view/MenuItem;Landroid/graphics/PorterDuff$Mode;)V
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/view/MenuItem;Ljava/lang/CharSequence;)V
-    .locals 1
-
-    instance-of v0, p0, Landroid/support/v4/c/a/b;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Landroid/support/v4/c/a/b;
-
-    invoke-interface {p0, p1}, Landroid/support/v4/c/a/b;->a(Ljava/lang/CharSequence;)Landroid/support/v4/c/a/b;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    sget-object v0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/f$c;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/f$c;->a(Landroid/view/MenuItem;Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-.end method
-
-.method public static b(Landroid/view/MenuItem;CI)V
-    .locals 1
-
-    instance-of v0, p0, Landroid/support/v4/c/a/b;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Landroid/support/v4/c/a/b;
-
-    invoke-interface {p0, p1, p2}, Landroid/support/v4/c/a/b;->setAlphabeticShortcut(CI)Landroid/view/MenuItem;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    sget-object v0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/f$c;
-
-    invoke-interface {v0, p0, p1, p2}, Landroid/support/v4/view/f$c;->a(Landroid/view/MenuItem;CI)V
-
-    goto :goto_0
-.end method
-
-.method public static b(Landroid/view/MenuItem;Ljava/lang/CharSequence;)V
-    .locals 1
-
-    instance-of v0, p0, Landroid/support/v4/c/a/b;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Landroid/support/v4/c/a/b;
-
-    invoke-interface {p0, p1}, Landroid/support/v4/c/a/b;->b(Ljava/lang/CharSequence;)Landroid/support/v4/c/a/b;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    sget-object v0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/f$c;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/f$c;->b(Landroid/view/MenuItem;Ljava/lang/CharSequence;)V
-
-    goto :goto_0
 .end method

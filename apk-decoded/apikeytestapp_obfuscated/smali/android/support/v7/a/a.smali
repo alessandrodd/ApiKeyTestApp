@@ -2,18 +2,25 @@
 .super Ljava/lang/Object;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroid/support/v7/a/a$j;,
-        Landroid/support/v7/a/a$i;,
-        Landroid/support/v7/a/a$h;,
-        Landroid/support/v7/a/a$g;,
-        Landroid/support/v7/a/a$f;,
-        Landroid/support/v7/a/a$e;,
-        Landroid/support/v7/a/a$d;,
-        Landroid/support/v7/a/a$c;,
-        Landroid/support/v7/a/a$b;,
-        Landroid/support/v7/a/a$a;
-    }
-.end annotation
+# static fields
+.field public static final a:Z = false
+
+.field public static final b:Ljava/lang/String; = "android.support.v7.appcompat"
+
+.field public static final c:Ljava/lang/String; = "release"
+
+.field public static final d:Ljava/lang/String; = ""
+
+.field public static final e:I = -0x1
+
+.field public static final f:Ljava/lang/String; = ""
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

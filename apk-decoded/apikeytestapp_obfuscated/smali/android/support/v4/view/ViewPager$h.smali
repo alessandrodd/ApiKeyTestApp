@@ -1,8 +1,5 @@
 .class Landroid/support/v4/view/ViewPager$h;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/util/Comparator;
+.super Landroid/database/DataSetObserver;
 
 
 # annotations
@@ -11,87 +8,44 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x2
     name = "h"
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Landroid/view/View;",
-        ">;"
-    }
-.end annotation
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/view/ViewPager;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/view/ViewPager;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Landroid/support/v4/view/ViewPager$h;->a:Landroid/support/v4/view/ViewPager;
+
+    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;Landroid/view/View;)I
-    .locals 4
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/support/v4/view/ViewPager$c;
-
-    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/support/v4/view/ViewPager$c;
-
-    iget-boolean v2, v0, Landroid/support/v4/view/ViewPager$c;->a:Z
-
-    iget-boolean v3, v1, Landroid/support/v4/view/ViewPager$c;->a:Z
-
-    if-eq v2, v3, :cond_1
-
-    iget-boolean v0, v0, Landroid/support/v4/view/ViewPager$c;->a:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    iget v0, v0, Landroid/support/v4/view/ViewPager$c;->e:I
-
-    iget v1, v1, Landroid/support/v4/view/ViewPager$c;->e:I
-
-    sub-int/2addr v0, v1
-
-    goto :goto_0
-.end method
-
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public onChanged()V
     .locals 1
 
-    check-cast p1, Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v4/view/ViewPager$h;->a:Landroid/support/v4/view/ViewPager;
 
-    check-cast p2, Landroid/view/View;
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->c()V
 
-    invoke-virtual {p0, p1, p2}, Landroid/support/v4/view/ViewPager$h;->a(Landroid/view/View;Landroid/view/View;)I
+    return-void
+.end method
 
-    move-result v0
+.method public onInvalidated()V
+    .locals 1
 
-    return v0
+    iget-object v0, p0, Landroid/support/v4/view/ViewPager$h;->a:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->c()V
+
+    return-void
 .end method

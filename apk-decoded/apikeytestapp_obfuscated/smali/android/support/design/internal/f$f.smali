@@ -19,26 +19,26 @@
 # instance fields
 .field a:Z
 
-.field private final b:Landroid/support/v7/e/a/m;
+.field private final b:Landroid/support/v7/view/menu/k;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v7/e/a/m;)V
+.method constructor <init>(Landroid/support/v7/view/menu/k;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroid/support/design/internal/f$f;->b:Landroid/support/v7/e/a/m;
+    iput-object p1, p0, Landroid/support/design/internal/f$f;->b:Landroid/support/v7/view/menu/k;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Landroid/support/v7/e/a/m;
+.method public a()Landroid/support/v7/view/menu/k;
     .locals 1
 
-    iget-object v0, p0, Landroid/support/design/internal/f$f;->b:Landroid/support/v7/e/a/m;
+    iget-object v0, p0, Landroid/support/design/internal/f$f;->b:Landroid/support/v7/view/menu/k;
 
     return-object v0
 .end method

@@ -7,7 +7,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroid/support/design/widget/TextInputLayout;->f()V
+    value = Landroid/support/design/widget/TextInputLayout;->l()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -38,7 +38,7 @@
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$4;->a:Landroid/support/design/widget/TextInputLayout;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/TextInputLayout;->a()V
+    invoke-virtual {v0}, Landroid/support/design/widget/TextInputLayout;->f()V
 
     return-void
 .end method

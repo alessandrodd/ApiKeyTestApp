@@ -3,6 +3,12 @@
 
 
 # annotations
+.annotation build Landroid/support/annotation/ak;
+    a = {
+        .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroid/support/v7/widget/RecyclerView;
 .end annotation
@@ -60,7 +66,7 @@
     return-void
 
     :cond_0
-    const-class v0, Landroid/support/v7/widget/RecyclerView$g;
+    const-class v0, Landroid/support/v7/widget/RecyclerView$h;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 

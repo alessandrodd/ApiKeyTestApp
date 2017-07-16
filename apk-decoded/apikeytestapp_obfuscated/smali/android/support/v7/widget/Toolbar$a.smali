@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v7/e/a/r;
+.implements Landroid/support/v7/view/menu/p;
 
 
 # annotations
@@ -17,9 +17,9 @@
 
 
 # instance fields
-.field a:Landroid/support/v7/e/a/k;
+.field a:Landroid/support/v7/view/menu/h;
 
-.field b:Landroid/support/v7/e/a/m;
+.field b:Landroid/support/v7/view/menu/k;
 
 .field final synthetic c:Landroid/support/v7/widget/Toolbar;
 
@@ -37,25 +37,33 @@
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Landroid/support/v7/e/a/k;)V
+.method public a(Landroid/view/ViewGroup;)Landroid/support/v7/view/menu/q;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public a(Landroid/content/Context;Landroid/support/v7/view/menu/h;)V
     .locals 2
 
-    iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/e/a/k;
+    iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/view/menu/h;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/e/a/m;
+    iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/view/menu/k;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/e/a/k;
+    iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/view/menu/h;
 
-    iget-object v1, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/e/a/m;
+    iget-object v1, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/view/menu/k;
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/e/a/k;->d(Landroid/support/v7/e/a/m;)Z
+    invoke-virtual {v0, v1}, Landroid/support/v7/view/menu/h;->d(Landroid/support/v7/view/menu/k;)Z
 
     :cond_0
-    iput-object p2, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/e/a/k;
+    iput-object p2, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/view/menu/h;
 
     return-void
 .end method
@@ -66,13 +74,13 @@
     return-void
 .end method
 
-.method public a(Landroid/support/v7/e/a/k;Z)V
+.method public a(Landroid/support/v7/view/menu/h;Z)V
     .locals 0
 
     return-void
 .end method
 
-.method public a(Landroid/support/v7/e/a/r$a;)V
+.method public a(Landroid/support/v7/view/menu/p$a;)V
     .locals 0
 
     return-void
@@ -83,17 +91,17 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/e/a/m;
+    iget-object v1, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/view/menu/k;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/e/a/k;
+    iget-object v1, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/view/menu/h;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/e/a/k;
+    iget-object v1, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/view/menu/h;
 
-    invoke-virtual {v1}, Landroid/support/v7/e/a/k;->size()I
+    invoke-virtual {v1}, Landroid/support/v7/view/menu/h;->size()I
 
     move-result v2
 
@@ -102,13 +110,13 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    iget-object v3, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/e/a/k;
+    iget-object v3, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/view/menu/h;
 
-    invoke-virtual {v3, v1}, Landroid/support/v7/e/a/k;->getItem(I)Landroid/view/MenuItem;
+    invoke-virtual {v3, v1}, Landroid/support/v7/view/menu/h;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v3
 
-    iget-object v4, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/e/a/m;
+    iget-object v4, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/view/menu/k;
 
     if-ne v3, v4, :cond_2
 
@@ -117,11 +125,11 @@
     :cond_0
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/e/a/k;
+    iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->a:Landroid/support/v7/view/menu/h;
 
-    iget-object v1, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/e/a/m;
+    iget-object v1, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/view/menu/k;
 
-    invoke-virtual {p0, v0, v1}, Landroid/support/v7/widget/Toolbar$a;->b(Landroid/support/v7/e/a/k;Landroid/support/v7/e/a/m;)Z
+    invoke-virtual {p0, v0, v1}, Landroid/support/v7/widget/Toolbar$a;->b(Landroid/support/v7/view/menu/h;Landroid/support/v7/view/menu/k;)Z
 
     :cond_1
     return-void
@@ -140,14 +148,14 @@
     return v0
 .end method
 
-.method public a(Landroid/support/v7/e/a/k;Landroid/support/v7/e/a/m;)Z
+.method public a(Landroid/support/v7/view/menu/h;Landroid/support/v7/view/menu/k;)Z
     .locals 4
 
     const/4 v3, 0x1
 
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->c:Landroid/support/v7/widget/Toolbar;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/Toolbar;->i()V
+    invoke-virtual {v0}, Landroid/support/v7/widget/Toolbar;->j()V
 
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->c:Landroid/support/v7/widget/Toolbar;
 
@@ -172,13 +180,13 @@
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->c:Landroid/support/v7/widget/Toolbar;
 
-    invoke-virtual {p2}, Landroid/support/v7/e/a/m;->getActionView()Landroid/view/View;
+    invoke-virtual {p2}, Landroid/support/v7/view/menu/k;->getActionView()Landroid/view/View;
 
     move-result-object v1
 
     iput-object v1, v0, Landroid/support/v7/widget/Toolbar;->b:Landroid/view/View;
 
-    iput-object p2, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/e/a/m;
+    iput-object p2, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/view/menu/k;
 
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->c:Landroid/support/v7/widget/Toolbar;
 
@@ -194,7 +202,7 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->c:Landroid/support/v7/widget/Toolbar;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/Toolbar;->j()Landroid/support/v7/widget/Toolbar$b;
+    invoke-virtual {v0}, Landroid/support/v7/widget/Toolbar;->k()Landroid/support/v7/widget/Toolbar$b;
 
     move-result-object v0
 
@@ -212,7 +220,7 @@
 
     const/4 v1, 0x2
 
-    iput v1, v0, Landroid/support/v7/widget/Toolbar$b;->b:I
+    iput v1, v0, Landroid/support/v7/widget/Toolbar$b;->e:I
 
     iget-object v1, p0, Landroid/support/v7/widget/Toolbar$a;->c:Landroid/support/v7/widget/Toolbar;
 
@@ -231,19 +239,19 @@
     :cond_1
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->c:Landroid/support/v7/widget/Toolbar;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/Toolbar;->k()V
+    invoke-virtual {v0}, Landroid/support/v7/widget/Toolbar;->l()V
 
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->c:Landroid/support/v7/widget/Toolbar;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/Toolbar;->requestLayout()V
 
-    invoke-virtual {p2, v3}, Landroid/support/v7/e/a/m;->e(Z)V
+    invoke-virtual {p2, v3}, Landroid/support/v7/view/menu/k;->e(Z)V
 
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->c:Landroid/support/v7/widget/Toolbar;
 
     iget-object v0, v0, Landroid/support/v7/widget/Toolbar;->b:Landroid/view/View;
 
-    instance-of v0, v0, Landroid/support/v7/e/c;
+    instance-of v0, v0, Landroid/support/v7/view/c;
 
     if-eqz v0, :cond_2
 
@@ -251,15 +259,15 @@
 
     iget-object v0, v0, Landroid/support/v7/widget/Toolbar;->b:Landroid/view/View;
 
-    check-cast v0, Landroid/support/v7/e/c;
+    check-cast v0, Landroid/support/v7/view/c;
 
-    invoke-interface {v0}, Landroid/support/v7/e/c;->a()V
+    invoke-interface {v0}, Landroid/support/v7/view/c;->a()V
 
     :cond_2
     return v3
 .end method
 
-.method public a(Landroid/support/v7/e/a/x;)Z
+.method public a(Landroid/support/v7/view/menu/v;)Z
     .locals 1
 
     const/4 v0, 0x0
@@ -275,7 +283,7 @@
     return v0
 .end method
 
-.method public b(Landroid/support/v7/e/a/k;Landroid/support/v7/e/a/m;)Z
+.method public b(Landroid/support/v7/view/menu/h;Landroid/support/v7/view/menu/k;)Z
     .locals 3
 
     const/4 v2, 0x0
@@ -284,7 +292,7 @@
 
     iget-object v0, v0, Landroid/support/v7/widget/Toolbar;->b:Landroid/view/View;
 
-    instance-of v0, v0, Landroid/support/v7/e/c;
+    instance-of v0, v0, Landroid/support/v7/view/c;
 
     if-eqz v0, :cond_0
 
@@ -292,9 +300,9 @@
 
     iget-object v0, v0, Landroid/support/v7/widget/Toolbar;->b:Landroid/view/View;
 
-    check-cast v0, Landroid/support/v7/e/c;
+    check-cast v0, Landroid/support/v7/view/c;
 
-    invoke-interface {v0}, Landroid/support/v7/e/c;->b()V
+    invoke-interface {v0}, Landroid/support/v7/view/c;->b()V
 
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->c:Landroid/support/v7/widget/Toolbar;
@@ -319,9 +327,9 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->c:Landroid/support/v7/widget/Toolbar;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/Toolbar;->l()V
+    invoke-virtual {v0}, Landroid/support/v7/widget/Toolbar;->m()V
 
-    iput-object v2, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/e/a/m;
+    iput-object v2, p0, Landroid/support/v7/widget/Toolbar$a;->b:Landroid/support/v7/view/menu/k;
 
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$a;->c:Landroid/support/v7/widget/Toolbar;
 
@@ -329,7 +337,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p2, v0}, Landroid/support/v7/e/a/m;->e(Z)V
+    invoke-virtual {p2, v0}, Landroid/support/v7/view/menu/k;->e(Z)V
 
     const/4 v0, 0x1
 

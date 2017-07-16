@@ -11,3 +11,8 @@
     accessFlags = 0x609
     name = "c"
 .end annotation
+
+
+# virtual methods
+.method public abstract a(Landroid/view/MenuItem;)Z
+.end method

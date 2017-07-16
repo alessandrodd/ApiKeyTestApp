@@ -1,4 +1,4 @@
-.class public Landroid/support/v7/app/c$a;
+.class Landroid/support/v7/app/c$a;
 .super Ljava/lang/Object;
 
 
@@ -8,182 +8,128 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "a"
 .end annotation
 
 
 # instance fields
-.field private final a:Landroid/support/v7/app/b$a;
+.field public a:Ljava/lang/reflect/Method;
 
-.field private final b:I
+.field public b:Ljava/lang/reflect/Method;
+
+.field public c:Landroid/widget/ImageView;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method constructor <init>(Landroid/app/Activity;)V
+    .locals 8
 
-    const/4 v0, 0x0
+    const v7, 0x102002c
 
-    invoke-static {p1, v0}, Landroid/support/v7/app/c;->a(Landroid/content/Context;I)I
+    const/4 v6, 0x1
 
-    move-result v0
-
-    invoke-direct {p0, p1, v0}, Landroid/support/v7/app/c$a;-><init>(Landroid/content/Context;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;I)V
-    .locals 3
+    const/4 v5, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/support/v7/app/b$a;
+    :try_start_0
+    const-class v0, Landroid/app/ActionBar;
 
-    new-instance v1, Landroid/view/ContextThemeWrapper;
+    const-string v1, "setHomeAsUpIndicator"
 
-    invoke-static {p1, p2}, Landroid/support/v7/app/c;->a(Landroid/content/Context;I)I
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    const-class v4, Landroid/graphics/drawable/Drawable;
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v7/app/c$a;->a:Ljava/lang/reflect/Method;
+
+    const-class v0, Landroid/app/ActionBar;
+
+    const-string v1, "setHomeActionContentDescription"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v7/app/c$a;->b:Ljava/lang/reflect/Method;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {p1, v7}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    if-ne v1, v2, :cond_0
+
+    invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v6}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v1}, Landroid/view/View;->getId()I
 
     move-result v2
 
-    invoke-direct {v1, p1, v2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
+    if-ne v2, v7, :cond_1
 
-    invoke-direct {v0, v1}, Landroid/support/v7/app/b$a;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iput p2, p0, Landroid/support/v7/app/c$a;->b:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a()Landroid/content/Context;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iget-object v0, v0, Landroid/support/v7/app/b$a;->a:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method public a(Landroid/content/DialogInterface$OnKeyListener;)Landroid/support/v7/app/c$a;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iput-object p1, v0, Landroid/support/v7/app/b$a;->r:Landroid/content/DialogInterface$OnKeyListener;
-
-    return-object p0
-.end method
-
-.method public a(Landroid/graphics/drawable/Drawable;)Landroid/support/v7/app/c$a;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iput-object p1, v0, Landroid/support/v7/app/b$a;->d:Landroid/graphics/drawable/Drawable;
-
-    return-object p0
-.end method
-
-.method public a(Landroid/view/View;)Landroid/support/v7/app/c$a;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iput-object p1, v0, Landroid/support/v7/app/b$a;->g:Landroid/view/View;
-
-    return-object p0
-.end method
-
-.method public a(Landroid/widget/ListAdapter;Landroid/content/DialogInterface$OnClickListener;)Landroid/support/v7/app/c$a;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iput-object p1, v0, Landroid/support/v7/app/b$a;->t:Landroid/widget/ListAdapter;
-
-    iget-object v0, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iput-object p2, v0, Landroid/support/v7/app/b$a;->u:Landroid/content/DialogInterface$OnClickListener;
-
-    return-object p0
-.end method
-
-.method public a(Ljava/lang/CharSequence;)Landroid/support/v7/app/c$a;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iput-object p1, v0, Landroid/support/v7/app/b$a;->f:Ljava/lang/CharSequence;
-
-    return-object p0
-.end method
-
-.method public b()Landroid/support/v7/app/c;
-    .locals 3
-
-    new-instance v0, Landroid/support/v7/app/c;
-
-    iget-object v1, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iget-object v1, v1, Landroid/support/v7/app/b$a;->a:Landroid/content/Context;
-
-    iget v2, p0, Landroid/support/v7/app/c$a;->b:I
-
-    invoke-direct {v0, v1, v2}, Landroid/support/v7/app/c;-><init>(Landroid/content/Context;I)V
-
-    iget-object v1, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iget-object v2, v0, Landroid/support/v7/app/c;->a:Landroid/support/v7/app/b;
-
-    invoke-virtual {v1, v2}, Landroid/support/v7/app/b$a;->a(Landroid/support/v7/app/b;)V
-
-    iget-object v1, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iget-boolean v1, v1, Landroid/support/v7/app/b$a;->o:Z
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/c;->setCancelable(Z)V
-
-    iget-object v1, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iget-boolean v1, v1, Landroid/support/v7/app/b$a;->o:Z
+    :goto_1
+    instance-of v1, v0, Landroid/widget/ImageView;
 
     if-eqz v1, :cond_0
 
-    const/4 v1, 0x1
+    check-cast v0, Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/c;->setCanceledOnTouchOutside(Z)V
+    iput-object v0, p0, Landroid/support/v7/app/c$a;->c:Landroid/widget/ImageView;
 
-    :cond_0
-    iget-object v1, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iget-object v1, v1, Landroid/support/v7/app/b$a;->p:Landroid/content/DialogInterface$OnCancelListener;
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/c;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
-
-    iget-object v1, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iget-object v1, v1, Landroid/support/v7/app/b$a;->q:Landroid/content/DialogInterface$OnDismissListener;
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/c;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
-
-    iget-object v1, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iget-object v1, v1, Landroid/support/v7/app/b$a;->r:Landroid/content/DialogInterface$OnKeyListener;
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Landroid/support/v7/app/c$a;->a:Landroid/support/v7/app/b$a;
-
-    iget-object v1, v1, Landroid/support/v7/app/b$a;->r:Landroid/content/DialogInterface$OnKeyListener;
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/c;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
+    goto :goto_0
 
     :cond_1
-    return-object v0
+    move-object v0, v1
+
+    goto :goto_1
 .end method

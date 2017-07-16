@@ -14,14 +14,14 @@
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+.field final synthetic m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
 
 # direct methods
 .method constructor <init>(Landroid/support/v4/media/session/MediaControllerCompat$a;)V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+    iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
     invoke-direct {p0}, Landroid/support/v4/media/session/a$a;-><init>()V
 
@@ -35,7 +35,7 @@
 
     const/4 v2, 0x0
 
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 
@@ -49,7 +49,7 @@
 .method public a(I)V
     .locals 4
 
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 
@@ -69,7 +69,7 @@
 .method public a(Landroid/os/Bundle;)V
     .locals 3
 
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 
@@ -85,7 +85,7 @@
 .method public a(Landroid/support/v4/media/MediaMetadataCompat;)V
     .locals 3
 
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 
@@ -105,7 +105,7 @@
 
     if-eqz p1, :cond_0
 
-    new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$b;
+    new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$g;
 
     iget v1, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->a:I
 
@@ -117,10 +117,10 @@
 
     iget v5, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->e:I
 
-    invoke-direct/range {v0 .. v5}, Landroid/support/v4/media/session/MediaControllerCompat$b;-><init>(IIIII)V
+    invoke-direct/range {v0 .. v5}, Landroid/support/v4/media/session/MediaControllerCompat$g;-><init>(IIIII)V
 
     :goto_0
-    iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+    iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
     iget-object v1, v1, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 
@@ -139,7 +139,7 @@
 .method public a(Landroid/support/v4/media/session/PlaybackStateCompat;)V
     .locals 3
 
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 
@@ -155,7 +155,7 @@
 .method public a(Ljava/lang/CharSequence;)V
     .locals 3
 
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 
@@ -171,7 +171,7 @@
 .method public a(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 2
 
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 
@@ -194,7 +194,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 
@@ -210,7 +210,7 @@
 .method public a(Z)V
     .locals 4
 
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 
@@ -230,7 +230,7 @@
 .method public b(I)V
     .locals 4
 
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 
@@ -250,7 +250,7 @@
 .method public b(Z)V
     .locals 4
 
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->m:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
     iget-object v0, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 

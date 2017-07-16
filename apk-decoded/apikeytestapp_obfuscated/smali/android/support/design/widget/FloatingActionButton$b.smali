@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/design/widget/l;
+.implements Landroid/support/design/widget/p;
 
 
 # annotations
@@ -56,7 +56,7 @@
 
     iget-object v0, p0, Landroid/support/design/widget/FloatingActionButton$b;->a:Landroid/support/design/widget/FloatingActionButton;
 
-    iget-object v0, v0, Landroid/support/design/widget/FloatingActionButton;->c:Landroid/graphics/Rect;
+    iget-object v0, v0, Landroid/support/design/widget/FloatingActionButton;->f:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;->set(IIII)V
 
@@ -64,25 +64,25 @@
 
     iget-object v1, p0, Landroid/support/design/widget/FloatingActionButton$b;->a:Landroid/support/design/widget/FloatingActionButton;
 
-    iget v1, v1, Landroid/support/design/widget/FloatingActionButton;->a:I
+    iget v1, v1, Landroid/support/design/widget/FloatingActionButton;->d:I
 
     add-int/2addr v1, p1
 
     iget-object v2, p0, Landroid/support/design/widget/FloatingActionButton$b;->a:Landroid/support/design/widget/FloatingActionButton;
 
-    iget v2, v2, Landroid/support/design/widget/FloatingActionButton;->a:I
+    iget v2, v2, Landroid/support/design/widget/FloatingActionButton;->d:I
 
     add-int/2addr v2, p2
 
     iget-object v3, p0, Landroid/support/design/widget/FloatingActionButton$b;->a:Landroid/support/design/widget/FloatingActionButton;
 
-    iget v3, v3, Landroid/support/design/widget/FloatingActionButton;->a:I
+    iget v3, v3, Landroid/support/design/widget/FloatingActionButton;->d:I
 
     add-int/2addr v3, p3
 
     iget-object v4, p0, Landroid/support/design/widget/FloatingActionButton$b;->a:Landroid/support/design/widget/FloatingActionButton;
 
-    iget v4, v4, Landroid/support/design/widget/FloatingActionButton;->a:I
+    iget v4, v4, Landroid/support/design/widget/FloatingActionButton;->d:I
 
     add-int/2addr v4, p4
 
@@ -106,7 +106,7 @@
 
     iget-object v0, p0, Landroid/support/design/widget/FloatingActionButton$b;->a:Landroid/support/design/widget/FloatingActionButton;
 
-    iget-boolean v0, v0, Landroid/support/design/widget/FloatingActionButton;->b:Z
+    iget-boolean v0, v0, Landroid/support/design/widget/FloatingActionButton;->e:Z
 
     return v0
 .end method

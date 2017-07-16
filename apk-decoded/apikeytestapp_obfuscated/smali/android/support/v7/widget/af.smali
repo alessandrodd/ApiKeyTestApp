@@ -1,37 +1,25 @@
-.class public interface abstract Landroid/support/v7/widget/af;
+.class interface abstract Landroid/support/v7/widget/af;
 .super Ljava/lang/Object;
 
 
 # virtual methods
-.method public abstract a(I)V
+.method public abstract a(II)V
 .end method
 
-.method public abstract a(Landroid/view/Menu;Landroid/support/v7/e/a/r$a;)V
+.method public abstract a(IIII)V
 .end method
 
-.method public abstract e()Z
+.method public abstract a(Landroid/graphics/drawable/Drawable;)V
 .end method
 
-.method public abstract f()Z
+.method public abstract a()Z
 .end method
 
-.method public abstract g()Z
+.method public abstract b()Z
 .end method
 
-.method public abstract h()Z
+.method public abstract c()Landroid/graphics/drawable/Drawable;
 .end method
 
-.method public abstract i()Z
-.end method
-
-.method public abstract j()V
-.end method
-
-.method public abstract k()V
-.end method
-
-.method public abstract setWindowCallback(Landroid/view/Window$Callback;)V
-.end method
-
-.method public abstract setWindowTitle(Ljava/lang/CharSequence;)V
+.method public abstract d()Landroid/view/View;
 .end method

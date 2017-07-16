@@ -1,4 +1,4 @@
-.class interface abstract Landroid/support/c/b$a;
+.class public final Landroid/support/c/b$a;
 .super Ljava/lang/Object;
 
 
@@ -8,14 +8,36 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x19
     name = "a"
 .end annotation
 
 
-# virtual methods
-.method public abstract onAnimationPause(Landroid/animation/Animator;)V
-.end method
+# static fields
+.field public static final font:I = 0x7f03009a
 
-.method public abstract onAnimationResume(Landroid/animation/Animator;)V
+.field public static final fontProviderAuthority:I = 0x7f03009c
+
+.field public static final fontProviderCerts:I = 0x7f03009d
+
+.field public static final fontProviderFetchStrategy:I = 0x7f03009e
+
+.field public static final fontProviderFetchTimeout:I = 0x7f03009f
+
+.field public static final fontProviderPackage:I = 0x7f0300a0
+
+.field public static final fontProviderQuery:I = 0x7f0300a1
+
+.field public static final fontStyle:I = 0x7f0300a2
+
+.field public static final fontWeight:I = 0x7f0300a3
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

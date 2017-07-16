@@ -1,13 +1,10 @@
 .class Landroid/support/v7/widget/ao$2;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemSelectedListener;
+.super Landroid/support/v7/widget/RecyclerView$m;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroid/support/v7/widget/ao;->b()I
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/support/v7/widget/ao;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,52 +23,27 @@
 
     iput-object p1, p0, Landroid/support/v7/widget/ao$2;->a:Landroid/support/v7/widget/ao;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$m;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
-
-    const/4 v0, -0x1
-
-    if-eq p3, v0, :cond_0
+.method public a(Landroid/support/v7/widget/RecyclerView;II)V
+    .locals 3
 
     iget-object v0, p0, Landroid/support/v7/widget/ao$2;->a:Landroid/support/v7/widget/ao;
 
-    iget-object v0, v0, Landroid/support/v7/widget/ao;->c:Landroid/support/v7/widget/ai;
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView;->computeHorizontalScrollOffset()I
 
-    if-eqz v0, :cond_0
+    move-result v1
 
-    const/4 v1, 0x0
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView;->computeVerticalScrollOffset()I
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/widget/ai;->setListSelectionHidden(Z)V
+    move-result v2
 
-    :cond_0
-    return-void
-.end method
-
-.method public onNothingSelected(Landroid/widget/AdapterView;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;)V"
-        }
-    .end annotation
+    invoke-virtual {v0, v1, v2}, Landroid/support/v7/widget/ao;->a(II)V
 
     return-void
 .end method

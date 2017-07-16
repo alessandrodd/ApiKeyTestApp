@@ -1,10 +1,10 @@
 .class Landroid/support/v4/app/Fragment$2;
-.super Landroid/support/v4/app/g;
+.super Landroid/support/v4/app/q;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroid/support/v4/app/Fragment;->B()V
+    value = Landroid/support/v4/app/Fragment;->ac()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,7 +23,7 @@
 
     iput-object p1, p0, Landroid/support/v4/app/Fragment$2;->a:Landroid/support/v4/app/Fragment;
 
-    invoke-direct {p0}, Landroid/support/v4/app/g;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/app/q;-><init>()V
 
     return-void
 .end method
@@ -35,9 +35,9 @@
 
     iget-object v0, p0, Landroid/support/v4/app/Fragment$2;->a:Landroid/support/v4/app/Fragment;
 
-    iget-object v0, v0, Landroid/support/v4/app/Fragment;->s:Landroid/support/v4/app/i;
+    iget-object v0, v0, Landroid/support/v4/app/Fragment;->L:Landroid/support/v4/app/s;
 
-    invoke-virtual {v0, p1, p2, p3}, Landroid/support/v4/app/i;->a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;
+    invoke-virtual {v0, p1, p2, p3}, Landroid/support/v4/app/s;->a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;
 
     move-result-object v0
 
@@ -46,10 +46,12 @@
 
 .method public a(I)Landroid/view/View;
     .locals 2
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
 
     iget-object v0, p0, Landroid/support/v4/app/Fragment$2;->a:Landroid/support/v4/app/Fragment;
 
-    iget-object v0, v0, Landroid/support/v4/app/Fragment;->H:Landroid/view/View;
+    iget-object v0, v0, Landroid/support/v4/app/Fragment;->aa:Landroid/view/View;
 
     if-nez v0, :cond_0
 
@@ -64,7 +66,7 @@
     :cond_0
     iget-object v0, p0, Landroid/support/v4/app/Fragment$2;->a:Landroid/support/v4/app/Fragment;
 
-    iget-object v0, v0, Landroid/support/v4/app/Fragment;->H:Landroid/view/View;
+    iget-object v0, v0, Landroid/support/v4/app/Fragment;->aa:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -78,7 +80,7 @@
 
     iget-object v0, p0, Landroid/support/v4/app/Fragment$2;->a:Landroid/support/v4/app/Fragment;
 
-    iget-object v0, v0, Landroid/support/v4/app/Fragment;->H:Landroid/view/View;
+    iget-object v0, v0, Landroid/support/v4/app/Fragment;->aa:Landroid/view/View;
 
     if-eqz v0, :cond_0
 

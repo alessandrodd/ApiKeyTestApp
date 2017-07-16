@@ -1,134 +1,201 @@
-.class Landroid/support/design/widget/r;
+.class final Landroid/support/design/widget/r;
 .super Ljava/lang/Object;
 
 
-# static fields
-.field private static final a:[I
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/support/design/widget/r$a;
+    }
+.end annotation
+
+
+# instance fields
+.field a:Landroid/animation/ValueAnimator;
+
+.field private final b:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/design/widget/r$a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private c:Landroid/support/design/widget/r$a;
+
+.field private final d:Landroid/animation/Animator$AnimatorListener;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [I
+.method constructor <init>()V
+    .locals 2
 
     const/4 v1, 0x0
 
-    const v2, 0x1010448
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    aput v2, v0, v1
+    new-instance v0, Ljava/util/ArrayList;
 
-    sput-object v0, Landroid/support/design/widget/r;->a:[I
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Landroid/support/design/widget/r;->b:Ljava/util/ArrayList;
+
+    iput-object v1, p0, Landroid/support/design/widget/r;->c:Landroid/support/design/widget/r$a;
+
+    iput-object v1, p0, Landroid/support/design/widget/r;->a:Landroid/animation/ValueAnimator;
+
+    new-instance v0, Landroid/support/design/widget/r$1;
+
+    invoke-direct {v0, p0}, Landroid/support/design/widget/r$1;-><init>(Landroid/support/design/widget/r;)V
+
+    iput-object v0, p0, Landroid/support/design/widget/r;->d:Landroid/animation/Animator$AnimatorListener;
 
     return-void
 .end method
 
-.method static a(Landroid/view/View;F)V
-    .locals 10
+.method private a(Landroid/support/design/widget/r$a;)V
+    .locals 1
 
-    const v9, 0x101000e
+    iget-object v0, p1, Landroid/support/design/widget/r$a;->b:Landroid/animation/ValueAnimator;
 
-    const/4 v8, 0x0
+    iput-object v0, p0, Landroid/support/design/widget/r;->a:Landroid/animation/ValueAnimator;
 
-    const/4 v7, 0x1
+    iget-object v0, p0, Landroid/support/design/widget/r;->a:Landroid/animation/ValueAnimator;
 
-    const/4 v6, 0x0
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    return-void
+.end method
 
-    move-result-object v0
+.method private b()V
+    .locals 1
 
-    sget v1, Landroid/support/design/a$e;->app_bar_elevation_anim_duration:I
+    iget-object v0, p0, Landroid/support/design/widget/r;->a:Landroid/animation/ValueAnimator;
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+    if-eqz v0, :cond_0
 
-    move-result v0
+    iget-object v0, p0, Landroid/support/design/widget/r;->a:Landroid/animation/ValueAnimator;
 
-    new-instance v1, Landroid/animation/StateListAnimator;
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    invoke-direct {v1}, Landroid/animation/StateListAnimator;-><init>()V
+    const/4 v0, 0x0
 
-    const/4 v2, 0x3
+    iput-object v0, p0, Landroid/support/design/widget/r;->a:Landroid/animation/ValueAnimator;
 
-    new-array v2, v2, [I
+    :cond_0
+    return-void
+.end method
 
-    aput v9, v2, v6
 
-    sget v3, Landroid/support/design/a$a;->state_collapsible:I
+# virtual methods
+.method public a()V
+    .locals 1
 
-    aput v3, v2, v7
+    iget-object v0, p0, Landroid/support/design/widget/r;->a:Landroid/animation/ValueAnimator;
 
-    const/4 v3, 0x2
+    if-eqz v0, :cond_0
 
-    sget v4, Landroid/support/design/a$a;->state_collapsed:I
+    iget-object v0, p0, Landroid/support/design/widget/r;->a:Landroid/animation/ValueAnimator;
 
-    neg-int v4, v4
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->end()V
 
-    aput v4, v2, v3
+    const/4 v0, 0x0
 
-    const-string v3, "elevation"
+    iput-object v0, p0, Landroid/support/design/widget/r;->a:Landroid/animation/ValueAnimator;
 
-    new-array v4, v7, [F
+    :cond_0
+    return-void
+.end method
 
-    aput v8, v4, v6
+.method a([I)V
+    .locals 5
 
-    invoke-static {p0, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+    const/4 v1, 0x0
 
-    move-result-object v3
+    iget-object v0, p0, Landroid/support/design/widget/r;->b:Ljava/util/ArrayList;
 
-    int-to-long v4, v0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {v3, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    move-result v3
 
-    move-result-object v3
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, v2, v3}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
+    move v2, v0
 
-    new-array v2, v7, [I
+    :goto_0
+    if-ge v2, v3, :cond_4
 
-    aput v9, v2, v6
+    iget-object v0, p0, Landroid/support/design/widget/r;->b:Ljava/util/ArrayList;
 
-    const-string v3, "elevation"
-
-    new-array v4, v7, [F
-
-    aput p1, v4, v6
-
-    invoke-static {p0, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v3
-
-    int-to-long v4, v0
-
-    invoke-virtual {v3, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
+    check-cast v0, Landroid/support/design/widget/r$a;
 
-    new-array v0, v6, [I
+    iget-object v4, v0, Landroid/support/design/widget/r$a;->a:[I
 
-    const-string v2, "elevation"
+    invoke-static {v4, p1}, Landroid/util/StateSet;->stateSetMatches([I[I)Z
 
-    new-array v3, v7, [F
+    move-result v4
 
-    aput v8, v3, v6
+    if-eqz v4, :cond_1
 
-    invoke-static {p0, v2, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+    :goto_1
+    iget-object v1, p0, Landroid/support/design/widget/r;->c:Landroid/support/design/widget/r$a;
 
-    move-result-object v2
+    if-ne v0, v1, :cond_2
 
-    const-wide/16 v4, 0x0
+    :cond_0
+    :goto_2
+    return-void
 
-    invoke-virtual {v2, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    :cond_1
+    add-int/lit8 v0, v2, 0x1
 
-    move-result-object v2
+    move v2, v0
 
-    invoke-virtual {v1, v0, v2}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
+    goto :goto_0
 
-    invoke-virtual {p0, v1}, Landroid/view/View;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
+    :cond_2
+    iget-object v1, p0, Landroid/support/design/widget/r;->c:Landroid/support/design/widget/r$a;
+
+    if-eqz v1, :cond_3
+
+    invoke-direct {p0}, Landroid/support/design/widget/r;->b()V
+
+    :cond_3
+    iput-object v0, p0, Landroid/support/design/widget/r;->c:Landroid/support/design/widget/r$a;
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0, v0}, Landroid/support/design/widget/r;->a(Landroid/support/design/widget/r$a;)V
+
+    goto :goto_2
+
+    :cond_4
+    move-object v0, v1
+
+    goto :goto_1
+.end method
+
+.method public a([ILandroid/animation/ValueAnimator;)V
+    .locals 2
+
+    new-instance v0, Landroid/support/design/widget/r$a;
+
+    invoke-direct {v0, p1, p2}, Landroid/support/design/widget/r$a;-><init>([ILandroid/animation/ValueAnimator;)V
+
+    iget-object v1, p0, Landroid/support/design/widget/r;->d:Landroid/animation/Animator$AnimatorListener;
+
+    invoke-virtual {p2, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    iget-object v1, p0, Landroid/support/design/widget/r;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method

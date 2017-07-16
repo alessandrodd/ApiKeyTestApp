@@ -1,5 +1,8 @@
 .class Landroid/support/v7/widget/ao$b;
-.super Landroid/database/DataSetObserver;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # annotations
@@ -18,43 +21,64 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v7/widget/ao;)V
+.method private constructor <init>(Landroid/support/v7/widget/ao;)V
     .locals 0
 
     iput-object p1, p0, Landroid/support/v7/widget/ao$b;->a:Landroid/support/v7/widget/ao;
 
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Landroid/support/v7/widget/ao;Landroid/support/v7/widget/ao$1;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Landroid/support/v7/widget/ao$b;-><init>(Landroid/support/v7/widget/ao;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChanged()V
-    .locals 1
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 2
 
-    iget-object v0, p0, Landroid/support/v7/widget/ao$b;->a:Landroid/support/v7/widget/ao;
+    const/high16 v1, 0x437f0000    # 255.0f
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ao;->f()Z
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    mul-float/2addr v0, v1
+
+    float-to-int v0, v0
+
+    iget-object v1, p0, Landroid/support/v7/widget/ao$b;->a:Landroid/support/v7/widget/ao;
+
+    invoke-static {v1}, Landroid/support/v7/widget/ao;->c(Landroid/support/v7/widget/ao;)Landroid/graphics/drawable/StateListDrawable;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/StateListDrawable;->setAlpha(I)V
+
+    iget-object v1, p0, Landroid/support/v7/widget/ao$b;->a:Landroid/support/v7/widget/ao;
+
+    invoke-static {v1}, Landroid/support/v7/widget/ao;->d(Landroid/support/v7/widget/ao;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     iget-object v0, p0, Landroid/support/v7/widget/ao$b;->a:Landroid/support/v7/widget/ao;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ao;->d()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onInvalidated()V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/widget/ao$b;->a:Landroid/support/v7/widget/ao;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/ao;->e()V
+    invoke-static {v0}, Landroid/support/v7/widget/ao;->b(Landroid/support/v7/widget/ao;)V
 
     return-void
 .end method

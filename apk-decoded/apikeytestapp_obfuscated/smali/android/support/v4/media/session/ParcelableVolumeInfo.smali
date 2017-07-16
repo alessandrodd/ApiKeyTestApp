@@ -43,6 +43,24 @@
     return-void
 .end method
 
+.method public constructor <init>(IIIII)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Landroid/support/v4/media/session/ParcelableVolumeInfo;->a:I
+
+    iput p2, p0, Landroid/support/v4/media/session/ParcelableVolumeInfo;->b:I
+
+    iput p3, p0, Landroid/support/v4/media/session/ParcelableVolumeInfo;->c:I
+
+    iput p4, p0, Landroid/support/v4/media/session/ParcelableVolumeInfo;->d:I
+
+    iput p5, p0, Landroid/support/v4/media/session/ParcelableVolumeInfo;->e:I
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 

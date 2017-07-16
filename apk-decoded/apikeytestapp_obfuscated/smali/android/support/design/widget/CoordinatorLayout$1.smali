@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/view/n;
+.implements Landroid/support/v4/view/t;
 
 
 # annotations
@@ -33,12 +33,12 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;Landroid/support/v4/view/x;)Landroid/support/v4/view/x;
+.method public a(Landroid/view/View;Landroid/support/v4/view/al;)Landroid/support/v4/view/al;
     .locals 1
 
     iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$1;->a:Landroid/support/design/widget/CoordinatorLayout;
 
-    invoke-virtual {v0, p2}, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/support/v4/view/x;)Landroid/support/v4/view/x;
+    invoke-virtual {v0, p2}, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/support/v4/view/al;)Landroid/support/v4/view/al;
 
     move-result-object v0
 

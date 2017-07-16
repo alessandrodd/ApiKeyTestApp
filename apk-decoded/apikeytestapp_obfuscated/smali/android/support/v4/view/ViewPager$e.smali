@@ -14,11 +14,17 @@
 
 
 # virtual methods
-.method public abstract a(I)V
-.end method
-
-.method public abstract a(IFI)V
-.end method
-
-.method public abstract b(I)V
+.method public abstract a(Landroid/support/v4/view/ViewPager;Landroid/support/v4/view/u;Landroid/support/v4/view/u;)V
+    .param p1    # Landroid/support/v4/view/ViewPager;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/support/v4/view/u;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .param p3    # Landroid/support/v4/view/u;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 .end method

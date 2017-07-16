@@ -1,141 +1,168 @@
 .class public Landroid/support/b/a/g;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/view/animation/Interpolator;
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/support/b/a/g$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final a:I = 0x0
+
+.field public static final b:I = 0x1
+
+.field public static final c:I = 0x2
+
+.field public static final d:I = 0x3
+
+.field public static final e:I = 0x4
+
+.field public static final f:I = 0x5
+
+.field static final k:I = 0x6
+
+.field private static final p:Z
+
+.field private static q:I
 
 
 # instance fields
-.field private a:[F
+.field public g:I
 
-.field private b:[F
+.field h:I
+
+.field public i:I
+
+.field public j:F
+
+.field l:[F
+
+.field m:Landroid/support/b/a/g$a;
+
+.field n:[Landroid/support/b/a/b;
+
+.field o:I
+
+.field private r:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;Lorg/xmlpull/v1/XmlPullParser;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const/4 v0, 0x1
 
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object v1
-
-    invoke-direct {p0, v0, v1, p2, p3}, Landroid/support/b/a/g;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;Lorg/xmlpull/v1/XmlPullParser;)V
+    sput v0, Landroid/support/b/a/g;->q:I
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;Lorg/xmlpull/v1/XmlPullParser;)V
-    .locals 1
+.method public constructor <init>(Landroid/support/b/a/g$a;)V
+    .locals 2
+
+    const/4 v1, 0x0
+
+    const/4 v0, -0x1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Landroid/support/b/a/a;->l:[I
+    iput v0, p0, Landroid/support/b/a/g;->g:I
 
-    invoke-static {p1, p2, p3, v0}, Landroid/support/v4/a/a/c;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    iput v0, p0, Landroid/support/b/a/g;->h:I
 
-    move-result-object v0
+    iput v1, p0, Landroid/support/b/a/g;->i:I
 
-    invoke-direct {p0, v0, p4}, Landroid/support/b/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V
+    const/4 v0, 0x6
 
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+    new-array v0, v0, [F
+
+    iput-object v0, p0, Landroid/support/b/a/g;->l:[F
+
+    const/16 v0, 0x8
+
+    new-array v0, v0, [Landroid/support/b/a/b;
+
+    iput-object v0, p0, Landroid/support/b/a/g;->n:[Landroid/support/b/a/b;
+
+    iput v1, p0, Landroid/support/b/a/g;->o:I
+
+    iput-object p1, p0, Landroid/support/b/a/g;->m:Landroid/support/b/a/g$a;
 
     return-void
 .end method
 
-.method private a(FF)V
-    .locals 3
-
-    const/high16 v2, 0x3f800000    # 1.0f
+.method public constructor <init>(Ljava/lang/String;Landroid/support/b/a/g$a;)V
+    .locals 2
 
     const/4 v1, 0x0
 
-    new-instance v0, Landroid/graphics/Path;
+    const/4 v0, -0x1
 
-    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, v1, v1}, Landroid/graphics/Path;->moveTo(FF)V
+    iput v0, p0, Landroid/support/b/a/g;->g:I
 
-    invoke-virtual {v0, p1, p2, v2, v2}, Landroid/graphics/Path;->quadTo(FFFF)V
+    iput v0, p0, Landroid/support/b/a/g;->h:I
 
-    invoke-direct {p0, v0}, Landroid/support/b/a/g;->a(Landroid/graphics/Path;)V
+    iput v1, p0, Landroid/support/b/a/g;->i:I
 
-    return-void
-.end method
+    const/4 v0, 0x6
 
-.method private a(FFFF)V
-    .locals 7
+    new-array v0, v0, [F
 
-    const/high16 v5, 0x3f800000    # 1.0f
+    iput-object v0, p0, Landroid/support/b/a/g;->l:[F
 
-    const/4 v1, 0x0
+    const/16 v0, 0x8
 
-    new-instance v0, Landroid/graphics/Path;
+    new-array v0, v0, [Landroid/support/b/a/b;
 
-    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
+    iput-object v0, p0, Landroid/support/b/a/g;->n:[Landroid/support/b/a/b;
 
-    invoke-virtual {v0, v1, v1}, Landroid/graphics/Path;->moveTo(FF)V
+    iput v1, p0, Landroid/support/b/a/g;->o:I
 
-    move v1, p1
+    iput-object p1, p0, Landroid/support/b/a/g;->r:Ljava/lang/String;
 
-    move v2, p2
-
-    move v3, p3
-
-    move v4, p4
-
-    move v6, v5
-
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
-
-    invoke-direct {p0, v0}, Landroid/support/b/a/g;->a(Landroid/graphics/Path;)V
+    iput-object p2, p0, Landroid/support/b/a/g;->m:Landroid/support/b/a/g$a;
 
     return-void
 .end method
 
-.method private a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V
-    .locals 6
+.method private static b(Landroid/support/b/a/g$a;)Ljava/lang/String;
+    .locals 2
 
-    const/4 v5, 0x0
+    sget v0, Landroid/support/b/a/g;->q:I
 
-    const-string v0, "pathData"
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-static {p2, v0}, Landroid/support/v4/a/a/c;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    sput v0, Landroid/support/b/a/g;->q:I
 
-    move-result v0
+    sget-object v0, Landroid/support/b/a/g$1;->a:[I
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p0}, Landroid/support/b/a/g$a;->ordinal()I
 
-    const-string v0, "pathData"
+    move-result v1
 
-    const/4 v1, 0x4
+    aget v0, v0, v1
 
-    invoke-static {p1, p2, v0, v1}, Landroid/support/v4/a/a/c;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "V"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/support/v4/b/b;->a(Ljava/lang/String;)Landroid/graphics/Path;
+    sget v1, Landroid/support/b/a/g;->q:I
 
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Landroid/view/InflateException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "The path is null, which is created from "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -143,162 +170,260 @@
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_0
-    invoke-direct {p0, v1}, Landroid/support/b/a/g;->a(Landroid/graphics/Path;)V
-
     :goto_0
-    return-void
+    return-object v0
 
-    :cond_1
-    const-string v0, "controlX1"
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {p2, v0}, Landroid/support/v4/a/a/c;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v0
+    const-string v1, "U"
 
-    if-nez v0, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Landroid/view/InflateException;
+    move-result-object v0
 
-    const-string v1, "pathInterpolator requires the controlX1 attribute"
+    sget v1, Landroid/support/b/a/g;->q:I
 
-    invoke-direct {v0, v1}, Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    throw v0
+    move-result-object v0
 
-    :cond_2
-    const-string v0, "controlY1"
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {p2, v0}, Landroid/support/v4/a/a/c;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    new-instance v0, Landroid/view/InflateException;
-
-    const-string v1, "pathInterpolator requires the controlY1 attribute"
-
-    invoke-direct {v0, v1}, Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_3
-    const-string v0, "controlX1"
-
-    const/4 v1, 0x0
-
-    invoke-static {p1, p2, v0, v1, v5}, Landroid/support/v4/a/a/c;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
-
-    move-result v0
-
-    const-string v1, "controlY1"
-
-    const/4 v2, 0x1
-
-    invoke-static {p1, p2, v1, v2, v5}, Landroid/support/v4/a/a/c;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
-
-    move-result v1
-
-    const-string v2, "controlX2"
-
-    invoke-static {p2, v2}, Landroid/support/v4/a/a/c;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
-
-    move-result v2
-
-    const-string v3, "controlY2"
-
-    invoke-static {p2, v3}, Landroid/support/v4/a/a/c;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eq v2, v3, :cond_4
-
-    new-instance v0, Landroid/view/InflateException;
-
-    const-string v1, "pathInterpolator requires both controlX2 and controlY2 for cubic Beziers."
-
-    invoke-direct {v0, v1}, Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_4
-    if-nez v2, :cond_5
-
-    invoke-direct {p0, v0, v1}, Landroid/support/b/a/g;->a(FF)V
+    move-result-object v0
 
     goto :goto_0
 
-    :cond_5
-    const-string v2, "controlX2"
+    :pswitch_1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x2
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p1, p2, v2, v3, v5}, Landroid/support/v4/a/a/c;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    const-string v1, "C"
 
-    move-result v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, "controlY2"
+    move-result-object v0
 
-    const/4 v4, 0x3
+    sget v1, Landroid/support/b/a/g;->q:I
 
-    invoke-static {p1, p2, v3, v4, v5}, Landroid/support/v4/a/a/c;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result v3
+    move-result-object v0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Landroid/support/b/a/g;->a(FFFF)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     goto :goto_0
+
+    :pswitch_2
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "S"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget v1, Landroid/support/b/a/g;->q:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :pswitch_3
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "e"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget v1, Landroid/support/b/a/g;->q:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
 .end method
 
-.method private a(Landroid/graphics/Path;)V
-    .locals 11
 
-    const/high16 v10, 0x3f800000    # 1.0f
-
-    const-wide v8, 0x3ee4f8b588e368f1L    # 1.0E-5
+# virtual methods
+.method a()V
+    .locals 3
 
     const/4 v0, 0x0
 
-    new-instance v4, Landroid/graphics/PathMeasure;
+    :goto_0
+    const/4 v1, 0x6
 
-    invoke-direct {v4, p1, v0}, Landroid/graphics/PathMeasure;-><init>(Landroid/graphics/Path;Z)V
+    if-ge v0, v1, :cond_0
 
-    invoke-virtual {v4}, Landroid/graphics/PathMeasure;->getLength()F
+    iget-object v1, p0, Landroid/support/b/a/g;->l:[F
 
-    move-result v2
+    const/4 v2, 0x0
 
-    const/16 v1, 0xbb8
+    aput v2, v1, v0
 
-    const v3, 0x3b03126f    # 0.002f
+    add-int/lit8 v0, v0, 0x1
 
-    div-float v3, v2, v3
+    goto :goto_0
 
-    float-to-int v3, v3
+    :cond_0
+    return-void
+.end method
 
-    add-int/lit8 v3, v3, 0x1
+.method a(Landroid/support/b/a/b;)V
+    .locals 2
 
-    invoke-static {v1, v3}, Ljava/lang/Math;->min(II)I
+    const/4 v0, 0x0
 
-    move-result v5
+    :goto_0
+    iget v1, p0, Landroid/support/b/a/g;->o:I
 
-    if-gtz v5, :cond_0
+    if-ge v0, v1, :cond_1
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iget-object v1, p0, Landroid/support/b/a/g;->n:[Landroid/support/b/a/b;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    aget-object v1, v1, v0
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    if-ne v1, p1, :cond_0
 
-    const-string v3, "The Path has a invalid length "
+    :goto_1
+    return-void
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    iget v0, p0, Landroid/support/b/a/g;->o:I
+
+    iget-object v1, p0, Landroid/support/b/a/g;->n:[Landroid/support/b/a/b;
+
+    array-length v1, v1
+
+    if-lt v0, v1, :cond_2
+
+    iget-object v0, p0, Landroid/support/b/a/g;->n:[Landroid/support/b/a/b;
+
+    iget-object v1, p0, Landroid/support/b/a/g;->n:[Landroid/support/b/a/b;
+
+    array-length v1, v1
+
+    mul-int/lit8 v1, v1, 0x2
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/support/b/a/b;
+
+    iput-object v0, p0, Landroid/support/b/a/g;->n:[Landroid/support/b/a/b;
+
+    :cond_2
+    iget-object v0, p0, Landroid/support/b/a/g;->n:[Landroid/support/b/a/b;
+
+    iget v1, p0, Landroid/support/b/a/g;->o:I
+
+    aput-object p1, v0, v1
+
+    iget v0, p0, Landroid/support/b/a/g;->o:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Landroid/support/b/a/g;->o:I
+
+    goto :goto_1
+.end method
+
+.method public a(Landroid/support/b/a/g$a;)V
+    .locals 0
+
+    iput-object p1, p0, Landroid/support/b/a/g;->m:Landroid/support/b/a/g$a;
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Landroid/support/b/a/g;->r:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method b()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "["
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v2, p0, Landroid/support/b/a/g;->l:[F
+
+    array-length v2, v2
+
+    if-ge v0, v2, :cond_1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Landroid/support/b/a/g;->l:[F
+
+    aget v2, v2, v0
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -308,233 +433,25 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object v2, p0, Landroid/support/b/a/g;->l:[F
 
-    throw v0
+    array-length v2, v2
 
-    :cond_0
-    new-array v1, v5, [F
+    add-int/lit8 v2, v2, -0x1
 
-    iput-object v1, p0, Landroid/support/b/a/g;->a:[F
-
-    new-array v1, v5, [F
-
-    iput-object v1, p0, Landroid/support/b/a/g;->b:[F
-
-    const/4 v1, 0x2
-
-    new-array v3, v1, [F
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, v5, :cond_1
-
-    int-to-float v6, v1
-
-    mul-float/2addr v6, v2
-
-    add-int/lit8 v7, v5, -0x1
-
-    int-to-float v7, v7
-
-    div-float/2addr v6, v7
-
-    const/4 v7, 0x0
-
-    invoke-virtual {v4, v6, v3, v7}, Landroid/graphics/PathMeasure;->getPosTan(F[F[F)Z
-
-    iget-object v6, p0, Landroid/support/b/a/g;->a:[F
-
-    aget v7, v3, v0
-
-    aput v7, v6, v1
-
-    iget-object v6, p0, Landroid/support/b/a/g;->b:[F
-
-    const/4 v7, 0x1
-
-    aget v7, v3, v7
-
-    aput v7, v6, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v1, p0, Landroid/support/b/a/g;->a:[F
-
-    aget v1, v1, v0
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
-
-    move-result v1
-
-    float-to-double v2, v1
-
-    cmpl-double v1, v2, v8
-
-    if-gtz v1, :cond_2
-
-    iget-object v1, p0, Landroid/support/b/a/g;->b:[F
-
-    aget v1, v1, v0
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
-
-    move-result v1
-
-    float-to-double v2, v1
-
-    cmpl-double v1, v2, v8
-
-    if-gtz v1, :cond_2
-
-    iget-object v1, p0, Landroid/support/b/a/g;->a:[F
-
-    add-int/lit8 v2, v5, -0x1
-
-    aget v1, v1, v2
-
-    sub-float/2addr v1, v10
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
-
-    move-result v1
-
-    float-to-double v2, v1
-
-    cmpl-double v1, v2, v8
-
-    if-gtz v1, :cond_2
-
-    iget-object v1, p0, Landroid/support/b/a/g;->b:[F
-
-    add-int/lit8 v2, v5, -0x1
-
-    aget v1, v1, v2
-
-    sub-float/2addr v1, v10
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
-
-    move-result v1
-
-    float-to-double v2, v1
-
-    cmpl-double v1, v2, v8
-
-    if-lez v1, :cond_3
-
-    :cond_2
-    new-instance v1, Ljava/lang/IllegalArgumentException;
+    if-ge v0, v2, :cond_0
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "The Path must start at (0,0) and end at (1,1) start: "
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, ", "
 
-    iget-object v3, p0, Landroid/support/b/a/g;->a:[F
-
-    aget v3, v3, v0
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ","
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Landroid/support/b/a/g;->b:[F
-
-    aget v0, v3, v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, " end:"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v2, p0, Landroid/support/b/a/g;->a:[F
-
-    add-int/lit8 v3, v5, -0x1
-
-    aget v2, v2, v3
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, ","
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v2, p0, Landroid/support/b/a/g;->b:[F
-
-    add-int/lit8 v3, v5, -0x1
-
-    aget v2, v2, v3
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_3
-    const/4 v1, 0x0
-
-    move v3, v1
-
-    move v1, v0
-
-    :goto_1
-    if-ge v0, v5, :cond_5
-
-    iget-object v6, p0, Landroid/support/b/a/g;->a:[F
-
-    add-int/lit8 v2, v1, 0x1
-
-    aget v1, v6, v1
-
-    cmpg-float v3, v1, v3
-
-    if-gez v3, :cond_4
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "The Path cannot loop back on itself, x :"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -542,154 +459,157 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_4
-    iget-object v3, p0, Landroid/support/b/a/g;->a:[F
-
-    aput v1, v3, v0
-
+    :goto_1
     add-int/lit8 v0, v0, 0x1
 
-    move v3, v1
+    goto :goto_0
 
-    move v1, v2
+    :cond_0
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "] "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     goto :goto_1
 
-    :cond_5
-    invoke-virtual {v4}, Landroid/graphics/PathMeasure;->nextContour()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "The Path should be continuous, can\'t have 2+ contours"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_6
-    return-void
+    :cond_1
+    return-object v1
 .end method
 
-
-# virtual methods
-.method public getInterpolation(F)F
+.method b(Landroid/support/b/a/b;)V
     .locals 6
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    const/4 v1, 0x0
 
-    const/4 v3, 0x0
+    move v0, v1
 
-    cmpg-float v1, p1, v3
+    :goto_0
+    iget v2, p0, Landroid/support/b/a/g;->o:I
 
-    if-gtz v1, :cond_1
+    if-ge v0, v2, :cond_1
 
-    move v0, v3
+    iget-object v2, p0, Landroid/support/b/a/g;->n:[Landroid/support/b/a/b;
+
+    aget-object v2, v2, v0
+
+    if-ne v2, p1, :cond_2
+
+    :goto_1
+    iget v2, p0, Landroid/support/b/a/g;->o:I
+
+    sub-int/2addr v2, v0
+
+    add-int/lit8 v2, v2, -0x1
+
+    if-ge v1, v2, :cond_0
+
+    iget-object v2, p0, Landroid/support/b/a/g;->n:[Landroid/support/b/a/b;
+
+    add-int v3, v0, v1
+
+    iget-object v4, p0, Landroid/support/b/a/g;->n:[Landroid/support/b/a/b;
+
+    add-int v5, v0, v1
+
+    add-int/lit8 v5, v5, 0x1
+
+    aget-object v4, v4, v5
+
+    aput-object v4, v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
 
     :cond_0
-    :goto_0
-    return v0
+    iget v0, p0, Landroid/support/b/a/g;->o:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Landroid/support/b/a/g;->o:I
 
     :cond_1
-    cmpl-float v1, p1, v0
+    return-void
 
-    if-gez v1, :cond_0
+    :cond_2
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public c()V
+    .locals 3
 
     const/4 v2, 0x0
 
-    iget-object v0, p0, Landroid/support/b/a/g;->a:[F
+    const/4 v1, -0x1
 
-    array-length v0, v0
+    const/4 v0, 0x0
 
-    add-int/lit8 v1, v0, -0x1
+    iput-object v0, p0, Landroid/support/b/a/g;->r:Ljava/lang/String;
 
-    :goto_1
-    sub-int v0, v1, v2
+    sget-object v0, Landroid/support/b/a/g$a;->e:Landroid/support/b/a/g$a;
 
-    const/4 v4, 0x1
+    iput-object v0, p0, Landroid/support/b/a/g;->m:Landroid/support/b/a/g$a;
 
-    if-le v0, v4, :cond_3
+    iput v2, p0, Landroid/support/b/a/g;->i:I
 
-    add-int v0, v2, v1
+    iput v1, p0, Landroid/support/b/a/g;->g:I
 
-    div-int/lit8 v0, v0, 0x2
+    iput v1, p0, Landroid/support/b/a/g;->h:I
 
-    iget-object v4, p0, Landroid/support/b/a/g;->a:[F
+    const/4 v0, 0x0
 
-    aget v4, v4, v0
+    iput v0, p0, Landroid/support/b/a/g;->j:F
 
-    cmpg-float v4, p1, v4
+    iput v2, p0, Landroid/support/b/a/g;->o:I
 
-    if-gez v4, :cond_2
+    return-void
+.end method
 
-    move v1, v2
+.method public d()Ljava/lang/String;
+    .locals 1
 
-    :goto_2
-    move v2, v1
+    iget-object v0, p0, Landroid/support/b/a/g;->r:Ljava/lang/String;
 
-    move v1, v0
+    return-object v0
+.end method
 
-    goto :goto_1
+.method public toString()Ljava/lang/String;
+    .locals 2
 
-    :cond_2
-    move v5, v1
+    const-string v0, ""
 
-    move v1, v0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move v0, v5
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto :goto_2
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_3
-    iget-object v0, p0, Landroid/support/b/a/g;->a:[F
+    move-result-object v0
 
-    aget v0, v0, v1
+    iget-object v1, p0, Landroid/support/b/a/g;->r:Ljava/lang/String;
 
-    iget-object v4, p0, Landroid/support/b/a/g;->a:[F
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aget v4, v4, v2
+    move-result-object v0
 
-    sub-float/2addr v0, v4
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    cmpl-float v3, v0, v3
+    move-result-object v0
 
-    if-nez v3, :cond_4
-
-    iget-object v0, p0, Landroid/support/b/a/g;->b:[F
-
-    aget v0, v0, v2
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v3, p0, Landroid/support/b/a/g;->a:[F
-
-    aget v3, v3, v2
-
-    sub-float v3, p1, v3
-
-    div-float v0, v3, v0
-
-    iget-object v3, p0, Landroid/support/b/a/g;->b:[F
-
-    aget v2, v3, v2
-
-    iget-object v3, p0, Landroid/support/b/a/g;->b:[F
-
-    aget v1, v3, v1
-
-    sub-float/2addr v1, v2
-
-    mul-float/2addr v0, v1
-
-    add-float/2addr v0, v2
-
-    goto :goto_0
+    return-object v0
 .end method

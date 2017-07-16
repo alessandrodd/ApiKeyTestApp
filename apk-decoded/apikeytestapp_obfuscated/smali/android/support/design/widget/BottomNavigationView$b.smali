@@ -11,3 +11,12 @@
     accessFlags = 0x609
     name = "b"
 .end annotation
+
+
+# virtual methods
+.method public abstract a(Landroid/view/MenuItem;)Z
+    .param p1    # Landroid/view/MenuItem;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+.end method

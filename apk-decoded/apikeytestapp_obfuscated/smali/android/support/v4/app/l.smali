@@ -1,89 +1,78 @@
-.class public Landroid/support/v4/app/l;
-.super Ljava/lang/Object;
+.class abstract Landroid/support/v4/app/l;
+.super Landroid/support/v4/app/k;
+
+
+# annotations
+.annotation build Landroid/support/annotation/ak;
+    a = {
+        .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+    }
+.end annotation
 
 
 # instance fields
-.field private final a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Landroid/support/v4/app/Fragment;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final b:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Landroid/support/v4/app/l;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field b:Z
 
 
 # direct methods
-.method constructor <init>(Ljava/util/List;Ljava/util/List;)V
+.method constructor <init>()V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Landroid/support/v4/app/Fragment;",
-            ">;",
-            "Ljava/util/List",
-            "<",
-            "Landroid/support/v4/app/l;",
-            ">;)V"
-        }
-    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Landroid/support/v4/app/l;->a:Ljava/util/List;
-
-    iput-object p2, p0, Landroid/support/v4/app/l;->b:Ljava/util/List;
+    invoke-direct {p0}, Landroid/support/v4/app/k;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method a()Ljava/util/List;
+.method public startActivityForResult(Landroid/content/Intent;ILandroid/os/Bundle;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Landroid/support/v4/app/Fragment;",
-            ">;"
-        }
+    .param p3    # Landroid/os/Bundle;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ai;
+        a = 0x10
     .end annotation
 
-    iget-object v0, p0, Landroid/support/v4/app/l;->a:Ljava/util/List;
+    iget-boolean v0, p0, Landroid/support/v4/app/l;->b:Z
 
-    return-object v0
+    if-nez v0, :cond_0
+
+    const/4 v0, -0x1
+
+    if-eq p2, v0, :cond_0
+
+    invoke-static {p2}, Landroid/support/v4/app/l;->b(I)V
+
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/k;->startActivityForResult(Landroid/content/Intent;ILandroid/os/Bundle;)V
+
+    return-void
 .end method
 
-.method b()Ljava/util/List;
+.method public startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Landroid/support/v4/app/l;",
-            ">;"
-        }
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ai;
+        a = 0x10
     .end annotation
 
-    iget-object v0, p0, Landroid/support/v4/app/l;->b:Ljava/util/List;
+    iget-boolean v0, p0, Landroid/support/v4/app/l;->a:Z
 
-    return-object v0
+    if-nez v0, :cond_0
+
+    const/4 v0, -0x1
+
+    if-eq p2, v0, :cond_0
+
+    invoke-static {p2}, Landroid/support/v4/app/l;->b(I)V
+
+    :cond_0
+    invoke-super/range {p0 .. p7}, Landroid/support/v4/app/k;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
+
+    return-void
 .end method

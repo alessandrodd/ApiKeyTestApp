@@ -64,6 +64,24 @@
     return-void
 .end method
 
+.method public constructor <init>(Landroid/os/ResultReceiver;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->a:Landroid/os/ResultReceiver;
+
+    return-void
+.end method
+
+.method static synthetic a(Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;)Landroid/os/ResultReceiver;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->a:Landroid/os/ResultReceiver;
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public describeContents()I

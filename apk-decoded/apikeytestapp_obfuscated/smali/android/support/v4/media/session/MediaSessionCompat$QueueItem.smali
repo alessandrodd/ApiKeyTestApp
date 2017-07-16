@@ -28,13 +28,15 @@
     .end annotation
 .end field
 
+.field public static final a:I = -0x1
+
 
 # instance fields
-.field private final a:Landroid/support/v4/media/MediaDescriptionCompat;
+.field private final b:Landroid/support/v4/media/MediaDescriptionCompat;
 
-.field private final b:J
+.field private final c:J
 
-.field private c:Ljava/lang/Object;
+.field private d:Ljava/lang/Object;
 
 
 # direct methods
@@ -63,13 +65,23 @@
 
     check-cast v0, Landroid/support/v4/media/MediaDescriptionCompat;
 
-    iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->a:Landroid/support/v4/media/MediaDescriptionCompat;
+    iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->b:Landroid/support/v4/media/MediaDescriptionCompat;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->b:J
+    iput-wide v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->c:J
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/support/v4/media/MediaDescriptionCompat;J)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0, p1, p2, p3}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;-><init>(Ljava/lang/Object;Landroid/support/v4/media/MediaDescriptionCompat;J)V
 
     return-void
 .end method
@@ -105,11 +117,11 @@
     throw v0
 
     :cond_1
-    iput-object p2, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->a:Landroid/support/v4/media/MediaDescriptionCompat;
+    iput-object p2, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->b:Landroid/support/v4/media/MediaDescriptionCompat;
 
-    iput-wide p3, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->b:J
+    iput-wide p3, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->c:J
 
-    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->c:Ljava/lang/Object;
+    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->d:Ljava/lang/Object;
 
     return-void
 .end method
@@ -132,7 +144,7 @@
     return-object v0
 
     :cond_1
-    invoke-static {p0}, Landroid/support/v4/media/session/d$a;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroid/support/v4/media/session/g$c;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -140,7 +152,7 @@
 
     move-result-object v1
 
-    invoke-static {p0}, Landroid/support/v4/media/session/d$a;->b(Ljava/lang/Object;)J
+    invoke-static {p0}, Landroid/support/v4/media/session/g$c;->b(Ljava/lang/Object;)J
 
     move-result-wide v2
 
@@ -210,6 +222,61 @@
 
 
 # virtual methods
+.method public a()Landroid/support/v4/media/MediaDescriptionCompat;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->b:Landroid/support/v4/media/MediaDescriptionCompat;
+
+    return-object v0
+.end method
+
+.method public b()J
+    .locals 2
+
+    iget-wide v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->c:J
+
+    return-wide v0
+.end method
+
+.method public c()Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->d:Ljava/lang/Object;
+
+    if-nez v0, :cond_0
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-ge v0, v1, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->d:Ljava/lang/Object;
+
+    :goto_0
+    return-object v0
+
+    :cond_1
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->b:Landroid/support/v4/media/MediaDescriptionCompat;
+
+    invoke-virtual {v0}, Landroid/support/v4/media/MediaDescriptionCompat;->i()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-wide v2, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->c:J
+
+    invoke-static {v0, v2, v3}, Landroid/support/v4/media/session/g$c;->a(Ljava/lang/Object;J)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->d:Ljava/lang/Object;
+
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->d:Ljava/lang/Object;
+
+    goto :goto_0
+.end method
+
 .method public describeContents()I
     .locals 1
 
@@ -231,7 +298,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->a:Landroid/support/v4/media/MediaDescriptionCompat;
+    iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->b:Landroid/support/v4/media/MediaDescriptionCompat;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -243,7 +310,7 @@
 
     move-result-object v0
 
-    iget-wide v2, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->b:J
+    iget-wide v2, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->c:J
 
     invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -265,11 +332,11 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->a:Landroid/support/v4/media/MediaDescriptionCompat;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->b:Landroid/support/v4/media/MediaDescriptionCompat;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/media/MediaDescriptionCompat;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-wide v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->b:J
+    iget-wide v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->c:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 

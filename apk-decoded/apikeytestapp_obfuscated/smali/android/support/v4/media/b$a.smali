@@ -1,5 +1,5 @@
-.class Landroid/support/v4/media/b$a;
-.super Landroid/support/v4/media/a$a;
+.class final Landroid/support/v4/media/b$a;
+.super Ljava/lang/Object;
 
 
 # annotations
@@ -8,18 +8,57 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x18
     name = "a"
 .end annotation
 
 
+# instance fields
+.field private a:Landroid/media/AudioAttributes;
+
+
 # direct methods
-.method public static b(Ljava/lang/Object;Landroid/net/Uri;)V
+.method private constructor <init>(Landroid/media/AudioAttributes;)V
     .locals 0
 
-    check-cast p0, Landroid/media/MediaDescription$Builder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setMediaUri(Landroid/net/Uri;)Landroid/media/MediaDescription$Builder;
+    iput-object p1, p0, Landroid/support/v4/media/b$a;->a:Landroid/media/AudioAttributes;
 
     return-void
+.end method
+
+.method public static a(Landroid/media/AudioAttributes;)Landroid/support/v4/media/b$a;
+    .locals 2
+    .param p0    # Landroid/media/AudioAttributes;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+
+    if-nez p0, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "AudioAttributesApi21.Wrapper cannot wrap null"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    new-instance v0, Landroid/support/v4/media/b$a;
+
+    invoke-direct {v0, p0}, Landroid/support/v4/media/b$a;-><init>(Landroid/media/AudioAttributes;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public a()Landroid/media/AudioAttributes;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/media/b$a;->a:Landroid/media/AudioAttributes;
+
+    return-object v0
 .end method

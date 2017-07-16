@@ -7,6 +7,7 @@
     value = {
         Landroid/support/design/widget/BottomSheetBehavior$SavedState;,
         Landroid/support/design/widget/BottomSheetBehavior$b;,
+        Landroid/support/design/widget/BottomSheetBehavior$c;,
         Landroid/support/design/widget/BottomSheetBehavior$a;
     }
 .end annotation
@@ -22,20 +23,46 @@
 .end annotation
 
 
+# static fields
+.field public static final a:I = 0x1
+
+.field public static final b:I = 0x2
+
+.field public static final c:I = 0x3
+
+.field public static final d:I = 0x4
+
+.field public static final e:I = 0x5
+
+.field public static final f:I = -0x1
+
+.field private static final q:F = 0.5f
+
+.field private static final r:F = 0.1f
+
+
 # instance fields
-.field a:I
+.field private A:Landroid/support/design/widget/BottomSheetBehavior$a;
 
-.field b:I
+.field private B:Landroid/view/VelocityTracker;
 
-.field c:Z
+.field private C:I
 
-.field d:I
+.field private final D:Landroid/support/v4/widget/ac$a;
 
-.field e:Landroid/support/v4/widget/p;
+.field g:I
 
-.field f:I
+.field h:I
 
-.field g:Ljava/lang/ref/WeakReference;
+.field i:Z
+
+.field j:I
+
+.field k:Landroid/support/v4/widget/ac;
+
+.field l:I
+
+.field m:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference",
@@ -44,7 +71,7 @@
     .end annotation
 .end field
 
-.field h:Ljava/lang/ref/WeakReference;
+.field n:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference",
@@ -55,33 +82,25 @@
     .end annotation
 .end field
 
-.field i:I
+.field o:I
 
-.field j:Z
+.field p:Z
 
-.field private k:F
+.field private s:F
 
-.field private l:I
+.field private t:I
 
-.field private m:Z
+.field private u:Z
 
-.field private n:I
+.field private v:I
 
-.field private o:Z
+.field private w:Z
 
-.field private p:Z
+.field private x:Z
 
-.field private q:I
+.field private y:I
 
-.field private r:Z
-
-.field private s:Landroid/support/design/widget/BottomSheetBehavior$a;
-
-.field private t:Landroid/view/VelocityTracker;
-
-.field private u:I
-
-.field private final v:Landroid/support/v4/widget/p$a;
+.field private z:Z
 
 
 # direct methods
@@ -92,13 +111,13 @@
 
     const/4 v0, 0x4
 
-    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
-    new-instance v0, Landroid/support/design/widget/BottomSheetBehavior$1;
+    new-instance v0, Landroid/support/design/widget/BottomSheetBehavior$2;
 
-    invoke-direct {v0, p0}, Landroid/support/design/widget/BottomSheetBehavior$1;-><init>(Landroid/support/design/widget/BottomSheetBehavior;)V
+    invoke-direct {v0, p0}, Landroid/support/design/widget/BottomSheetBehavior$2;-><init>(Landroid/support/design/widget/BottomSheetBehavior;)V
 
-    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->v:Landroid/support/v4/widget/p$a;
+    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->D:Landroid/support/v4/widget/ac$a;
 
     return-void
 .end method
@@ -114,21 +133,21 @@
 
     const/4 v0, 0x4
 
-    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
-    new-instance v0, Landroid/support/design/widget/BottomSheetBehavior$1;
+    new-instance v0, Landroid/support/design/widget/BottomSheetBehavior$2;
 
-    invoke-direct {v0, p0}, Landroid/support/design/widget/BottomSheetBehavior$1;-><init>(Landroid/support/design/widget/BottomSheetBehavior;)V
+    invoke-direct {v0, p0}, Landroid/support/design/widget/BottomSheetBehavior$2;-><init>(Landroid/support/design/widget/BottomSheetBehavior;)V
 
-    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->v:Landroid/support/v4/widget/p$a;
+    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->D:Landroid/support/v4/widget/ac$a;
 
-    sget-object v0, Landroid/support/design/a$h;->BottomSheetBehavior_Layout:[I
+    sget-object v0, Landroid/support/design/b$m;->BottomSheetBehavior_Layout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    sget v1, Landroid/support/design/a$h;->BottomSheetBehavior_Layout_behavior_peekHeight:I
+    sget v1, Landroid/support/design/b$m;->BottomSheetBehavior_Layout_behavior_peekHeight:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
@@ -145,7 +164,7 @@
     invoke-virtual {p0, v1}, Landroid/support/design/widget/BottomSheetBehavior;->a(I)V
 
     :goto_0
-    sget v1, Landroid/support/design/a$h;->BottomSheetBehavior_Layout_behavior_hideable:I
+    sget v1, Landroid/support/design/b$m;->BottomSheetBehavior_Layout_behavior_hideable:I
 
     invoke-virtual {v0, v1, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -153,7 +172,7 @@
 
     invoke-virtual {p0, v1}, Landroid/support/design/widget/BottomSheetBehavior;->a(Z)V
 
-    sget v1, Landroid/support/design/a$h;->BottomSheetBehavior_Layout_behavior_skipCollapsed:I
+    sget v1, Landroid/support/design/b$m;->BottomSheetBehavior_Layout_behavior_skipCollapsed:I
 
     invoke-virtual {v0, v1, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -173,12 +192,12 @@
 
     int-to-float v0, v0
 
-    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->k:F
+    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->s:F
 
     return-void
 
     :cond_0
-    sget v1, Landroid/support/design/a$h;->BottomSheetBehavior_Layout_behavior_peekHeight:I
+    sget v1, Landroid/support/design/b$m;->BottomSheetBehavior_Layout_behavior_peekHeight:I
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -189,43 +208,96 @@
     goto :goto_0
 .end method
 
-.method private a()V
+.method public static b(Landroid/view/View;)Landroid/support/design/widget/BottomSheetBehavior;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Landroid/view/View;",
+            ">(TV;)",
+            "Landroid/support/design/widget/BottomSheetBehavior",
+            "<TV;>;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/support/design/widget/CoordinatorLayout$e;
+
+    if-nez v1, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "The view is not a child of CoordinatorLayout"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$e;
+
+    invoke-virtual {v0}, Landroid/support/design/widget/CoordinatorLayout$e;->b()Landroid/support/design/widget/CoordinatorLayout$a;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/support/design/widget/BottomSheetBehavior;
+
+    if-nez v1, :cond_1
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "The view is not associated with BottomSheetBehavior"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    check-cast v0, Landroid/support/design/widget/BottomSheetBehavior;
+
+    return-object v0
+.end method
+
+.method private g()V
     .locals 1
 
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->i:I
+    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->o:I
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->B:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->B:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:Landroid/view/VelocityTracker;
+    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->B:Landroid/view/VelocityTracker;
 
     :cond_0
     return-void
 .end method
 
-.method private b()F
+.method private h()F
     .locals 3
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->B:Landroid/view/VelocityTracker;
 
     const/16 v1, 0x3e8
 
-    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->k:F
+    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->s:F
 
     invoke-virtual {v0, v1, v2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->B:Landroid/view/VelocityTracker;
 
-    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->i:I
+    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->o:I
 
     invoke-virtual {v0, v1}, Landroid/view/VelocityTracker;->getYVelocity(I)F
 
@@ -236,10 +308,30 @@
 
 
 # virtual methods
+.method public final a()I
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->u:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, -0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:I
+
+    goto :goto_0
+.end method
+
 .method a(Landroid/view/View;)Landroid/view/View;
     .locals 3
+    .annotation build Landroid/support/annotation/as;
+    .end annotation
 
-    invoke-static {p1}, Landroid/support/v4/view/r;->s(Landroid/view/View;)Z
+    invoke-static {p1}, Landroid/support/v4/view/ac;->V(Landroid/view/View;)Z
 
     move-result v0
 
@@ -304,26 +396,26 @@
 
     if-ne p1, v2, :cond_1
 
-    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->m:Z
+    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->u:Z
 
     if-nez v2, :cond_3
 
-    iput-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->m:Z
+    iput-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->u:Z
 
     :goto_0
     if-eqz v0, :cond_0
 
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->m:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->m:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -339,28 +431,28 @@
     return-void
 
     :cond_1
-    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->m:Z
+    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->u:Z
 
     if-nez v2, :cond_2
 
-    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->l:I
+    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:I
 
     if-eq v2, p1, :cond_3
 
     :cond_2
-    iput-boolean v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->m:Z
+    iput-boolean v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->u:Z
 
     invoke-static {v1, p1}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
-    iput v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->l:I
+    iput v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:I
 
-    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->f:I
+    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->l:I
 
     sub-int/2addr v1, p1
 
-    iput v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
+    iput v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
 
     goto :goto_0
 
@@ -368,6 +460,14 @@
     move v0, v1
 
     goto :goto_0
+.end method
+
+.method public a(Landroid/support/design/widget/BottomSheetBehavior$a;)V
+    .locals 0
+
+    iput-object p1, p0, Landroid/support/design/widget/BottomSheetBehavior;->A:Landroid/support/design/widget/BottomSheetBehavior$a;
+
+    return-void
 .end method
 
 .method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/os/Parcelable;)V
@@ -405,7 +505,7 @@
     :cond_0
     const/4 v0, 0x4
 
-    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
     :goto_0
     return-void
@@ -413,7 +513,7 @@
     :cond_1
     iget v0, p3, Landroid/support/design/widget/BottomSheetBehavior$SavedState;->a:I
 
-    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
     goto :goto_0
 .end method
@@ -432,7 +532,7 @@
 
     const/4 v3, 0x1
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->n:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -454,11 +554,11 @@
 
     if-lez p5, :cond_3
 
-    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->a:I
+    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:I
 
     if-ge v1, v2, :cond_2
 
-    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->a:I
+    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:I
 
     sub-int/2addr v0, v1
 
@@ -468,11 +568,11 @@
 
     neg-int v0, v0
 
-    invoke-static {p2, v0}, Landroid/support/v4/view/r;->d(Landroid/view/View;I)V
+    invoke-static {p2, v0}, Landroid/support/v4/view/ac;->k(Landroid/view/View;I)V
 
     const/4 v0, 0x3
 
-    invoke-virtual {p0, v0}, Landroid/support/design/widget/BottomSheetBehavior;->b(I)V
+    invoke-virtual {p0, v0}, Landroid/support/design/widget/BottomSheetBehavior;->c(I)V
 
     :cond_1
     :goto_1
@@ -480,11 +580,11 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Landroid/support/design/widget/BottomSheetBehavior;->c(I)V
+    invoke-virtual {p0, v0}, Landroid/support/design/widget/BottomSheetBehavior;->d(I)V
 
-    iput p5, p0, Landroid/support/design/widget/BottomSheetBehavior;->q:I
+    iput p5, p0, Landroid/support/design/widget/BottomSheetBehavior;->y:I
 
-    iput-boolean v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->r:Z
+    iput-boolean v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->z:Z
 
     goto :goto_0
 
@@ -493,9 +593,9 @@
 
     neg-int v0, p5
 
-    invoke-static {p2, v0}, Landroid/support/v4/view/r;->d(Landroid/view/View;I)V
+    invoke-static {p2, v0}, Landroid/support/v4/view/ac;->k(Landroid/view/View;I)V
 
-    invoke-virtual {p0, v3}, Landroid/support/design/widget/BottomSheetBehavior;->b(I)V
+    invoke-virtual {p0, v3}, Landroid/support/design/widget/BottomSheetBehavior;->c(I)V
 
     goto :goto_1
 
@@ -504,17 +604,17 @@
 
     const/4 v2, -0x1
 
-    invoke-static {p3, v2}, Landroid/support/v4/view/r;->a(Landroid/view/View;I)Z
+    invoke-static {p3, v2}, Landroid/support/v4/view/ac;->b(Landroid/view/View;I)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
+    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
 
     if-le v1, v2, :cond_4
 
-    iget-boolean v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->c:Z
+    iget-boolean v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->i:Z
 
     if-eqz v1, :cond_5
 
@@ -523,14 +623,14 @@
 
     neg-int v0, p5
 
-    invoke-static {p2, v0}, Landroid/support/v4/view/r;->d(Landroid/view/View;I)V
+    invoke-static {p2, v0}, Landroid/support/v4/view/ac;->k(Landroid/view/View;I)V
 
-    invoke-virtual {p0, v3}, Landroid/support/design/widget/BottomSheetBehavior;->b(I)V
+    invoke-virtual {p0, v3}, Landroid/support/design/widget/BottomSheetBehavior;->c(I)V
 
     goto :goto_1
 
     :cond_5
-    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
+    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
 
     sub-int/2addr v0, v1
 
@@ -540,11 +640,99 @@
 
     neg-int v0, v0
 
-    invoke-static {p2, v0}, Landroid/support/v4/view/r;->d(Landroid/view/View;I)V
+    invoke-static {p2, v0}, Landroid/support/v4/view/ac;->k(Landroid/view/View;I)V
 
     const/4 v0, 0x4
 
-    invoke-virtual {p0, v0}, Landroid/support/design/widget/BottomSheetBehavior;->b(I)V
+    invoke-virtual {p0, v0}, Landroid/support/design/widget/BottomSheetBehavior;->c(I)V
+
+    goto :goto_1
+.end method
+
+.method a(Landroid/view/View;I)V
+    .locals 3
+
+    const/4 v0, 0x4
+
+    if-ne p2, v0, :cond_0
+
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
+
+    :goto_0
+    iget-object v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ac;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+
+    move-result v2
+
+    invoke-virtual {v1, p1, v2, v0}, Landroid/support/v4/widget/ac;->a(Landroid/view/View;II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Landroid/support/design/widget/BottomSheetBehavior;->c(I)V
+
+    new-instance v0, Landroid/support/design/widget/BottomSheetBehavior$b;
+
+    invoke-direct {v0, p0, p1, p2}, Landroid/support/design/widget/BottomSheetBehavior$b;-><init>(Landroid/support/design/widget/BottomSheetBehavior;Landroid/view/View;I)V
+
+    invoke-static {p1, v0}, Landroid/support/v4/view/ac;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+
+    :goto_1
+    return-void
+
+    :cond_0
+    const/4 v0, 0x3
+
+    if-ne p2, v0, :cond_1
+
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:I
+
+    goto :goto_0
+
+    :cond_1
+    iget-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->i:Z
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x5
+
+    if-ne p2, v0, :cond_2
+
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->l:I
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Illegal state argument: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_3
+    invoke-virtual {p0, p2}, Landroid/support/design/widget/BottomSheetBehavior;->c(I)V
 
     goto :goto_1
 .end method
@@ -552,7 +740,7 @@
 .method public a(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Landroid/support/design/widget/BottomSheetBehavior;->c:Z
+    iput-boolean p1, p0, Landroid/support/design/widget/BottomSheetBehavior;->i:Z
 
     return-void
 .end method
@@ -569,19 +757,19 @@
 
     const/4 v5, 0x1
 
-    invoke-static {p1}, Landroid/support/v4/view/r;->o(Landroid/view/View;)Z
+    invoke-static {p1}, Landroid/support/v4/view/ac;->P(Landroid/view/View;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p2}, Landroid/support/v4/view/r;->o(Landroid/view/View;)Z
+    invoke-static {p2}, Landroid/support/v4/view/ac;->P(Landroid/view/View;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {p2, v5}, Landroid/support/v4/view/r;->b(Landroid/view/View;Z)V
+    invoke-static {p2, v5}, Landroid/support/v4/view/ac;->b(Landroid/view/View;Z)V
 
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->getTop()I
@@ -594,13 +782,13 @@
 
     move-result v0
 
-    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->f:I
+    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->l:I
 
-    iget-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->m:Z
+    iget-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->u:Z
 
     if-eqz v0, :cond_4
 
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->n:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->v:I
 
     if-nez v0, :cond_1
 
@@ -608,18 +796,18 @@
 
     move-result-object v0
 
-    sget v2, Landroid/support/design/a$b;->design_bottom_sheet_peek_height_min:I
+    sget v2, Landroid/support/design/b$f;->design_bottom_sheet_peek_height_min:I
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->n:I
+    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->v:I
 
     :cond_1
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->n:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->v:I
 
-    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->f:I
+    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->l:I
 
     invoke-virtual {p1}, Landroid/support/design/widget/CoordinatorLayout;->getWidth()I
 
@@ -638,7 +826,7 @@
     :goto_0
     const/4 v2, 0x0
 
-    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->f:I
+    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->l:I
 
     invoke-virtual {p2}, Landroid/view/View;->getHeight()I
 
@@ -650,50 +838,50 @@
 
     move-result v2
 
-    iput v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->a:I
+    iput v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:I
 
-    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->f:I
+    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->l:I
 
     sub-int v0, v2, v0
 
-    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->a:I
+    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:I
 
     invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
+    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
 
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
     const/4 v2, 0x3
 
     if-ne v0, v2, :cond_5
 
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->a:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:I
 
-    invoke-static {p2, v0}, Landroid/support/v4/view/r;->d(Landroid/view/View;I)V
+    invoke-static {p2, v0}, Landroid/support/v4/view/ac;->k(Landroid/view/View;I)V
 
     :cond_2
     :goto_1
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->e:Landroid/support/v4/widget/p;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ac;
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->v:Landroid/support/v4/widget/p$a;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->D:Landroid/support/v4/widget/ac$a;
 
-    invoke-static {p1, v0}, Landroid/support/v4/widget/p;->a(Landroid/view/ViewGroup;Landroid/support/v4/widget/p$a;)Landroid/support/v4/widget/p;
+    invoke-static {p1, v0}, Landroid/support/v4/widget/ac;->a(Landroid/view/ViewGroup;Landroid/support/v4/widget/ac$a;)Landroid/support/v4/widget/ac;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->e:Landroid/support/v4/widget/p;
+    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ac;
 
     :cond_3
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->m:Ljava/lang/ref/WeakReference;
 
     new-instance v0, Ljava/lang/ref/WeakReference;
 
@@ -703,51 +891,51 @@
 
     invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->n:Ljava/lang/ref/WeakReference;
 
     return v5
 
     :cond_4
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->l:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:I
 
     goto :goto_0
 
     :cond_5
-    iget-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->c:Z
+    iget-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->i:Z
 
     if-eqz v0, :cond_6
 
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
     const/4 v2, 0x5
 
     if-ne v0, v2, :cond_6
 
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->f:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->l:I
 
-    invoke-static {p2, v0}, Landroid/support/v4/view/r;->d(Landroid/view/View;I)V
+    invoke-static {p2, v0}, Landroid/support/v4/view/ac;->k(Landroid/view/View;I)V
 
     goto :goto_1
 
     :cond_6
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
     const/4 v2, 0x4
 
     if-ne v0, v2, :cond_7
 
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
 
-    invoke-static {p2, v0}, Landroid/support/v4/view/r;->d(Landroid/view/View;I)V
+    invoke-static {p2, v0}, Landroid/support/v4/view/ac;->k(Landroid/view/View;I)V
 
     goto :goto_1
 
     :cond_7
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
     if-eq v0, v5, :cond_8
 
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
     const/4 v2, 0x2
 
@@ -760,7 +948,7 @@
 
     sub-int v0, v1, v0
 
-    invoke-static {p2, v0}, Landroid/support/v4/view/r;->d(Landroid/view/View;I)V
+    invoke-static {p2, v0}, Landroid/support/v4/view/ac;->k(Landroid/view/View;I)V
 
     goto :goto_1
 .end method
@@ -789,7 +977,7 @@
 
     if-nez v0, :cond_0
 
-    iput-boolean v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->p:Z
+    iput-boolean v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->x:Z
 
     :goto_0
     return v2
@@ -801,10 +989,10 @@
 
     if-nez v3, :cond_1
 
-    invoke-direct {p0}, Landroid/support/design/widget/BottomSheetBehavior;->a()V
+    invoke-direct {p0}, Landroid/support/design/widget/BottomSheetBehavior;->g()V
 
     :cond_1
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->B:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_2
 
@@ -812,10 +1000,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:Landroid/view/VelocityTracker;
+    iput-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->B:Landroid/view/VelocityTracker;
 
     :cond_2
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->B:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, p3}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
@@ -824,13 +1012,13 @@
     :cond_3
     :goto_1
     :pswitch_0
-    iget-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->p:Z
+    iget-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->x:Z
 
     if-nez v0, :cond_7
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->e:Landroid/support/v4/widget/p;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ac;
 
-    invoke-virtual {v0, p3}, Landroid/support/v4/widget/p;->a(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p3}, Landroid/support/v4/widget/ac;->a(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -841,15 +1029,15 @@
     goto :goto_0
 
     :pswitch_1
-    iput-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:Z
+    iput-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->p:Z
 
-    iput v6, p0, Landroid/support/design/widget/BottomSheetBehavior;->i:I
+    iput v6, p0, Landroid/support/design/widget/BottomSheetBehavior;->o:I
 
-    iget-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->p:Z
+    iget-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->x:Z
 
     if-eqz v0, :cond_3
 
-    iput-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->p:Z
+    iput-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->x:Z
 
     goto :goto_0
 
@@ -866,13 +1054,13 @@
 
     float-to-int v0, v0
 
-    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->u:I
+    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->C:I
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->n:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->n:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -883,7 +1071,7 @@
     :goto_2
     if-eqz v0, :cond_4
 
-    iget v5, p0, Landroid/support/design/widget/BottomSheetBehavior;->u:I
+    iget v5, p0, Landroid/support/design/widget/BottomSheetBehavior;->C:I
 
     invoke-virtual {p1, v0, v4, v5}, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/view/View;II)Z
 
@@ -899,16 +1087,16 @@
 
     move-result v0
 
-    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->i:I
+    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->o:I
 
-    iput-boolean v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:Z
+    iput-boolean v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->p:Z
 
     :cond_4
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->i:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->o:I
 
     if-ne v0, v6, :cond_6
 
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->u:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->C:I
 
     invoke-virtual {p1, p2, v4, v0}, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/view/View;II)Z
 
@@ -919,7 +1107,7 @@
     move v0, v1
 
     :goto_3
-    iput-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->p:Z
+    iput-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->x:Z
 
     goto :goto_1
 
@@ -934,7 +1122,7 @@
     goto :goto_3
 
     :cond_7
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->n:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -948,11 +1136,11 @@
 
     if-eqz v0, :cond_8
 
-    iget-boolean v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->p:Z
+    iget-boolean v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->x:Z
 
     if-nez v3, :cond_8
 
-    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
     if-eq v3, v1, :cond_8
 
@@ -974,7 +1162,7 @@
 
     if-nez v0, :cond_8
 
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->u:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->C:I
 
     int-to-float v0, v0
 
@@ -988,9 +1176,9 @@
 
     move-result v0
 
-    iget-object v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->e:Landroid/support/v4/widget/p;
+    iget-object v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ac;
 
-    invoke-virtual {v3}, Landroid/support/v4/widget/p;->d()I
+    invoke-virtual {v3}, Landroid/support/v4/widget/ac;->f()I
 
     move-result v3
 
@@ -1033,7 +1221,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->n:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -1041,7 +1229,7 @@
 
     if-ne p3, v0, :cond_1
 
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
     const/4 v1, 0x3
 
@@ -1080,9 +1268,9 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->q:I
+    iput v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->y:I
 
-    iput-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->r:Z
+    iput-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->z:Z
 
     and-int/lit8 v1, p5, 0x2
 
@@ -1101,7 +1289,7 @@
 
     const/4 v1, 0x0
 
-    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->o:Z
+    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->w:Z
 
     if-eqz v2, :cond_1
 
@@ -1114,7 +1302,7 @@
 
     move-result v2
 
-    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
+    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
 
     if-ge v2, v3, :cond_2
 
@@ -1135,7 +1323,7 @@
 
     add-float/2addr v2, v3
 
-    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
+    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
 
     int-to-float v3, v3
 
@@ -1145,7 +1333,7 @@
 
     move-result v2
 
-    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->l:I
+    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:I
 
     int-to-float v3, v3
 
@@ -1179,28 +1367,52 @@
 
     move-result-object v1
 
-    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
     invoke-direct {v0, v1, v2}, Landroid/support/design/widget/BottomSheetBehavior$SavedState;-><init>(Landroid/os/Parcelable;I)V
 
     return-object v0
 .end method
 
-.method b(I)V
+.method public final b(I)V
     .locals 2
 
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
-    if-ne v0, p1, :cond_1
+    if-ne p1, v0, :cond_1
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    iput p1, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->m:Ljava/lang/ref/WeakReference;
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:Ljava/lang/ref/WeakReference;
+    if-nez v0, :cond_3
+
+    const/4 v0, 0x4
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_2
+
+    iget-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->i:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x5
+
+    if-ne p1, v0, :cond_0
+
+    :cond_2
+    iput p1, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->m:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -1210,13 +1422,34 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->s:Landroid/support/design/widget/BottomSheetBehavior$a;
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    if-eqz v1, :cond_0
+    move-result-object v1
 
-    iget-object v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->s:Landroid/support/design/widget/BottomSheetBehavior$a;
+    if-eqz v1, :cond_4
 
-    invoke-virtual {v1, v0, p1}, Landroid/support/design/widget/BottomSheetBehavior$a;->a(Landroid/view/View;I)V
+    invoke-interface {v1}, Landroid/view/ViewParent;->isLayoutRequested()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-static {v0}, Landroid/support/v4/view/ac;->ad(Landroid/view/View;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    new-instance v1, Landroid/support/design/widget/BottomSheetBehavior$1;
+
+    invoke-direct {v1, p0, v0, p1}, Landroid/support/design/widget/BottomSheetBehavior$1;-><init>(Landroid/support/design/widget/BottomSheetBehavior;Landroid/view/View;I)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p0, v0, p1}, Landroid/support/design/widget/BottomSheetBehavior;->a(Landroid/view/View;I)V
 
     goto :goto_0
 .end method
@@ -1224,9 +1457,17 @@
 .method public b(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Landroid/support/design/widget/BottomSheetBehavior;->o:Z
+    iput-boolean p1, p0, Landroid/support/design/widget/BottomSheetBehavior;->w:Z
 
     return-void
+.end method
+
+.method public b()Z
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->i:Z
+
+    return v0
 .end method
 
 .method public b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
@@ -1262,23 +1503,23 @@
 
     move-result v2
 
-    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->d:I
+    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
 
     if-ne v3, v0, :cond_2
 
     if-eqz v2, :cond_0
 
     :cond_2
-    iget-object v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->e:Landroid/support/v4/widget/p;
+    iget-object v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ac;
 
-    invoke-virtual {v3, p3}, Landroid/support/v4/widget/p;->b(Landroid/view/MotionEvent;)V
+    invoke-virtual {v3, p3}, Landroid/support/v4/widget/ac;->b(Landroid/view/MotionEvent;)V
 
     if-nez v2, :cond_3
 
-    invoke-direct {p0}, Landroid/support/design/widget/BottomSheetBehavior;->a()V
+    invoke-direct {p0}, Landroid/support/design/widget/BottomSheetBehavior;->g()V
 
     :cond_3
-    iget-object v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:Landroid/view/VelocityTracker;
+    iget-object v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->B:Landroid/view/VelocityTracker;
 
     if-nez v3, :cond_4
 
@@ -1286,10 +1527,10 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:Landroid/view/VelocityTracker;
+    iput-object v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->B:Landroid/view/VelocityTracker;
 
     :cond_4
-    iget-object v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->t:Landroid/view/VelocityTracker;
+    iget-object v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->B:Landroid/view/VelocityTracker;
 
     invoke-virtual {v3, p3}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
@@ -1297,11 +1538,11 @@
 
     if-ne v2, v3, :cond_5
 
-    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->p:Z
+    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->x:Z
 
     if-nez v2, :cond_5
 
-    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->u:I
+    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->C:I
 
     int-to-float v2, v2
 
@@ -1315,9 +1556,9 @@
 
     move-result v2
 
-    iget-object v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->e:Landroid/support/v4/widget/p;
+    iget-object v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ac;
 
-    invoke-virtual {v3}, Landroid/support/v4/widget/p;->d()I
+    invoke-virtual {v3}, Landroid/support/v4/widget/ac;->f()I
 
     move-result v3
 
@@ -1327,7 +1568,7 @@
 
     if-lez v2, :cond_5
 
-    iget-object v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->e:Landroid/support/v4/widget/p;
+    iget-object v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ac;
 
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getActionIndex()I
 
@@ -1337,10 +1578,10 @@
 
     move-result v3
 
-    invoke-virtual {v2, p2, v3}, Landroid/support/v4/widget/p;->a(Landroid/view/View;I)V
+    invoke-virtual {v2, p2, v3}, Landroid/support/v4/widget/ac;->a(Landroid/view/View;I)V
 
     :cond_5
-    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->p:Z
+    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->x:Z
 
     if-eqz v2, :cond_0
 
@@ -1350,9 +1591,20 @@
 .end method
 
 .method c(I)V
-    .locals 5
+    .locals 2
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:Ljava/lang/ref/WeakReference;
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
+
+    if-ne v0, p1, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iput p1, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
+
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->m:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -1362,58 +1614,13 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->s:Landroid/support/design/widget/BottomSheetBehavior$a;
+    iget-object v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->A:Landroid/support/design/widget/BottomSheetBehavior$a;
 
     if-eqz v1, :cond_0
 
-    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
+    iget-object v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->A:Landroid/support/design/widget/BottomSheetBehavior$a;
 
-    if-le p1, v1, :cond_1
-
-    iget-object v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->s:Landroid/support/design/widget/BottomSheetBehavior$a;
-
-    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
-
-    sub-int/2addr v2, p1
-
-    int-to-float v2, v2
-
-    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->f:I
-
-    iget v4, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
-
-    sub-int/2addr v3, v4
-
-    int-to-float v3, v3
-
-    div-float/2addr v2, v3
-
-    invoke-virtual {v1, v0, v2}, Landroid/support/design/widget/BottomSheetBehavior$a;->a(Landroid/view/View;F)V
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-object v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->s:Landroid/support/design/widget/BottomSheetBehavior$a;
-
-    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
-
-    sub-int/2addr v2, p1
-
-    int-to-float v2, v2
-
-    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
-
-    iget v4, p0, Landroid/support/design/widget/BottomSheetBehavior;->a:I
-
-    sub-int/2addr v3, v4
-
-    int-to-float v3, v3
-
-    div-float/2addr v2, v3
-
-    invoke-virtual {v1, v0, v2}, Landroid/support/design/widget/BottomSheetBehavior$a;->a(Landroid/view/View;F)V
+    invoke-virtual {v1, v0, p1}, Landroid/support/design/widget/BottomSheetBehavior$a;->a(Landroid/view/View;I)V
 
     goto :goto_0
 .end method
@@ -1438,22 +1645,22 @@
 
     move-result v2
 
-    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->a:I
+    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:I
 
     if-ne v2, v3, :cond_1
 
-    invoke-virtual {p0, v0}, Landroid/support/design/widget/BottomSheetBehavior;->b(I)V
+    invoke-virtual {p0, v0}, Landroid/support/design/widget/BottomSheetBehavior;->c(I)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    iget-object v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:Ljava/lang/ref/WeakReference;
+    iget-object v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->n:Ljava/lang/ref/WeakReference;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:Ljava/lang/ref/WeakReference;
+    iget-object v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->n:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -1461,24 +1668,24 @@
 
     if-ne p3, v2, :cond_0
 
-    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->r:Z
+    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->z:Z
 
     if-eqz v2, :cond_0
 
-    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->q:I
+    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->y:I
 
     if-lez v2, :cond_2
 
-    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->a:I
+    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:I
 
     :goto_1
-    iget-object v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->e:Landroid/support/v4/widget/p;
+    iget-object v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ac;
 
     invoke-virtual {p2}, Landroid/view/View;->getLeft()I
 
     move-result v3
 
-    invoke-virtual {v2, p2, v3, v1}, Landroid/support/v4/widget/p;->a(Landroid/view/View;II)Z
+    invoke-virtual {v2, p2, v3, v1}, Landroid/support/v4/widget/ac;->a(Landroid/view/View;II)Z
 
     move-result v1
 
@@ -1486,27 +1693,27 @@
 
     const/4 v1, 0x2
 
-    invoke-virtual {p0, v1}, Landroid/support/design/widget/BottomSheetBehavior;->b(I)V
+    invoke-virtual {p0, v1}, Landroid/support/design/widget/BottomSheetBehavior;->c(I)V
 
     new-instance v1, Landroid/support/design/widget/BottomSheetBehavior$b;
 
     invoke-direct {v1, p0, p2, v0}, Landroid/support/design/widget/BottomSheetBehavior$b;-><init>(Landroid/support/design/widget/BottomSheetBehavior;Landroid/view/View;I)V
 
-    invoke-static {p2, v1}, Landroid/support/v4/view/r;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {p2, v1}, Landroid/support/v4/view/ac;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
     :goto_2
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->r:Z
+    iput-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->z:Z
 
     goto :goto_0
 
     :cond_2
-    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->c:Z
+    iget-boolean v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->i:Z
 
     if-eqz v2, :cond_3
 
-    invoke-direct {p0}, Landroid/support/design/widget/BottomSheetBehavior;->b()F
+    invoke-direct {p0}, Landroid/support/design/widget/BottomSheetBehavior;->h()F
 
     move-result v2
 
@@ -1516,14 +1723,14 @@
 
     if-eqz v2, :cond_3
 
-    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->f:I
+    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->l:I
 
     const/4 v0, 0x5
 
     goto :goto_1
 
     :cond_3
-    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->q:I
+    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->y:I
 
     if-nez v2, :cond_5
 
@@ -1531,7 +1738,7 @@
 
     move-result v2
 
-    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->a:I
+    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:I
 
     sub-int v3, v2, v3
 
@@ -1539,7 +1746,7 @@
 
     move-result v3
 
-    iget v4, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
+    iget v4, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
 
     sub-int/2addr v2, v4
 
@@ -1549,12 +1756,12 @@
 
     if-ge v3, v2, :cond_4
 
-    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->a:I
+    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:I
 
     goto :goto_1
 
     :cond_4
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
 
     move v5, v1
 
@@ -1565,7 +1772,7 @@
     goto :goto_1
 
     :cond_5
-    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->b:I
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
 
     move v5, v1
 
@@ -1576,7 +1783,102 @@
     goto :goto_1
 
     :cond_6
-    invoke-virtual {p0, v0}, Landroid/support/design/widget/BottomSheetBehavior;->b(I)V
+    invoke-virtual {p0, v0}, Landroid/support/design/widget/BottomSheetBehavior;->c(I)V
 
     goto :goto_2
+.end method
+
+.method public c()Z
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->w:Z
+
+    return v0
+.end method
+
+.method public final d()I
+    .locals 1
+
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->j:I
+
+    return v0
+.end method
+
+.method d(I)V
+    .locals 5
+
+    iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->m:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->A:Landroid/support/design/widget/BottomSheetBehavior$a;
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
+
+    if-le p1, v1, :cond_1
+
+    iget-object v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->A:Landroid/support/design/widget/BottomSheetBehavior$a;
+
+    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
+
+    sub-int/2addr v2, p1
+
+    int-to-float v2, v2
+
+    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->l:I
+
+    iget v4, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
+
+    sub-int/2addr v3, v4
+
+    int-to-float v3, v3
+
+    div-float/2addr v2, v3
+
+    invoke-virtual {v1, v0, v2}, Landroid/support/design/widget/BottomSheetBehavior$a;->a(Landroid/view/View;F)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v1, p0, Landroid/support/design/widget/BottomSheetBehavior;->A:Landroid/support/design/widget/BottomSheetBehavior$a;
+
+    iget v2, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
+
+    sub-int/2addr v2, p1
+
+    int-to-float v2, v2
+
+    iget v3, p0, Landroid/support/design/widget/BottomSheetBehavior;->h:I
+
+    iget v4, p0, Landroid/support/design/widget/BottomSheetBehavior;->g:I
+
+    sub-int/2addr v3, v4
+
+    int-to-float v3, v3
+
+    div-float/2addr v2, v3
+
+    invoke-virtual {v1, v0, v2}, Landroid/support/design/widget/BottomSheetBehavior$a;->a(Landroid/view/View;F)V
+
+    goto :goto_0
+.end method
+
+.method e()I
+    .locals 1
+    .annotation build Landroid/support/annotation/as;
+    .end annotation
+
+    iget v0, p0, Landroid/support/design/widget/BottomSheetBehavior;->v:I
+
+    return v0
 .end method

@@ -1,112 +1,34 @@
 .class Landroid/support/design/widget/f;
-.super Ljava/lang/Object;
+.super Landroid/support/design/widget/e;
 
 
-# static fields
-.field private static a:Ljava/lang/reflect/Method;
-
-.field private static b:Z
+# annotations
+.annotation build Landroid/support/annotation/ai;
+    a = 0x15
+.end annotation
 
 
 # direct methods
-.method static a(Landroid/graphics/drawable/DrawableContainer;Landroid/graphics/drawable/Drawable$ConstantState;)Z
-    .locals 1
+.method constructor <init>()V
+    .locals 0
 
-    invoke-static {p0, p1}, Landroid/support/design/widget/f;->b(Landroid/graphics/drawable/DrawableContainer;Landroid/graphics/drawable/Drawable$ConstantState;)Z
+    invoke-direct {p0}, Landroid/support/design/widget/e;-><init>()V
 
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method private static b(Landroid/graphics/drawable/DrawableContainer;Landroid/graphics/drawable/Drawable$ConstantState;)Z
-    .locals 7
 
-    const/4 v1, 0x0
+# virtual methods
+.method public getOutline(Landroid/graphics/Outline;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Landroid/support/design/widget/f;->b:Landroid/graphics/Rect;
 
-    sget-boolean v2, Landroid/support/design/widget/f;->b:Z
+    invoke-virtual {p0, v0}, Landroid/support/design/widget/f;->copyBounds(Landroid/graphics/Rect;)V
 
-    if-nez v2, :cond_0
+    iget-object v0, p0, Landroid/support/design/widget/f;->b:Landroid/graphics/Rect;
 
-    :try_start_0
-    const-class v2, Landroid/graphics/drawable/DrawableContainer;
+    invoke-virtual {p1, v0}, Landroid/graphics/Outline;->setOval(Landroid/graphics/Rect;)V
 
-    const-string v3, "setConstantState"
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/Class;
-
-    const/4 v5, 0x0
-
-    const-class v6, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;
-
-    aput-object v6, v4, v5
-
-    invoke-virtual {v2, v3, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v2
-
-    sput-object v2, Landroid/support/design/widget/f;->a:Ljava/lang/reflect/Method;
-
-    sget-object v2, Landroid/support/design/widget/f;->a:Ljava/lang/reflect/Method;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v2, v3}, Ljava/lang/reflect/Method;->setAccessible(Z)V
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    sput-boolean v0, Landroid/support/design/widget/f;->b:Z
-
-    :cond_0
-    sget-object v2, Landroid/support/design/widget/f;->a:Ljava/lang/reflect/Method;
-
-    if-eqz v2, :cond_1
-
-    :try_start_1
-    sget-object v2, Landroid/support/design/widget/f;->a:Ljava/lang/reflect/Method;
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    aput-object p1, v3, v4
-
-    invoke-virtual {v2, p0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    :goto_1
-    return v0
-
-    :catch_0
-    move-exception v2
-
-    const-string v2, "DrawableUtils"
-
-    const-string v3, "Could not fetch setConstantState(). Oh well."
-
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    const-string v0, "DrawableUtils"
-
-    const-string v2, "Could not invoke setConstantState(). Oh well."
-
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    move v0, v1
-
-    goto :goto_1
+    return-void
 .end method

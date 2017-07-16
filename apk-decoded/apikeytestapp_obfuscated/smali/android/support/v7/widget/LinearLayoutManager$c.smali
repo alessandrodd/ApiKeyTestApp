@@ -13,39 +13,55 @@
 .end annotation
 
 
+# static fields
+.field static final a:Ljava/lang/String; = "LLM#LayoutState"
+
+.field static final b:I = -0x1
+
+.field static final c:I = 0x1
+
+.field static final d:I = -0x80000000
+
+.field static final e:I = -0x1
+
+.field static final f:I = 0x1
+
+.field static final g:I = -0x80000000
+
+
 # instance fields
-.field a:Z
+.field h:Z
 
-.field b:I
-
-.field c:I
-
-.field d:I
-
-.field e:I
-
-.field f:I
-
-.field g:I
-
-.field h:I
-
-.field i:Z
+.field i:I
 
 .field j:I
 
-.field k:Ljava/util/List;
+.field k:I
+
+.field l:I
+
+.field m:I
+
+.field n:I
+
+.field o:I
+
+.field p:Z
+
+.field q:I
+
+.field r:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Landroid/support/v7/widget/RecyclerView$u;",
+            "Landroid/support/v7/widget/RecyclerView$w;",
             ">;"
         }
     .end annotation
 .end field
 
-.field l:Z
+.field s:Z
 
 
 # direct methods
@@ -58,23 +74,23 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->a:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->h:Z
 
-    iput v1, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->h:I
+    iput v1, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->o:I
 
-    iput-boolean v1, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->i:Z
+    iput-boolean v1, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->p:Z
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:Ljava/util/List;
+    iput-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->r:Ljava/util/List;
 
     return-void
 .end method
 
-.method private b()Landroid/view/View;
+.method private c()Landroid/view/View;
     .locals 5
 
-    iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:Ljava/util/List;
+    iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->r:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -87,23 +103,23 @@
     :goto_0
     if-ge v2, v3, :cond_2
 
-    iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:Ljava/util/List;
+    iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->r:Ljava/util/List;
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v7/widget/RecyclerView$u;
+    check-cast v0, Landroid/support/v7/widget/RecyclerView$w;
 
-    iget-object v1, v0, Landroid/support/v7/widget/RecyclerView$u;->a:Landroid/view/View;
+    iget-object v1, v0, Landroid/support/v7/widget/RecyclerView$w;->a:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v7/widget/RecyclerView$h;
+    check-cast v0, Landroid/support/v7/widget/RecyclerView$i;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$h;->d()Z
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$i;->e()Z
 
     move-result v4
 
@@ -117,9 +133,9 @@
     goto :goto_0
 
     :cond_1
-    iget v4, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->d:I
+    iget v4, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:I
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$h;->f()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$i;->h()I
 
     move-result v0
 
@@ -140,14 +156,14 @@
 
 
 # virtual methods
-.method a(Landroid/support/v7/widget/RecyclerView$n;)Landroid/view/View;
+.method a(Landroid/support/v7/widget/RecyclerView$o;)Landroid/view/View;
     .locals 3
 
-    iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:Ljava/util/List;
+    iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->r:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Landroid/support/v7/widget/LinearLayoutManager$c;->b()Landroid/view/View;
+    invoke-direct {p0}, Landroid/support/v7/widget/LinearLayoutManager$c;->c()Landroid/view/View;
 
     move-result-object v0
 
@@ -155,19 +171,19 @@
     return-object v0
 
     :cond_0
-    iget v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->d:I
+    iget v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:I
 
-    invoke-virtual {p1, v0}, Landroid/support/v7/widget/RecyclerView$n;->c(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Landroid/support/v7/widget/RecyclerView$o;->c(I)Landroid/view/View;
 
     move-result-object v0
 
-    iget v1, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->d:I
+    iget v1, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:I
 
-    iget v2, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->e:I
+    iget v2, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->l:I
 
     add-int/2addr v1, v2
 
-    iput v1, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->d:I
+    iput v1, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:I
 
     goto :goto_0
 .end method
@@ -193,7 +209,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->d:I
+    iput v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:I
 
     :goto_0
     return-void
@@ -203,27 +219,27 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v7/widget/RecyclerView$h;
+    check-cast v0, Landroid/support/v7/widget/RecyclerView$i;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$h;->f()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$i;->h()I
 
     move-result v0
 
-    iput v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->d:I
+    iput v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:I
 
     goto :goto_0
 .end method
 
-.method a(Landroid/support/v7/widget/RecyclerView$r;)Z
+.method a(Landroid/support/v7/widget/RecyclerView$t;)Z
     .locals 2
 
-    iget v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->d:I
+    iget v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:I
 
     if-ltz v0, :cond_0
 
-    iget v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->d:I
+    iget v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:I
 
-    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$r;->e()I
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$t;->i()I
 
     move-result v1
 
@@ -243,7 +259,7 @@
 .method public b(Landroid/view/View;)Landroid/view/View;
     .locals 7
 
-    iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:Ljava/util/List;
+    iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->r:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -260,25 +276,25 @@
     :goto_0
     if-ge v4, v5, :cond_4
 
-    iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:Ljava/util/List;
+    iget-object v0, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->r:Ljava/util/List;
 
     invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v7/widget/RecyclerView$u;
+    check-cast v0, Landroid/support/v7/widget/RecyclerView$w;
 
-    iget-object v3, v0, Landroid/support/v7/widget/RecyclerView$u;->a:Landroid/view/View;
+    iget-object v3, v0, Landroid/support/v7/widget/RecyclerView$w;->a:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v7/widget/RecyclerView$h;
+    check-cast v0, Landroid/support/v7/widget/RecyclerView$i;
 
     if-eq v3, p1, :cond_3
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$h;->d()Z
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$i;->e()Z
 
     move-result v6
 
@@ -300,15 +316,15 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$h;->f()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$i;->h()I
 
     move-result v0
 
-    iget v6, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->d:I
+    iget v6, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:I
 
     sub-int/2addr v0, v6
 
-    iget v6, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->e:I
+    iget v6, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->l:I
 
     mul-int/2addr v0, v6
 
@@ -344,4 +360,82 @@
     move-object v3, v2
 
     goto :goto_2
+.end method
+
+.method b()V
+    .locals 3
+
+    const-string v0, "LLM#LayoutState"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "avail:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->j:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ", ind:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->k:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ", dir:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->l:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ", offset:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->i:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ", layoutDir:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p0, Landroid/support/v7/widget/LinearLayoutManager$c;->m:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
 .end method

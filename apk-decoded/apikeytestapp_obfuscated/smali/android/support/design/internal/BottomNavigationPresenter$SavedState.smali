@@ -80,6 +80,10 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
 
     iget v0, p0, Landroid/support/design/internal/BottomNavigationPresenter$SavedState;->a:I
 

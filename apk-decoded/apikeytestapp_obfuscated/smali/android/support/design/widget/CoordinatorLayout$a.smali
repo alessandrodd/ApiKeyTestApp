@@ -39,26 +39,61 @@
     return-void
 .end method
 
+.method public static a(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$e;
+
+    iput-object p1, v0, Landroid/support/design/widget/CoordinatorLayout$e;->n:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public static d(Landroid/view/View;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$e;
+
+    iget-object v0, v0, Landroid/support/design/widget/CoordinatorLayout$e;->n:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/support/v4/view/x;)Landroid/support/v4/view/x;
+.method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/support/v4/view/al;)Landroid/support/v4/view/al;
     .locals 0
+    .annotation build Landroid/support/annotation/ad;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/support/design/widget/CoordinatorLayout;",
             "TV;",
-            "Landroid/support/v4/view/x;",
+            "Landroid/support/v4/view/al;",
             ")",
-            "Landroid/support/v4/view/x;"
+            "Landroid/support/v4/view/al;"
         }
     .end annotation
 
     return-object p3
 .end method
 
-.method public a(Landroid/support/design/widget/CoordinatorLayout$c;)V
+.method public a(Landroid/support/design/widget/CoordinatorLayout$e;)V
     .locals 0
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout$e;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
 
     return-void
 .end method
@@ -80,6 +115,18 @@
 
 .method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;I)V
     .locals 0
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -100,6 +147,18 @@
 
 .method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIII)V
     .locals 0
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -118,6 +177,18 @@
 
 .method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIIII)V
     .locals 0
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -138,6 +209,22 @@
 
 .method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[I)V
     .locals 0
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p6    # [I
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -156,6 +243,22 @@
 
 .method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[II)V
     .locals 0
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p6    # [I
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -206,6 +309,18 @@
 
 .method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/graphics/Rect;)Z
     .locals 1
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/graphics/Rect;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -274,6 +389,18 @@
 
 .method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;FF)Z
     .locals 1
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -291,6 +418,18 @@
 
 .method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;FFZ)Z
     .locals 1
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -308,6 +447,22 @@
 
 .method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;I)Z
     .locals 1
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p4    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -329,6 +484,22 @@
 
 .method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
     .locals 1
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p4    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -373,6 +544,22 @@
 
 .method public b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;I)V
     .locals 0
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p4    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -392,6 +579,22 @@
 
 .method public b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)V
     .locals 0
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p4    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -447,6 +650,9 @@
 
 .method public c(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)I
     .locals 1
+    .annotation build Landroid/support/annotation/k;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -460,14 +666,20 @@
     return v0
 .end method
 
-.method public c()V
-    .locals 0
-
-    return-void
-.end method
-
 .method public c(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V
     .locals 0
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -486,6 +698,11 @@
 
 .method public d(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)F
     .locals 1
+    .annotation build Landroid/support/annotation/q;
+        a = 0.0
+        b = 1.0
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -543,4 +760,10 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public f()V
+    .locals 0
+
+    return-void
 .end method

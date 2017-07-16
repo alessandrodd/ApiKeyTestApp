@@ -37,3 +37,31 @@
 
     return-void
 .end method
+
+.method public b(Landroid/view/accessibility/AccessibilityEvent;)I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public b(Landroid/view/accessibility/AccessibilityEvent;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public c(Landroid/view/accessibility/AccessibilityEvent;)I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public c(Landroid/view/accessibility/AccessibilityEvent;I)V
+    .locals 0
+
+    return-void
+.end method

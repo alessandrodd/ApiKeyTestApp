@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.implements Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
 
 # annotations
@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x2
     name = "d"
 .end annotation
 
@@ -33,16 +33,46 @@
 
 
 # virtual methods
-.method public onPreDraw()Z
+.method public onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$d;->a:Landroid/support/design/widget/CoordinatorLayout;
+
+    iget-object v0, v0, Landroid/support/design/widget/CoordinatorLayout;->i:Landroid/view/ViewGroup$OnHierarchyChangeListener;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$d;->a:Landroid/support/design/widget/CoordinatorLayout;
+
+    iget-object v0, v0, Landroid/support/design/widget/CoordinatorLayout;->i:Landroid/view/ViewGroup$OnHierarchyChangeListener;
+
+    invoke-interface {v0, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
     .locals 2
 
     iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$d;->a:Landroid/support/design/widget/CoordinatorLayout;
 
-    const/4 v1, 0x0
+    const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/support/design/widget/CoordinatorLayout;->a(I)V
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$d;->a:Landroid/support/design/widget/CoordinatorLayout;
 
-    return v0
+    iget-object v0, v0, Landroid/support/design/widget/CoordinatorLayout;->i:Landroid/view/ViewGroup$OnHierarchyChangeListener;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$d;->a:Landroid/support/design/widget/CoordinatorLayout;
+
+    iget-object v0, v0, Landroid/support/design/widget/CoordinatorLayout;->i:Landroid/view/ViewGroup$OnHierarchyChangeListener;
+
+    invoke-interface {v0, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
+
+    :cond_0
+    return-void
 .end method

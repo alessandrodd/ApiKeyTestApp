@@ -1,5 +1,8 @@
-.class public Landroid/support/v4/widget/SlidingPaneLayout$b;
-.super Landroid/view/ViewGroup$MarginLayoutParams;
+.class Landroid/support/v4/widget/SlidingPaneLayout$b;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -8,106 +11,65 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x2
     name = "b"
 .end annotation
 
 
-# static fields
-.field private static final e:[I
-
-
 # instance fields
-.field public a:F
+.field final a:Landroid/view/View;
 
-.field b:Z
-
-.field c:Z
-
-.field d:Landroid/graphics/Paint;
+.field final synthetic b:Landroid/support/v4/widget/SlidingPaneLayout;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Landroid/support/v4/widget/SlidingPaneLayout$b;->b:Landroid/support/v4/widget/SlidingPaneLayout;
 
-    new-array v0, v0, [I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
-
-    const v2, 0x1010181
-
-    aput v2, v0, v1
-
-    sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout$b;->e:[I
+    iput-object p2, p0, Landroid/support/v4/widget/SlidingPaneLayout$b;->a:Landroid/view/View;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
 
-    const/4 v0, -0x1
-
-    invoke-direct {p0, v0, v0}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$b;->a:F
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+# virtual methods
+.method public run()V
     .locals 3
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$b;->a:Landroid/view/View;
 
-    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    iput v2, p0, Landroid/support/v4/widget/SlidingPaneLayout$b;->a:F
-
-    sget-object v0, Landroid/support/v4/widget/SlidingPaneLayout$b;->e:[I
-
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
+    iget-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout$b;->b:Landroid/support/v4/widget/SlidingPaneLayout;
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$b;->a:Landroid/view/View;
+
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    const/4 v2, 0x0
 
-    move-result v1
+    invoke-virtual {v0, v1, v2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    iput v1, p0, Landroid/support/v4/widget/SlidingPaneLayout$b;->a:F
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$b;->b:Landroid/support/v4/widget/SlidingPaneLayout;
 
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+    iget-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout$b;->a:Landroid/view/View;
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/SlidingPaneLayout;->e(Landroid/view/View;)V
 
-.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 1
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$b;->b:Landroid/support/v4/widget/SlidingPaneLayout;
 
-    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+    iget-object v0, v0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Ljava/util/ArrayList;
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$b;->a:F
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
-    .locals 1
-
-    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$b;->a:F
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method

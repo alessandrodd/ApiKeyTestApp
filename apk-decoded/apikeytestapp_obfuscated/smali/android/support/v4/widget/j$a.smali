@@ -1,8 +1,12 @@
 .class Landroid/support/v4/widget/j$a;
-.super Landroid/support/v4/widget/j$d;
+.super Landroid/support/v4/widget/j$b;
 
 
 # annotations
+.annotation build Landroid/support/annotation/ai;
+    a = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroid/support/v4/widget/j;
 .end annotation
@@ -17,17 +21,17 @@
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroid/support/v4/widget/j$d;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/widget/j$b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/widget/PopupWindow;Landroid/view/View;III)V
+.method public a(Landroid/widget/EdgeEffect;FF)V
     .locals 0
 
-    invoke-virtual {p1, p2, p3, p4, p5}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;III)V
+    invoke-virtual {p1, p2, p3}, Landroid/widget/EdgeEffect;->onPull(FF)V
 
     return-void
 .end method

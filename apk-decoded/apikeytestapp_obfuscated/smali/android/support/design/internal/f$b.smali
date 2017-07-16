@@ -22,10 +22,24 @@
 .end annotation
 
 
+# static fields
+.field private static final b:Ljava/lang/String; = "android:menu:checked"
+
+.field private static final c:Ljava/lang/String; = "android:menu:action_views"
+
+.field private static final d:I = 0x0
+
+.field private static final e:I = 0x1
+
+.field private static final f:I = 0x2
+
+.field private static final g:I = 0x3
+
+
 # instance fields
 .field final synthetic a:Landroid/support/design/internal/f;
 
-.field private final b:Ljava/util/ArrayList;
+.field private final h:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
@@ -36,19 +50,37 @@
     .end annotation
 .end field
 
-.field private c:Landroid/support/v7/e/a/m;
+.field private i:Landroid/support/v7/view/menu/k;
 
-.field private d:Z
+.field private j:Z
 
 
 # direct methods
-.method private a(II)V
+.method constructor <init>(Landroid/support/design/internal/f;)V
+    .locals 1
+
+    iput-object p1, p0, Landroid/support/design/internal/f$b;->a:Landroid/support/design/internal/f;
+
+    invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$a;-><init>()V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
+
+    invoke-direct {p0}, Landroid/support/design/internal/f$b;->g()V
+
+    return-void
+.end method
+
+.method private e(II)V
     .locals 2
 
     :goto_0
     if-ge p1, p2, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -68,10 +100,10 @@
     return-void
 .end method
 
-.method private f()V
+.method private g()V
     .locals 14
 
-    iget-boolean v0, p0, Landroid/support/design/internal/f$b;->d:Z
+    iget-boolean v0, p0, Landroid/support/design/internal/f$b;->j:Z
 
     if-eqz v0, :cond_0
 
@@ -81,13 +113,13 @@
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/design/internal/f$b;->d:Z
+    iput-boolean v0, p0, Landroid/support/design/internal/f$b;->j:Z
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     new-instance v1, Landroid/support/design/internal/f$c;
 
@@ -105,9 +137,9 @@
 
     iget-object v1, p0, Landroid/support/design/internal/f$b;->a:Landroid/support/design/internal/f;
 
-    iget-object v1, v1, Landroid/support/design/internal/f;->b:Landroid/support/v7/e/a/k;
+    iget-object v1, v1, Landroid/support/design/internal/f;->b:Landroid/support/v7/view/menu/h;
 
-    invoke-virtual {v1}, Landroid/support/v7/e/a/k;->i()Ljava/util/ArrayList;
+    invoke-virtual {v1}, Landroid/support/v7/view/menu/h;->j()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -122,9 +154,9 @@
 
     iget-object v0, p0, Landroid/support/design/internal/f$b;->a:Landroid/support/design/internal/f;
 
-    iget-object v0, v0, Landroid/support/design/internal/f;->b:Landroid/support/v7/e/a/k;
+    iget-object v0, v0, Landroid/support/design/internal/f;->b:Landroid/support/v7/view/menu/h;
 
-    invoke-virtual {v0}, Landroid/support/v7/e/a/k;->i()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/h;->j()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -132,18 +164,18 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v7/e/a/m;
+    check-cast v0, Landroid/support/v7/view/menu/k;
 
-    invoke-virtual {v0}, Landroid/support/v7/e/a/m;->isChecked()Z
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/k;->isChecked()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p0, v0}, Landroid/support/design/internal/f$b;->a(Landroid/support/v7/e/a/m;)V
+    invoke-virtual {p0, v0}, Landroid/support/design/internal/f$b;->a(Landroid/support/v7/view/menu/k;)V
 
     :cond_1
-    invoke-virtual {v0}, Landroid/support/v7/e/a/m;->isCheckable()Z
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/k;->isCheckable()Z
 
     move-result v1
 
@@ -151,16 +183,16 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/e/a/m;->a(Z)V
+    invoke-virtual {v0, v1}, Landroid/support/v7/view/menu/k;->a(Z)V
 
     :cond_2
-    invoke-virtual {v0}, Landroid/support/v7/e/a/m;->hasSubMenu()Z
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/k;->hasSubMenu()Z
 
     move-result v1
 
     if-eqz v1, :cond_a
 
-    invoke-virtual {v0}, Landroid/support/v7/e/a/m;->getSubMenu()Landroid/view/SubMenu;
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/k;->getSubMenu()Landroid/view/SubMenu;
 
     move-result-object v9
 
@@ -172,7 +204,7 @@
 
     if-eqz v7, :cond_3
 
-    iget-object v1, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     new-instance v2, Landroid/support/design/internal/f$e;
 
@@ -187,17 +219,17 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_3
-    iget-object v1, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     new-instance v2, Landroid/support/design/internal/f$f;
 
-    invoke-direct {v2, v0}, Landroid/support/design/internal/f$f;-><init>(Landroid/support/v7/e/a/m;)V
+    invoke-direct {v2, v0}, Landroid/support/design/internal/f$f;-><init>(Landroid/support/v7/view/menu/k;)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const/4 v2, 0x0
 
-    iget-object v1, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -218,9 +250,9 @@
 
     move-result-object v1
 
-    check-cast v1, Landroid/support/v7/e/a/m;
+    check-cast v1, Landroid/support/v7/view/menu/k;
 
-    invoke-virtual {v1}, Landroid/support/v7/e/a/m;->isVisible()Z
+    invoke-virtual {v1}, Landroid/support/v7/view/menu/k;->isVisible()Z
 
     move-result v12
 
@@ -228,7 +260,7 @@
 
     if-nez v2, :cond_4
 
-    invoke-virtual {v1}, Landroid/support/v7/e/a/m;->getIcon()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1}, Landroid/support/v7/view/menu/k;->getIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v12
 
@@ -237,7 +269,7 @@
     const/4 v2, 0x1
 
     :cond_4
-    invoke-virtual {v1}, Landroid/support/v7/e/a/m;->isCheckable()Z
+    invoke-virtual {v1}, Landroid/support/v7/view/menu/k;->isCheckable()Z
 
     move-result v12
 
@@ -245,23 +277,23 @@
 
     const/4 v12, 0x0
 
-    invoke-virtual {v1, v12}, Landroid/support/v7/e/a/m;->a(Z)V
+    invoke-virtual {v1, v12}, Landroid/support/v7/view/menu/k;->a(Z)V
 
     :cond_5
-    invoke-virtual {v0}, Landroid/support/v7/e/a/m;->isChecked()Z
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/k;->isChecked()Z
 
     move-result v12
 
     if-eqz v12, :cond_6
 
-    invoke-virtual {p0, v0}, Landroid/support/design/internal/f$b;->a(Landroid/support/v7/e/a/m;)V
+    invoke-virtual {p0, v0}, Landroid/support/design/internal/f$b;->a(Landroid/support/v7/view/menu/k;)V
 
     :cond_6
-    iget-object v12, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v12, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     new-instance v13, Landroid/support/design/internal/f$f;
 
-    invoke-direct {v13, v1}, Landroid/support/design/internal/f$f;-><init>(Landroid/support/v7/e/a/m;)V
+    invoke-direct {v13, v1}, Landroid/support/design/internal/f$f;-><init>(Landroid/support/v7/view/menu/k;)V
 
     invoke-virtual {v12, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -275,13 +307,13 @@
     :cond_8
     if-eqz v2, :cond_9
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    invoke-direct {p0, v10, v0}, Landroid/support/design/internal/f$b;->a(II)V
+    invoke-direct {p0, v10, v0}, Landroid/support/design/internal/f$b;->e(II)V
 
     :cond_9
     move v0, v5
@@ -296,19 +328,19 @@
     goto/16 :goto_1
 
     :cond_a
-    invoke-virtual {v0}, Landroid/support/v7/e/a/m;->getGroupId()I
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/k;->getGroupId()I
 
     move-result v6
 
     if-eq v6, v5, :cond_d
 
-    iget-object v1, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    invoke-virtual {v0}, Landroid/support/v7/e/a/m;->getIcon()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/k;->getIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -321,7 +353,7 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    iget-object v3, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v3, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     new-instance v4, Landroid/support/design/internal/f$e;
 
@@ -341,11 +373,11 @@
     :goto_5
     new-instance v3, Landroid/support/design/internal/f$f;
 
-    invoke-direct {v3, v0}, Landroid/support/design/internal/f$f;-><init>(Landroid/support/v7/e/a/m;)V
+    invoke-direct {v3, v0}, Landroid/support/design/internal/f$f;-><init>(Landroid/support/v7/view/menu/k;)V
 
     iput-boolean v1, v3, Landroid/support/design/internal/f$f;->a:Z
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -365,7 +397,7 @@
     :cond_d
     if-nez v3, :cond_f
 
-    invoke-virtual {v0}, Landroid/support/v7/e/a/m;->getIcon()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/k;->getIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -373,13 +405,13 @@
 
     const/4 v1, 0x1
 
-    iget-object v2, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v2, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    invoke-direct {p0, v4, v2}, Landroid/support/design/internal/f$b;->a(II)V
+    invoke-direct {p0, v4, v2}, Landroid/support/design/internal/f$b;->e(II)V
 
     move v2, v4
 
@@ -388,7 +420,7 @@
     :cond_e
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/design/internal/f$b;->d:Z
+    iput-boolean v0, p0, Landroid/support/design/internal/f$b;->j:Z
 
     goto/16 :goto_0
 
@@ -405,7 +437,7 @@
 .method public a()I
     .locals 1
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -506,9 +538,9 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/design/internal/f$b;->d:Z
+    iput-boolean v0, p0, Landroid/support/design/internal/f$b;->j:Z
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -519,7 +551,7 @@
     :goto_0
     if-ge v2, v4, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -533,24 +565,24 @@
 
     check-cast v0, Landroid/support/design/internal/f$f;
 
-    invoke-virtual {v0}, Landroid/support/design/internal/f$f;->a()Landroid/support/v7/e/a/m;
+    invoke-virtual {v0}, Landroid/support/design/internal/f$f;->a()Landroid/support/v7/view/menu/k;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Landroid/support/v7/e/a/m;->getItemId()I
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/k;->getItemId()I
 
     move-result v5
 
     if-ne v5, v3, :cond_3
 
-    invoke-virtual {p0, v0}, Landroid/support/design/internal/f$b;->a(Landroid/support/v7/e/a/m;)V
+    invoke-virtual {p0, v0}, Landroid/support/design/internal/f$b;->a(Landroid/support/v7/view/menu/k;)V
 
     :cond_0
-    iput-boolean v1, p0, Landroid/support/design/internal/f$b;->d:Z
+    iput-boolean v1, p0, Landroid/support/design/internal/f$b;->j:Z
 
-    invoke-direct {p0}, Landroid/support/design/internal/f$b;->f()V
+    invoke-direct {p0}, Landroid/support/design/internal/f$b;->g()V
 
     :cond_1
     const-string v0, "android:menu:action_views"
@@ -561,7 +593,7 @@
 
     if-eqz v2, :cond_5
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -570,7 +602,7 @@
     :goto_1
     if-ge v1, v3, :cond_5
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -600,19 +632,19 @@
     :cond_4
     check-cast v0, Landroid/support/design/internal/f$f;
 
-    invoke-virtual {v0}, Landroid/support/design/internal/f$f;->a()Landroid/support/v7/e/a/m;
+    invoke-virtual {v0}, Landroid/support/design/internal/f$f;->a()Landroid/support/v7/view/menu/k;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Landroid/support/v7/e/a/m;->getActionView()Landroid/view/View;
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/k;->getActionView()Landroid/view/View;
 
     move-result-object v4
 
     if-eqz v4, :cond_2
 
-    invoke-virtual {v0}, Landroid/support/v7/e/a/m;->getItemId()I
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/k;->getItemId()I
 
     move-result v0
 
@@ -641,9 +673,9 @@
 
     iget-object v0, p1, Landroid/support/design/internal/f$j;->a:Landroid/view/View;
 
-    check-cast v0, Landroid/support/design/internal/e;
+    check-cast v0, Landroid/support/design/internal/NavigationMenuItemView;
 
-    invoke-virtual {v0}, Landroid/support/design/internal/e;->b()V
+    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuItemView;->c()V
 
     :cond_0
     return-void
@@ -666,13 +698,13 @@
     :pswitch_0
     iget-object v0, p1, Landroid/support/design/internal/f$j;->a:Landroid/view/View;
 
-    check-cast v0, Landroid/support/design/internal/e;
+    check-cast v0, Landroid/support/design/internal/NavigationMenuItemView;
 
     iget-object v1, p0, Landroid/support/design/internal/f$b;->a:Landroid/support/design/internal/f;
 
     iget-object v1, v1, Landroid/support/design/internal/f;->h:Landroid/content/res/ColorStateList;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/internal/e;->setIconTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v0, v1}, Landroid/support/design/internal/NavigationMenuItemView;->setIconTintList(Landroid/content/res/ColorStateList;)V
 
     iget-object v1, p0, Landroid/support/design/internal/f$b;->a:Landroid/support/design/internal/f;
 
@@ -684,7 +716,7 @@
 
     iget v1, v1, Landroid/support/design/internal/f;->e:I
 
-    invoke-virtual {v0, v1}, Landroid/support/design/internal/e;->setTextAppearance(I)V
+    invoke-virtual {v0, v1}, Landroid/support/design/internal/NavigationMenuItemView;->setTextAppearance(I)V
 
     :cond_0
     iget-object v1, p0, Landroid/support/design/internal/f$b;->a:Landroid/support/design/internal/f;
@@ -697,7 +729,7 @@
 
     iget-object v1, v1, Landroid/support/design/internal/f;->g:Landroid/content/res/ColorStateList;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/internal/e;->setTextColor(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v0, v1}, Landroid/support/design/internal/NavigationMenuItemView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
     :cond_1
     iget-object v1, p0, Landroid/support/design/internal/f$b;->a:Landroid/support/design/internal/f;
@@ -719,9 +751,9 @@
     move-result-object v1
 
     :goto_1
-    invoke-static {v0, v1}, Landroid/support/v4/view/r;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v1}, Landroid/support/v4/view/ac;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
-    iget-object v1, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -731,13 +763,13 @@
 
     iget-boolean v2, v1, Landroid/support/design/internal/f$f;->a:Z
 
-    invoke-virtual {v0, v2}, Landroid/support/design/internal/e;->setNeedsEmptyIcon(Z)V
+    invoke-virtual {v0, v2}, Landroid/support/design/internal/NavigationMenuItemView;->setNeedsEmptyIcon(Z)V
 
-    invoke-virtual {v1}, Landroid/support/design/internal/f$f;->a()Landroid/support/v7/e/a/m;
+    invoke-virtual {v1}, Landroid/support/design/internal/f$f;->a()Landroid/support/v7/view/menu/k;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, v3}, Landroid/support/design/internal/e;->a(Landroid/support/v7/e/a/m;I)V
+    invoke-virtual {v0, v1, v3}, Landroid/support/design/internal/NavigationMenuItemView;->a(Landroid/support/v7/view/menu/k;I)V
 
     goto :goto_0
 
@@ -751,7 +783,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iget-object v1, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -759,11 +791,11 @@
 
     check-cast v1, Landroid/support/design/internal/f$f;
 
-    invoke-virtual {v1}, Landroid/support/design/internal/f$f;->a()Landroid/support/v7/e/a/m;
+    invoke-virtual {v1}, Landroid/support/design/internal/f$f;->a()Landroid/support/v7/view/menu/k;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/support/v7/e/a/m;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual {v1}, Landroid/support/v7/view/menu/k;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -772,7 +804,7 @@
     goto :goto_0
 
     :pswitch_2
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -802,14 +834,14 @@
     .end packed-switch
 .end method
 
-.method public a(Landroid/support/v7/e/a/m;)V
+.method public a(Landroid/support/v7/view/menu/k;)V
     .locals 2
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->c:Landroid/support/v7/e/a/m;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->i:Landroid/support/v7/view/menu/k;
 
     if-eq v0, p1, :cond_0
 
-    invoke-virtual {p1}, Landroid/support/v7/e/a/m;->isCheckable()Z
+    invoke-virtual {p1}, Landroid/support/v7/view/menu/k;->isCheckable()Z
 
     move-result v0
 
@@ -820,27 +852,27 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->c:Landroid/support/v7/e/a/m;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->i:Landroid/support/v7/view/menu/k;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->c:Landroid/support/v7/e/a/m;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->i:Landroid/support/v7/view/menu/k;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/e/a/m;->setChecked(Z)Landroid/view/MenuItem;
+    invoke-virtual {v0, v1}, Landroid/support/v7/view/menu/k;->setChecked(Z)Landroid/view/MenuItem;
 
     :cond_2
-    iput-object p1, p0, Landroid/support/design/internal/f$b;->c:Landroid/support/v7/e/a/m;
+    iput-object p1, p0, Landroid/support/design/internal/f$b;->i:Landroid/support/v7/view/menu/k;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/support/v7/e/a/m;->setChecked(Z)Landroid/view/MenuItem;
+    invoke-virtual {p1, v0}, Landroid/support/v7/view/menu/k;->setChecked(Z)Landroid/view/MenuItem;
 
     goto :goto_0
 .end method
 
-.method public bridge synthetic a(Landroid/support/v7/widget/RecyclerView$u;)V
+.method public bridge synthetic a(Landroid/support/v7/widget/RecyclerView$w;)V
     .locals 0
 
     check-cast p1, Landroid/support/design/internal/f$j;
@@ -850,7 +882,7 @@
     return-void
 .end method
 
-.method public bridge synthetic a(Landroid/support/v7/widget/RecyclerView$u;I)V
+.method public bridge synthetic a(Landroid/support/v7/widget/RecyclerView$w;I)V
     .locals 0
 
     check-cast p1, Landroid/support/design/internal/f$j;
@@ -860,10 +892,18 @@
     return-void
 .end method
 
+.method public a(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Landroid/support/design/internal/f$b;->j:Z
+
+    return-void
+.end method
+
 .method public b(I)I
     .locals 2
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -896,11 +936,11 @@
 
     check-cast v0, Landroid/support/design/internal/f$f;
 
-    invoke-virtual {v0}, Landroid/support/design/internal/f$f;->a()Landroid/support/v7/e/a/m;
+    invoke-virtual {v0}, Landroid/support/design/internal/f$f;->a()Landroid/support/v7/view/menu/k;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v7/e/a/m;->hasSubMenu()Z
+    invoke-virtual {v0}, Landroid/support/v7/view/menu/k;->hasSubMenu()Z
 
     move-result v0
 
@@ -925,7 +965,7 @@
     throw v0
 .end method
 
-.method public synthetic b(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$u;
+.method public synthetic b(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$w;
     .locals 1
 
     invoke-virtual {p0, p1, p2}, Landroid/support/design/internal/f$b;->a(Landroid/view/ViewGroup;I)Landroid/support/design/internal/f$j;
@@ -938,9 +978,9 @@
 .method public b()V
     .locals 0
 
-    invoke-direct {p0}, Landroid/support/design/internal/f$b;->f()V
+    invoke-direct {p0}, Landroid/support/design/internal/f$b;->g()V
 
-    invoke-virtual {p0}, Landroid/support/design/internal/f$b;->e()V
+    invoke-virtual {p0}, Landroid/support/design/internal/f$b;->f()V
 
     return-void
 .end method
@@ -952,15 +992,15 @@
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->c:Landroid/support/v7/e/a/m;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->i:Landroid/support/v7/view/menu/k;
 
     if-eqz v0, :cond_0
 
     const-string v0, "android:menu:checked"
 
-    iget-object v1, p0, Landroid/support/design/internal/f$b;->c:Landroid/support/v7/e/a/m;
+    iget-object v1, p0, Landroid/support/design/internal/f$b;->i:Landroid/support/v7/view/menu/k;
 
-    invoke-virtual {v1}, Landroid/support/v7/e/a/m;->getItemId()I
+    invoke-virtual {v1}, Landroid/support/v7/view/menu/k;->getItemId()I
 
     move-result v1
 
@@ -973,7 +1013,7 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v1, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -984,7 +1024,7 @@
     :goto_0
     if-ge v1, v4, :cond_3
 
-    iget-object v0, p0, Landroid/support/design/internal/f$b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroid/support/design/internal/f$b;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -998,13 +1038,13 @@
 
     check-cast v0, Landroid/support/design/internal/f$f;
 
-    invoke-virtual {v0}, Landroid/support/design/internal/f$f;->a()Landroid/support/v7/e/a/m;
+    invoke-virtual {v0}, Landroid/support/design/internal/f$f;->a()Landroid/support/v7/view/menu/k;
 
     move-result-object v5
 
     if-eqz v5, :cond_2
 
-    invoke-virtual {v5}, Landroid/support/v7/e/a/m;->getActionView()Landroid/view/View;
+    invoke-virtual {v5}, Landroid/support/v7/view/menu/k;->getActionView()Landroid/view/View;
 
     move-result-object v0
 
@@ -1017,7 +1057,7 @@
 
     invoke-virtual {v0, v6}, Landroid/view/View;->saveHierarchyState(Landroid/util/SparseArray;)V
 
-    invoke-virtual {v5}, Landroid/support/v7/e/a/m;->getItemId()I
+    invoke-virtual {v5}, Landroid/support/v7/view/menu/k;->getItemId()I
 
     move-result v0
 

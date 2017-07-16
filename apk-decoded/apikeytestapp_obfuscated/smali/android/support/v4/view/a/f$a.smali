@@ -33,6 +33,3 @@
 
 .method public abstract a(IILandroid/os/Bundle;)Z
 .end method
-
-.method public abstract b(I)Ljava/lang/Object;
-.end method

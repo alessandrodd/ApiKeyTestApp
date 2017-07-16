@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/view/u;
+.implements Landroid/support/v4/view/ah;
 
 
 # annotations
@@ -41,12 +41,12 @@
 
 
 # virtual methods
-.method public a(Landroid/support/v4/view/t;I)Landroid/support/v7/widget/a$a;
+.method public a(Landroid/support/v4/view/ag;I)Landroid/support/v7/widget/a$a;
     .locals 1
 
     iget-object v0, p0, Landroid/support/v7/widget/a$a;->b:Landroid/support/v7/widget/a;
 
-    iput-object p1, v0, Landroid/support/v7/widget/a;->f:Landroid/support/v4/view/t;
+    iput-object p1, v0, Landroid/support/v7/widget/a;->f:Landroid/support/v4/view/ag;
 
     iput p2, p0, Landroid/support/v7/widget/a$a;->a:I
 
@@ -82,7 +82,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Landroid/support/v7/widget/a;->f:Landroid/support/v4/view/t;
+    iput-object v1, v0, Landroid/support/v7/widget/a;->f:Landroid/support/v4/view/ag;
 
     iget-object v0, p0, Landroid/support/v7/widget/a$a;->b:Landroid/support/v7/widget/a;
 

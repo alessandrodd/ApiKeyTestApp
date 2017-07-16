@@ -1,5 +1,8 @@
-.class interface abstract Landroid/support/v7/widget/bm$b;
+.class Landroid/support/v7/widget/bm$b;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/support/v7/widget/d$f;
 
 
 # annotations
@@ -8,20 +11,47 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x2
     name = "b"
 .end annotation
 
 
+# instance fields
+.field final synthetic a:Landroid/support/v7/widget/bm;
+
+
+# direct methods
+.method constructor <init>(Landroid/support/v7/widget/bm;)V
+    .locals 0
+
+    iput-object p1, p0, Landroid/support/v7/widget/bm$b;->a:Landroid/support/v7/widget/bm;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a(Landroid/support/v7/widget/RecyclerView$u;)V
-.end method
+.method public a(Landroid/support/v7/widget/d;Landroid/content/Intent;)Z
+    .locals 2
 
-.method public abstract a(Landroid/support/v7/widget/RecyclerView$u;Landroid/support/v7/widget/RecyclerView$e$b;Landroid/support/v7/widget/RecyclerView$e$b;)V
-.end method
+    iget-object v0, p0, Landroid/support/v7/widget/bm$b;->a:Landroid/support/v7/widget/bm;
 
-.method public abstract b(Landroid/support/v7/widget/RecyclerView$u;Landroid/support/v7/widget/RecyclerView$e$b;Landroid/support/v7/widget/RecyclerView$e$b;)V
-.end method
+    iget-object v0, v0, Landroid/support/v7/widget/bm;->d:Landroid/support/v7/widget/bm$a;
 
-.method public abstract c(Landroid/support/v7/widget/RecyclerView$u;Landroid/support/v7/widget/RecyclerView$e$b;Landroid/support/v7/widget/RecyclerView$e$b;)V
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/bm$b;->a:Landroid/support/v7/widget/bm;
+
+    iget-object v0, v0, Landroid/support/v7/widget/bm;->d:Landroid/support/v7/widget/bm$a;
+
+    iget-object v1, p0, Landroid/support/v7/widget/bm$b;->a:Landroid/support/v7/widget/bm;
+
+    invoke-interface {v0, v1, p2}, Landroid/support/v7/widget/bm$a;->a(Landroid/support/v7/widget/bm;Landroid/content/Intent;)Z
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

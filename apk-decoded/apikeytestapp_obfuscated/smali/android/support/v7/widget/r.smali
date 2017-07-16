@@ -1,277 +1,356 @@
-.class public Landroid/support/v7/widget/r;
-.super Landroid/widget/MultiAutoCompleteTextView;
-
-# interfaces
-.implements Landroid/support/v4/view/q;
+.class Landroid/support/v7/widget/r;
+.super Landroid/widget/PopupWindow;
 
 
 # static fields
-.field private static final a:[I
+.field private static final a:Ljava/lang/String; = "AppCompatPopupWindow"
+
+.field private static final b:Z
 
 
 # instance fields
-.field private final b:Landroid/support/v7/widget/h;
-
-.field private final c:Landroid/support/v7/widget/z;
+.field private c:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-ge v0, v1, :cond_0
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [I
-
-    const/4 v1, 0x0
-
-    const v2, 0x1010176
-
-    aput v2, v0, v1
-
-    sput-object v0, Landroid/support/v7/widget/r;->a:[I
+    :goto_0
+    sput-boolean v0, Landroid/support/v7/widget/r;->b:Z
 
     return-void
-.end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
+    :cond_0
+    const/4 v0, 0x0
 
-    sget v0, Landroid/support/v7/a/a$a;->autoCompleteTextViewStyle:I
-
-    invoke-direct {p0, p1, p2, v0}, Landroid/support/v7/widget/r;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    return-void
+    goto :goto_0
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroid/support/annotation/f;
+        .end annotation
+    .end param
+
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, p3, v0}, Landroid/support/v7/widget/r;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroid/support/annotation/f;
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation build Landroid/support/annotation/ao;
+        .end annotation
+    .end param
+
+    invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    invoke-direct {p0, p1, p2, p3, p4}, Landroid/support/v7/widget/r;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    return-void
+.end method
+
+.method private a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 3
 
-    const/4 v2, 0x0
+    sget-object v0, Landroid/support/v7/a/b$l;->PopupWindow:[I
 
-    invoke-static {p1}, Landroid/support/v7/widget/bc;->a(Landroid/content/Context;)Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0, p2, p3}, Landroid/widget/MultiAutoCompleteTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/r;->getContext()Landroid/content/Context;
+    invoke-static {p1, p2, v0, p3, p4}, Landroid/support/v7/widget/bw;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/support/v7/widget/bw;
 
     move-result-object v0
 
-    sget-object v1, Landroid/support/v7/widget/r;->a:[I
+    sget v1, Landroid/support/v7/a/b$l;->PopupWindow_overlapAnchor:I
 
-    invoke-static {v0, p2, v1, p3, v2}, Landroid/support/v7/widget/bf;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/support/v7/widget/bf;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/support/v7/widget/bf;->g(I)Z
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bw;->j(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v2}, Landroid/support/v7/widget/bf;->a(I)Landroid/graphics/drawable/Drawable;
+    sget v1, Landroid/support/v7/a/b$l;->PopupWindow_overlapAnchor:I
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/support/v7/widget/bw;->a(IZ)Z
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Landroid/support/v7/widget/r;->a(Z)V
+
+    :cond_0
+    sget v1, Landroid/support/v7/a/b$l;->PopupWindow_android_popupBackground:I
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bw;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Landroid/support/v7/widget/r;->setDropDownBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v1}, Landroid/support/v7/widget/r;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    :cond_0
-    invoke-virtual {v0}, Landroid/support/v7/widget/bf;->a()V
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    new-instance v0, Landroid/support/v7/widget/h;
+    if-eqz p4, :cond_1
 
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/h;-><init>(Landroid/view/View;)V
+    const/16 v2, 0xb
 
-    iput-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
+    if-ge v1, v2, :cond_1
 
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
+    sget v1, Landroid/support/v7/a/b$l;->PopupWindow_android_popupAnimationStyle:I
 
-    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/h;->a(Landroid/util/AttributeSet;I)V
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bw;->j(I)Z
 
-    invoke-static {p0}, Landroid/support/v7/widget/z;->a(Landroid/widget/TextView;)Landroid/support/v7/widget/z;
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    sget v1, Landroid/support/v7/a/b$l;->PopupWindow_android_popupAnimationStyle:I
+
+    const/4 v2, -0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/support/v7/widget/bw;->g(II)I
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Landroid/support/v7/widget/r;->setAnimationStyle(I)V
+
+    :cond_1
+    invoke-virtual {v0}, Landroid/support/v7/widget/bw;->e()V
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0xe
+
+    if-ge v0, v1, :cond_2
+
+    invoke-static {p0}, Landroid/support/v7/widget/r;->a(Landroid/widget/PopupWindow;)V
+
+    :cond_2
+    return-void
+.end method
+
+.method private static a(Landroid/widget/PopupWindow;)V
+    .locals 4
+
+    :try_start_0
+    const-class v0, Landroid/widget/PopupWindow;
+
+    const-string v1, "mAnchor"
+
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+
+    const-class v0, Landroid/widget/PopupWindow;
+
+    const-string v2, "mOnScrollChangedListener"
+
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v2
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v2, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/widget/r;->c:Landroid/support/v7/widget/z;
+    check-cast v0, Landroid/view/ViewTreeObserver$OnScrollChangedListener;
 
-    iget-object v0, p0, Landroid/support/v7/widget/r;->c:Landroid/support/v7/widget/z;
+    new-instance v3, Landroid/support/v7/widget/r$1;
 
-    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/z;->a(Landroid/util/AttributeSet;I)V
+    invoke-direct {v3, v1, p0, v0}, Landroid/support/v7/widget/r$1;-><init>(Ljava/lang/reflect/Field;Landroid/widget/PopupWindow;Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
 
-    iget-object v0, p0, Landroid/support/v7/widget/r;->c:Landroid/support/v7/widget/z;
+    invoke-virtual {v2, p0, v3}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/z;->a()V
-
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "AppCompatPopupWindow"
+
+    const-string v2, "Exception while installing workaround OnScrollChangedListener"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method protected drawableStateChanged()V
+.method public a(Z)V
     .locals 1
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
 
-    invoke-super {p0}, Landroid/widget/MultiAutoCompleteTextView;->drawableStateChanged()V
-
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
+    sget-boolean v0, Landroid/support/v7/widget/r;->b:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/h;->c()V
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/r;->c:Landroid/support/v7/widget/z;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Landroid/support/v7/widget/r;->c:Landroid/support/v7/widget/z;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/z;->a()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/h;->a()Landroid/content/res/ColorStateList;
-
-    move-result-object v0
+    iput-boolean p1, p0, Landroid/support/v7/widget/r;->c:Z
 
     :goto_0
-    return-object v0
+    return-void
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-static {p0, p1}, Landroid/support/v4/widget/s;->a(Landroid/widget/PopupWindow;Z)V
 
     goto :goto_0
 .end method
 
-.method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
+.method public a()Z
     .locals 1
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
 
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
+    sget-boolean v0, Landroid/support/v7/widget/r;->b:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/h;->b()Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object v0
+    iget-boolean v0, p0, Landroid/support/v7/widget/r;->c:Z
 
     :goto_0
-    return-object v0
+    return v0
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-static {p0}, Landroid/support/v4/widget/s;->a(Landroid/widget/PopupWindow;)Z
+
+    move-result v0
 
     goto :goto_0
 .end method
 
-.method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+.method public showAsDropDown(Landroid/view/View;II)V
     .locals 1
 
-    invoke-super {p0, p1}, Landroid/widget/MultiAutoCompleteTextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
+    sget-boolean v0, Landroid/support/v7/widget/r;->b:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
-
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/h;->a(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setBackgroundResource(I)V
-    .locals 1
-
-    invoke-super {p0, p1}, Landroid/widget/MultiAutoCompleteTextView;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
+    iget-boolean v0, p0, Landroid/support/v7/widget/r;->c:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/h;->a(I)V
+    move-result v0
+
+    sub-int/2addr p3, v0
 
     :cond_0
-    return-void
-.end method
-
-.method public setDropDownBackgroundResource(I)V
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/r;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Landroid/support/v7/b/a/b;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroid/support/v7/widget/r;->setDropDownBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-super {p0, p1, p2, p3}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;II)V
 
     return-void
 .end method
 
-.method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
+.method public showAsDropDown(Landroid/view/View;III)V
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
+    sget-boolean v0, Landroid/support/v7/widget/r;->b:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
+    iget-boolean v0, p0, Landroid/support/v7/widget/r;->c:Z
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/h;->a(Landroid/content/res/ColorStateList;)V
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    sub-int/2addr p3, v0
 
     :cond_0
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;III)V
+
     return-void
 .end method
 
-.method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
-    .locals 1
+.method public update(Landroid/view/View;IIII)V
+    .locals 6
 
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/r;->b:Landroid/support/v7/widget/h;
-
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/h;->a(Landroid/graphics/PorterDuff$Mode;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setTextAppearance(Landroid/content/Context;I)V
-    .locals 1
-
-    invoke-super {p0, p1, p2}, Landroid/widget/MultiAutoCompleteTextView;->setTextAppearance(Landroid/content/Context;I)V
-
-    iget-object v0, p0, Landroid/support/v7/widget/r;->c:Landroid/support/v7/widget/z;
+    sget-boolean v0, Landroid/support/v7/widget/r;->b:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/r;->c:Landroid/support/v7/widget/z;
+    iget-boolean v0, p0, Landroid/support/v7/widget/r;->c:Z
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/z;->a(Landroid/content/Context;I)V
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    sub-int/2addr p3, v0
+
+    move v3, p3
+
+    :goto_0
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move v2, p2
+
+    move v4, p4
+
+    move v5, p5
+
+    invoke-super/range {v0 .. v5}, Landroid/widget/PopupWindow;->update(Landroid/view/View;IIII)V
+
+    return-void
 
     :cond_0
-    return-void
+    move v3, p3
+
+    goto :goto_0
 .end method

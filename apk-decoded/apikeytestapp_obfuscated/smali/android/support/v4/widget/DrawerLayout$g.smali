@@ -1,5 +1,5 @@
-.class Landroid/support/v4/widget/DrawerLayout$g;
-.super Landroid/support/v4/widget/p$a;
+.class public Landroid/support/v4/widget/DrawerLayout$g;
+.super Landroid/view/ViewGroup$MarginLayoutParams;
 
 
 # annotations
@@ -8,453 +8,114 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x9
     name = "g"
 .end annotation
 
 
+# static fields
+.field private static final e:I = 0x1
+
+.field private static final f:I = 0x2
+
+.field private static final g:I = 0x4
+
+
 # instance fields
-.field final synthetic a:Landroid/support/v4/widget/DrawerLayout;
+.field public a:I
 
-.field private final b:I
+.field b:F
 
-.field private c:Landroid/support/v4/widget/p;
+.field c:Z
 
-.field private final d:Ljava/lang/Runnable;
+.field d:I
 
 
 # direct methods
-.method private b()V
-    .locals 2
-
-    const/4 v0, 0x3
-
-    iget v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->b:I
-
-    if-ne v1, v0, :cond_0
-
-    const/4 v0, 0x5
-
-    :cond_0
-    iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    invoke-virtual {v1, v0}, Landroid/support/v4/widget/DrawerLayout;->b(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    invoke-virtual {v1, v0}, Landroid/support/v4/widget/DrawerLayout;->i(Landroid/view/View;)V
-
-    :cond_1
-    return-void
-.end method
-
-
-# virtual methods
-.method public a(Landroid/view/View;II)I
+.method public constructor <init>(II)V
     .locals 1
 
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public a()V
-    .locals 2
-
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->d:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/DrawerLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public a(I)V
-    .locals 3
-
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    iget v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->b:I
-
-    iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout$g;->c:Landroid/support/v4/widget/p;
-
-    invoke-virtual {v2}, Landroid/support/v4/widget/p;->c()Landroid/view/View;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, p1, v2}, Landroid/support/v4/widget/DrawerLayout;->a(IILandroid/view/View;)V
-
-    return-void
-.end method
-
-.method public a(II)V
-    .locals 4
-
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->d:Ljava/lang/Runnable;
-
-    const-wide/16 v2, 0xa0
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/support/v4/widget/DrawerLayout;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    return-void
-.end method
-
-.method public a(Landroid/view/View;FF)V
-    .locals 6
-
-    const/high16 v5, 0x3f000000    # 0.5f
-
-    const/4 v4, 0x0
-
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/widget/DrawerLayout;->d(Landroid/view/View;)F
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    const/4 v3, 0x3
-
-    invoke-virtual {v0, p1, v3}, Landroid/support/v4/widget/DrawerLayout;->a(Landroid/view/View;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    cmpl-float v0, p2, v4
-
-    if-gtz v0, :cond_0
-
-    cmpl-float v0, p2, v4
-
-    if-nez v0, :cond_2
-
-    cmpl-float v0, v1, v5
-
-    if-lez v0, :cond_2
-
-    :cond_0
     const/4 v0, 0x0
 
-    :cond_1
-    :goto_0
-    iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->c:Landroid/support/v4/widget/p;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result v2
-
-    invoke-virtual {v1, v0, v2}, Landroid/support/v4/widget/p;->a(II)Z
-
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    invoke-virtual {v0}, Landroid/support/v4/widget/DrawerLayout;->invalidate()V
+    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:I
 
     return-void
-
-    :cond_2
-    neg-int v0, v2
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    invoke-virtual {v0}, Landroid/support/v4/widget/DrawerLayout;->getWidth()I
-
-    move-result v0
-
-    cmpg-float v3, p2, v4
-
-    if-ltz v3, :cond_4
-
-    cmpl-float v3, p2, v4
-
-    if-nez v3, :cond_1
-
-    cmpl-float v1, v1, v5
-
-    if-lez v1, :cond_1
-
-    :cond_4
-    sub-int/2addr v0, v2
-
-    goto :goto_0
 .end method
 
-.method public a(Landroid/view/View;IIII)V
-    .locals 3
+.method public constructor <init>(III)V
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    invoke-direct {p0, p1, p2}, Landroid/support/v4/widget/DrawerLayout$g;-><init>(II)V
 
-    move-result v0
+    iput p3, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:I
 
-    iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
+    return-void
+.end method
 
-    const/4 v2, 0x3
-
-    invoke-virtual {v1, p1, v2}, Landroid/support/v4/widget/DrawerLayout;->a(Landroid/view/View;I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    add-int v1, v0, p2
-
-    int-to-float v1, v1
-
-    int-to-float v0, v0
-
-    div-float v0, v1, v0
-
-    :goto_0
-    iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    invoke-virtual {v1, p1, v0}, Landroid/support/v4/widget/DrawerLayout;->b(Landroid/view/View;F)V
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 2
 
     const/4 v1, 0x0
 
-    cmpl-float v0, v0, v1
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    if-nez v0, :cond_1
+    iput v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:I
 
-    const/4 v0, 0x4
+    sget-object v0, Landroid/support/v4/widget/DrawerLayout;->h:[I
 
-    :goto_1
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/DrawerLayout;->invalidate()V
-
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    invoke-virtual {v1}, Landroid/support/v4/widget/DrawerLayout;->getWidth()I
+    invoke-virtual {v0, v1, v1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v1
 
-    sub-int/2addr v1, p2
+    iput v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:I
 
-    int-to-float v1, v1
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    int-to-float v0, v0
-
-    div-float v0, v1, v0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_1
+    return-void
 .end method
 
-.method public a(Landroid/view/View;I)Z
-    .locals 2
-
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/widget/DrawerLayout;->g(Landroid/view/View;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    iget v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->b:I
-
-    invoke-virtual {v0, p1, v1}, Landroid/support/v4/widget/DrawerLayout;->a(Landroid/view/View;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/widget/DrawerLayout;->a(Landroid/view/View;)I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public b(Landroid/view/View;)I
+.method public constructor <init>(Landroid/support/v4/widget/DrawerLayout$g;)V
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    invoke-virtual {v0, p1}, Landroid/support/v4/widget/DrawerLayout;->g(Landroid/view/View;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
-    goto :goto_0
-.end method
+    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:I
 
-.method public b(Landroid/view/View;II)I
-    .locals 2
+    iget v0, p1, Landroid/support/v4/widget/DrawerLayout$g;->a:I
 
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    const/4 v1, 0x3
-
-    invoke-virtual {v0, p1, v1}, Landroid/support/v4/widget/DrawerLayout;->a(Landroid/view/View;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    neg-int v0, v0
-
-    const/4 v1, 0x0
-
-    invoke-static {p2, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    invoke-virtual {v0}, Landroid/support/v4/widget/DrawerLayout;->getWidth()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v1
-
-    sub-int v1, v0, v1
-
-    invoke-static {p2, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    goto :goto_0
-.end method
-
-.method public b(II)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x1
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    const/4 v1, 0x3
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/DrawerLayout;->b(I)Landroid/view/View;
-
-    move-result-object v0
-
-    :goto_0
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    invoke-virtual {v1, v0}, Landroid/support/v4/widget/DrawerLayout;->a(Landroid/view/View;)I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout$g;->c:Landroid/support/v4/widget/p;
-
-    invoke-virtual {v1, v0, p2}, Landroid/support/v4/widget/p;->a(Landroid/view/View;I)V
-
-    :cond_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:Landroid/support/v4/widget/DrawerLayout;
-
-    const/4 v1, 0x5
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/DrawerLayout;->b(I)Landroid/view/View;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public b(Landroid/view/View;I)V
-    .locals 2
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/support/v4/widget/DrawerLayout$f;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Landroid/support/v4/widget/DrawerLayout$f;->c:Z
-
-    invoke-direct {p0}, Landroid/support/v4/widget/DrawerLayout$g;->b()V
+    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:I
 
     return-void
 .end method
 
-.method public b(I)Z
+.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
     .locals 1
 
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+
     const/4 v0, 0x0
 
-    return v0
+    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+    .locals 1
+
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$g;->a:I
+
+    return-void
 .end method

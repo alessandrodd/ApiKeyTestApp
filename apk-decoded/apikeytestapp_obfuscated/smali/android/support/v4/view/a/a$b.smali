@@ -3,6 +3,10 @@
 
 
 # annotations
+.annotation build Landroid/support/annotation/ai;
+    a = 0x13
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroid/support/v4/view/a/a;
 .end annotation
@@ -24,7 +28,7 @@
 
 
 # virtual methods
-.method public a(Landroid/view/accessibility/AccessibilityEvent;)I
+.method public c(Landroid/view/accessibility/AccessibilityEvent;)I
     .locals 1
 
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getContentChangeTypes()I
@@ -34,7 +38,7 @@
     return v0
 .end method
 
-.method public a(Landroid/view/accessibility/AccessibilityEvent;I)V
+.method public c(Landroid/view/accessibility/AccessibilityEvent;I)V
     .locals 0
 
     invoke-virtual {p1, p2}, Landroid/view/accessibility/AccessibilityEvent;->setContentChangeTypes(I)V

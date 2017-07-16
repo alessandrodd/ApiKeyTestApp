@@ -1,486 +1,475 @@
 .class public Landroid/support/v7/widget/p;
-.super Ljava/lang/Object;
+.super Landroid/widget/ImageView;
+
+# interfaces
+.implements Landroid/support/v4/view/aa;
+.implements Landroid/support/v4/widget/ab;
 
 
 # instance fields
-.field private final a:Landroid/widget/ImageView;
+.field private final a:Landroid/support/v7/widget/g;
 
-.field private b:Landroid/support/v7/widget/bd;
-
-.field private c:Landroid/support/v7/widget/bd;
-
-.field private d:Landroid/support/v7/widget/bd;
+.field private final b:Landroid/support/v7/widget/o;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/ImageView;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
+    invoke-direct {p0, p1, v0}, Landroid/support/v7/widget/p;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
 
-.method private a(Landroid/graphics/drawable/Drawable;)Z
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
 
-    const/4 v0, 0x1
-
-    iget-object v1, p0, Landroid/support/v7/widget/p;->d:Landroid/support/v7/widget/bd;
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Landroid/support/v7/widget/bd;
-
-    invoke-direct {v1}, Landroid/support/v7/widget/bd;-><init>()V
-
-    iput-object v1, p0, Landroid/support/v7/widget/p;->d:Landroid/support/v7/widget/bd;
-
-    :cond_0
-    iget-object v1, p0, Landroid/support/v7/widget/p;->d:Landroid/support/v7/widget/bd;
-
-    invoke-virtual {v1}, Landroid/support/v7/widget/bd;->a()V
-
-    iget-object v2, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
-
-    invoke-static {v2}, Landroid/support/v4/widget/g;->a(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    iput-boolean v0, v1, Landroid/support/v7/widget/bd;->d:Z
-
-    iput-object v2, v1, Landroid/support/v7/widget/bd;->a:Landroid/content/res/ColorStateList;
-
-    :cond_1
-    iget-object v2, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
-
-    invoke-static {v2}, Landroid/support/v4/widget/g;->b(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_2
-
-    iput-boolean v0, v1, Landroid/support/v7/widget/bd;->c:Z
-
-    iput-object v2, v1, Landroid/support/v7/widget/bd;->b:Landroid/graphics/PorterDuff$Mode;
-
-    :cond_2
-    iget-boolean v2, v1, Landroid/support/v7/widget/bd;->d:Z
-
-    if-nez v2, :cond_3
-
-    iget-boolean v2, v1, Landroid/support/v7/widget/bd;->c:Z
-
-    if-eqz v2, :cond_4
-
-    :cond_3
-    iget-object v2, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
-
-    invoke-virtual {v2}, Landroid/widget/ImageView;->getDrawableState()[I
-
-    move-result-object v2
-
-    invoke-static {p1, v1, v2}, Landroid/support/v7/widget/m;->a(Landroid/graphics/drawable/Drawable;Landroid/support/v7/widget/bd;[I)V
-
-    :goto_0
-    return v0
-
-    :cond_4
     const/4 v0, 0x0
 
-    goto :goto_0
+    invoke-direct {p0, p1, p2, v0}, Landroid/support/v7/widget/p;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    return-void
 .end method
 
-.method private e()Z
-    .locals 4
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 1
 
-    const/16 v3, 0x15
+    invoke-static {p1}, Landroid/support/v7/widget/bt;->a(Landroid/content/Context;)Landroid/content/Context;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-direct {p0, v0, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+    new-instance v0, Landroid/support/v7/widget/g;
 
-    if-le v2, v3, :cond_2
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/g;-><init>(Landroid/view/View;)V
 
-    iget-object v2, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/bd;
+    iput-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
 
-    if-eqz v2, :cond_1
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
 
-    :cond_0
-    :goto_0
-    return v0
+    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/g;->a(Landroid/util/AttributeSet;I)V
 
-    :cond_1
-    move v0, v1
+    new-instance v0, Landroid/support/v7/widget/o;
 
-    goto :goto_0
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/o;-><init>(Landroid/widget/ImageView;)V
 
-    :cond_2
-    if-eq v2, v3, :cond_0
+    iput-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
 
-    move v0, v1
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
 
-    goto :goto_0
+    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/o;->a(Landroid/util/AttributeSet;I)V
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public a(I)V
-    .locals 2
+.method protected drawableStateChanged()V
+    .locals 1
 
-    if-eqz p1, :cond_1
+    invoke-super {p0}, Landroid/widget/ImageView;->drawableStateChanged()V
 
-    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Landroid/support/v7/b/a/b;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Landroid/support/v7/widget/ah;->a(Landroid/graphics/drawable/Drawable;)V
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/g;->c()V
 
     :cond_0
-    iget-object v1, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
 
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    if-eqz v0, :cond_1
 
-    :goto_0
-    invoke-virtual {p0}, Landroid/support/v7/widget/p;->d()V
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
 
-    return-void
+    invoke-virtual {v0}, Landroid/support/v7/widget/o;->d()V
 
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
+    .locals 1
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/g;->a()Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method a(Landroid/content/res/ColorStateList;)V
-    .locals 2
+.method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
+    .locals 1
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
 
-    iget-object v0, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
 
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroid/support/v7/widget/bd;
-
-    invoke-direct {v0}, Landroid/support/v7/widget/bd;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
-
-    iput-object p1, v0, Landroid/support/v7/widget/bd;->a:Landroid/content/res/ColorStateList;
-
-    iget-object v0, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Landroid/support/v7/widget/bd;->d:Z
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/p;->d()V
-
-    return-void
-.end method
-
-.method a(Landroid/graphics/PorterDuff$Mode;)V
-    .locals 2
-
-    iget-object v0, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroid/support/v7/widget/bd;
-
-    invoke-direct {v0}, Landroid/support/v7/widget/bd;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
-
-    iput-object p1, v0, Landroid/support/v7/widget/bd;->b:Landroid/graphics/PorterDuff$Mode;
-
-    iget-object v0, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Landroid/support/v7/widget/bd;->c:Z
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/p;->d()V
-
-    return-void
-.end method
-
-.method public a(Landroid/util/AttributeSet;I)V
-    .locals 5
-
-    const/4 v4, -0x1
-
-    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget-object v1, Landroid/support/v7/a/a$j;->AppCompatImageView:[I
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, p1, v1, p2, v2}, Landroid/support/v7/widget/bf;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/support/v7/widget/bf;
-
-    move-result-object v1
-
-    :try_start_0
-    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    sget v2, Landroid/support/v7/a/a$j;->AppCompatImageView_srcCompat:I
-
-    const/4 v3, -0x1
-
-    invoke-virtual {v1, v2, v3}, Landroid/support/v7/widget/bf;->f(II)I
-
-    move-result v2
-
-    if-eq v2, v4, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0, v2}, Landroid/support/v7/b/a/b;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
 
     if-eqz v0, :cond_0
 
-    iget-object v2, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
 
-    invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    if-eqz v0, :cond_1
-
-    invoke-static {v0}, Landroid/support/v7/widget/ah;->a(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_1
-    sget v0, Landroid/support/v7/a/a$j;->AppCompatImageView_tint:I
-
-    invoke-virtual {v1, v0}, Landroid/support/v7/widget/bf;->g(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
-
-    sget v2, Landroid/support/v7/a/a$j;->AppCompatImageView_tint:I
-
-    invoke-virtual {v1, v2}, Landroid/support/v7/widget/bf;->e(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Landroid/support/v4/widget/g;->a(Landroid/widget/ImageView;Landroid/content/res/ColorStateList;)V
-
-    :cond_2
-    sget v0, Landroid/support/v7/a/a$j;->AppCompatImageView_tintMode:I
-
-    invoke-virtual {v1, v0}, Landroid/support/v7/widget/bf;->g(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
-
-    sget v2, Landroid/support/v7/a/a$j;->AppCompatImageView_tintMode:I
-
-    const/4 v3, -0x1
-
-    invoke-virtual {v1, v2, v3}, Landroid/support/v7/widget/bf;->a(II)I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    invoke-static {v2, v3}, Landroid/support/v7/widget/ah;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Landroid/support/v4/widget/g;->a(Landroid/widget/ImageView;Landroid/graphics/PorterDuff$Mode;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_3
-    invoke-virtual {v1}, Landroid/support/v7/widget/bf;->a()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {v1}, Landroid/support/v7/widget/bf;->a()V
-
-    throw v0
-.end method
-
-.method a()Z
-    .locals 3
-
-    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Landroid/support/v7/widget/g;->b()Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v0
 
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    :goto_0
+    return-object v0
 
-    const/16 v2, 0x15
-
-    if-lt v1, v2, :cond_0
-
-    instance-of v0, v0, Landroid/graphics/drawable/RippleDrawable;
-
-    if-eqz v0, :cond_0
-
+    :cond_0
     const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getSupportImageTintList()Landroid/content/res/ColorStateList;
+    .locals 1
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
+
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/o;->b()Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getSupportImageTintMode()Landroid/graphics/PorterDuff$Mode;
+    .locals 1
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
+
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/o;->c()Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public hasOverlappingRendering()Z
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/o;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0}, Landroid/widget/ImageView;->hasOverlappingRendering()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
 
     :goto_0
     return v0
 
     :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method b()Landroid/content/res/ColorStateList;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
-
-    iget-object v0, v0, Landroid/support/v7/widget/bd;->a:Landroid/content/res/ColorStateList;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method c()Landroid/graphics/PorterDuff$Mode;
+.method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
 
-    iget-object v0, v0, Landroid/support/v7/widget/bd;->b:Landroid/graphics/PorterDuff$Mode;
-
-    :goto_0
-    return-object v0
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/g;->a(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method d()V
-    .locals 3
-
-    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Landroid/support/v7/widget/ah;->a(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    if-eqz v0, :cond_1
-
-    invoke-direct {p0}, Landroid/support/v7/widget/p;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-direct {p0, v0}, Landroid/support/v7/widget/p;->a(Landroid/graphics/drawable/Drawable;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    :cond_1
-    :goto_0
     return-void
+.end method
 
-    :cond_2
-    iget-object v1, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
+.method public setBackgroundResource(I)V
+    .locals 1
+    .param p1    # I
+        .annotation build Landroid/support/annotation/p;
+        .end annotation
+    .end param
 
-    if-eqz v1, :cond_3
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    iget-object v1, p0, Landroid/support/v7/widget/p;->c:Landroid/support/v7/widget/bd;
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
 
-    iget-object v2, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v2}, Landroid/widget/ImageView;->getDrawableState()[I
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
 
-    move-result-object v2
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/g;->a(I)V
 
-    invoke-static {v0, v1, v2}, Landroid/support/v7/widget/m;->a(Landroid/graphics/drawable/Drawable;Landroid/support/v7/widget/bd;[I)V
+    :cond_0
+    return-void
+.end method
 
-    goto :goto_0
+.method public setImageBitmap(Landroid/graphics/Bitmap;)V
+    .locals 1
 
-    :cond_3
-    iget-object v1, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/bd;
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    if-eqz v1, :cond_1
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
 
-    iget-object v1, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/bd;
+    if-eqz v0, :cond_0
 
-    iget-object v2, p0, Landroid/support/v7/widget/p;->a:Landroid/widget/ImageView;
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
 
-    invoke-virtual {v2}, Landroid/widget/ImageView;->getDrawableState()[I
+    invoke-virtual {v0}, Landroid/support/v7/widget/o;->d()V
 
-    move-result-object v2
+    :cond_0
+    return-void
+.end method
 
-    invoke-static {v0, v1, v2}, Landroid/support/v7/widget/m;->a(Landroid/graphics/drawable/Drawable;Landroid/support/v7/widget/bd;[I)V
+.method public setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 
-    goto :goto_0
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/o;->d()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setImageIcon(Landroid/graphics/drawable/Icon;)V
+    .locals 1
+    .param p1    # Landroid/graphics/drawable/Icon;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageIcon(Landroid/graphics/drawable/Icon;)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/o;->d()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setImageResource(I)V
+    .locals 1
+    .param p1    # I
+        .annotation build Landroid/support/annotation/p;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/o;->a(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setImageURI(Landroid/net/Uri;)V
+    .locals 1
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageURI(Landroid/net/Uri;)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/o;->d()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
+    .locals 1
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/g;->a(Landroid/content/res/ColorStateList;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    .locals 1
+    .param p1    # Landroid/graphics/PorterDuff$Mode;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->a:Landroid/support/v7/widget/g;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/g;->a(Landroid/graphics/PorterDuff$Mode;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportImageTintList(Landroid/content/res/ColorStateList;)V
+    .locals 1
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/o;->a(Landroid/content/res/ColorStateList;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    .locals 1
+    .param p1    # Landroid/graphics/PorterDuff$Mode;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/p;->b:Landroid/support/v7/widget/o;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/o;->a(Landroid/graphics/PorterDuff$Mode;)V
+
+    :cond_0
+    return-void
 .end method

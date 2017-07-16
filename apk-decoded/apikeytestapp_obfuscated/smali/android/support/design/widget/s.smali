@@ -1,39 +1,64 @@
-.class Landroid/support/design/widget/s;
-.super Landroid/widget/ImageButton;
+.class public final Landroid/support/design/widget/s;
+.super Landroid/view/View;
 
 
 # instance fields
-.field private a:I
+.field final a:Ljava/lang/CharSequence;
+
+.field final b:Landroid/graphics/drawable/Drawable;
+
+.field final c:I
 
 
-# virtual methods
-.method final a(IZ)V
-    .locals 0
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    invoke-super {p0, p1}, Landroid/widget/ImageButton;->setVisibility(I)V
+    const/4 v0, 0x0
 
-    if-eqz p2, :cond_0
+    invoke-direct {p0, p1, v0}, Landroid/support/design/widget/s;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    iput p1, p0, Landroid/support/design/widget/s;->a:I
-
-    :cond_0
     return-void
 .end method
 
-.method final getUserSetVisibility()I
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 3
 
-    iget v0, p0, Landroid/support/design/widget/s;->a:I
+    invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    return v0
-.end method
+    sget-object v0, Landroid/support/design/b$m;->TabItem:[I
 
-.method public setVisibility(I)V
-    .locals 1
+    invoke-static {p1, p2, v0}, Landroid/support/v7/widget/bw;->a(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/support/v7/widget/bw;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Landroid/support/design/widget/s;->a(IZ)V
+    sget v1, Landroid/support/design/b$m;->TabItem_android_text:I
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bw;->d(I)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    iput-object v1, p0, Landroid/support/design/widget/s;->a:Ljava/lang/CharSequence;
+
+    sget v1, Landroid/support/design/b$m;->TabItem_android_icon:I
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bw;->a(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    iput-object v1, p0, Landroid/support/design/widget/s;->b:Landroid/graphics/drawable/Drawable;
+
+    sget v1, Landroid/support/design/b$m;->TabItem_android_layout:I
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/support/v7/widget/bw;->g(II)I
+
+    move-result v1
+
+    iput v1, p0, Landroid/support/design/widget/s;->c:I
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/bw;->e()V
 
     return-void
 .end method

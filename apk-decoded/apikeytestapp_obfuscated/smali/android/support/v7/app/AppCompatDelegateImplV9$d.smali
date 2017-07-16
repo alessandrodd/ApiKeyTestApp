@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v7/e/a/r$a;
+.implements Landroid/support/v7/view/menu/p$a;
 
 
 # annotations
@@ -33,12 +33,12 @@
 
 
 # virtual methods
-.method public a(Landroid/support/v7/e/a/k;Z)V
+.method public a(Landroid/support/v7/view/menu/h;Z)V
     .locals 5
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1}, Landroid/support/v7/e/a/k;->p()Landroid/support/v7/e/a/k;
+    invoke-virtual {p1}, Landroid/support/v7/view/menu/h;->q()Landroid/support/v7/view/menu/h;
 
     move-result-object v2
 
@@ -89,20 +89,20 @@
     goto :goto_1
 .end method
 
-.method public a(Landroid/support/v7/e/a/k;)Z
+.method public a(Landroid/support/v7/view/menu/h;)Z
     .locals 2
 
     if-nez p1, :cond_0
 
     iget-object v0, p0, Landroid/support/v7/app/AppCompatDelegateImplV9$d;->a:Landroid/support/v7/app/AppCompatDelegateImplV9;
 
-    iget-boolean v0, v0, Landroid/support/v7/app/AppCompatDelegateImplV9;->g:Z
+    iget-boolean v0, v0, Landroid/support/v7/app/AppCompatDelegateImplV9;->s:Z
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Landroid/support/v7/app/AppCompatDelegateImplV9$d;->a:Landroid/support/v7/app/AppCompatDelegateImplV9;
 
-    invoke-virtual {v0}, Landroid/support/v7/app/AppCompatDelegateImplV9;->m()Landroid/view/Window$Callback;
+    invoke-virtual {v0}, Landroid/support/v7/app/AppCompatDelegateImplV9;->s()Landroid/view/Window$Callback;
 
     move-result-object v0
 
@@ -110,7 +110,7 @@
 
     iget-object v1, p0, Landroid/support/v7/app/AppCompatDelegateImplV9$d;->a:Landroid/support/v7/app/AppCompatDelegateImplV9;
 
-    invoke-virtual {v1}, Landroid/support/v7/app/AppCompatDelegateImplV9;->l()Z
+    invoke-virtual {v1}, Landroid/support/v7/app/AppCompatDelegateImplV9;->q()Z
 
     move-result v1
 

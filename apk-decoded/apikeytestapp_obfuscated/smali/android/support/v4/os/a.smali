@@ -1,24 +1,56 @@
-.class public Landroid/support/v4/os/a;
+.class public final Landroid/support/v4/os/a;
 .super Ljava/lang/Object;
 
 
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+
 # direct methods
-.method public static a()Z
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static varargs a(Landroid/os/AsyncTask;[Ljava/lang/Object;)Landroid/os/AsyncTask;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<Params:",
+            "Ljava/lang/Object;",
+            "Progress:",
+            "Ljava/lang/Object;",
+            "Result:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/AsyncTask",
+            "<TParams;TProgress;TResult;>;[TParams;)",
+            "Landroid/os/AsyncTask",
+            "<TParams;TProgress;TResult;>;"
+        }
+    .end annotation
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    const/16 v1, 0x1a
+    if-nez p0, :cond_0
 
-    if-lt v0, v1, :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const/4 v0, 0x1
+    const-string v1, "task can not be null"
 
-    :goto_0
-    return v0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_0
-    const/4 v0, 0x0
+    sget-object v0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    goto :goto_0
+    invoke-virtual {p0, v0, p1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    return-object p0
 .end method

@@ -40,7 +40,7 @@
 
     iget-object v0, p0, Landroid/support/v7/app/AppCompatDelegateImplV9$1;->a:Landroid/support/v7/app/AppCompatDelegateImplV9;
 
-    iget v0, v0, Landroid/support/v7/app/AppCompatDelegateImplV9;->r:I
+    iget v0, v0, Landroid/support/v7/app/AppCompatDelegateImplV9;->D:I
 
     and-int/lit8 v0, v0, 0x1
 
@@ -48,12 +48,12 @@
 
     iget-object v0, p0, Landroid/support/v7/app/AppCompatDelegateImplV9$1;->a:Landroid/support/v7/app/AppCompatDelegateImplV9;
 
-    invoke-virtual {v0, v2}, Landroid/support/v7/app/AppCompatDelegateImplV9;->f(I)V
+    invoke-virtual {v0, v2}, Landroid/support/v7/app/AppCompatDelegateImplV9;->i(I)V
 
     :cond_0
     iget-object v0, p0, Landroid/support/v7/app/AppCompatDelegateImplV9$1;->a:Landroid/support/v7/app/AppCompatDelegateImplV9;
 
-    iget v0, v0, Landroid/support/v7/app/AppCompatDelegateImplV9;->r:I
+    iget v0, v0, Landroid/support/v7/app/AppCompatDelegateImplV9;->D:I
 
     and-int/lit16 v0, v0, 0x1000
 
@@ -63,16 +63,16 @@
 
     const/16 v1, 0x6c
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/AppCompatDelegateImplV9;->f(I)V
+    invoke-virtual {v0, v1}, Landroid/support/v7/app/AppCompatDelegateImplV9;->i(I)V
 
     :cond_1
     iget-object v0, p0, Landroid/support/v7/app/AppCompatDelegateImplV9$1;->a:Landroid/support/v7/app/AppCompatDelegateImplV9;
 
-    iput-boolean v2, v0, Landroid/support/v7/app/AppCompatDelegateImplV9;->q:Z
+    iput-boolean v2, v0, Landroid/support/v7/app/AppCompatDelegateImplV9;->C:Z
 
     iget-object v0, p0, Landroid/support/v7/app/AppCompatDelegateImplV9$1;->a:Landroid/support/v7/app/AppCompatDelegateImplV9;
 
-    iput v2, v0, Landroid/support/v7/app/AppCompatDelegateImplV9;->r:I
+    iput v2, v0, Landroid/support/v7/app/AppCompatDelegateImplV9;->D:I
 
     return-void
 .end method

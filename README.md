@@ -9,6 +9,12 @@ example grep command to search for a key:
 grep -B 10 -A 10 -ra "AIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
 ```
 
+example strings command to search for a key in native code:
+
+```
+strings -n 10 --radix=x -d libnative-lib.so | grep "HIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+```
+
 ### String Resource (XML)
 AIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
@@ -26,7 +32,7 @@ AIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
 ```
 [...]
-
+<string name="api_key_res">AIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4</string>
 [...]
 ```
 
@@ -227,7 +233,7 @@ HIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
 ```
 [...]
-
+17130 HIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 [...]
 ```
 
@@ -235,7 +241,7 @@ HIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
 ```
 [...]
-
+17130 HIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 [...]
 ```
 
@@ -247,7 +253,7 @@ IIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
 ```
 [...]
-
+3c2c IIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 [...]
 ```
 
@@ -255,7 +261,7 @@ IIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
 ```
 [...]
-
+3c2c IIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 [...]
 ```
 
@@ -267,7 +273,7 @@ JIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
 ```
 [...]
-
+3c64 JIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 [...]
 ```
 
@@ -275,6 +281,6 @@ JIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
 ```
 [...]
-
+3c64 JIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 [...]
 ```

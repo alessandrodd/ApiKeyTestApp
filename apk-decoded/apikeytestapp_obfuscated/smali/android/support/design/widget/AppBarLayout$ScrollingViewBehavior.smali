@@ -1,5 +1,5 @@
 .class public Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;
-.super Landroid/support/design/widget/j;
+.super Landroid/support/design/widget/n;
 
 
 # annotations
@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroid/support/design/widget/j;-><init>()V
+    invoke-direct {p0}, Landroid/support/design/widget/n;-><init>()V
 
     return-void
 .end method
@@ -25,15 +25,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
-    invoke-direct {p0, p1, p2}, Landroid/support/design/widget/j;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Landroid/support/design/widget/n;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Landroid/support/design/a$h;->ScrollingViewBehavior_Layout:[I
+    sget-object v0, Landroid/support/design/b$m;->ScrollingViewBehavior_Layout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    sget v1, Landroid/support/design/a$h;->ScrollingViewBehavior_Layout_behavior_overlapTop:I
+    sget v1, Landroid/support/design/b$m;->ScrollingViewBehavior_Layout_behavior_overlapTop:I
 
     const/4 v2, 0x0
 
@@ -41,7 +41,7 @@
 
     move-result v1
 
-    invoke-virtual {p0, v1}, Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;->b(I)V
+    invoke-virtual {p0, v1}, Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;->c(I)V
 
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -55,9 +55,9 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$c;
+    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$e;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/CoordinatorLayout$c;->b()Landroid/support/design/widget/CoordinatorLayout$a;
+    invoke-virtual {v0}, Landroid/support/design/widget/CoordinatorLayout$e;->b()Landroid/support/design/widget/CoordinatorLayout$a;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
 
     check-cast v0, Landroid/support/design/widget/AppBarLayout$Behavior;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/AppBarLayout$Behavior;->a()I
+    invoke-virtual {v0}, Landroid/support/design/widget/AppBarLayout$Behavior;->b()I
 
     move-result v0
 
@@ -87,9 +87,9 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$c;
+    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$e;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/CoordinatorLayout$c;->b()Landroid/support/design/widget/CoordinatorLayout$a;
+    invoke-virtual {v0}, Landroid/support/design/widget/CoordinatorLayout$e;->b()Landroid/support/design/widget/CoordinatorLayout$a;
 
     move-result-object v0
 
@@ -127,7 +127,7 @@
 
     sub-int/2addr v0, v1
 
-    invoke-static {p2, v0}, Landroid/support/v4/view/r;->d(Landroid/view/View;I)V
+    invoke-static {p2, v0}, Landroid/support/v4/view/ac;->k(Landroid/view/View;I)V
 
     :cond_0
     return-void
@@ -241,7 +241,7 @@
 .method public bridge synthetic a(I)Z
     .locals 1
 
-    invoke-super {p0, p1}, Landroid/support/design/widget/j;->a(I)Z
+    invoke-super {p0, p1}, Landroid/support/design/widget/n;->a(I)Z
 
     move-result v0
 
@@ -251,7 +251,7 @@
 .method public bridge synthetic a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;I)Z
     .locals 1
 
-    invoke-super {p0, p1, p2, p3}, Landroid/support/design/widget/j;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;I)Z
+    invoke-super {p0, p1, p2, p3}, Landroid/support/design/widget/n;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;I)Z
 
     move-result v0
 
@@ -261,7 +261,7 @@
 .method public bridge synthetic a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;IIII)Z
     .locals 1
 
-    invoke-super/range {p0 .. p6}, Landroid/support/design/widget/j;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;IIII)Z
+    invoke-super/range {p0 .. p6}, Landroid/support/design/widget/n;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;IIII)Z
 
     move-result v0
 
@@ -342,16 +342,6 @@
     return v0
 .end method
 
-.method public bridge synthetic b()I
-    .locals 1
-
-    invoke-super {p0}, Landroid/support/design/widget/j;->b()I
-
-    move-result v0
-
-    return v0
-.end method
-
 .method b(Landroid/view/View;)I
     .locals 1
 
@@ -369,7 +359,7 @@
     return v0
 
     :cond_0
-    invoke-super {p0, p1}, Landroid/support/design/widget/j;->b(Landroid/view/View;)I
+    invoke-super {p0, p1}, Landroid/support/design/widget/n;->b(Landroid/view/View;)I
 
     move-result v0
 
@@ -386,12 +376,42 @@
     return-object v0
 .end method
 
+.method public bridge synthetic b(I)Z
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/support/design/widget/n;->b(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
     .locals 1
 
     invoke-direct {p0, p1, p2, p3}, Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;->e(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V
 
     const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public bridge synthetic c()I
+    .locals 1
+
+    invoke-super {p0}, Landroid/support/design/widget/n;->c()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public bridge synthetic d()I
+    .locals 1
+
+    invoke-super {p0}, Landroid/support/design/widget/n;->d()I
+
+    move-result v0
 
     return v0
 .end method

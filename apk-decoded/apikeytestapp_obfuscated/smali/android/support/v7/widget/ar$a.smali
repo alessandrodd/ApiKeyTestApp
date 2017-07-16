@@ -1,5 +1,8 @@
-.class public Landroid/support/v7/widget/ar$a;
-.super Landroid/support/v7/widget/ai;
+.class Landroid/support/v7/widget/ar$a;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/support/v7/widget/RecyclerView$h$a;
 
 
 # annotations
@@ -8,326 +11,274 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x8
     name = "a"
 .end annotation
 
 
 # instance fields
-.field final g:I
+.field a:I
 
-.field final h:I
+.field b:I
 
-.field private i:Landroid/support/v7/widget/aq;
+.field c:[I
 
-.field private j:Landroid/view/MenuItem;
+.field d:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Z)V
-    .locals 5
+.method constructor <init>()V
+    .locals 0
 
-    const/16 v4, 0x16
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v3, 0x15
-
-    invoke-direct {p0, p1, p2}, Landroid/support/v7/widget/ai;-><init>(Landroid/content/Context;Z)V
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x11
-
-    if-lt v1, v2, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0}, Landroid/content/res/Configuration;->getLayoutDirection()I
-
-    move-result v0
-
-    if-ne v1, v0, :cond_0
-
-    iput v3, p0, Landroid/support/v7/widget/ar$a;->g:I
-
-    iput v4, p0, Landroid/support/v7/widget/ar$a;->h:I
-
-    :goto_0
     return-void
-
-    :cond_0
-    iput v4, p0, Landroid/support/v7/widget/ar$a;->g:I
-
-    iput v3, p0, Landroid/support/v7/widget/ar$a;->h:I
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a(Landroid/view/MotionEvent;I)Z
-    .locals 1
+.method a()V
+    .locals 2
 
-    invoke-super {p0, p1, p2}, Landroid/support/v7/widget/ai;->a(Landroid/view/MotionEvent;I)Z
+    iget-object v0, p0, Landroid/support/v7/widget/ar$a;->c:[I
 
-    move-result v0
+    if-eqz v0, :cond_0
 
-    return v0
+    iget-object v0, p0, Landroid/support/v7/widget/ar$a;->c:[I
+
+    const/4 v1, -0x1
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([II)V
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroid/support/v7/widget/ar$a;->d:I
+
+    return-void
 .end method
 
-.method public bridge synthetic hasFocus()Z
-    .locals 1
+.method a(II)V
+    .locals 0
 
-    invoke-super {p0}, Landroid/support/v7/widget/ai;->hasFocus()Z
+    iput p1, p0, Landroid/support/v7/widget/ar$a;->a:I
 
-    move-result v0
+    iput p2, p0, Landroid/support/v7/widget/ar$a;->b:I
 
-    return v0
+    return-void
 .end method
 
-.method public bridge synthetic hasWindowFocus()Z
-    .locals 1
+.method a(Landroid/support/v7/widget/RecyclerView;Z)V
+    .locals 4
 
-    invoke-super {p0}, Landroid/support/v7/widget/ai;->hasWindowFocus()Z
+    const/4 v0, 0x0
 
-    move-result v0
+    iput v0, p0, Landroid/support/v7/widget/ar$a;->d:I
 
-    return v0
-.end method
+    iget-object v0, p0, Landroid/support/v7/widget/ar$a;->c:[I
 
-.method public bridge synthetic isFocused()Z
-    .locals 1
+    if-eqz v0, :cond_0
 
-    invoke-super {p0}, Landroid/support/v7/widget/ai;->isFocused()Z
+    iget-object v0, p0, Landroid/support/v7/widget/ar$a;->c:[I
 
-    move-result v0
+    const/4 v1, -0x1
 
-    return v0
-.end method
+    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([II)V
 
-.method public bridge synthetic isInTouchMode()Z
-    .locals 1
+    :cond_0
+    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView;->D:Landroid/support/v7/widget/RecyclerView$h;
 
-    invoke-super {p0}, Landroid/support/v7/widget/ai;->isInTouchMode()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public onHoverEvent(Landroid/view/MotionEvent;)Z
-    .locals 5
-
-    iget-object v0, p0, Landroid/support/v7/widget/ar$a;->i:Landroid/support/v7/widget/aq;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/ar$a;->getAdapter()Landroid/widget/ListAdapter;
-
-    move-result-object v0
-
-    instance-of v1, v0, Landroid/widget/HeaderViewListAdapter;
+    iget-object v1, p1, Landroid/support/v7/widget/RecyclerView;->C:Landroid/support/v7/widget/RecyclerView$a;
 
     if-eqz v1, :cond_2
 
-    check-cast v0, Landroid/widget/HeaderViewListAdapter;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Landroid/widget/HeaderViewListAdapter;->getHeadersCount()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$h;->z()Z
 
     move-result v1
 
-    invoke-virtual {v0}, Landroid/widget/HeaderViewListAdapter;->getWrappedAdapter()Landroid/widget/ListAdapter;
+    if-eqz v1, :cond_2
 
-    move-result-object v0
+    if-eqz p2, :cond_3
 
-    check-cast v0, Landroid/support/v7/e/a/j;
+    iget-object v1, p1, Landroid/support/v7/widget/RecyclerView;->v:Landroid/support/v7/widget/e;
 
-    :goto_0
-    const/4 v2, 0x0
+    invoke-virtual {v1}, Landroid/support/v7/widget/e;->d()Z
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    move-result v1
 
-    move-result v3
+    if-nez v1, :cond_1
 
-    const/16 v4, 0xa
+    iget-object v1, p1, Landroid/support/v7/widget/RecyclerView;->C:Landroid/support/v7/widget/RecyclerView$a;
 
-    if-eq v3, v4, :cond_3
+    invoke-virtual {v1}, Landroid/support/v7/widget/RecyclerView$a;->a()I
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+    move-result v1
 
-    move-result v3
-
-    float-to-int v3, v3
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v4
-
-    float-to-int v4, v4
-
-    invoke-virtual {p0, v3, v4}, Landroid/support/v7/widget/ar$a;->pointToPosition(II)I
-
-    move-result v3
-
-    const/4 v4, -0x1
-
-    if-eq v3, v4, :cond_3
-
-    sub-int v1, v3, v1
-
-    if-ltz v1, :cond_3
-
-    invoke-virtual {v0}, Landroid/support/v7/e/a/j;->getCount()I
-
-    move-result v3
-
-    if-ge v1, v3, :cond_3
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/e/a/j;->a(I)Landroid/support/v7/e/a/m;
-
-    move-result-object v1
-
-    :goto_1
-    iget-object v2, p0, Landroid/support/v7/widget/ar$a;->j:Landroid/view/MenuItem;
-
-    if-eq v2, v1, :cond_1
-
-    invoke-virtual {v0}, Landroid/support/v7/e/a/j;->a()Landroid/support/v7/e/a/k;
-
-    move-result-object v0
-
-    if-eqz v2, :cond_0
-
-    iget-object v3, p0, Landroid/support/v7/widget/ar$a;->i:Landroid/support/v7/widget/aq;
-
-    invoke-interface {v3, v0, v2}, Landroid/support/v7/widget/aq;->a(Landroid/support/v7/e/a/k;Landroid/view/MenuItem;)V
-
-    :cond_0
-    iput-object v1, p0, Landroid/support/v7/widget/ar$a;->j:Landroid/view/MenuItem;
-
-    if-eqz v1, :cond_1
-
-    iget-object v2, p0, Landroid/support/v7/widget/ar$a;->i:Landroid/support/v7/widget/aq;
-
-    invoke-interface {v2, v0, v1}, Landroid/support/v7/widget/aq;->b(Landroid/support/v7/e/a/k;Landroid/view/MenuItem;)V
+    invoke-virtual {v0, v1, p0}, Landroid/support/v7/widget/RecyclerView$h;->a(ILandroid/support/v7/widget/RecyclerView$h$a;)V
 
     :cond_1
-    invoke-super {p0, p1}, Landroid/support/v7/widget/ai;->onHoverEvent(Landroid/view/MotionEvent;)Z
+    :goto_0
+    iget v1, p0, Landroid/support/v7/widget/ar$a;->d:I
 
-    move-result v0
+    iget v2, v0, Landroid/support/v7/widget/RecyclerView$h;->C:I
 
-    return v0
+    if-le v1, v2, :cond_2
+
+    iget v1, p0, Landroid/support/v7/widget/ar$a;->d:I
+
+    iput v1, v0, Landroid/support/v7/widget/RecyclerView$h;->C:I
+
+    iput-boolean p2, v0, Landroid/support/v7/widget/RecyclerView$h;->D:Z
+
+    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView;->u:Landroid/support/v7/widget/RecyclerView$o;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$o;->b()V
 
     :cond_2
-    const/4 v1, 0x0
-
-    check-cast v0, Landroid/support/v7/e/a/j;
-
-    goto :goto_0
+    return-void
 
     :cond_3
-    move-object v1, v2
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView;->C()Z
 
-    goto :goto_1
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget v1, p0, Landroid/support/v7/widget/ar$a;->a:I
+
+    iget v2, p0, Landroid/support/v7/widget/ar$a;->b:I
+
+    iget-object v3, p1, Landroid/support/v7/widget/RecyclerView;->W:Landroid/support/v7/widget/RecyclerView$t;
+
+    invoke-virtual {v0, v1, v2, v3, p0}, Landroid/support/v7/widget/RecyclerView$h;->a(IILandroid/support/v7/widget/RecyclerView$t;Landroid/support/v7/widget/RecyclerView$h$a;)V
+
+    goto :goto_0
 .end method
 
-.method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .locals 6
+.method a(I)Z
+    .locals 4
 
-    const/4 v1, 0x1
+    const/4 v0, 0x0
 
-    invoke-virtual {p0}, Landroid/support/v7/widget/ar$a;->getSelectedView()Landroid/view/View;
+    iget-object v1, p0, Landroid/support/v7/widget/ar$a;->c:[I
 
-    move-result-object v0
+    if-eqz v1, :cond_0
 
-    check-cast v0, Landroid/support/v7/e/a/h;
+    iget v1, p0, Landroid/support/v7/widget/ar$a;->d:I
 
-    if-eqz v0, :cond_1
+    mul-int/lit8 v2, v1, 0x2
 
-    iget v2, p0, Landroid/support/v7/widget/ar$a;->g:I
-
-    if-ne p1, v2, :cond_1
-
-    invoke-virtual {v0}, Landroid/support/v7/e/a/h;->isEnabled()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v0}, Landroid/support/v7/e/a/h;->getItemData()Landroid/support/v7/e/a/m;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/support/v7/e/a/m;->hasSubMenu()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/ar$a;->getSelectedItemPosition()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/ar$a;->getSelectedItemId()J
-
-    move-result-wide v4
-
-    invoke-virtual {p0, v0, v2, v4, v5}, Landroid/support/v7/widget/ar$a;->performItemClick(Landroid/view/View;IJ)Z
-
-    :cond_0
-    move v0, v1
+    move v1, v0
 
     :goto_0
+    if-ge v1, v2, :cond_0
+
+    iget-object v3, p0, Landroid/support/v7/widget/ar$a;->c:[I
+
+    aget v3, v3, v1
+
+    if-ne v3, p1, :cond_1
+
+    const/4 v0, 0x1
+
+    :cond_0
     return v0
 
     :cond_1
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Landroid/support/v7/widget/ar$a;->h:I
-
-    if-ne p1, v0, :cond_2
-
-    const/4 v0, -0x1
-
-    invoke-virtual {p0, v0}, Landroid/support/v7/widget/ar$a;->setSelection(I)V
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/ar$a;->getAdapter()Landroid/widget/ListAdapter;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/support/v7/e/a/j;
-
-    invoke-virtual {v0}, Landroid/support/v7/e/a/j;->a()Landroid/support/v7/e/a/k;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Landroid/support/v7/e/a/k;->b(Z)V
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-super {p0, p1, p2}, Landroid/support/v7/widget/ai;->onKeyDown(ILandroid/view/KeyEvent;)Z
-
-    move-result v0
+    add-int/lit8 v1, v1, 0x2
 
     goto :goto_0
 .end method
 
-.method public setHoverListener(Landroid/support/v7/widget/aq;)V
-    .locals 0
+.method public b(II)V
+    .locals 5
 
-    iput-object p1, p0, Landroid/support/v7/widget/ar$a;->i:Landroid/support/v7/widget/aq;
+    const/4 v4, 0x0
+
+    if-gez p1, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Layout positions must be non-negative"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    if-gez p2, :cond_1
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Pixel distance must be non-negative"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    iget v0, p0, Landroid/support/v7/widget/ar$a;->d:I
+
+    mul-int/lit8 v0, v0, 0x2
+
+    iget-object v1, p0, Landroid/support/v7/widget/ar$a;->c:[I
+
+    if-nez v1, :cond_3
+
+    const/4 v1, 0x4
+
+    new-array v1, v1, [I
+
+    iput-object v1, p0, Landroid/support/v7/widget/ar$a;->c:[I
+
+    iget-object v1, p0, Landroid/support/v7/widget/ar$a;->c:[I
+
+    const/4 v2, -0x1
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->fill([II)V
+
+    :cond_2
+    :goto_0
+    iget-object v1, p0, Landroid/support/v7/widget/ar$a;->c:[I
+
+    aput p1, v1, v0
+
+    iget-object v1, p0, Landroid/support/v7/widget/ar$a;->c:[I
+
+    add-int/lit8 v0, v0, 0x1
+
+    aput p2, v1, v0
+
+    iget v0, p0, Landroid/support/v7/widget/ar$a;->d:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Landroid/support/v7/widget/ar$a;->d:I
 
     return-void
+
+    :cond_3
+    iget-object v1, p0, Landroid/support/v7/widget/ar$a;->c:[I
+
+    array-length v1, v1
+
+    if-lt v0, v1, :cond_2
+
+    iget-object v1, p0, Landroid/support/v7/widget/ar$a;->c:[I
+
+    mul-int/lit8 v2, v0, 0x2
+
+    new-array v2, v2, [I
+
+    iput-object v2, p0, Landroid/support/v7/widget/ar$a;->c:[I
+
+    iget-object v2, p0, Landroid/support/v7/widget/ar$a;->c:[I
+
+    array-length v3, v1
+
+    invoke-static {v1, v4, v2, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    goto :goto_0
 .end method

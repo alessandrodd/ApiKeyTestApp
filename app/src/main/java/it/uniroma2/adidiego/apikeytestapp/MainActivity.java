@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
     private void prepareData() {
         ApiKey apiKey;
 
-        apiKey = new ApiKey(getString(R.string.api_key_res), "R.string.api_key_res");
+        apiKey = new ApiKey(getString(R.string.api_key_res),    "R.string.api_key_res");
         apiKeys.add(apiKey);
 
         JavaKey javaKey = new JavaKey();

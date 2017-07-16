@@ -1,43 +1,26 @@
-.class public abstract Landroid/support/v7/app/a$c;
+.class public interface abstract annotation Landroid/support/v7/app/a$c;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
 
 # annotations
+.annotation build Landroid/support/annotation/ak;
+    a = {
+        .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroid/support/v7/app/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x409
+    accessFlags = 0x2609
     name = "c"
 .end annotation
 
-.annotation runtime Ljava/lang/Deprecated;
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->SOURCE:Ljava/lang/annotation/RetentionPolicy;
 .end annotation
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public abstract a()Landroid/graphics/drawable/Drawable;
-.end method
-
-.method public abstract b()Ljava/lang/CharSequence;
-.end method
-
-.method public abstract c()Landroid/view/View;
-.end method
-
-.method public abstract d()V
-.end method
-
-.method public abstract e()Ljava/lang/CharSequence;
-.end method

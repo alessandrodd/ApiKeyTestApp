@@ -17,7 +17,7 @@
 .method public constructor <init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V
     .locals 2
 
-    sget v0, Landroid/support/design/a$f;->design_navigation_item_subheader:I
+    sget v0, Landroid/support/design/b$j;->design_navigation_item_subheader:I
 
     const/4 v1, 0x0
 

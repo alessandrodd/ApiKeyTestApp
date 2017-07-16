@@ -1,792 +1,276 @@
-.class Landroid/support/v4/b/a/c;
-.super Landroid/graphics/drawable/Drawable;
-
-# interfaces
-.implements Landroid/graphics/drawable/Drawable$Callback;
-.implements Landroid/support/v4/b/a/b;
-.implements Landroid/support/v4/b/a/f;
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroid/support/v4/b/a/c$b;,
-        Landroid/support/v4/b/a/c$a;
-    }
-.end annotation
+.class public Landroid/support/v4/b/a/c;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field static final a:Landroid/graphics/PorterDuff$Mode;
+.field static final a:Ljava/lang/String; = "com.android.launcher.action.INSTALL_SHORTCUT"
+    .annotation build Landroid/support/annotation/as;
+    .end annotation
+.end field
 
-
-# instance fields
-.field b:Landroid/support/v4/b/a/c$a;
-
-.field c:Landroid/graphics/drawable/Drawable;
-
-.field private d:I
-
-.field private e:Landroid/graphics/PorterDuff$Mode;
-
-.field private f:Z
-
-.field private g:Z
+.field static final b:Ljava/lang/String; = "com.android.launcher.permission.INSTALL_SHORTCUT"
+    .annotation build Landroid/support/annotation/as;
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    sput-object v0, Landroid/support/v4/b/a/c;->a:Landroid/graphics/PorterDuff$Mode;
-
-    return-void
-.end method
-
-.method constructor <init>(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
-
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
-
-    invoke-virtual {p0}, Landroid/support/v4/b/a/c;->b()Landroid/support/v4/b/a/c$a;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    invoke-virtual {p0, p1}, Landroid/support/v4/b/a/c;->a(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-.end method
-
-.method constructor <init>(Landroid/support/v4/b/a/c$a;Landroid/content/res/Resources;)V
+.method private constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
-
-    iput-object p1, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    invoke-direct {p0, p2}, Landroid/support/v4/b/a/c;->a(Landroid/content/res/Resources;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private a(Landroid/content/res/Resources;)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    iget-object v0, v0, Landroid/support/v4/b/a/c$a;->b:Landroid/graphics/drawable/Drawable$ConstantState;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    iget-object v0, v0, Landroid/support/v4/b/a/c$a;->b:Landroid/graphics/drawable/Drawable$ConstantState;
-
-    invoke-virtual {p0, v0, p1}, Landroid/support/v4/b/a/c;->a(Landroid/graphics/drawable/Drawable$ConstantState;Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroid/support/v4/b/a/c;->a(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method private a([I)Z
-    .locals 5
-
-    const/4 v1, 0x1
+.method public static a(Landroid/content/Context;Landroid/support/v4/b/a/b;)Landroid/content/Intent;
+    .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p1    # Landroid/support/v4/b/a/b;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ad;
+    .end annotation
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0}, Landroid/support/v4/b/a/c;->c()Z
+    invoke-static {}, Landroid/support/v4/os/b;->c()Z
 
-    move-result v2
+    move-result v1
 
-    if-nez v2, :cond_1
+    if-eqz v1, :cond_0
+
+    const-class v0, Landroid/content/pm/ShortcutManager;
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ShortcutManager;
+
+    invoke-virtual {p1}, Landroid/support/v4/b/a/b;->a()Landroid/content/pm/ShortcutInfo;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/content/pm/ShortcutManager;->createShortcutResultIntent(Landroid/content/pm/ShortcutInfo;)Landroid/content/Intent;
+
+    move-result-object v0
 
     :cond_0
+    if-nez v0, :cond_1
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    :cond_1
+    invoke-virtual {p1, v0}, Landroid/support/v4/b/a/b;->a(Landroid/content/Intent;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static a(Landroid/content/Context;)Z
+    .locals 4
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+
+    const/4 v1, 0x0
+
+    invoke-static {}, Landroid/support/v4/os/b;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-class v0, Landroid/content/pm/ShortcutManager;
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ShortcutManager;
+
+    invoke-virtual {v0}, Landroid/content/pm/ShortcutManager;->isRequestPinShortcutSupported()Z
+
+    move-result v0
+
     :goto_0
     return v0
 
-    :cond_1
-    iget-object v2, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
+    :cond_0
+    const-string v0, "com.android.launcher.permission.INSTALL_SHORTCUT"
 
-    iget-object v2, v2, Landroid/support/v4/b/a/c$a;->c:Landroid/content/res/ColorStateList;
+    invoke-static {p0, v0}, Landroid/support/v4/b/c;->b(Landroid/content/Context;Ljava/lang/String;)I
 
-    iget-object v3, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
+    move-result v0
 
-    iget-object v3, v3, Landroid/support/v4/b/a/c$a;->d:Landroid/graphics/PorterDuff$Mode;
-
-    if-eqz v2, :cond_3
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v2}, Landroid/content/res/ColorStateList;->getDefaultColor()I
-
-    move-result v4
-
-    invoke-virtual {v2, p1, v4}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result v2
-
-    iget-boolean v4, p0, Landroid/support/v4/b/a/c;->f:Z
-
-    if-eqz v4, :cond_2
-
-    iget v4, p0, Landroid/support/v4/b/a/c;->d:I
-
-    if-ne v2, v4, :cond_2
-
-    iget-object v4, p0, Landroid/support/v4/b/a/c;->e:Landroid/graphics/PorterDuff$Mode;
-
-    if-eq v3, v4, :cond_0
-
-    :cond_2
-    invoke-virtual {p0, v2, v3}, Landroid/support/v4/b/a/c;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
-
-    iput v2, p0, Landroid/support/v4/b/a/c;->d:I
-
-    iput-object v3, p0, Landroid/support/v4/b/a/c;->e:Landroid/graphics/PorterDuff$Mode;
-
-    iput-boolean v1, p0, Landroid/support/v4/b/a/c;->f:Z
+    if-eqz v0, :cond_1
 
     move v0, v1
 
     goto :goto_0
 
-    :cond_3
-    iput-boolean v0, p0, Landroid/support/v4/b/a/c;->f:Z
+    :cond_1
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    invoke-virtual {p0}, Landroid/support/v4/b/a/c;->clearColorFilter()V
+    move-result-object v0
+
+    new-instance v2, Landroid/content/Intent;
+
+    const-string v3, "com.android.launcher.action.INSTALL_SHORTCUT"
+
+    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/pm/PackageManager;->queryBroadcastReceivers(Landroid/content/Intent;I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ResolveInfo;
+
+    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->permission:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    const-string v3, "com.android.launcher.permission.INSTALL_SHORTCUT"
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    :cond_3
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    move v0, v1
 
     goto :goto_0
 .end method
 
+.method public static a(Landroid/content/Context;Landroid/support/v4/b/a/b;Landroid/content/IntentSender;)Z
+    .locals 9
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p1    # Landroid/support/v4/b/a/b;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/content/IntentSender;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 
-# virtual methods
-.method public final a()Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    return-object v0
-.end method
-
-.method protected a(Landroid/graphics/drawable/Drawable$ConstantState;Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final a(Landroid/graphics/drawable/Drawable;)V
-    .locals 2
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    :cond_0
-    iput-object p1, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->isVisible()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v0, v1}, Landroid/support/v4/b/a/c;->setVisible(ZZ)Z
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getState()[I
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroid/support/v4/b/a/c;->setState([I)Z
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getLevel()I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Landroid/support/v4/b/a/c;->setLevel(I)Z
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroid/support/v4/b/a/c;->setBounds(Landroid/graphics/Rect;)V
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroid/support/v4/b/a/c$a;->b:Landroid/graphics/drawable/Drawable$ConstantState;
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/support/v4/b/a/c;->invalidateSelf()V
-
-    return-void
-.end method
-
-.method b()Landroid/support/v4/b/a/c$a;
-    .locals 3
-
-    new-instance v0, Landroid/support/v4/b/a/c$b;
-
-    iget-object v1, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
+    const/4 v8, 0x1
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Landroid/support/v4/b/a/c$b;-><init>(Landroid/support/v4/b/a/c$a;Landroid/content/res/Resources;)V
+    invoke-static {}, Landroid/support/v4/os/b;->c()Z
 
-    return-object v0
-.end method
-
-.method protected c()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public draw(Landroid/graphics/Canvas;)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    return-void
-.end method
-
-.method public getChangingConfigurations()I
-    .locals 2
-
-    invoke-super {p0}, Landroid/graphics/drawable/Drawable;->getChangingConfigurations()I
-
-    move-result v1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
+    const-class v0, Landroid/content/pm/ShortcutManager;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/a/c$a;->getChangingConfigurations()I
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ShortcutManager;
+
+    invoke-virtual {p1}, Landroid/support/v4/b/a/b;->a()Landroid/content/pm/ShortcutInfo;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p2}, Landroid/content/pm/ShortcutManager;->requestPinShortcut(Landroid/content/pm/ShortcutInfo;Landroid/content/IntentSender;)Z
 
     move-result v0
 
     :goto_0
-    or-int/2addr v0, v1
-
-    iget-object v1, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getChangingConfigurations()I
-
-    move-result v1
-
-    or-int/2addr v0, v1
-
     return v0
 
     :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
-    .locals 2
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    invoke-virtual {v0}, Landroid/support/v4/b/a/c$a;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    invoke-virtual {p0}, Landroid/support/v4/b/a/c;->getChangingConfigurations()I
-
-    move-result v1
-
-    iput v1, v0, Landroid/support/v4/b/a/c$a;->a:I
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public getCurrent()Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getIntrinsicHeight()I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getIntrinsicWidth()I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getMinimumHeight()I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getMinimumHeight()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getMinimumWidth()I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getMinimumWidth()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getOpacity()I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getOpacity()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getPadding(Landroid/graphics/Rect;)Z
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getState()[I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getState()[I
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getTransparentRegion()Landroid/graphics/Region;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getTransparentRegion()Landroid/graphics/Region;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/support/v4/b/a/c;->invalidateSelf()V
-
-    return-void
-.end method
-
-.method public isStateful()Z
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/support/v4/b/a/c;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    iget-object v0, v0, Landroid/support/v4/b/a/c$a;->c:Landroid/content/res/ColorStateList;
-
-    :goto_0
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/content/res/ColorStateList;->isStateful()Z
+    invoke-static {p0}, Landroid/support/v4/b/a/c;->a(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
+    goto :goto_0
 
     :cond_1
-    const/4 v0, 0x1
+    new-instance v0, Landroid/content/Intent;
 
-    :goto_1
-    return v0
+    const-string v1, "com.android.launcher.action.INSTALL_SHORTCUT"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Landroid/support/v4/b/a/b;->a(Landroid/content/Intent;)Landroid/content/Intent;
+
+    move-result-object v1
+
+    if-nez p2, :cond_2
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+
+    move v0, v8
+
+    goto :goto_0
 
     :cond_2
-    const/4 v0, 0x0
+    new-instance v3, Landroid/support/v4/b/a/c$1;
+
+    invoke-direct {v3, p2}, Landroid/support/v4/b/a/c$1;-><init>(Landroid/content/IntentSender;)V
+
+    const/4 v5, -0x1
+
+    move-object v0, p0
+
+    move-object v4, v2
+
+    move-object v6, v2
+
+    move-object v7, v2
+
+    invoke-virtual/range {v0 .. v7}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
+
+    move v0, v8
 
     goto :goto_0
-
-    :cond_3
-    const/4 v0, 0x0
-
-    goto :goto_1
-.end method
-
-.method public jumpToCurrentState()V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
-
-    return-void
-.end method
-
-.method public mutate()Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    iget-boolean v0, p0, Landroid/support/v4/b/a/c;->g:Z
-
-    if-nez v0, :cond_2
-
-    invoke-super {p0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-ne v0, p0, :cond_2
-
-    invoke-virtual {p0}, Landroid/support/v4/b/a/c;->b()Landroid/support/v4/b/a/c$a;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    if-eqz v0, :cond_1
-
-    iget-object v1, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
-
-    move-result-object v0
-
-    :goto_0
-    iput-object v0, v1, Landroid/support/v4/b/a/c$a;->b:Landroid/graphics/drawable/Drawable$ConstantState;
-
-    :cond_1
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Landroid/support/v4/b/a/c;->g:Z
-
-    :cond_2
-    return-object p0
-
-    :cond_3
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method protected onBoundsChange(Landroid/graphics/Rect;)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method protected onLevelChange(I)Z
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
-    .locals 1
-
-    invoke-virtual {p0, p2, p3, p4}, Landroid/support/v4/b/a/c;->scheduleSelf(Ljava/lang/Runnable;J)V
-
-    return-void
-.end method
-
-.method public setAlpha(I)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
-
-    return-void
-.end method
-
-.method public setChangingConfigurations(I)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
-
-    return-void
-.end method
-
-.method public setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    return-void
-.end method
-
-.method public setDither(Z)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setDither(Z)V
-
-    return-void
-.end method
-
-.method public setFilterBitmap(Z)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setFilterBitmap(Z)V
-
-    return-void
-.end method
-
-.method public setState([I)Z
-    .locals 2
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
-
-    move-result v0
-
-    invoke-direct {p0, p1}, Landroid/support/v4/b/a/c;->a([I)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public setTint(I)V
-    .locals 1
-
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroid/support/v4/b/a/c;->setTintList(Landroid/content/res/ColorStateList;)V
-
-    return-void
-.end method
-
-.method public setTintList(Landroid/content/res/ColorStateList;)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    iput-object p1, v0, Landroid/support/v4/b/a/c$a;->c:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {p0}, Landroid/support/v4/b/a/c;->getState()[I
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Landroid/support/v4/b/a/c;->a([I)Z
-
-    return-void
-.end method
-
-.method public setTintMode(Landroid/graphics/PorterDuff$Mode;)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->b:Landroid/support/v4/b/a/c$a;
-
-    iput-object p1, v0, Landroid/support/v4/b/a/c$a;->d:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-virtual {p0}, Landroid/support/v4/b/a/c;->getState()[I
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Landroid/support/v4/b/a/c;->a([I)Z
-
-    return-void
-.end method
-
-.method public setVisible(ZZ)Z
-    .locals 1
-
-    invoke-super {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/b/a/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
-    .locals 0
-
-    invoke-virtual {p0, p2}, Landroid/support/v4/b/a/c;->unscheduleSelf(Ljava/lang/Runnable;)V
-
-    return-void
 .end method

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/media/session/c$a;
+.implements Landroid/support/v4/media/session/d$a;
 
 
 # annotations
@@ -48,7 +48,7 @@
 
     iget-object v6, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$b;->a:Landroid/support/v4/media/session/MediaControllerCompat$a;
 
-    new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$b;
+    new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$g;
 
     move v1, p1
 
@@ -60,9 +60,9 @@
 
     move v5, p5
 
-    invoke-direct/range {v0 .. v5}, Landroid/support/v4/media/session/MediaControllerCompat$b;-><init>(IIIII)V
+    invoke-direct/range {v0 .. v5}, Landroid/support/v4/media/session/MediaControllerCompat$g;-><init>(IIIII)V
 
-    invoke-virtual {v6, v0}, Landroid/support/v4/media/session/MediaControllerCompat$a;->a(Landroid/support/v4/media/session/MediaControllerCompat$b;)V
+    invoke-virtual {v6, v0}, Landroid/support/v4/media/session/MediaControllerCompat$a;->a(Landroid/support/v4/media/session/MediaControllerCompat$g;)V
 
     return-void
 .end method

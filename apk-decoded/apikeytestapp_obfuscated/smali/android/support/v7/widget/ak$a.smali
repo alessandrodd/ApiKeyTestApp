@@ -1,9 +1,6 @@
 .class Landroid/support/v7/widget/ak$a;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -11,45 +8,144 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0xa
     name = "a"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v7/widget/ak;
+.field public a:Landroid/support/v7/widget/RecyclerView$w;
+
+.field public b:Landroid/support/v7/widget/RecyclerView$w;
+
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v7/widget/ak;)V
+.method private constructor <init>(Landroid/support/v7/widget/RecyclerView$w;Landroid/support/v7/widget/RecyclerView$w;)V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v7/widget/ak$a;->a:Landroid/support/v7/widget/ak;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroid/support/v7/widget/ak$a;->a:Landroid/support/v7/widget/RecyclerView$w;
+
+    iput-object p2, p0, Landroid/support/v7/widget/ak$a;->b:Landroid/support/v7/widget/RecyclerView$w;
+
+    return-void
+.end method
+
+.method constructor <init>(Landroid/support/v7/widget/RecyclerView$w;Landroid/support/v7/widget/RecyclerView$w;IIII)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Landroid/support/v7/widget/ak$a;-><init>(Landroid/support/v7/widget/RecyclerView$w;Landroid/support/v7/widget/RecyclerView$w;)V
+
+    iput p3, p0, Landroid/support/v7/widget/ak$a;->c:I
+
+    iput p4, p0, Landroid/support/v7/widget/ak$a;->d:I
+
+    iput p5, p0, Landroid/support/v7/widget/ak$a;->e:I
+
+    iput p6, p0, Landroid/support/v7/widget/ak$a;->f:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public toString()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Landroid/support/v7/widget/ak$a;->a:Landroid/support/v7/widget/ak;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Landroid/support/v7/widget/ak;->c:Landroid/view/View;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    const-string v1, "ChangeInfo{oldHolder="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Landroid/support/v7/widget/ak$a;->a:Landroid/support/v7/widget/RecyclerView$w;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+    move-result-object v0
 
-    :cond_0
-    return-void
+    const-string v1, ", newHolder="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Landroid/support/v7/widget/ak$a;->b:Landroid/support/v7/widget/RecyclerView$w;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", fromX="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Landroid/support/v7/widget/ak$a;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", fromY="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Landroid/support/v7/widget/ak$a;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", toX="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Landroid/support/v7/widget/ak$a;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", toY="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Landroid/support/v7/widget/ak$a;->f:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

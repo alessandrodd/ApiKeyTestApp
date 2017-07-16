@@ -54,7 +54,7 @@
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaControllerCompat$a$b;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$a;)V
 
-    invoke-static {v0}, Landroid/support/v4/media/session/c;->a(Landroid/support/v4/media/session/c$a;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/support/v4/media/session/d;->a(Landroid/support/v4/media/session/d$a;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -71,6 +71,38 @@
     iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->d:Ljava/lang/Object;
 
     goto :goto_0
+.end method
+
+.method static synthetic a(Landroid/support/v4/media/session/MediaControllerCompat$a;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->d:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method private a(Landroid/os/Handler;)V
+    .locals 2
+
+    new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$a$a;
+
+    invoke-virtual {p1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Landroid/support/v4/media/session/MediaControllerCompat$a$a;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$a;Landroid/os/Looper;)V
+
+    iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/support/v4/media/session/MediaControllerCompat$a$a;
+
+    return-void
+.end method
+
+.method static synthetic a(Landroid/support/v4/media/session/MediaControllerCompat$a;Landroid/os/Handler;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaControllerCompat$a;->a(Landroid/os/Handler;)V
+
+    return-void
 .end method
 
 
@@ -99,7 +131,7 @@
     return-void
 .end method
 
-.method public a(Landroid/support/v4/media/session/MediaControllerCompat$b;)V
+.method public a(Landroid/support/v4/media/session/MediaControllerCompat$g;)V
     .locals 0
 
     return-void
@@ -154,6 +186,14 @@
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
+
+    return-void
+.end method
+
+.method public binderDied()V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/support/v4/media/session/MediaControllerCompat$a;->a()V
 
     return-void
 .end method

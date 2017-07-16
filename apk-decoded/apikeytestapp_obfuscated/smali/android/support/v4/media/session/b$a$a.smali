@@ -2778,3 +2778,11 @@
 
     throw v0
 .end method
+
+.method public y()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "android.support.v4.media.session.IMediaSession"
+
+    return-object v0
+.end method

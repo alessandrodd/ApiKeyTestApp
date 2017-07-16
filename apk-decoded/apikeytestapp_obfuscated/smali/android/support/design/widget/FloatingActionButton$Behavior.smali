@@ -22,12 +22,16 @@
 .end annotation
 
 
+# static fields
+.field private static final a:Z = true
+
+
 # instance fields
-.field private a:Landroid/graphics/Rect;
+.field private b:Landroid/graphics/Rect;
 
-.field private b:Landroid/support/design/widget/FloatingActionButton$a;
+.field private c:Landroid/support/design/widget/FloatingActionButton$a;
 
-.field private c:Z
+.field private d:Z
 
 
 # direct methods
@@ -38,7 +42,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->c:Z
+    iput-boolean v0, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->d:Z
 
     return-void
 .end method
@@ -48,13 +52,13 @@
 
     invoke-direct {p0, p1, p2}, Landroid/support/design/widget/CoordinatorLayout$a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Landroid/support/design/a$h;->FloatingActionButton_Behavior_Layout:[I
+    sget-object v0, Landroid/support/design/b$m;->FloatingActionButton_Behavior_Layout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    sget v1, Landroid/support/design/a$h;->FloatingActionButton_Behavior_Layout_behavior_autoHide:I
+    sget v1, Landroid/support/design/b$m;->FloatingActionButton_Behavior_Layout_behavior_autoHide:I
 
     const/4 v2, 0x1
 
@@ -62,7 +66,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->c:Z
+    iput-boolean v1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->d:Z
 
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -74,7 +78,7 @@
 
     const/4 v2, 0x0
 
-    iget-object v3, p2, Landroid/support/design/widget/FloatingActionButton;->c:Landroid/graphics/Rect;
+    iget-object v3, p2, Landroid/support/design/widget/FloatingActionButton;->f:Landroid/graphics/Rect;
 
     if-eqz v3, :cond_2
 
@@ -94,7 +98,7 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$c;
+    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$e;
 
     invoke-virtual {p2}, Landroid/support/design/widget/FloatingActionButton;->getRight()I
 
@@ -104,7 +108,7 @@
 
     move-result v4
 
-    iget v5, v0, Landroid/support/design/widget/CoordinatorLayout$c;->rightMargin:I
+    iget v5, v0, Landroid/support/design/widget/CoordinatorLayout$e;->rightMargin:I
 
     sub-int/2addr v4, v5
 
@@ -121,7 +125,7 @@
 
     move-result v5
 
-    iget v6, v0, Landroid/support/design/widget/CoordinatorLayout$c;->bottomMargin:I
+    iget v6, v0, Landroid/support/design/widget/CoordinatorLayout$e;->bottomMargin:I
 
     sub-int/2addr v5, v6
 
@@ -133,12 +137,12 @@
     :goto_1
     if-eqz v2, :cond_1
 
-    invoke-static {p2, v2}, Landroid/support/v4/view/r;->d(Landroid/view/View;I)V
+    invoke-static {p2, v2}, Landroid/support/v4/view/ac;->k(Landroid/view/View;I)V
 
     :cond_1
     if-eqz v1, :cond_2
 
-    invoke-static {p2, v1}, Landroid/support/v4/view/r;->e(Landroid/view/View;I)V
+    invoke-static {p2, v1}, Landroid/support/v4/view/ac;->l(Landroid/view/View;I)V
 
     :cond_2
     return-void
@@ -148,7 +152,7 @@
 
     move-result v1
 
-    iget v4, v0, Landroid/support/design/widget/CoordinatorLayout$c;->leftMargin:I
+    iget v4, v0, Landroid/support/design/widget/CoordinatorLayout$e;->leftMargin:I
 
     if-gt v1, v4, :cond_5
 
@@ -163,7 +167,7 @@
 
     move-result v4
 
-    iget v0, v0, Landroid/support/design/widget/CoordinatorLayout$c;->topMargin:I
+    iget v0, v0, Landroid/support/design/widget/CoordinatorLayout$e;->topMargin:I
 
     if-gt v4, v0, :cond_0
 
@@ -194,7 +198,7 @@
     return v0
 
     :cond_0
-    iget-object v1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->a:Landroid/graphics/Rect;
+    iget-object v1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->b:Landroid/graphics/Rect;
 
     if-nez v1, :cond_1
 
@@ -202,12 +206,12 @@
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->a:Landroid/graphics/Rect;
+    iput-object v1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->b:Landroid/graphics/Rect;
 
     :cond_1
-    iget-object v1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->a:Landroid/graphics/Rect;
+    iget-object v1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->b:Landroid/graphics/Rect;
 
-    invoke-static {p1, p2, v1}, Landroid/support/design/widget/o;->b(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-static {p1, p2, v1}, Landroid/support/design/widget/w;->b(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
 
     iget v1, v1, Landroid/graphics/Rect;->bottom:I
 
@@ -217,7 +221,7 @@
 
     if-gt v1, v2, :cond_2
 
-    iget-object v1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->b:Landroid/support/design/widget/FloatingActionButton$a;
+    iget-object v1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->c:Landroid/support/design/widget/FloatingActionButton$a;
 
     invoke-virtual {p3, v1, v0}, Landroid/support/design/widget/FloatingActionButton;->b(Landroid/support/design/widget/FloatingActionButton$a;Z)V
 
@@ -227,7 +231,7 @@
     goto :goto_0
 
     :cond_2
-    iget-object v1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->b:Landroid/support/design/widget/FloatingActionButton$a;
+    iget-object v1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->c:Landroid/support/design/widget/FloatingActionButton$a;
 
     invoke-virtual {p3, v1, v0}, Landroid/support/design/widget/FloatingActionButton;->a(Landroid/support/design/widget/FloatingActionButton$a;Z)V
 
@@ -236,18 +240,22 @@
 
 .method private static a(Landroid/view/View;)Z
     .locals 2
+    .param p0    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
 
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    instance-of v1, v0, Landroid/support/design/widget/CoordinatorLayout$c;
+    instance-of v1, v0, Landroid/support/design/widget/CoordinatorLayout$e;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$c;
+    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$e;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/CoordinatorLayout$c;->b()Landroid/support/design/widget/CoordinatorLayout$a;
+    invoke-virtual {v0}, Landroid/support/design/widget/CoordinatorLayout$e;->b()Landroid/support/design/widget/CoordinatorLayout$a;
 
     move-result-object v0
 
@@ -271,9 +279,9 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$c;
+    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$e;
 
-    iget-boolean v2, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->c:Z
+    iget-boolean v2, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->d:Z
 
     if-nez v2, :cond_0
 
@@ -283,7 +291,7 @@
     return v0
 
     :cond_0
-    invoke-virtual {v0}, Landroid/support/design/widget/CoordinatorLayout$c;->a()I
+    invoke-virtual {v0}, Landroid/support/design/widget/CoordinatorLayout$e;->a()I
 
     move-result v0
 
@@ -335,7 +343,7 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$c;
+    check-cast v0, Landroid/support/design/widget/CoordinatorLayout$e;
 
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
@@ -347,13 +355,13 @@
 
     div-int/lit8 v3, v3, 0x2
 
-    iget v0, v0, Landroid/support/design/widget/CoordinatorLayout$c;->topMargin:I
+    iget v0, v0, Landroid/support/design/widget/CoordinatorLayout$e;->topMargin:I
 
     add-int/2addr v0, v3
 
     if-ge v2, v0, :cond_1
 
-    iget-object v0, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->b:Landroid/support/design/widget/FloatingActionButton$a;
+    iget-object v0, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->c:Landroid/support/design/widget/FloatingActionButton$a;
 
     invoke-virtual {p2, v0, v1}, Landroid/support/design/widget/FloatingActionButton;->b(Landroid/support/design/widget/FloatingActionButton$a;Z)V
 
@@ -363,7 +371,7 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->b:Landroid/support/design/widget/FloatingActionButton$a;
+    iget-object v0, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->c:Landroid/support/design/widget/FloatingActionButton$a;
 
     invoke-virtual {p2, v0, v1}, Landroid/support/design/widget/FloatingActionButton;->a(Landroid/support/design/widget/FloatingActionButton$a;Z)V
 
@@ -372,19 +380,49 @@
 
 
 # virtual methods
-.method public a(Landroid/support/design/widget/CoordinatorLayout$c;)V
+.method public a(Landroid/support/design/widget/CoordinatorLayout$e;)V
     .locals 1
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout$e;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
 
-    iget v0, p1, Landroid/support/design/widget/CoordinatorLayout$c;->h:I
+    iget v0, p1, Landroid/support/design/widget/CoordinatorLayout$e;->h:I
 
     if-nez v0, :cond_0
 
     const/16 v0, 0x50
 
-    iput v0, p1, Landroid/support/design/widget/CoordinatorLayout$c;->h:I
+    iput v0, p1, Landroid/support/design/widget/CoordinatorLayout$e;->h:I
 
     :cond_0
     return-void
+.end method
+
+.method a(Landroid/support/design/widget/FloatingActionButton$a;)V
+    .locals 0
+    .annotation build Landroid/support/annotation/as;
+    .end annotation
+
+    iput-object p1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->c:Landroid/support/design/widget/FloatingActionButton$a;
+
+    return-void
+.end method
+
+.method public a(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->d:Z
+
+    return-void
+.end method
+
+.method public a()Z
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->d:Z
+
+    return v0
 .end method
 
 .method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/FloatingActionButton;I)Z
@@ -455,8 +493,20 @@
 
 .method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/FloatingActionButton;Landroid/graphics/Rect;)Z
     .locals 5
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/support/design/widget/FloatingActionButton;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/graphics/Rect;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
 
-    iget-object v0, p2, Landroid/support/design/widget/FloatingActionButton;->c:Landroid/graphics/Rect;
+    iget-object v0, p2, Landroid/support/design/widget/FloatingActionButton;->f:Landroid/graphics/Rect;
 
     invoke-virtual {p2}, Landroid/support/design/widget/FloatingActionButton;->getLeft()I
 
@@ -540,6 +590,18 @@
 
 .method public bridge synthetic a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/graphics/Rect;)Z
     .locals 1
+    .param p1    # Landroid/support/design/widget/CoordinatorLayout;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p3    # Landroid/graphics/Rect;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
 
     check-cast p2, Landroid/support/design/widget/FloatingActionButton;
 
