@@ -18,6 +18,13 @@ strings -n 10 --radix=x -d libnative-lib.so | grep "HIzaSyCuxR_sUTfFJZBDkIsauake
 ### String Resource (XML)
 AIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
+**Original**
+
+```
+[...]
+<string name="api_key_res">AIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4</string>
+[...]
+```
 
 **Not Obfuscated**
 
@@ -39,6 +46,16 @@ AIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 ### Java Local Variable
 BIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
+**Original**
+
+```
+[...]
+    public String getLocalKey(){
+        String apiKeyLocal = "BIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4";
+        return apiKeyLocal;
+    }
+[...]
+```
 
 **Not Obfuscated**
 
@@ -72,13 +89,21 @@ smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 
     return-object v0
 .end method
-
 [...]
 ```
 
 ### Java Method Return
 CIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
+**Original**
+
+```
+[...]
+    public String getLocalReturnKey(){
+        return "CIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4";
+    }
+[...]
+```
 
 **Not Obfuscated**
 
@@ -109,13 +134,19 @@ smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 
     return-object v0
 .end method
-
 [...]
 ```
 
 ### Java Global Public Variable
 DIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
+**Original**
+
+```
+[...]
+    public String apiKeyPublic = "DIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4";
+[...]
+```
 
 **Not Obfuscated**
 
@@ -141,7 +172,6 @@ smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
 
     return-void
 .end method
-
 [...]
 ```
 
@@ -171,6 +201,17 @@ smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 ### Java Global Private Variable
 EIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
+**Original**
+
+```
+[...]
+    private String apiKeyPrivate = "EIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4";
+
+    public String getGlobalPrivateKey(){
+        return apiKeyPrivate;
+    }
+[...]
+```
 
 **Not Obfuscated**
 
@@ -219,13 +260,19 @@ smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 
     return-void
 .end method
-
 [...]
 ```
 
 ### Java Static Variable
 FIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
+**Original**
+
+```
+[...]
+    public static String apiKeyStatic = "FIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4";
+[...]
+```
 
 **Not Obfuscated**
 
@@ -269,6 +316,13 @@ smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 ### Java Static Final Variable
 GIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
+**Original**
+
+```
+[...]
+    public static final String API_KEY_FINAL_STATIC = "GIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4";
+[...]
+```
 
 **Not Obfuscated**
 
@@ -296,6 +350,18 @@ smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 ### Native Local Variable
 HIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
+**Original**
+
+```
+[...]
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_it_uniroma2_adidiego_apikeytestapp_NativeKey_localKey(JNIEnv *env, jobject /* this */) {
+    char api_key_native_local[128] = "HIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4";
+    return env->NewStringUTF(api_key_native_local);
+}
+[...]
+```
 
 **Not Obfuscated**
 
@@ -316,6 +382,19 @@ HIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 ### Native Global Variable
 IIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
+**Original**
+
+```
+[...]
+std::string api_key_native_global = "IIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4";
+
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_it_uniroma2_adidiego_apikeytestapp_NativeKey_globalKey(JNIEnv *env, jobject /* this */) {
+    return env->NewStringUTF(api_key_native_global.c_str());
+}
+[...]
+```
 
 **Not Obfuscated**
 
@@ -336,6 +415,19 @@ IIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 ### Native Static Variable
 JIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
+**Original**
+
+```
+[...]
+static std::string api_key_native_static = "JIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4";
+
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_it_uniroma2_adidiego_apikeytestapp_NativeKey_staticKey(JNIEnv *env, jobject /* this */) {
+    return env->NewStringUTF(api_key_native_static.c_str());
+}
+[...]
+```
 
 **Not Obfuscated**
 
