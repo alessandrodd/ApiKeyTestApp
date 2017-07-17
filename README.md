@@ -61,8 +61,17 @@ smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
 
 **Obfuscated**
 
+smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 ```
 [...]
+# virtual methods
+.method public a()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "BIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    return-object v0
+.end method
 
 [...]
 ```
@@ -90,8 +99,16 @@ smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
 
 **Obfuscated**
 
+smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 ```
 [...]
+.method public b()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "CIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    return-object v0
+.end method
 
 [...]
 ```
@@ -130,9 +147,24 @@ smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
 
 **Obfuscated**
 
+smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 ```
 [...]
+.method public constructor <init>()V
+    .locals 1
 
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, "DIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    iput-object v0, p0, Lit/uniroma2/adidiego/apikeytestapp/b;->a:Ljava/lang/String;
+
+    const-string v0, "EIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    iput-object v0, p0, Lit/uniroma2/adidiego/apikeytestapp/b;->d:Ljava/lang/String;
+
+    return-void
+.end method
 [...]
 ```
 
@@ -169,6 +201,27 @@ smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
 
 **Obfuscated**
 
+smali/it/uniroma2/adidiego/apikeytestapp/b.smali
+```
+[...]
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, "DIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    iput-object v0, p0, Lit/uniroma2/adidiego/apikeytestapp/b;->a:Ljava/lang/String;
+
+    const-string v0, "EIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    iput-object v0, p0, Lit/uniroma2/adidiego/apikeytestapp/b;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+[...]
+```
 
 ### Java Static Variable
 FIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
@@ -196,8 +249,19 @@ smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
 
 **Obfuscated**
 
+smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 ```
 [...]
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "FIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    sput-object v0, Lit/uniroma2/adidiego/apikeytestapp/b;->b:Ljava/lang/String;
+
+    return-void
+.end method
 
 [...]
 ```
@@ -219,9 +283,13 @@ smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
 
 **Obfuscated**
 
+smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 ```
 [...]
+# static fields
+.field public static b:Ljava/lang/String; = null
 
+.field public static final c:Ljava/lang/String; = "GIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
 [...]
 ```
 
