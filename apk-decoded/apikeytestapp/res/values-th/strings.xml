@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="abc_action_bar_home_description">นำทางไปหน้าแรก</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
     <string name="abc_action_bar_up_description">นำทางขึ้น</string>
     <string name="abc_action_menu_overflow_description">ตัวเลือกอื่น</string>
     <string name="abc_action_mode_done">เสร็จสิ้น</string>
@@ -18,4 +20,5 @@
     <string name="abc_shareactionprovider_share_with_application">แชร์กับ %s</string>
     <string name="abc_toolbar_collapse_description">ยุบ</string>
     <string name="search_menu_title">ค้นหา</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

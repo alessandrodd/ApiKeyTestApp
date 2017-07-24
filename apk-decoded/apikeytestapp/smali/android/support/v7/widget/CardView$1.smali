@@ -120,7 +120,6 @@
     .line 467
     iget-object v0, p0, Landroid/support/v7/widget/CardView$1;->this$0:Landroid/support/v7/widget/CardView;
 
-    # invokes: Landroid/widget/FrameLayout;->setMinimumWidth(I)V
     invoke-static {v0, p1}, Landroid/support/v7/widget/CardView;->access$101(Landroid/support/v7/widget/CardView;I)V
 
     .line 469
@@ -134,7 +133,6 @@
     .line 470
     iget-object v0, p0, Landroid/support/v7/widget/CardView$1;->this$0:Landroid/support/v7/widget/CardView;
 
-    # invokes: Landroid/widget/FrameLayout;->setMinimumHeight(I)V
     invoke-static {v0, p2}, Landroid/support/v7/widget/CardView;->access$201(Landroid/support/v7/widget/CardView;I)V
 
     .line 472
@@ -192,7 +190,6 @@
 
     add-int/2addr v4, p4
 
-    # invokes: Landroid/widget/FrameLayout;->setPadding(IIII)V
     invoke-static {v0, v1, v2, v3, v4}, Landroid/support/v7/widget/CardView;->access$001(Landroid/support/v7/widget/CardView;IIII)V
 
     .line 462

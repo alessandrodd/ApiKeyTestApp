@@ -47,13 +47,11 @@
     .line 392
     iget-object v0, p0, Landroid/support/transition/TransitionSet$TransitionSetListener;->mTransitionSet:Landroid/support/transition/TransitionSet;
 
-    # --operator for: Landroid/support/transition/TransitionSet;->mCurrentListeners:I
     invoke-static {v0}, Landroid/support/transition/TransitionSet;->access$106(Landroid/support/transition/TransitionSet;)I
 
     .line 393
     iget-object v0, p0, Landroid/support/transition/TransitionSet$TransitionSetListener;->mTransitionSet:Landroid/support/transition/TransitionSet;
 
-    # getter for: Landroid/support/transition/TransitionSet;->mCurrentListeners:I
     invoke-static {v0}, Landroid/support/transition/TransitionSet;->access$100(Landroid/support/transition/TransitionSet;)I
 
     move-result v0
@@ -65,7 +63,6 @@
 
     const/4 v1, 0x0
 
-    # setter for: Landroid/support/transition/TransitionSet;->mStarted:Z
     invoke-static {v0, v1}, Landroid/support/transition/TransitionSet;->access$002(Landroid/support/transition/TransitionSet;Z)Z
 
     .line 396
@@ -92,7 +89,6 @@
     .line 384
     iget-object v0, p0, Landroid/support/transition/TransitionSet$TransitionSetListener;->mTransitionSet:Landroid/support/transition/TransitionSet;
 
-    # getter for: Landroid/support/transition/TransitionSet;->mStarted:Z
     invoke-static {v0}, Landroid/support/transition/TransitionSet;->access$000(Landroid/support/transition/TransitionSet;)Z
 
     move-result v0
@@ -109,7 +105,6 @@
 
     const/4 v1, 0x1
 
-    # setter for: Landroid/support/transition/TransitionSet;->mStarted:Z
     invoke-static {v0, v1}, Landroid/support/transition/TransitionSet;->access$002(Landroid/support/transition/TransitionSet;Z)Z
 
     .line 388

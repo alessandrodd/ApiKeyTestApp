@@ -66,3 +66,19 @@
 
     return-object v0
 .end method
+
+.method public d()V
+    .locals 2
+
+    const-class v0, Lit/uniroma2/adidiego/apikeytestapp/b;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "KIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method

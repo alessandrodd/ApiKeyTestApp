@@ -64,7 +64,6 @@
 
     .line 581
     .local v0, "currentAnimatedIntValue":I
-    # getter for: Landroid/support/design/widget/BaseTransientBottomBar;->USE_OFFSET_API:Z
     invoke-static {}, Landroid/support/design/widget/BaseTransientBottomBar;->access$100()Z
 
     move-result v1

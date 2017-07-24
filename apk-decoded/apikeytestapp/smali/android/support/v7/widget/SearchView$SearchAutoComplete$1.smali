@@ -44,7 +44,6 @@
     .line 1831
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete$1;->this$0:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    # invokes: Landroid/support/v7/widget/SearchView$SearchAutoComplete;->showSoftInputIfNecessary()V
     invoke-static {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->access$200(Landroid/support/v7/widget/SearchView$SearchAutoComplete;)V
 
     .line 1832

@@ -77,7 +77,6 @@
     .line 824
     iget-object v0, p0, Landroid/support/design/widget/FloatingActionButton$ShadowDelegateImpl;->this$0:Landroid/support/design/widget/FloatingActionButton;
 
-    # invokes: Landroid/support/design/widget/VisibilityAwareImageButton;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
     invoke-static {v0, p1}, Landroid/support/design/widget/FloatingActionButton;->access$001(Landroid/support/design/widget/FloatingActionButton;Landroid/graphics/drawable/Drawable;)V
 
     .line 825

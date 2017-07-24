@@ -54,7 +54,6 @@
     .line 83
     iget-object v0, p0, Landroid/support/v7/view/menu/StandardMenuPopup$2;->this$0:Landroid/support/v7/view/menu/StandardMenuPopup;
 
-    # getter for: Landroid/support/v7/view/menu/StandardMenuPopup;->mTreeObserver:Landroid/view/ViewTreeObserver;
     invoke-static {v0}, Landroid/support/v7/view/menu/StandardMenuPopup;->access$000(Landroid/support/v7/view/menu/StandardMenuPopup;)Landroid/view/ViewTreeObserver;
 
     move-result-object v0
@@ -64,7 +63,6 @@
     .line 84
     iget-object v0, p0, Landroid/support/v7/view/menu/StandardMenuPopup$2;->this$0:Landroid/support/v7/view/menu/StandardMenuPopup;
 
-    # getter for: Landroid/support/v7/view/menu/StandardMenuPopup;->mTreeObserver:Landroid/view/ViewTreeObserver;
     invoke-static {v0}, Landroid/support/v7/view/menu/StandardMenuPopup;->access$000(Landroid/support/v7/view/menu/StandardMenuPopup;)Landroid/view/ViewTreeObserver;
 
     move-result-object v0
@@ -81,21 +79,18 @@
 
     move-result-object v1
 
-    # setter for: Landroid/support/v7/view/menu/StandardMenuPopup;->mTreeObserver:Landroid/view/ViewTreeObserver;
     invoke-static {v0, v1}, Landroid/support/v7/view/menu/StandardMenuPopup;->access$002(Landroid/support/v7/view/menu/StandardMenuPopup;Landroid/view/ViewTreeObserver;)Landroid/view/ViewTreeObserver;
 
     .line 85
     :cond_0
     iget-object v0, p0, Landroid/support/v7/view/menu/StandardMenuPopup$2;->this$0:Landroid/support/v7/view/menu/StandardMenuPopup;
 
-    # getter for: Landroid/support/v7/view/menu/StandardMenuPopup;->mTreeObserver:Landroid/view/ViewTreeObserver;
     invoke-static {v0}, Landroid/support/v7/view/menu/StandardMenuPopup;->access$000(Landroid/support/v7/view/menu/StandardMenuPopup;)Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
     iget-object v1, p0, Landroid/support/v7/view/menu/StandardMenuPopup$2;->this$0:Landroid/support/v7/view/menu/StandardMenuPopup;
 
-    # getter for: Landroid/support/v7/view/menu/StandardMenuPopup;->mGlobalLayoutListener:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
     invoke-static {v1}, Landroid/support/v7/view/menu/StandardMenuPopup;->access$100(Landroid/support/v7/view/menu/StandardMenuPopup;)Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
     move-result-object v1

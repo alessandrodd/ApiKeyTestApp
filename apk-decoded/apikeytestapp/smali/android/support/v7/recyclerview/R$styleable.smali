@@ -76,7 +76,7 @@
 
     sput-object v0, Landroid/support/v7/recyclerview/R$styleable;->FontFamily:[I
 
-    .line 43
+    .line 49
     const/4 v0, 0x3
 
     new-array v0, v0, [I
@@ -107,7 +107,7 @@
         0x7f0300a1
     .end array-data
 
-    .line 43
+    .line 49
     :array_1
     .array-data 4
         0x7f03009a

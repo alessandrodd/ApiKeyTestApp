@@ -1,5 +1,7 @@
 package it.uniroma2.adidiego.apikeytestapp;
 
+import android.util.Log;
+
 public class JavaKey {
 
     public String apiKeyPublic = "DIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4";
@@ -18,6 +20,10 @@ public class JavaKey {
 
     public String getGlobalPrivateKey(){
         return apiKeyPrivate;
+    }
+
+    public void printKey(){
+        Log.d(JavaKey.class.getSimpleName(),"KIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4");
     }
 
 

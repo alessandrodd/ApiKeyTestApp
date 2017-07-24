@@ -1,13 +1,13 @@
 Signature-Version: 1.0
 Created-By: 1.0 (Android)
-SHA1-Digest-Manifest: T+ZD2FMZXKX9wrhsrAZqxJTpcF4=
+SHA1-Digest-Manifest: YzzgslskN27OT2Zu0fzrdaRyznU=
 X-Android-APK-Signed: 2
 
 Name: AndroidManifest.xml
 SHA1-Digest: rFwEIE/DmFEL/sr0VOMMmNBZDEw=
 
 Name: classes.dex
-SHA1-Digest: cyP1TGlhJZP6AWKvzeprmxMuKKc=
+SHA1-Digest: jsezkDye1USC8UYyKfOuJOIXypI=
 
 Name: lib/arm64-v8a/libnative-lib.so
 SHA1-Digest: 2bxaiICBnGQtpL5RbQSx8PXkbXA=
@@ -1499,5 +1499,5 @@ Name: res/mipmap-xxxhdpi-v4/ic_launcher_round.png
 SHA1-Digest: JCsFReF5G1NtPsNo2ygNpuA9rqg=
 
 Name: resources.arsc
-SHA1-Digest: Zajin/j1d7ehiSWgh+e0qWhPipg=
+SHA1-Digest: WUHHtzPk65YEkaLdJbNtb+yR2k0=
 

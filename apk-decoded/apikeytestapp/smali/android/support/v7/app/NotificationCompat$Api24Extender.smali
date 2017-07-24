@@ -49,7 +49,6 @@
 
     .prologue
     .line 516
-    # invokes: Landroid/support/v7/app/NotificationCompat;->addStyleToBuilderApi24(Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;Landroid/support/v4/app/NotificationCompat$Builder;)V
     invoke-static {p2, p1}, Landroid/support/v7/app/NotificationCompat;->access$900(Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;Landroid/support/v4/app/NotificationCompat$Builder;)V
 
     .line 517

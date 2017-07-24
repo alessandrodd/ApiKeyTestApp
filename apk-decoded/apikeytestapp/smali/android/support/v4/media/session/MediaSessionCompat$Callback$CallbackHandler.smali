@@ -55,7 +55,6 @@
     .line 1232
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$CallbackHandler;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
-    # invokes: Landroid/support/v4/media/session/MediaSessionCompat$Callback;->handleMediaPlayPauseKeySingleTapIfUnhandled()V
     invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->access$000(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
 
     .line 1234

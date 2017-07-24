@@ -68,7 +68,6 @@
 
     iget-object v2, p0, Landroid/support/v4/provider/FontsContractCompat$1;->val$request:Landroid/support/v4/provider/FontRequest;
 
-    # invokes: Landroid/support/v4/provider/FontsContractCompat;->getFontInternal(Landroid/content/Context;Landroid/support/v4/provider/FontRequest;)Landroid/graphics/Typeface;
     invoke-static {v1, v2}, Landroid/support/v4/provider/FontsContractCompat;->access$000(Landroid/content/Context;Landroid/support/v4/provider/FontRequest;)Landroid/graphics/Typeface;
 
     move-result-object v0
@@ -78,7 +77,6 @@
     if-eqz v0, :cond_0
 
     .line 222
-    # getter for: Landroid/support/v4/provider/FontsContractCompat;->sTypefaceCache:Landroid/support/v4/util/LruCache;
     invoke-static {}, Landroid/support/v4/provider/FontsContractCompat;->access$100()Landroid/support/v4/util/LruCache;
 
     move-result-object v1

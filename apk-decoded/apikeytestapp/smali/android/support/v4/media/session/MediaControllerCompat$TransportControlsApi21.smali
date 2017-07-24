@@ -304,7 +304,6 @@
 
     move-result-object v0
 
-    # invokes: Landroid/support/v4/media/session/MediaControllerCompat;->validateCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
     invoke-static {v0, p2}, Landroid/support/v4/media/session/MediaControllerCompat;->access$200(Ljava/lang/String;Landroid/os/Bundle;)V
 
     .line 2322
@@ -329,7 +328,6 @@
 
     .prologue
     .line 2328
-    # invokes: Landroid/support/v4/media/session/MediaControllerCompat;->validateCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
     invoke-static {p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat;->access$200(Ljava/lang/String;Landroid/os/Bundle;)V
 
     .line 2329

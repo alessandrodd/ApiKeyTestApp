@@ -44,7 +44,6 @@
     .line 60
     iget-object v0, p0, Landroid/support/v7/widget/TooltipCompatHandler$2;->this$0:Landroid/support/v7/widget/TooltipCompatHandler;
 
-    # invokes: Landroid/support/v7/widget/TooltipCompatHandler;->hide()V
     invoke-static {v0}, Landroid/support/v7/widget/TooltipCompatHandler;->access$100(Landroid/support/v7/widget/TooltipCompatHandler;)V
 
     .line 61

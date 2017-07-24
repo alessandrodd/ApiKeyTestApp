@@ -20,7 +20,7 @@
     .locals 1
 
     .prologue
-    .line 7
+    .line 9
     const-string v0, "FIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
 
     sput-object v0, Lit/uniroma2/adidiego/apikeytestapp/JavaKey;->apiKeyStatic:Ljava/lang/String;
@@ -32,15 +32,15 @@
     .locals 1
 
     .prologue
-    .line 3
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
+    .line 7
     const-string v0, "DIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
 
     iput-object v0, p0, Lit/uniroma2/adidiego/apikeytestapp/JavaKey;->apiKeyPublic:Ljava/lang/String;
 
-    .line 6
+    .line 8
     const-string v0, "EIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
 
     iput-object v0, p0, Lit/uniroma2/adidiego/apikeytestapp/JavaKey;->apiKeyPrivate:Ljava/lang/String;
@@ -54,7 +54,7 @@
     .locals 1
 
     .prologue
-    .line 20
+    .line 22
     iget-object v0, p0, Lit/uniroma2/adidiego/apikeytestapp/JavaKey;->apiKeyPrivate:Ljava/lang/String;
 
     return-object v0
@@ -64,10 +64,10 @@
     .locals 1
 
     .prologue
-    .line 11
+    .line 13
     const-string v0, "BIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
 
-    .line 12
+    .line 14
     .local v0, "apiKeyLocal":Ljava/lang/String;
     return-object v0
 .end method
@@ -76,8 +76,27 @@
     .locals 1
 
     .prologue
-    .line 16
+    .line 18
     const-string v0, "CIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
 
     return-object v0
+.end method
+
+.method public printKey()V
+    .locals 2
+
+    .prologue
+    .line 26
+    const-class v0, Lit/uniroma2/adidiego/apikeytestapp/JavaKey;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "KIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 27
+    return-void
 .end method

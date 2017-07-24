@@ -47,7 +47,6 @@
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$1;->this$0:Landroid/support/design/widget/TextInputLayout;
 
-    # getter for: Landroid/support/design/widget/TextInputLayout;->mRestoringSavedState:Z
     invoke-static {v0}, Landroid/support/design/widget/TextInputLayout;->access$000(Landroid/support/design/widget/TextInputLayout;)Z
 
     move-result v0

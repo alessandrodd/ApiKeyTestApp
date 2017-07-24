@@ -1112,7 +1112,7 @@
 
     sput-object v0, Landroid/support/design/R$styleable;->ActionBar:[I
 
-    .line 1369
+    .line 1398
     new-array v0, v4, [I
 
     const v1, 0x10100b3
@@ -1167,14 +1167,14 @@
 
     sput-object v0, Landroid/support/design/R$styleable;->AppBarLayout:[I
 
-    .line 1422
+    .line 1427
     new-array v0, v5, [I
 
     fill-array-data v0, :array_5
 
     sput-object v0, Landroid/support/design/R$styleable;->AppBarLayoutStates:[I
 
-    .line 1425
+    .line 1430
     new-array v0, v5, [I
 
     fill-array-data v0, :array_6
@@ -1258,7 +1258,7 @@
 
     sput-object v0, Landroid/support/design/R$styleable;->CollapsingToolbarLayout:[I
 
-    .line 1593
+    .line 1609
     new-array v0, v5, [I
 
     fill-array-data v0, :array_f
@@ -1286,7 +1286,7 @@
 
     sput-object v0, Landroid/support/design/R$styleable;->CoordinatorLayout:[I
 
-    .line 1621
+    .line 1623
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -1320,7 +1320,7 @@
 
     sput-object v0, Landroid/support/design/R$styleable;->FloatingActionButton:[I
 
-    .line 1645
+    .line 1653
     new-array v0, v4, [I
 
     const v1, 0x7f030037
@@ -1338,7 +1338,7 @@
 
     sput-object v0, Landroid/support/design/R$styleable;->FontFamily:[I
 
-    .line 1656
+    .line 1662
     new-array v0, v2, [I
 
     fill-array-data v0, :array_18
@@ -1361,7 +1361,7 @@
 
     sput-object v0, Landroid/support/design/R$styleable;->LinearLayoutCompat:[I
 
-    .line 1671
+    .line 1680
     const/4 v0, 0x4
 
     new-array v0, v0, [I
@@ -1420,7 +1420,7 @@
 
     sput-object v0, Landroid/support/design/R$styleable;->PopupWindow:[I
 
-    .line 1741
+    .line 1744
     new-array v0, v4, [I
 
     const v1, 0x7f03013b
@@ -1545,14 +1545,14 @@
 
     sput-object v0, Landroid/support/design/R$styleable;->View:[I
 
-    .line 1891
+    .line 1896
     new-array v0, v2, [I
 
     fill-array-data v0, :array_2e
 
     sput-object v0, Landroid/support/design/R$styleable;->ViewBackgroundHelper:[I
 
-    .line 1895
+    .line 1900
     new-array v0, v2, [I
 
     fill-array-data v0, :array_2f
@@ -1635,14 +1635,14 @@
         0x7f03008c
     .end array-data
 
-    .line 1422
+    .line 1427
     :array_5
     .array-data 4
         0x7f03013c
         0x7f03013d
     .end array-data
 
-    .line 1425
+    .line 1430
     :array_6
     .array-data 4
         0x7f0300f3
@@ -1855,7 +1855,7 @@
         0x7f03017c
     .end array-data
 
-    .line 1593
+    .line 1609
     :array_f
     .array-data 4
         0x7f0300c3
@@ -1885,7 +1885,7 @@
         0x7f03013e
     .end array-data
 
-    .line 1621
+    .line 1623
     :array_13
     .array-data 4
         0x10100b3
@@ -1942,7 +1942,7 @@
         0x7f0300a1
     .end array-data
 
-    .line 1656
+    .line 1662
     :array_18
     .array-data 4
         0x7f03009a
@@ -1972,7 +1972,7 @@
         0x7f030130
     .end array-data
 
-    .line 1671
+    .line 1680
     :array_1b
     .array-data 4
         0x10100b3
@@ -2258,7 +2258,7 @@
         0x7f030167
     .end array-data
 
-    .line 1891
+    .line 1896
     :array_2e
     .array-data 4
         0x10100d4
@@ -2266,7 +2266,7 @@
         0x7f030035
     .end array-data
 
-    .line 1895
+    .line 1900
     :array_2f
     .array-data 4
         0x10100d0

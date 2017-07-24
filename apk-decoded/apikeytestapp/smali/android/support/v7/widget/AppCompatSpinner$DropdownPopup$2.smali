@@ -72,7 +72,6 @@
     .line 833
     iget-object v0, p0, Landroid/support/v7/widget/AppCompatSpinner$DropdownPopup$2;->this$1:Landroid/support/v7/widget/AppCompatSpinner$DropdownPopup;
 
-    # invokes: Landroid/support/v7/widget/ListPopupWindow;->show()V
     invoke-static {v0}, Landroid/support/v7/widget/AppCompatSpinner$DropdownPopup;->access$301(Landroid/support/v7/widget/AppCompatSpinner$DropdownPopup;)V
 
     goto :goto_0

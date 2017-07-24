@@ -51,7 +51,6 @@
     .line 903
     iget-object v0, p0, Landroid/support/transition/Transition$2;->this$0:Landroid/support/transition/Transition;
 
-    # getter for: Landroid/support/transition/Transition;->mCurrentAnimators:Ljava/util/ArrayList;
     invoke-static {v0}, Landroid/support/transition/Transition;->access$000(Landroid/support/transition/Transition;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -70,7 +69,6 @@
     .line 897
     iget-object v0, p0, Landroid/support/transition/Transition$2;->this$0:Landroid/support/transition/Transition;
 
-    # getter for: Landroid/support/transition/Transition;->mCurrentAnimators:Ljava/util/ArrayList;
     invoke-static {v0}, Landroid/support/transition/Transition;->access$000(Landroid/support/transition/Transition;)Ljava/util/ArrayList;
 
     move-result-object v0

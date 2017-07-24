@@ -91,7 +91,6 @@
     .local v8, "roundedCornerRadius":F
     iget-object v0, p0, Landroid/support/v7/widget/CardViewBaseImpl$1;->this$0:Landroid/support/v7/widget/CardViewBaseImpl;
 
-    # getter for: Landroid/support/v7/widget/CardViewBaseImpl;->mCornerRect:Landroid/graphics/RectF;
     invoke-static {v0}, Landroid/support/v7/widget/CardViewBaseImpl;->access$000(Landroid/support/v7/widget/CardViewBaseImpl;)Landroid/graphics/RectF;
 
     move-result-object v0
@@ -122,7 +121,6 @@
     .line 51
     iget-object v0, p0, Landroid/support/v7/widget/CardViewBaseImpl$1;->this$0:Landroid/support/v7/widget/CardViewBaseImpl;
 
-    # getter for: Landroid/support/v7/widget/CardViewBaseImpl;->mCornerRect:Landroid/graphics/RectF;
     invoke-static {v0}, Landroid/support/v7/widget/CardViewBaseImpl;->access$000(Landroid/support/v7/widget/CardViewBaseImpl;)Landroid/graphics/RectF;
 
     move-result-object v1
@@ -152,7 +150,6 @@
     .line 54
     iget-object v0, p0, Landroid/support/v7/widget/CardViewBaseImpl$1;->this$0:Landroid/support/v7/widget/CardViewBaseImpl;
 
-    # getter for: Landroid/support/v7/widget/CardViewBaseImpl;->mCornerRect:Landroid/graphics/RectF;
     invoke-static {v0}, Landroid/support/v7/widget/CardViewBaseImpl;->access$000(Landroid/support/v7/widget/CardViewBaseImpl;)Landroid/graphics/RectF;
 
     move-result-object v1
@@ -182,7 +179,6 @@
     .line 57
     iget-object v0, p0, Landroid/support/v7/widget/CardViewBaseImpl$1;->this$0:Landroid/support/v7/widget/CardViewBaseImpl;
 
-    # getter for: Landroid/support/v7/widget/CardViewBaseImpl;->mCornerRect:Landroid/graphics/RectF;
     invoke-static {v0}, Landroid/support/v7/widget/CardViewBaseImpl;->access$000(Landroid/support/v7/widget/CardViewBaseImpl;)Landroid/graphics/RectF;
 
     move-result-object v1
@@ -212,7 +208,6 @@
     .line 60
     iget-object v0, p0, Landroid/support/v7/widget/CardViewBaseImpl$1;->this$0:Landroid/support/v7/widget/CardViewBaseImpl;
 
-    # getter for: Landroid/support/v7/widget/CardViewBaseImpl;->mCornerRect:Landroid/graphics/RectF;
     invoke-static {v0}, Landroid/support/v7/widget/CardViewBaseImpl;->access$000(Landroid/support/v7/widget/CardViewBaseImpl;)Landroid/graphics/RectF;
 
     move-result-object v1

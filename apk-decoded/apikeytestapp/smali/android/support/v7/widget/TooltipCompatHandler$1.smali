@@ -46,7 +46,6 @@
 
     const/4 v1, 0x0
 
-    # invokes: Landroid/support/v7/widget/TooltipCompatHandler;->show(Z)V
     invoke-static {v0, v1}, Landroid/support/v7/widget/TooltipCompatHandler;->access$000(Landroid/support/v7/widget/TooltipCompatHandler;Z)V
 
     .line 55

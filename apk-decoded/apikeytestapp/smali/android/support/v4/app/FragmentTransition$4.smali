@@ -87,7 +87,6 @@
 
     iget-object v4, p0, Landroid/support/v4/app/FragmentTransition$4;->val$fragments:Landroid/support/v4/app/FragmentTransition$FragmentContainerTransition;
 
-    # invokes: Landroid/support/v4/app/FragmentTransition;->captureInSharedElements(Landroid/support/v4/util/ArrayMap;Ljava/lang/Object;Landroid/support/v4/app/FragmentTransition$FragmentContainerTransition;)Landroid/support/v4/util/ArrayMap;
     invoke-static {v2, v3, v4}, Landroid/support/v4/app/FragmentTransition;->access$300(Landroid/support/v4/util/ArrayMap;Ljava/lang/Object;Landroid/support/v4/app/FragmentTransition$FragmentContainerTransition;)Landroid/support/v4/util/ArrayMap;
 
     move-result-object v1
@@ -122,7 +121,6 @@
 
     const/4 v5, 0x0
 
-    # invokes: Landroid/support/v4/app/FragmentTransition;->callSharedElementStartEnd(Landroid/support/v4/app/Fragment;Landroid/support/v4/app/Fragment;ZLandroid/support/v4/util/ArrayMap;Z)V
     invoke-static {v2, v3, v4, v1, v5}, Landroid/support/v4/app/FragmentTransition;->access$200(Landroid/support/v4/app/Fragment;Landroid/support/v4/app/Fragment;ZLandroid/support/v4/util/ArrayMap;Z)V
 
     .line 667
@@ -146,7 +144,6 @@
 
     iget-boolean v4, p0, Landroid/support/v4/app/FragmentTransition$4;->val$inIsPop:Z
 
-    # invokes: Landroid/support/v4/app/FragmentTransition;->getInEpicenterView(Landroid/support/v4/util/ArrayMap;Landroid/support/v4/app/FragmentTransition$FragmentContainerTransition;Ljava/lang/Object;Z)Landroid/view/View;
     invoke-static {v1, v2, v3, v4}, Landroid/support/v4/app/FragmentTransition;->access$400(Landroid/support/v4/util/ArrayMap;Landroid/support/v4/app/FragmentTransition$FragmentContainerTransition;Ljava/lang/Object;Z)Landroid/view/View;
 
     move-result-object v0

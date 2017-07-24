@@ -196,7 +196,6 @@
     move-object/from16 v32, v0
 
     .line 810
-    # getter for: Landroid/support/v4/app/NotificationCompat$Builder;->mGroupAlertBehavior:I
     invoke-static/range {p1 .. p1}, Landroid/support/v4/app/NotificationCompat$Builder;->access$000(Landroid/support/v4/app/NotificationCompat$Builder;)I
 
     move-result v33

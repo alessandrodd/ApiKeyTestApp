@@ -52,7 +52,6 @@
 
     .prologue
     .line 257
-    # getter for: Landroid/support/v4/provider/FontsContractCompat;->sLock:Ljava/lang/Object;
     invoke-static {}, Landroid/support/v4/provider/FontsContractCompat;->access$200()Ljava/lang/Object;
 
     move-result-object v3
@@ -61,7 +60,6 @@
 
     .line 258
     :try_start_0
-    # getter for: Landroid/support/v4/provider/FontsContractCompat;->sPendingReplies:Landroid/support/v4/util/SimpleArrayMap;
     invoke-static {}, Landroid/support/v4/provider/FontsContractCompat;->access$300()Landroid/support/v4/util/SimpleArrayMap;
 
     move-result-object v2
@@ -76,7 +74,6 @@
 
     .line 259
     .local v1, "replies":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/support/v4/provider/SelfDestructiveThread$ReplyCallback<Landroid/graphics/Typeface;>;>;"
-    # getter for: Landroid/support/v4/provider/FontsContractCompat;->sPendingReplies:Landroid/support/v4/util/SimpleArrayMap;
     invoke-static {}, Landroid/support/v4/provider/FontsContractCompat;->access$300()Landroid/support/v4/util/SimpleArrayMap;
 
     move-result-object v2

@@ -1,12 +1,12 @@
 Manifest-Version: 1.0
 Built-By: Generated-by-ADT
-Created-By: Android Gradle 3.0.0-alpha6
+Created-By: Android Gradle 3.0.0-alpha7
 
 Name: AndroidManifest.xml
 SHA1-Digest: Ou/yOIBH3dKIU3S7fMGPpVlYNyU=
 
 Name: classes.dex
-SHA1-Digest: hLP7m6aoVJvhmNertni9/6ibyjY=
+SHA1-Digest: i+sVCpWjlyUREBSitpdsyVw/rlY=
 
 Name: lib/arm64-v8a/libnative-lib.so
 SHA1-Digest: HRl1qRc3vW9NUEC/nRQOKtwktDQ=
@@ -1498,5 +1498,5 @@ Name: res/mipmap-xxxhdpi-v4/ic_launcher_round.png
 SHA1-Digest: 7tjrvLmnbDWwVVVtpG7cGVxbVcI=
 
 Name: resources.arsc
-SHA1-Digest: 4EvISWEfhgXysM5IvM6phLrZJ9I=
+SHA1-Digest: cXKYfSKx7D1CN5uoBYALVKMO3Bk=
 

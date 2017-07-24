@@ -145,7 +145,6 @@
     sub-int/2addr v2, v3
 
     .line 1418
-    # getter for: Landroid/support/design/widget/AppBarLayout$Behavior;->mOffsetDelta:I
     invoke-static {v0}, Landroid/support/design/widget/AppBarLayout$Behavior;->access$000(Landroid/support/design/widget/AppBarLayout$Behavior;)I
 
     move-result v3

@@ -505,7 +505,6 @@
 
     iget-object v2, v0, Landroid/support/v7/widget/RecyclerView$ViewFlinger;->this$0:Landroid/support/v7/widget/RecyclerView;
 
-    # getter for: Landroid/support/v7/widget/RecyclerView;->mScrollConsumed:[I
     invoke-static {v2}, Landroid/support/v7/widget/RecyclerView;->access$500(Landroid/support/v7/widget/RecyclerView;)[I
 
     move-result-object v5
@@ -955,7 +954,6 @@
 
     iget-object v2, v0, Landroid/support/v7/widget/RecyclerView$ViewFlinger;->this$0:Landroid/support/v7/widget/RecyclerView;
 
-    # invokes: Landroid/support/v7/widget/RecyclerView;->awakenScrollBars()Z
     invoke-static {v2}, Landroid/support/v7/widget/RecyclerView;->access$700(Landroid/support/v7/widget/RecyclerView;)Z
 
     move-result v2
@@ -1060,7 +1058,6 @@
     invoke-virtual {v2, v6}, Landroid/support/v7/widget/RecyclerView;->setScrollState(I)V
 
     .line 4907
-    # getter for: Landroid/support/v7/widget/RecyclerView;->ALLOW_THREAD_GAP_WORK:Z
     invoke-static {}, Landroid/support/v7/widget/RecyclerView;->access$800()Z
 
     move-result v2
@@ -1117,7 +1114,6 @@
 
     move-object/from16 v0, v19
 
-    # invokes: Landroid/support/v7/widget/RecyclerView$SmoothScroller;->onAnimation(II)V
     invoke-static {v0, v2, v6}, Landroid/support/v7/widget/RecyclerView$SmoothScroller;->access$600(Landroid/support/v7/widget/RecyclerView$SmoothScroller;II)V
 
     .line 4923
@@ -1169,7 +1165,6 @@
 
     move-object/from16 v0, v19
 
-    # invokes: Landroid/support/v7/widget/RecyclerView$SmoothScroller;->onAnimation(II)V
     invoke-static {v0, v2, v6}, Landroid/support/v7/widget/RecyclerView$SmoothScroller;->access$600(Landroid/support/v7/widget/RecyclerView$SmoothScroller;II)V
 
     goto/16 :goto_2
@@ -1182,7 +1177,6 @@
 
     move-object/from16 v0, v19
 
-    # invokes: Landroid/support/v7/widget/RecyclerView$SmoothScroller;->onAnimation(II)V
     invoke-static {v0, v2, v6}, Landroid/support/v7/widget/RecyclerView$SmoothScroller;->access$600(Landroid/support/v7/widget/RecyclerView$SmoothScroller;II)V
 
     goto/16 :goto_2

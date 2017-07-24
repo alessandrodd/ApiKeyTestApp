@@ -418,7 +418,6 @@
 
     move-object v0, p1
 
-    # invokes: Landroid/support/transition/ChangeTransform;->setTransforms(Landroid/view/View;FFFFFFFF)V
     invoke-static/range {v0 .. v8}, Landroid/support/transition/ChangeTransform;->access$300(Landroid/view/View;FFFFFFFF)V
 
     .line 441

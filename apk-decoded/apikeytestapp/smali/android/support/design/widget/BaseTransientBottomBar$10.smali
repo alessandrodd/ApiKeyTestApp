@@ -65,7 +65,6 @@
     .local p0, "this":Landroid/support/design/widget/BaseTransientBottomBar$10;, "Landroid/support/design/widget/BaseTransientBottomBar$10;"
     iget-object v0, p0, Landroid/support/design/widget/BaseTransientBottomBar$10;->this$0:Landroid/support/design/widget/BaseTransientBottomBar;
 
-    # getter for: Landroid/support/design/widget/BaseTransientBottomBar;->mContentViewCallback:Landroid/support/design/widget/BaseTransientBottomBar$ContentViewCallback;
     invoke-static {v0}, Landroid/support/design/widget/BaseTransientBottomBar;->access$000(Landroid/support/design/widget/BaseTransientBottomBar;)Landroid/support/design/widget/BaseTransientBottomBar$ContentViewCallback;
 
     move-result-object v0

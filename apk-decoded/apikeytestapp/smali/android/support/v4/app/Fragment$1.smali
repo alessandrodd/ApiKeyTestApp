@@ -44,7 +44,6 @@
     .line 2168
     iget-object v0, p0, Landroid/support/v4/app/Fragment$1;->this$0:Landroid/support/v4/app/Fragment;
 
-    # invokes: Landroid/support/v4/app/Fragment;->callStartTransitionListener()V
     invoke-static {v0}, Landroid/support/v4/app/Fragment;->access$800(Landroid/support/v4/app/Fragment;)V
 
     .line 2169

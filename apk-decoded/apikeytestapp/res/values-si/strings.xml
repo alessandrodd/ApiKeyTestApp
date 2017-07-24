@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="abc_action_bar_home_description">ගෙදරට සංචාලනය කරන්න</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
     <string name="abc_action_bar_up_description">ඉහලට සංචාලනය කරන්න</string>
     <string name="abc_action_menu_overflow_description">තවත් විකල්ප</string>
     <string name="abc_action_mode_done">අවසාන වූ</string>
@@ -18,4 +20,5 @@
     <string name="abc_shareactionprovider_share_with_application">%s සමඟ බෙදාගන්න</string>
     <string name="abc_toolbar_collapse_description">හකුළන්න</string>
     <string name="search_menu_title">සොයන්න</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
 </resources>

@@ -108,7 +108,6 @@
     const/4 v4, 0x0
 
     .line 434
-    # getter for: Landroid/support/v4/media/AudioAttributesCompat;->sForceLegacyBehavior:Z
     invoke-static {}, Landroid/support/v4/media/AudioAttributesCompat;->access$000()Z
 
     move-result v2
@@ -220,7 +219,6 @@
     iput-object v2, v0, Landroid/support/v4/media/AudioAttributesCompat;->mLegacyStream:Ljava/lang/Integer;
 
     .line 459
-    # setter for: Landroid/support/v4/media/AudioAttributesCompat;->mAudioAttributesWrapper:Landroid/support/v4/media/AudioAttributesCompatApi21$Wrapper;
     invoke-static {v0, v4}, Landroid/support/v4/media/AudioAttributesCompat;->access$202(Landroid/support/v4/media/AudioAttributesCompat;Landroid/support/v4/media/AudioAttributesCompatApi21$Wrapper;)Landroid/support/v4/media/AudioAttributesCompatApi21$Wrapper;
 
     goto :goto_0
@@ -307,7 +305,6 @@
     iput-object v0, p0, Landroid/support/v4/media/AudioAttributesCompat$Builder;->mLegacyStream:Ljava/lang/Integer;
 
     .line 575
-    # invokes: Landroid/support/v4/media/AudioAttributesCompat;->usageForStreamType(I)I
     invoke-static {p1}, Landroid/support/v4/media/AudioAttributesCompat;->access$300(I)I
 
     move-result v0
@@ -343,7 +340,6 @@
 
     .line 507
     :pswitch_1
-    # getter for: Landroid/support/v4/media/AudioAttributesCompat;->sForceLegacyBehavior:Z
     invoke-static {}, Landroid/support/v4/media/AudioAttributesCompat;->access$000()Z
 
     move-result v0

@@ -2620,7 +2620,6 @@
     .line 498
     iget-object v0, p0, Landroid/support/v7/widget/SearchView;->mSearchSrcTextView:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    # invokes: Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setImeVisibility(Z)V
     invoke-static {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->access$000(Landroid/support/v7/widget/SearchView$SearchAutoComplete;Z)V
 
     .line 499
@@ -3029,7 +3028,6 @@
     .line 1218
     iget-object v1, p0, Landroid/support/v7/widget/SearchView;->mSearchSrcTextView:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    # invokes: Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setImeVisibility(Z)V
     invoke-static {v1, v3}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->access$000(Landroid/support/v7/widget/SearchView$SearchAutoComplete;Z)V
 
     goto :goto_0
@@ -3088,7 +3086,6 @@
     .line 1389
     iget-object v1, p0, Landroid/support/v7/widget/SearchView;->mSearchSrcTextView:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    # invokes: Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setImeVisibility(Z)V
     invoke-static {v1, v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->access$000(Landroid/support/v7/widget/SearchView$SearchAutoComplete;Z)V
 
     .line 1390
@@ -3497,7 +3494,6 @@
 
     const/4 v1, 0x1
 
-    # invokes: Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setImeVisibility(Z)V
     invoke-static {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->access$000(Landroid/support/v7/widget/SearchView$SearchAutoComplete;Z)V
 
     .line 1227
@@ -3575,7 +3571,6 @@
     :cond_1
     iget-object v1, p0, Landroid/support/v7/widget/SearchView;->mSearchSrcTextView:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    # invokes: Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setImeVisibility(Z)V
     invoke-static {v1, v3}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->access$000(Landroid/support/v7/widget/SearchView$SearchAutoComplete;Z)V
 
     .line 1194

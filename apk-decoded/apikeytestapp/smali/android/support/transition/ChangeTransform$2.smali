@@ -124,7 +124,6 @@
 
     iget-object v0, p0, Landroid/support/transition/ChangeTransform$2;->this$0:Landroid/support/transition/ChangeTransform;
 
-    # getter for: Landroid/support/transition/ChangeTransform;->mUseOverlay:Z
     invoke-static {v0}, Landroid/support/transition/ChangeTransform;->access$000(Landroid/support/transition/ChangeTransform;)Z
 
     move-result v0
@@ -139,7 +138,6 @@
     .line 305
     :cond_0
     :goto_0
-    # getter for: Landroid/support/transition/ChangeTransform;->ANIMATION_MATRIX_PROPERTY:Landroid/util/Property;
     invoke-static {}, Landroid/support/transition/ChangeTransform;->access$100()Landroid/util/Property;
 
     move-result-object v0
@@ -210,7 +208,6 @@
     .line 318
     iget-object v0, p0, Landroid/support/transition/ChangeTransform$2;->val$view:Landroid/view/View;
 
-    # invokes: Landroid/support/transition/ChangeTransform;->setIdentityTransforms(Landroid/view/View;)V
     invoke-static {v0}, Landroid/support/transition/ChangeTransform;->access$200(Landroid/view/View;)V
 
     .line 319

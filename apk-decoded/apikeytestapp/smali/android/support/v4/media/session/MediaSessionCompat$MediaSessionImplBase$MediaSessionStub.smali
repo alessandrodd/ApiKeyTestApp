@@ -255,7 +255,6 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 2710
-    # invokes: Landroid/support/v4/media/session/MediaSessionCompat;->getStateWithUpdatedPosition(Landroid/support/v4/media/session/PlaybackStateCompat;Landroid/support/v4/media/MediaMetadataCompat;)Landroid/support/v4/media/session/PlaybackStateCompat;
     invoke-static {v1, v0}, Landroid/support/v4/media/session/MediaSessionCompat;->access$500(Landroid/support/v4/media/session/PlaybackStateCompat;Landroid/support/v4/media/MediaMetadataCompat;)Landroid/support/v4/media/session/PlaybackStateCompat;
 
     move-result-object v2
@@ -923,7 +922,6 @@
     new-instance v2, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$Command;
 
     .line 2492
-    # getter for: Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->mResultReceiver:Landroid/os/ResultReceiver;
     invoke-static {p3}, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->access$400(Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;)Landroid/os/ResultReceiver;
 
     move-result-object v3

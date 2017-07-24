@@ -45,7 +45,6 @@
 
     .prologue
     .line 103
-    # getter for: Landroid/support/v7/widget/SwitchCompat;->mThumbPosition:F
     invoke-static {p1}, Landroid/support/v7/widget/SwitchCompat;->access$000(Landroid/support/v7/widget/SwitchCompat;)F
 
     move-result v0

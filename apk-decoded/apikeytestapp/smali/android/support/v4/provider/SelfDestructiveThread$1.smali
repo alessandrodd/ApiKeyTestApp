@@ -61,7 +61,6 @@
 
     check-cast v0, Ljava/lang/Runnable;
 
-    # invokes: Landroid/support/v4/provider/SelfDestructiveThread;->onInvokeRunnable(Ljava/lang/Runnable;)V
     invoke-static {v1, v0}, Landroid/support/v4/provider/SelfDestructiveThread;->access$000(Landroid/support/v4/provider/SelfDestructiveThread;Ljava/lang/Runnable;)V
 
     goto :goto_0
@@ -70,7 +69,6 @@
     :pswitch_1
     iget-object v0, p0, Landroid/support/v4/provider/SelfDestructiveThread$1;->this$0:Landroid/support/v4/provider/SelfDestructiveThread;
 
-    # invokes: Landroid/support/v4/provider/SelfDestructiveThread;->onDestruction()V
     invoke-static {v0}, Landroid/support/v4/provider/SelfDestructiveThread;->access$100(Landroid/support/v4/provider/SelfDestructiveThread;)V
 
     goto :goto_0

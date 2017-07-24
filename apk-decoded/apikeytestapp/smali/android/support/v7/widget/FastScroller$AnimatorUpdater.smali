@@ -74,7 +74,6 @@
     .local v0, "alpha":I
     iget-object v1, p0, Landroid/support/v7/widget/FastScroller$AnimatorUpdater;->this$0:Landroid/support/v7/widget/FastScroller;
 
-    # getter for: Landroid/support/v7/widget/FastScroller;->mVerticalThumbDrawable:Landroid/graphics/drawable/StateListDrawable;
     invoke-static {v1}, Landroid/support/v7/widget/FastScroller;->access$600(Landroid/support/v7/widget/FastScroller;)Landroid/graphics/drawable/StateListDrawable;
 
     move-result-object v1
@@ -84,7 +83,6 @@
     .line 582
     iget-object v1, p0, Landroid/support/v7/widget/FastScroller$AnimatorUpdater;->this$0:Landroid/support/v7/widget/FastScroller;
 
-    # getter for: Landroid/support/v7/widget/FastScroller;->mVerticalTrackDrawable:Landroid/graphics/drawable/Drawable;
     invoke-static {v1}, Landroid/support/v7/widget/FastScroller;->access$700(Landroid/support/v7/widget/FastScroller;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -94,7 +92,6 @@
     .line 583
     iget-object v1, p0, Landroid/support/v7/widget/FastScroller$AnimatorUpdater;->this$0:Landroid/support/v7/widget/FastScroller;
 
-    # invokes: Landroid/support/v7/widget/FastScroller;->requestRedraw()V
     invoke-static {v1}, Landroid/support/v7/widget/FastScroller;->access$500(Landroid/support/v7/widget/FastScroller;)V
 
     .line 584

@@ -40,11 +40,9 @@
     const/4 v3, 0x0
 
     .line 45
-    # invokes: Landroid/support/transition/GhostViewApi21;->fetchAddGhostMethod()V
     invoke-static {}, Landroid/support/transition/GhostViewApi21;->access$000()V
 
     .line 46
-    # getter for: Landroid/support/transition/GhostViewApi21;->sAddGhostMethod:Ljava/lang/reflect/Method;
     invoke-static {}, Landroid/support/transition/GhostViewApi21;->access$100()Ljava/lang/reflect/Method;
 
     move-result-object v1
@@ -56,7 +54,6 @@
     new-instance v2, Landroid/support/transition/GhostViewApi21;
 
     .line 49
-    # getter for: Landroid/support/transition/GhostViewApi21;->sAddGhostMethod:Ljava/lang/reflect/Method;
     invoke-static {}, Landroid/support/transition/GhostViewApi21;->access$100()Ljava/lang/reflect/Method;
 
     move-result-object v1
@@ -132,11 +129,9 @@
 
     .prologue
     .line 61
-    # invokes: Landroid/support/transition/GhostViewApi21;->fetchRemoveGhostMethod()V
     invoke-static {}, Landroid/support/transition/GhostViewApi21;->access$300()V
 
     .line 62
-    # getter for: Landroid/support/transition/GhostViewApi21;->sRemoveGhostMethod:Ljava/lang/reflect/Method;
     invoke-static {}, Landroid/support/transition/GhostViewApi21;->access$400()Ljava/lang/reflect/Method;
 
     move-result-object v1
@@ -145,7 +140,6 @@
 
     .line 64
     :try_start_0
-    # getter for: Landroid/support/transition/GhostViewApi21;->sRemoveGhostMethod:Ljava/lang/reflect/Method;
     invoke-static {}, Landroid/support/transition/GhostViewApi21;->access$400()Ljava/lang/reflect/Method;
 
     move-result-object v1

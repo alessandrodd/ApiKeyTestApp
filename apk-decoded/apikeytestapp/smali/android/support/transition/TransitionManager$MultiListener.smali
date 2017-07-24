@@ -78,7 +78,6 @@
     invoke-direct {p0}, Landroid/support/transition/TransitionManager$MultiListener;->removeListeners()V
 
     .line 260
-    # getter for: Landroid/support/transition/TransitionManager;->sPendingTransitions:Ljava/util/ArrayList;
     invoke-static {}, Landroid/support/transition/TransitionManager;->access$000()Ljava/util/ArrayList;
 
     move-result-object v4
@@ -232,7 +231,6 @@
     invoke-direct {p0}, Landroid/support/transition/TransitionManager$MultiListener;->removeListeners()V
 
     .line 245
-    # getter for: Landroid/support/transition/TransitionManager;->sPendingTransitions:Ljava/util/ArrayList;
     invoke-static {}, Landroid/support/transition/TransitionManager;->access$000()Ljava/util/ArrayList;
 
     move-result-object v2

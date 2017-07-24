@@ -89,7 +89,6 @@
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/FastScroller$AnimatorListener;->this$0:Landroid/support/v7/widget/FastScroller;
 
-    # getter for: Landroid/support/v7/widget/FastScroller;->mShowHideAnimator:Landroid/animation/ValueAnimator;
     invoke-static {v0}, Landroid/support/v7/widget/FastScroller;->access$200(Landroid/support/v7/widget/FastScroller;)Landroid/animation/ValueAnimator;
 
     move-result-object v0
@@ -113,13 +112,11 @@
     .line 562
     iget-object v0, p0, Landroid/support/v7/widget/FastScroller$AnimatorListener;->this$0:Landroid/support/v7/widget/FastScroller;
 
-    # setter for: Landroid/support/v7/widget/FastScroller;->mAnimationState:I
     invoke-static {v0, v2}, Landroid/support/v7/widget/FastScroller;->access$302(Landroid/support/v7/widget/FastScroller;I)I
 
     .line 563
     iget-object v0, p0, Landroid/support/v7/widget/FastScroller$AnimatorListener;->this$0:Landroid/support/v7/widget/FastScroller;
 
-    # invokes: Landroid/support/v7/widget/FastScroller;->setState(I)V
     invoke-static {v0, v2}, Landroid/support/v7/widget/FastScroller;->access$400(Landroid/support/v7/widget/FastScroller;I)V
 
     goto :goto_0
@@ -130,13 +127,11 @@
 
     const/4 v1, 0x2
 
-    # setter for: Landroid/support/v7/widget/FastScroller;->mAnimationState:I
     invoke-static {v0, v1}, Landroid/support/v7/widget/FastScroller;->access$302(Landroid/support/v7/widget/FastScroller;I)I
 
     .line 566
     iget-object v0, p0, Landroid/support/v7/widget/FastScroller$AnimatorListener;->this$0:Landroid/support/v7/widget/FastScroller;
 
-    # invokes: Landroid/support/v7/widget/FastScroller;->requestRedraw()V
     invoke-static {v0}, Landroid/support/v7/widget/FastScroller;->access$500(Landroid/support/v7/widget/FastScroller;)V
 
     goto :goto_0
