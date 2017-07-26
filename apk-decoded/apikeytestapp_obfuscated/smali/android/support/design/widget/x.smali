@@ -1,221 +1,70 @@
 .class Landroid/support/design/widget/x;
-.super Landroid/support/design/widget/CoordinatorLayout$a;
+.super Ljava/lang/Object;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<V:",
-        "Landroid/view/View;",
-        ">",
-        "Landroid/support/design/widget/CoordinatorLayout$a",
-        "<TV;>;"
-    }
-.end annotation
-
-
-# instance fields
-.field private a:Landroid/support/design/widget/y;
-
-.field private b:I
-
-.field private c:I
+# static fields
+.field private static final a:[I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0}, Landroid/support/design/widget/CoordinatorLayout$a;-><init>()V
-
-    iput v0, p0, Landroid/support/design/widget/x;->b:I
-
-    iput v0, p0, Landroid/support/design/widget/x;->c:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, p2}, Landroid/support/design/widget/CoordinatorLayout$a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    iput v0, p0, Landroid/support/design/widget/x;->b:I
-
-    iput v0, p0, Landroid/support/design/widget/x;->c:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a(I)Z
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/design/widget/x;->a:Landroid/support/design/widget/y;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/design/widget/x;->a:Landroid/support/design/widget/y;
-
-    invoke-virtual {v0, p1}, Landroid/support/design/widget/y;->b(I)Z
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    iput p1, p0, Landroid/support/design/widget/x;->c:I
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;I)Z
+.method static constructor <clinit>()V
     .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;I)Z"
-        }
-    .end annotation
 
-    const/4 v2, 0x0
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2, p3}, Landroid/support/design/widget/x;->b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;I)V
+    new-array v0, v0, [I
 
-    iget-object v0, p0, Landroid/support/design/widget/x;->a:Landroid/support/design/widget/y;
+    const/4 v1, 0x0
 
-    if-nez v0, :cond_0
+    sget v2, Landroid/support/v7/a/b$b;->colorPrimary:I
 
-    new-instance v0, Landroid/support/design/widget/y;
+    aput v2, v0, v1
 
-    invoke-direct {v0, p2}, Landroid/support/design/widget/y;-><init>(Landroid/view/View;)V
+    sput-object v0, Landroid/support/design/widget/x;->a:[I
 
-    iput-object v0, p0, Landroid/support/design/widget/x;->a:Landroid/support/design/widget/y;
+    return-void
+.end method
+
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method static a(Landroid/content/Context;)V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    sget-object v1, Landroid/support/design/widget/x;->a:[I
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const/4 v0, 0x1
 
     :cond_0
-    iget-object v0, p0, Landroid/support/design/widget/x;->a:Landroid/support/design/widget/y;
-
-    invoke-virtual {v0}, Landroid/support/design/widget/y;->a()V
-
-    iget v0, p0, Landroid/support/design/widget/x;->b:I
+    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Landroid/support/design/widget/x;->a:Landroid/support/design/widget/y;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    iget v1, p0, Landroid/support/design/widget/x;->b:I
+    const-string v1, "You need to use a Theme.AppCompat theme (or descendant) with the design library."
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/y;->a(I)Z
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iput v2, p0, Landroid/support/design/widget/x;->b:I
+    throw v0
 
     :cond_1
-    iget v0, p0, Landroid/support/design/widget/x;->c:I
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Landroid/support/design/widget/x;->a:Landroid/support/design/widget/y;
-
-    iget v1, p0, Landroid/support/design/widget/x;->c:I
-
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/y;->b(I)Z
-
-    iput v2, p0, Landroid/support/design/widget/x;->c:I
-
-    :cond_2
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method protected b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;I)V"
-        }
-    .end annotation
-
-    invoke-virtual {p1, p2, p3}, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/view/View;I)V
-
     return-void
-.end method
-
-.method public b(I)Z
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/design/widget/x;->a:Landroid/support/design/widget/y;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/design/widget/x;->a:Landroid/support/design/widget/y;
-
-    invoke-virtual {v0, p1}, Landroid/support/design/widget/y;->a(I)Z
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    iput p1, p0, Landroid/support/design/widget/x;->b:I
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public c()I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/design/widget/x;->a:Landroid/support/design/widget/y;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/design/widget/x;->a:Landroid/support/design/widget/y;
-
-    invoke-virtual {v0}, Landroid/support/design/widget/y;->c()I
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public d()I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/design/widget/x;->a:Landroid/support/design/widget/y;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/design/widget/x;->a:Landroid/support/design/widget/y;
-
-    invoke-virtual {v0}, Landroid/support/design/widget/y;->b()I
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

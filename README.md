@@ -92,6 +92,82 @@ smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 [...]
 ```
 
+### Java Local Array
+LIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4, MIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
+
+**Original**
+
+```
+[...]
+    public String[] getLocalKeyArray() {
+        String apiKeyLocalArray[] = {"LIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4", "MIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"};
+        return apiKeyLocalArray;
+    }
+[...]
+```
+
+**Not Obfuscated**
+
+smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
+```
+[...]
+.method public getLocalKeyArray()[Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 24
+    const/4 v1, 0x2
+
+    new-array v0, v1, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string v2, "LIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x1
+
+    const-string v2, "MIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v2, v0, v1
+
+    .line 25
+    .local v0, "apiKeyLocalArray":[Ljava/lang/String;
+    return-object v0
+.end method
+[...]
+```
+
+**Obfuscated**
+
+smali/it/uniroma2/adidiego/apikeytestapp/b.smali
+```
+[...]
+.method public b()[Ljava/lang/String;
+    .locals 3
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string v2, "LIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x1
+
+    const-string v2, "MIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v2, v0, v1
+
+    return-object v0
+.end method
+[...]
+```
+
 ### Java Method Return
 CIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
@@ -131,6 +207,67 @@ smali/it/uniroma2/adidiego/apikeytestapp/b.smali
     .locals 1
 
     const-string v0, "CIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    return-object v0
+.end method
+[...]
+```
+
+### Java Method Return Array
+NIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4, OIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
+
+**Original**
+
+```
+[...]
+    public String[] getLocalReturnKeyArray() {
+        return new String[]{"NIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4, OIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"};
+    }
+[...]
+```
+
+**Not Obfuscated**
+
+smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
+```
+[...]
+.method public getLocalReturnKeyArray()[Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 33
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string v2, "NIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4, OIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v2, v0, v1
+
+    return-object v0
+.end method
+[...]
+```
+
+**Obfuscated**
+
+smali/it/uniroma2/adidiego/apikeytestapp/b.smali
+```
+[...]
+.method public d()[Ljava/lang/String;
+    .locals 3
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string v2, "NIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4, OIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v2, v0, v1
 
     return-object v0
 .end method
@@ -198,6 +335,56 @@ smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 [...]
 ```
 
+### Java Global Public Array
+PIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4, QIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
+
+**Original**
+
+```
+[...]
+    public String apiKeyPublicArray[] = {"PIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4", "QIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"};
+[...]
+```
+
+**Not Obfuscated**
+
+smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
+```
+[...]
+    .line 10
+    new-array v0, v4, [Ljava/lang/String;
+
+    const-string v1, "PIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v2
+
+    const-string v1, "QIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v3
+
+    iput-object v0, p0, Lit/uniroma2/adidiego/apikeytestapp/JavaKey;->apiKeyPublicArray:[Ljava/lang/String;
+[...]
+```
+
+**Obfuscated**
+
+smali/it/uniroma2/adidiego/apikeytestapp/b.smali
+```
+[...]
+    new-array v0, v4, [Ljava/lang/String;
+
+    const-string v1, "PIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v2
+
+    const-string v1, "QIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v3
+
+    iput-object v0, p0, Lit/uniroma2/adidiego/apikeytestapp/b;->b:[Ljava/lang/String;
+[...]
+```
+
 ### Java Global Private Variable
 EIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
@@ -240,26 +427,55 @@ smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
 [...]
 ```
 
+### Java Global Private Array
+RIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4, SIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
+
+**Original**
+
+```
+[...]
+    public String[] getGlobalPrivateKeyArray() {
+        return apiKeyPrivateArray;
+    }
+[...]
+```
+
+**Not Obfuscated**
+
+smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
+```
+[...]
+    .line 12
+    new-array v0, v4, [Ljava/lang/String;
+
+    const-string v1, "RIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v2
+
+    const-string v1, "SIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v3
+
+    iput-object v0, p0, Lit/uniroma2/adidiego/apikeytestapp/JavaKey;->apiKeyPrivateArray:[Ljava/lang/String;
+[...]
+```
+
 **Obfuscated**
 
 smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 ```
 [...]
-.method public constructor <init>()V
-    .locals 1
+    new-array v0, v4, [Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "RIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
 
-    const-string v0, "DIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+    aput-object v1, v0, v2
 
-    iput-object v0, p0, Lit/uniroma2/adidiego/apikeytestapp/b;->a:Ljava/lang/String;
+    const-string v1, "SIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
 
-    const-string v0, "EIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+    aput-object v1, v0, v3
 
-    iput-object v0, p0, Lit/uniroma2/adidiego/apikeytestapp/b;->d:Ljava/lang/String;
-
-    return-void
-.end method
+    iput-object v0, p0, Lit/uniroma2/adidiego/apikeytestapp/b;->h:[Ljava/lang/String;
 [...]
 ```
 
@@ -313,6 +529,57 @@ smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 [...]
 ```
 
+### Java Static Array
+TIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4, UIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
+
+**Original**
+
+```
+[...]
+    public static String apiKeyStaticArray[] = {"TIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4", "UIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"};
+[...]
+```
+
+**Not Obfuscated**
+
+smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
+```
+[...]
+    .line 14
+    new-array v0, v4, [Ljava/lang/String;
+
+    const-string v1, "TIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v2
+
+    const-string v1, "UIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v3
+
+    sput-object v0, Lit/uniroma2/adidiego/apikeytestapp/JavaKey;->apiKeyStaticArray:[Ljava/lang/String;
+[...]
+```
+
+
+**Obfuscated**
+
+smali/it/uniroma2/adidiego/apikeytestapp/b.smali
+```
+[...]
+    new-array v0, v4, [Ljava/lang/String;
+
+    const-string v1, "TIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v2
+
+    const-string v1, "UIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v3
+
+    sput-object v0, Lit/uniroma2/adidiego/apikeytestapp/b;->d:[Ljava/lang/String;
+[...]
+```
+
 ### Java Static Final Variable
 GIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 
@@ -344,6 +611,56 @@ smali/it/uniroma2/adidiego/apikeytestapp/b.smali
 .field public static b:Ljava/lang/String; = null
 
 .field public static final c:Ljava/lang/String; = "GIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+[...]
+```
+
+### Java Static Final Array
+VIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4, WIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
+
+**Original**
+
+```
+[...]
+    public static final String API_KEY_FINAL_STATIC_ARRAY[] = {"VIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4", "WIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"};
+[...]
+```
+
+**Not Obfuscated**
+
+smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
+```
+[...]
+    .line 16
+    new-array v0, v4, [Ljava/lang/String;
+
+    const-string v1, "VIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v2
+
+    const-string v1, "WIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v3
+
+    sput-object v0, Lit/uniroma2/adidiego/apikeytestapp/JavaKey;->API_KEY_FINAL_STATIC_ARRAY:[Ljava/lang/String;
+[...]
+```
+
+**Obfuscated**
+
+smali/it/uniroma2/adidiego/apikeytestapp/b.smali
+```
+[...]
+    new-array v0, v4, [Ljava/lang/String;
+
+    const-string v1, "VIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v2
+
+    const-string v1, "WIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v1, v0, v3
+
+    sput-object v0, Lit/uniroma2/adidiego/apikeytestapp/b;->f:[Ljava/lang/String;
 [...]
 ```
 
@@ -401,6 +718,92 @@ smali/it/uniroma2/adidiego/apikeytestapp/b.smali
     move-result-object v0
 
     const-string v1, "KIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+[...]
+```
+
+### Java Method Array Parameter
+XIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4, YIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
+
+**Original**
+
+```
+[...]
+    public void printKeyArray() {
+        Log.d(JavaKey.class.getSimpleName(), Arrays.toString(new String[]{"XIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4, YIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"}));
+    }
+[...]
+```
+
+**Not Obfuscated**
+
+smali/it/uniroma2/adidiego/apikeytestapp/JavaKey.smali
+```
+[...]
+.method public printKeyArray()V
+    .locals 4
+
+    .prologue
+    .line 49
+    const-class v0, Lit/uniroma2/adidiego/apikeytestapp/JavaKey;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    const-string v3, "XIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4, YIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v3, v1, v2
+
+    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 50
+    return-void
+.end method
+[...]
+```
+
+**Obfuscated**
+
+smali/it/uniroma2/adidiego/apikeytestapp/b.smali
+```
+[...]
+.method public h()V
+    .locals 4
+
+    const-class v0, Lit/uniroma2/adidiego/apikeytestapp/b;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    const-string v3, "XIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4, YIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+
+    aput-object v3, v1, v2
+
+    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

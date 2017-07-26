@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v7/widget/e$a;
+.implements Landroid/support/v7/widget/j$a;
 
 
 # annotations
@@ -55,11 +55,11 @@
     :cond_1
     iget-object v2, p0, Landroid/support/v7/widget/RecyclerView$6;->a:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v2, v2, Landroid/support/v7/widget/RecyclerView;->w:Landroid/support/v7/widget/ah;
+    iget-object v2, v2, Landroid/support/v7/widget/RecyclerView;->w:Landroid/support/v7/widget/ap;
 
     iget-object v3, v1, Landroid/support/v7/widget/RecyclerView$w;->a:Landroid/view/View;
 
-    invoke-virtual {v2, v3}, Landroid/support/v7/widget/ah;->c(Landroid/view/View;)Z
+    invoke-virtual {v2, v3}, Landroid/support/v7/widget/ap;->c(Landroid/view/View;)Z
 
     move-result v2
 
@@ -112,10 +112,10 @@
     return-void
 .end method
 
-.method public a(Landroid/support/v7/widget/e$b;)V
+.method public a(Landroid/support/v7/widget/j$b;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/support/v7/widget/RecyclerView$6;->c(Landroid/support/v7/widget/e$b;)V
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/RecyclerView$6;->c(Landroid/support/v7/widget/j$b;)V
 
     return-void
 .end method
@@ -138,10 +138,10 @@
     return-void
 .end method
 
-.method public b(Landroid/support/v7/widget/e$b;)V
+.method public b(Landroid/support/v7/widget/j$b;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/support/v7/widget/RecyclerView$6;->c(Landroid/support/v7/widget/e$b;)V
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/RecyclerView$6;->c(Landroid/support/v7/widget/j$b;)V
 
     return-void
 .end method
@@ -162,10 +162,10 @@
     return-void
 .end method
 
-.method c(Landroid/support/v7/widget/e$b;)V
+.method c(Landroid/support/v7/widget/j$b;)V
     .locals 5
 
-    iget v0, p1, Landroid/support/v7/widget/e$b;->f:I
+    iget v0, p1, Landroid/support/v7/widget/j$b;->f:I
 
     packed-switch v0, :pswitch_data_0
 
@@ -180,9 +180,9 @@
 
     iget-object v1, p0, Landroid/support/v7/widget/RecyclerView$6;->a:Landroid/support/v7/widget/RecyclerView;
 
-    iget v2, p1, Landroid/support/v7/widget/e$b;->g:I
+    iget v2, p1, Landroid/support/v7/widget/j$b;->g:I
 
-    iget v3, p1, Landroid/support/v7/widget/e$b;->i:I
+    iget v3, p1, Landroid/support/v7/widget/j$b;->i:I
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/support/v7/widget/RecyclerView$h;->a(Landroid/support/v7/widget/RecyclerView;II)V
 
@@ -195,9 +195,9 @@
 
     iget-object v1, p0, Landroid/support/v7/widget/RecyclerView$6;->a:Landroid/support/v7/widget/RecyclerView;
 
-    iget v2, p1, Landroid/support/v7/widget/e$b;->g:I
+    iget v2, p1, Landroid/support/v7/widget/j$b;->g:I
 
-    iget v3, p1, Landroid/support/v7/widget/e$b;->i:I
+    iget v3, p1, Landroid/support/v7/widget/j$b;->i:I
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/support/v7/widget/RecyclerView$h;->b(Landroid/support/v7/widget/RecyclerView;II)V
 
@@ -210,11 +210,11 @@
 
     iget-object v1, p0, Landroid/support/v7/widget/RecyclerView$6;->a:Landroid/support/v7/widget/RecyclerView;
 
-    iget v2, p1, Landroid/support/v7/widget/e$b;->g:I
+    iget v2, p1, Landroid/support/v7/widget/j$b;->g:I
 
-    iget v3, p1, Landroid/support/v7/widget/e$b;->i:I
+    iget v3, p1, Landroid/support/v7/widget/j$b;->i:I
 
-    iget-object v4, p1, Landroid/support/v7/widget/e$b;->h:Ljava/lang/Object;
+    iget-object v4, p1, Landroid/support/v7/widget/j$b;->h:Ljava/lang/Object;
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/support/v7/widget/RecyclerView$h;->a(Landroid/support/v7/widget/RecyclerView;IILjava/lang/Object;)V
 
@@ -227,9 +227,9 @@
 
     iget-object v1, p0, Landroid/support/v7/widget/RecyclerView$6;->a:Landroid/support/v7/widget/RecyclerView;
 
-    iget v2, p1, Landroid/support/v7/widget/e$b;->g:I
+    iget v2, p1, Landroid/support/v7/widget/j$b;->g:I
 
-    iget v3, p1, Landroid/support/v7/widget/e$b;->i:I
+    iget v3, p1, Landroid/support/v7/widget/j$b;->i:I
 
     const/4 v4, 0x1
 

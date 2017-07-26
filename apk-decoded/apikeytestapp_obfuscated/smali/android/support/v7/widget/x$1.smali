@@ -1,72 +1,83 @@
-.class Landroid/support/v7/widget/x$1;
-.super Landroid/support/v7/widget/aq;
+.class final Landroid/support/v7/widget/x$1;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnScrollChangedListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroid/support/v7/widget/x;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILandroid/content/res/Resources$Theme;)V
+    value = Landroid/support/v7/widget/x;->a(Landroid/widget/PopupWindow;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v7/widget/x$b;
+.field final synthetic a:Ljava/lang/reflect/Field;
 
-.field final synthetic b:Landroid/support/v7/widget/x;
+.field final synthetic b:Landroid/widget/PopupWindow;
+
+.field final synthetic c:Landroid/view/ViewTreeObserver$OnScrollChangedListener;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v7/widget/x;Landroid/view/View;Landroid/support/v7/widget/x$b;)V
+.method constructor <init>(Ljava/lang/reflect/Field;Landroid/widget/PopupWindow;Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v7/widget/x$1;->b:Landroid/support/v7/widget/x;
+    iput-object p1, p0, Landroid/support/v7/widget/x$1;->a:Ljava/lang/reflect/Field;
 
-    iput-object p3, p0, Landroid/support/v7/widget/x$1;->a:Landroid/support/v7/widget/x$b;
+    iput-object p2, p0, Landroid/support/v7/widget/x$1;->b:Landroid/widget/PopupWindow;
 
-    invoke-direct {p0, p2}, Landroid/support/v7/widget/aq;-><init>(Landroid/view/View;)V
+    iput-object p3, p0, Landroid/support/v7/widget/x$1;->c:Landroid/view/ViewTreeObserver$OnScrollChangedListener;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Landroid/support/v7/view/menu/t;
-    .locals 1
+.method public onScrollChanged()V
+    .locals 2
 
-    iget-object v0, p0, Landroid/support/v7/widget/x$1;->a:Landroid/support/v7/widget/x$b;
+    :try_start_0
+    iget-object v0, p0, Landroid/support/v7/widget/x$1;->a:Ljava/lang/reflect/Field;
 
-    return-object v0
-.end method
+    iget-object v1, p0, Landroid/support/v7/widget/x$1;->b:Landroid/widget/PopupWindow;
 
-.method public b()Z
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/widget/x$1;->b:Landroid/support/v7/widget/x;
-
-    invoke-static {v0}, Landroid/support/v7/widget/x;->a(Landroid/support/v7/widget/x;)Landroid/support/v7/widget/x$b;
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/x$b;->f()Z
+    check-cast v0, Ljava/lang/ref/WeakReference;
 
-    move-result v0
+    if-eqz v0, :cond_0
 
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/x$1;->b:Landroid/support/v7/widget/x;
-
-    invoke-static {v0}, Landroid/support/v7/widget/x;->a(Landroid/support/v7/widget/x;)Landroid/support/v7/widget/x$b;
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/x$b;->d()V
+    if-nez v0, :cond_1
 
     :cond_0
-    const/4 v0, 0x1
+    :goto_0
+    return-void
 
-    return v0
+    :cond_1
+    iget-object v0, p0, Landroid/support/v7/widget/x$1;->c:Landroid/view/ViewTreeObserver$OnScrollChangedListener;
+
+    invoke-interface {v0}, Landroid/view/ViewTreeObserver$OnScrollChangedListener;->onScrollChanged()V
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method

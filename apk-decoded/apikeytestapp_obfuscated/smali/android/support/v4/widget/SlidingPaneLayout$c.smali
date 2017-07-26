@@ -1,5 +1,5 @@
 .class Landroid/support/v4/widget/SlidingPaneLayout$c;
-.super Landroid/support/v4/widget/ac$a;
+.super Landroid/support/v4/widget/ad$a;
 
 
 # annotations
@@ -23,7 +23,7 @@
 
     iput-object p1, p0, Landroid/support/v4/widget/SlidingPaneLayout$c;->a:Landroid/support/v4/widget/SlidingPaneLayout;
 
-    invoke-direct {p0}, Landroid/support/v4/widget/ac$a;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/widget/ad$a;-><init>()V
 
     return-void
 .end method
@@ -45,9 +45,9 @@
 
     iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$c;->a:Landroid/support/v4/widget/SlidingPaneLayout;
 
-    iget-object v0, v0, Landroid/support/v4/widget/SlidingPaneLayout;->e:Landroid/support/v4/widget/ac;
+    iget-object v0, v0, Landroid/support/v4/widget/SlidingPaneLayout;->e:Landroid/support/v4/widget/ad;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/ac;->b()I
+    invoke-virtual {v0}, Landroid/support/v4/widget/ad;->b()I
 
     move-result v0
 
@@ -184,13 +184,13 @@
     :goto_0
     iget-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout$c;->a:Landroid/support/v4/widget/SlidingPaneLayout;
 
-    iget-object v1, v1, Landroid/support/v4/widget/SlidingPaneLayout;->e:Landroid/support/v4/widget/ac;
+    iget-object v1, v1, Landroid/support/v4/widget/SlidingPaneLayout;->e:Landroid/support/v4/widget/ad;
 
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v2
 
-    invoke-virtual {v1, v0, v2}, Landroid/support/v4/widget/ac;->a(II)Z
+    invoke-virtual {v1, v0, v2}, Landroid/support/v4/widget/ad;->a(II)Z
 
     iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$c;->a:Landroid/support/v4/widget/SlidingPaneLayout;
 
@@ -384,13 +384,13 @@
 
     iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$c;->a:Landroid/support/v4/widget/SlidingPaneLayout;
 
-    iget-object v0, v0, Landroid/support/v4/widget/SlidingPaneLayout;->e:Landroid/support/v4/widget/ac;
+    iget-object v0, v0, Landroid/support/v4/widget/SlidingPaneLayout;->e:Landroid/support/v4/widget/ad;
 
     iget-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout$c;->a:Landroid/support/v4/widget/SlidingPaneLayout;
 
     iget-object v1, v1, Landroid/support/v4/widget/SlidingPaneLayout;->a:Landroid/view/View;
 
-    invoke-virtual {v0, v1, p2}, Landroid/support/v4/widget/ac;->a(Landroid/view/View;I)V
+    invoke-virtual {v0, v1, p2}, Landroid/support/v4/widget/ad;->a(Landroid/view/View;I)V
 
     return-void
 .end method

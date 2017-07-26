@@ -1,5 +1,8 @@
-.class public Landroid/support/v7/widget/bd;
+.class final Landroid/support/v7/widget/bd;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -11,270 +14,782 @@
 .end annotation
 
 
+# static fields
+.field static final a:Ljava/lang/ThreadLocal;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ThreadLocal",
+            "<",
+            "Landroid/support/v7/widget/bd;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field static e:Ljava/util/Comparator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Comparator",
+            "<",
+            "Landroid/support/v7/widget/bd$b;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field final a:Landroid/support/v7/view/menu/o;
+.field b:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v7/widget/RecyclerView;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field b:Landroid/support/v7/widget/bd$b;
+.field c:J
 
-.field c:Landroid/support/v7/widget/bd$a;
+.field d:J
 
-.field private final d:Landroid/content/Context;
-
-.field private final e:Landroid/support/v7/view/menu/h;
-
-.field private final f:Landroid/view/View;
-
-.field private g:Landroid/view/View$OnTouchListener;
+.field private f:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v7/widget/bd$b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/view/View;)V
+.method static constructor <clinit>()V
     .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroid/support/annotation/ad;
-        .end annotation
-    .end param
-    .param p2    # Landroid/view/View;
-        .annotation build Landroid/support/annotation/ad;
-        .end annotation
-    .end param
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    invoke-direct {p0, p1, p2, v0}, Landroid/support/v7/widget/bd;-><init>(Landroid/content/Context;Landroid/view/View;I)V
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    return-void
-.end method
+    sput-object v0, Landroid/support/v7/widget/bd;->a:Ljava/lang/ThreadLocal;
 
-.method public constructor <init>(Landroid/content/Context;Landroid/view/View;I)V
-    .locals 6
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroid/support/annotation/ad;
-        .end annotation
-    .end param
-    .param p2    # Landroid/view/View;
-        .annotation build Landroid/support/annotation/ad;
-        .end annotation
-    .end param
+    new-instance v0, Landroid/support/v7/widget/bd$1;
 
-    sget v4, Landroid/support/v7/a/b$b;->popupMenuStyle:I
+    invoke-direct {v0}, Landroid/support/v7/widget/bd$1;-><init>()V
 
-    const/4 v5, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move v3, p3
-
-    invoke-direct/range {v0 .. v5}, Landroid/support/v7/widget/bd;-><init>(Landroid/content/Context;Landroid/view/View;III)V
+    sput-object v0, Landroid/support/v7/widget/bd;->e:Ljava/util/Comparator;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/view/View;III)V
-    .locals 7
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroid/support/annotation/ad;
-        .end annotation
-    .end param
-    .param p2    # Landroid/view/View;
-        .annotation build Landroid/support/annotation/ad;
-        .end annotation
-    .end param
-    .param p4    # I
-        .annotation build Landroid/support/annotation/f;
-        .end annotation
-    .end param
-    .param p5    # I
-        .annotation build Landroid/support/annotation/ao;
-        .end annotation
-    .end param
+.method constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroid/support/v7/widget/bd;->d:Landroid/content/Context;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object p2, p0, Landroid/support/v7/widget/bd;->f:Landroid/view/View;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v0, Landroid/support/v7/view/menu/h;
+    iput-object v0, p0, Landroid/support/v7/widget/bd;->b:Ljava/util/ArrayList;
 
-    invoke-direct {v0, p1}, Landroid/support/v7/view/menu/h;-><init>(Landroid/content/Context;)V
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object v0, p0, Landroid/support/v7/widget/bd;->e:Landroid/support/v7/view/menu/h;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object v0, p0, Landroid/support/v7/widget/bd;->e:Landroid/support/v7/view/menu/h;
-
-    new-instance v1, Landroid/support/v7/widget/bd$1;
-
-    invoke-direct {v1, p0}, Landroid/support/v7/widget/bd$1;-><init>(Landroid/support/v7/widget/bd;)V
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/view/menu/h;->a(Landroid/support/v7/view/menu/h$a;)V
-
-    new-instance v0, Landroid/support/v7/view/menu/o;
-
-    iget-object v2, p0, Landroid/support/v7/widget/bd;->e:Landroid/support/v7/view/menu/h;
-
-    const/4 v4, 0x0
-
-    move-object v1, p1
-
-    move-object v3, p2
-
-    move v5, p4
-
-    move v6, p5
-
-    invoke-direct/range {v0 .. v6}, Landroid/support/v7/view/menu/o;-><init>(Landroid/content/Context;Landroid/support/v7/view/menu/h;Landroid/view/View;ZII)V
-
-    iput-object v0, p0, Landroid/support/v7/widget/bd;->a:Landroid/support/v7/view/menu/o;
-
-    iget-object v0, p0, Landroid/support/v7/widget/bd;->a:Landroid/support/v7/view/menu/o;
-
-    invoke-virtual {v0, p3}, Landroid/support/v7/view/menu/o;->a(I)V
-
-    iget-object v0, p0, Landroid/support/v7/widget/bd;->a:Landroid/support/v7/view/menu/o;
-
-    new-instance v1, Landroid/support/v7/widget/bd$2;
-
-    invoke-direct {v1, p0}, Landroid/support/v7/widget/bd$2;-><init>(Landroid/support/v7/widget/bd;)V
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/view/menu/o;->a(Landroid/widget/PopupWindow$OnDismissListener;)V
+    iput-object v0, p0, Landroid/support/v7/widget/bd;->f:Ljava/util/ArrayList;
 
     return-void
+.end method
+
+.method private a(Landroid/support/v7/widget/RecyclerView;IJ)Landroid/support/v7/widget/RecyclerView$w;
+    .locals 5
+
+    const/4 v3, 0x0
+
+    invoke-static {p1, p2}, Landroid/support/v7/widget/bd;->a(Landroid/support/v7/widget/RecyclerView;I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v1, p1, Landroid/support/v7/widget/RecyclerView;->u:Landroid/support/v7/widget/RecyclerView$o;
+
+    :try_start_0
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView;->p()V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, p2, v0, p3, p4}, Landroid/support/v7/widget/RecyclerView$o;->a(IZJ)Landroid/support/v7/widget/RecyclerView$w;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$w;->r()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$w;->p()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    iget-object v2, v0, Landroid/support/v7/widget/RecyclerView$w;->a:Landroid/view/View;
+
+    invoke-virtual {v1, v2}, Landroid/support/v7/widget/RecyclerView$o;->a(Landroid/view/View;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_1
+    :goto_1
+    invoke-virtual {p1, v3}, Landroid/support/v7/widget/RecyclerView;->b(Z)V
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v2, 0x0
+
+    :try_start_1
+    invoke-virtual {v1, v0, v2}, Landroid/support/v7/widget/RecyclerView$o;->a(Landroid/support/v7/widget/RecyclerView$w;Z)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {p1, v3}, Landroid/support/v7/widget/RecyclerView;->b(Z)V
+
+    throw v0
+.end method
+
+.method private a()V
+    .locals 11
+
+    const/4 v3, 0x0
+
+    iget-object v0, p0, Landroid/support/v7/widget/bd;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v7
+
+    move v2, v3
+
+    move v1, v3
+
+    :goto_0
+    if-ge v2, v7, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/bd;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getWindowVisibility()I
+
+    move-result v4
+
+    if-nez v4, :cond_6
+
+    iget-object v4, v0, Landroid/support/v7/widget/RecyclerView;->V:Landroid/support/v7/widget/bd$a;
+
+    invoke-virtual {v4, v0, v3}, Landroid/support/v7/widget/bd$a;->a(Landroid/support/v7/widget/RecyclerView;Z)V
+
+    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView;->V:Landroid/support/v7/widget/bd$a;
+
+    iget v0, v0, Landroid/support/v7/widget/bd$a;->d:I
+
+    add-int/2addr v0, v1
+
+    :goto_1
+    add-int/lit8 v1, v2, 0x1
+
+    move v2, v1
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Landroid/support/v7/widget/bd;->f:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->ensureCapacity(I)V
+
+    move v6, v3
+
+    move v1, v3
+
+    :goto_2
+    if-ge v6, v7, :cond_4
+
+    iget-object v0, p0, Landroid/support/v7/widget/bd;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getWindowVisibility()I
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    :goto_3
+    add-int/lit8 v0, v6, 0x1
+
+    move v6, v0
+
+    goto :goto_2
+
+    :cond_1
+    iget-object v8, v0, Landroid/support/v7/widget/RecyclerView;->V:Landroid/support/v7/widget/bd$a;
+
+    iget v2, v8, Landroid/support/v7/widget/bd$a;->a:I
+
+    invoke-static {v2}, Ljava/lang/Math;->abs(I)I
+
+    move-result v2
+
+    iget v4, v8, Landroid/support/v7/widget/bd$a;->b:I
+
+    invoke-static {v4}, Ljava/lang/Math;->abs(I)I
+
+    move-result v4
+
+    add-int v9, v2, v4
+
+    move v2, v3
+
+    move v4, v1
+
+    :goto_4
+    iget v1, v8, Landroid/support/v7/widget/bd$a;->d:I
+
+    mul-int/lit8 v1, v1, 0x2
+
+    if-ge v2, v1, :cond_5
+
+    iget-object v1, p0, Landroid/support/v7/widget/bd;->f:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-lt v4, v1, :cond_2
+
+    new-instance v1, Landroid/support/v7/widget/bd$b;
+
+    invoke-direct {v1}, Landroid/support/v7/widget/bd$b;-><init>()V
+
+    iget-object v5, p0, Landroid/support/v7/widget/bd;->f:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_5
+    iget-object v5, v8, Landroid/support/v7/widget/bd$a;->c:[I
+
+    add-int/lit8 v10, v2, 0x1
+
+    aget v10, v5, v10
+
+    if-gt v10, v9, :cond_3
+
+    const/4 v5, 0x1
+
+    :goto_6
+    iput-boolean v5, v1, Landroid/support/v7/widget/bd$b;->a:Z
+
+    iput v9, v1, Landroid/support/v7/widget/bd$b;->b:I
+
+    iput v10, v1, Landroid/support/v7/widget/bd$b;->c:I
+
+    iput-object v0, v1, Landroid/support/v7/widget/bd$b;->d:Landroid/support/v7/widget/RecyclerView;
+
+    iget-object v5, v8, Landroid/support/v7/widget/bd$a;->c:[I
+
+    aget v5, v5, v2
+
+    iput v5, v1, Landroid/support/v7/widget/bd$b;->e:I
+
+    add-int/lit8 v4, v4, 0x1
+
+    add-int/lit8 v1, v2, 0x2
+
+    move v2, v1
+
+    goto :goto_4
+
+    :cond_2
+    iget-object v1, p0, Landroid/support/v7/widget/bd;->f:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/support/v7/widget/bd$b;
+
+    goto :goto_5
+
+    :cond_3
+    move v5, v3
+
+    goto :goto_6
+
+    :cond_4
+    iget-object v0, p0, Landroid/support/v7/widget/bd;->f:Ljava/util/ArrayList;
+
+    sget-object v1, Landroid/support/v7/widget/bd;->e:Ljava/util/Comparator;
+
+    invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    return-void
+
+    :cond_5
+    move v1, v4
+
+    goto :goto_3
+
+    :cond_6
+    move v0, v1
+
+    goto :goto_1
+.end method
+
+.method private a(Landroid/support/v7/widget/RecyclerView;J)V
+    .locals 4
+    .param p1    # Landroid/support/v7/widget/RecyclerView;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+
+    if-nez p1, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-boolean v0, p1, Landroid/support/v7/widget/RecyclerView;->N:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView;->w:Landroid/support/v7/widget/ap;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/ap;->c()I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView;->d()V
+
+    :cond_2
+    iget-object v1, p1, Landroid/support/v7/widget/RecyclerView;->V:Landroid/support/v7/widget/bd$a;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v1, p1, v0}, Landroid/support/v7/widget/bd$a;->a(Landroid/support/v7/widget/RecyclerView;Z)V
+
+    iget v0, v1, Landroid/support/v7/widget/bd$a;->d:I
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    const-string v0, "RV Nested Prefetch"
+
+    invoke-static {v0}, Landroid/support/v4/os/n;->a(Ljava/lang/String;)V
+
+    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView;->W:Landroid/support/v7/widget/RecyclerView$t;
+
+    iget-object v2, p1, Landroid/support/v7/widget/RecyclerView;->C:Landroid/support/v7/widget/RecyclerView$a;
+
+    invoke-virtual {v0, v2}, Landroid/support/v7/widget/RecyclerView$t;->a(Landroid/support/v7/widget/RecyclerView$a;)V
+
+    const/4 v0, 0x0
+
+    :goto_1
+    iget v2, v1, Landroid/support/v7/widget/bd$a;->d:I
+
+    mul-int/lit8 v2, v2, 0x2
+
+    if-ge v0, v2, :cond_3
+
+    iget-object v2, v1, Landroid/support/v7/widget/bd$a;->c:[I
+
+    aget v2, v2, v0
+
+    invoke-direct {p0, p1, v2, p2, p3}, Landroid/support/v7/widget/bd;->a(Landroid/support/v7/widget/RecyclerView;IJ)Landroid/support/v7/widget/RecyclerView$w;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    add-int/lit8 v0, v0, 0x2
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {}, Landroid/support/v4/os/n;->a()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {}, Landroid/support/v4/os/n;->a()V
+
+    throw v0
+.end method
+
+.method private a(Landroid/support/v7/widget/bd$b;J)V
+    .locals 4
+
+    iget-boolean v0, p1, Landroid/support/v7/widget/bd$b;->a:Z
+
+    if-eqz v0, :cond_1
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    :goto_0
+    iget-object v2, p1, Landroid/support/v7/widget/bd$b;->d:Landroid/support/v7/widget/RecyclerView;
+
+    iget v3, p1, Landroid/support/v7/widget/bd$b;->e:I
+
+    invoke-direct {p0, v2, v3, v0, v1}, Landroid/support/v7/widget/bd;->a(Landroid/support/v7/widget/RecyclerView;IJ)Landroid/support/v7/widget/RecyclerView$w;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, v0, Landroid/support/v7/widget/RecyclerView$w;->b:Ljava/lang/ref/WeakReference;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$w;->r()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$w;->p()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView$w;->b:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/RecyclerView;
+
+    invoke-direct {p0, v0, p2, p3}, Landroid/support/v7/widget/bd;->a(Landroid/support/v7/widget/RecyclerView;J)V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    move-wide v0, p2
+
+    goto :goto_0
+.end method
+
+.method static a(Landroid/support/v7/widget/RecyclerView;I)Z
+    .locals 5
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Landroid/support/v7/widget/RecyclerView;->w:Landroid/support/v7/widget/ap;
+
+    invoke-virtual {v1}, Landroid/support/v7/widget/ap;->c()I
+
+    move-result v2
+
+    move v1, v0
+
+    :goto_0
+    if-ge v1, v2, :cond_0
+
+    iget-object v3, p0, Landroid/support/v7/widget/RecyclerView;->w:Landroid/support/v7/widget/ap;
+
+    invoke-virtual {v3, v1}, Landroid/support/v7/widget/ap;->d(I)Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-static {v3}, Landroid/support/v7/widget/RecyclerView;->e(Landroid/view/View;)Landroid/support/v7/widget/RecyclerView$w;
+
+    move-result-object v3
+
+    iget v4, v3, Landroid/support/v7/widget/RecyclerView$w;->c:I
+
+    if-ne v4, p1, :cond_1
+
+    invoke-virtual {v3}, Landroid/support/v7/widget/RecyclerView$w;->p()Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    const/4 v0, 0x1
+
+    :cond_0
+    return v0
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+.end method
+
+.method private b(J)V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    iget-object v0, p0, Landroid/support/v7/widget/bd;->f:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/bd;->f:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/bd$b;
+
+    iget-object v2, v0, Landroid/support/v7/widget/bd$b;->d:Landroid/support/v7/widget/RecyclerView;
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    return-void
+
+    :cond_1
+    invoke-direct {p0, v0, p1, p2}, Landroid/support/v7/widget/bd;->a(Landroid/support/v7/widget/bd$b;J)V
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/bd$b;->a()V
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public a()I
+.method a(J)V
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v7/widget/bd;->a:Landroid/support/v7/view/menu/o;
+    invoke-direct {p0}, Landroid/support/v7/widget/bd;->a()V
 
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/o;->b()I
+    invoke-direct {p0, p1, p2}, Landroid/support/v7/widget/bd;->b(J)V
+
+    return-void
+.end method
+
+.method public a(Landroid/support/v7/widget/RecyclerView;)V
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/widget/bd;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method a(Landroid/support/v7/widget/RecyclerView;II)V
+    .locals 4
+
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView;->isAttachedToWindow()Z
 
     move-result v0
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public a(I)V
-    .locals 1
+    iget-wide v0, p0, Landroid/support/v7/widget/bd;->c:J
 
-    iget-object v0, p0, Landroid/support/v7/widget/bd;->a:Landroid/support/v7/view/menu/o;
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/view/menu/o;->a(I)V
-
-    return-void
-.end method
-
-.method public a(Landroid/support/v7/widget/bd$a;)V
-    .locals 0
-    .param p1    # Landroid/support/v7/widget/bd$a;
-        .annotation build Landroid/support/annotation/ae;
-        .end annotation
-    .end param
-
-    iput-object p1, p0, Landroid/support/v7/widget/bd;->c:Landroid/support/v7/widget/bd$a;
-
-    return-void
-.end method
-
-.method public a(Landroid/support/v7/widget/bd$b;)V
-    .locals 0
-    .param p1    # Landroid/support/v7/widget/bd$b;
-        .annotation build Landroid/support/annotation/ae;
-        .end annotation
-    .end param
-
-    iput-object p1, p0, Landroid/support/v7/widget/bd;->b:Landroid/support/v7/widget/bd$b;
-
-    return-void
-.end method
-
-.method public b()Landroid/view/View$OnTouchListener;
-    .locals 2
-    .annotation build Landroid/support/annotation/ad;
-    .end annotation
-
-    iget-object v0, p0, Landroid/support/v7/widget/bd;->g:Landroid/view/View$OnTouchListener;
+    cmp-long v0, v0, v2
 
     if-nez v0, :cond_0
 
-    new-instance v0, Landroid/support/v7/widget/bd$3;
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView;->getNanoTime()J
 
-    iget-object v1, p0, Landroid/support/v7/widget/bd;->f:Landroid/view/View;
+    move-result-wide v0
 
-    invoke-direct {v0, p0, v1}, Landroid/support/v7/widget/bd$3;-><init>(Landroid/support/v7/widget/bd;Landroid/view/View;)V
+    iput-wide v0, p0, Landroid/support/v7/widget/bd;->c:J
 
-    iput-object v0, p0, Landroid/support/v7/widget/bd;->g:Landroid/view/View$OnTouchListener;
+    invoke-virtual {p1, p0}, Landroid/support/v7/widget/RecyclerView;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/bd;->g:Landroid/view/View$OnTouchListener;
+    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView;->V:Landroid/support/v7/widget/bd$a;
 
-    return-object v0
+    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/bd$a;->a(II)V
+
+    return-void
 .end method
 
-.method public b(I)V
-    .locals 2
-    .param p1    # I
-        .annotation build Landroid/support/annotation/ac;
-        .end annotation
-    .end param
+.method public b(Landroid/support/v7/widget/RecyclerView;)V
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/support/v7/widget/bd;->d()Landroid/view/MenuInflater;
+    iget-object v0, p0, Landroid/support/v7/widget/bd;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public run()V
+    .locals 8
+
+    const-wide/16 v6, 0x0
+
+    :try_start_0
+    const-string v0, "RV Prefetch"
+
+    invoke-static {v0}, Landroid/support/v4/os/n;->a(Ljava/lang/String;)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/bd;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-wide v6, p0, Landroid/support/v7/widget/bd;->c:J
+
+    invoke-static {}, Landroid/support/v4/os/n;->a()V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    :try_start_1
+    iget-object v0, p0, Landroid/support/v7/widget/bd;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    const/4 v0, 0x0
+
+    move v4, v0
+
+    move-wide v2, v6
+
+    :goto_1
+    if-ge v4, v5, :cond_1
+
+    iget-object v0, p0, Landroid/support/v7/widget/bd;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v7/widget/bd;->e:Landroid/support/v7/view/menu/h;
+    check-cast v0, Landroid/support/v7/widget/RecyclerView;
 
-    invoke-virtual {v0, p1, v1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getWindowVisibility()I
 
-    return-void
-.end method
+    move-result v1
 
-.method public c()Landroid/view/Menu;
-    .locals 1
-    .annotation build Landroid/support/annotation/ad;
-    .end annotation
+    if-nez v1, :cond_3
 
-    iget-object v0, p0, Landroid/support/v7/widget/bd;->e:Landroid/support/v7/view/menu/h;
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getDrawingTime()J
 
-    return-object v0
-.end method
+    move-result-wide v0
 
-.method public d()Landroid/view/MenuInflater;
-    .locals 2
-    .annotation build Landroid/support/annotation/ad;
-    .end annotation
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->max(JJ)J
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    new-instance v0, Landroid/support/v7/view/g;
+    move-result-wide v0
 
-    iget-object v1, p0, Landroid/support/v7/widget/bd;->d:Landroid/content/Context;
+    :goto_2
+    add-int/lit8 v2, v4, 0x1
 
-    invoke-direct {v0, v1}, Landroid/support/v7/view/g;-><init>(Landroid/content/Context;)V
+    move v4, v2
 
-    return-object v0
-.end method
+    move-wide v2, v0
 
-.method public e()V
-    .locals 1
+    goto :goto_1
 
-    iget-object v0, p0, Landroid/support/v7/widget/bd;->a:Landroid/support/v7/view/menu/o;
+    :cond_1
+    cmp-long v0, v2, v6
 
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/o;->c()V
+    if-nez v0, :cond_2
 
-    return-void
-.end method
+    iput-wide v6, p0, Landroid/support/v7/widget/bd;->c:J
 
-.method public f()V
-    .locals 1
+    invoke-static {}, Landroid/support/v4/os/n;->a()V
 
-    iget-object v0, p0, Landroid/support/v7/widget/bd;->a:Landroid/support/v7/view/menu/o;
+    goto :goto_0
 
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/o;->a()V
+    :cond_2
+    :try_start_2
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    return-void
+    invoke-virtual {v0, v2, v3}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Landroid/support/v7/widget/bd;->d:J
+
+    add-long/2addr v0, v2
+
+    invoke-virtual {p0, v0, v1}, Landroid/support/v7/widget/bd;->a(J)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    iput-wide v6, p0, Landroid/support/v7/widget/bd;->c:J
+
+    invoke-static {}, Landroid/support/v4/os/n;->a()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    iput-wide v6, p0, Landroid/support/v7/widget/bd;->c:J
+
+    invoke-static {}, Landroid/support/v4/os/n;->a()V
+
+    throw v0
+
+    :cond_3
+    move-wide v0, v2
+
+    goto :goto_2
 .end method

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v7/view/menu/h$a;
+.implements Landroid/support/v7/h/a/k$a;
 
 
 # annotations
@@ -33,13 +33,13 @@
 
 
 # virtual methods
-.method public a(Landroid/support/v7/view/menu/h;)V
+.method public a(Landroid/support/v7/h/a/k;)V
     .locals 0
 
     return-void
 .end method
 
-.method public a(Landroid/support/v7/view/menu/h;Landroid/view/MenuItem;)Z
+.method public a(Landroid/support/v7/h/a/k;Landroid/view/MenuItem;)Z
     .locals 1
 
     iget-object v0, p0, Landroid/support/design/widget/NavigationView$1;->a:Landroid/support/design/widget/NavigationView;

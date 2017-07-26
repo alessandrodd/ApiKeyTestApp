@@ -45,9 +45,9 @@
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$a;->a:Landroid/support/design/widget/TextInputLayout;
 
-    iget-object v0, v0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, v0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/g;->k()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Landroid/support/design/widget/h;->k()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -132,9 +132,9 @@
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$a;->a:Landroid/support/design/widget/TextInputLayout;
 
-    iget-object v0, v0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, v0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/g;->k()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Landroid/support/design/widget/h;->k()Ljava/lang/CharSequence;
 
     move-result-object v0
 

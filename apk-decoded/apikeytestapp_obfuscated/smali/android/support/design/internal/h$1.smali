@@ -2,12 +2,12 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/view/t;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroid/support/design/internal/h;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/support/design/internal/h;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,82 +33,57 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;Landroid/support/v4/view/al;)Landroid/support/v4/view/al;
-    .locals 5
+.method public onClick(Landroid/view/View;)V
+    .locals 4
+
+    const/4 v3, 0x0
+
+    check-cast p1, Landroid/support/design/internal/g;
 
     iget-object v0, p0, Landroid/support/design/internal/h$1;->a:Landroid/support/design/internal/h;
 
-    iget-object v0, v0, Landroid/support/design/internal/h;->b:Landroid/graphics/Rect;
+    const/4 v1, 0x1
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0, v1}, Landroid/support/design/internal/h;->b(Z)V
 
-    iget-object v0, p0, Landroid/support/design/internal/h$1;->a:Landroid/support/design/internal/h;
+    invoke-virtual {p1}, Landroid/support/design/internal/g;->getItemData()Landroid/support/v7/h/a/n;
 
-    new-instance v1, Landroid/graphics/Rect;
+    move-result-object v0
 
-    invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
+    iget-object v1, p0, Landroid/support/design/internal/h$1;->a:Landroid/support/design/internal/h;
 
-    iput-object v1, v0, Landroid/support/design/internal/h;->b:Landroid/graphics/Rect;
+    iget-object v1, v1, Landroid/support/design/internal/h;->b:Landroid/support/v7/h/a/k;
+
+    iget-object v2, p0, Landroid/support/design/internal/h$1;->a:Landroid/support/design/internal/h;
+
+    invoke-virtual {v1, v0, v2, v3}, Landroid/support/v7/h/a/k;->a(Landroid/view/MenuItem;Landroid/support/v7/h/a/s;I)Z
+
+    move-result v1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/support/v7/h/a/n;->isCheckable()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Landroid/support/design/internal/h$1;->a:Landroid/support/design/internal/h;
+
+    iget-object v1, v1, Landroid/support/design/internal/h;->c:Landroid/support/design/internal/h$b;
+
+    invoke-virtual {v1, v0}, Landroid/support/design/internal/h$b;->a(Landroid/support/v7/h/a/n;)V
 
     :cond_0
     iget-object v0, p0, Landroid/support/design/internal/h$1;->a:Landroid/support/design/internal/h;
 
-    iget-object v0, v0, Landroid/support/design/internal/h;->b:Landroid/graphics/Rect;
-
-    invoke-virtual {p2}, Landroid/support/v4/view/al;->a()I
-
-    move-result v1
-
-    invoke-virtual {p2}, Landroid/support/v4/view/al;->b()I
-
-    move-result v2
-
-    invoke-virtual {p2}, Landroid/support/v4/view/al;->c()I
-
-    move-result v3
-
-    invoke-virtual {p2}, Landroid/support/v4/view/al;->d()I
-
-    move-result v4
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
+    invoke-virtual {v0, v3}, Landroid/support/design/internal/h;->b(Z)V
 
     iget-object v0, p0, Landroid/support/design/internal/h$1;->a:Landroid/support/design/internal/h;
 
-    invoke-virtual {v0, p2}, Landroid/support/design/internal/h;->a(Landroid/support/v4/view/al;)V
+    invoke-virtual {v0, v3}, Landroid/support/design/internal/h;->a(Z)V
 
-    iget-object v1, p0, Landroid/support/design/internal/h$1;->a:Landroid/support/design/internal/h;
-
-    invoke-virtual {p2}, Landroid/support/v4/view/al;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Landroid/support/design/internal/h$1;->a:Landroid/support/design/internal/h;
-
-    iget-object v0, v0, Landroid/support/design/internal/h;->a:Landroid/graphics/drawable/Drawable;
-
-    if-nez v0, :cond_2
-
-    :cond_1
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-virtual {v1, v0}, Landroid/support/design/internal/h;->setWillNotDraw(Z)V
-
-    iget-object v0, p0, Landroid/support/design/internal/h$1;->a:Landroid/support/design/internal/h;
-
-    invoke-static {v0}, Landroid/support/v4/view/ac;->d(Landroid/view/View;)V
-
-    invoke-virtual {p2}, Landroid/support/v4/view/al;->i()Landroid/support/v4/view/al;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

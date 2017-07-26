@@ -24,7 +24,7 @@
 
 .field private B:Ljava/lang/CharSequence;
 
-.field private C:Landroid/support/design/widget/CheckableImageButton;
+.field private C:Landroid/support/design/widget/e;
 
 .field private D:Z
 
@@ -62,7 +62,7 @@
 
 .field c:Z
 
-.field final d:Landroid/support/design/widget/g;
+.field final d:Landroid/support/design/widget/h;
 
 .field private final h:Landroid/widget/FrameLayout;
 
@@ -141,13 +141,13 @@
 
     iput-object v0, p0, Landroid/support/design/widget/TextInputLayout;->m:Landroid/graphics/Rect;
 
-    new-instance v0, Landroid/support/design/widget/g;
+    new-instance v0, Landroid/support/design/widget/h;
 
-    invoke-direct {v0, p0}, Landroid/support/design/widget/g;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p0}, Landroid/support/design/widget/h;-><init>(Landroid/view/View;)V
 
-    iput-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iput-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-static {p1}, Landroid/support/design/widget/v;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Landroid/support/design/widget/x;->a(Landroid/content/Context;)V
 
     invoke-virtual {p0, v5}, Landroid/support/design/widget/TextInputLayout;->setOrientation(I)V
 
@@ -169,37 +169,37 @@
 
     invoke-virtual {p0, v0}, Landroid/support/design/widget/TextInputLayout;->addView(Landroid/view/View;)V
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     sget-object v1, Landroid/support/design/widget/a;->b:Landroid/view/animation/Interpolator;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/g;->a(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/h;->a(Landroid/view/animation/Interpolator;)V
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     new-instance v1, Landroid/view/animation/AccelerateInterpolator;
 
     invoke-direct {v1}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/g;->b(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/h;->b(Landroid/view/animation/Interpolator;)V
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     const v1, 0x800033
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/g;->b(I)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/h;->b(I)V
 
     sget-object v0, Landroid/support/design/b$m;->TextInputLayout:[I
 
     sget v1, Landroid/support/design/b$l;->Widget_Design_TextInputLayout:I
 
-    invoke-static {p1, p2, v0, p3, v1}, Landroid/support/v7/widget/bw;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/support/v7/widget/bw;
+    invoke-static {p1, p2, v0, p3, v1}, Landroid/support/v7/widget/ci;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/support/v7/widget/ci;
 
     move-result-object v0
 
     sget v1, Landroid/support/design/b$m;->TextInputLayout_hintEnabled:I
 
-    invoke-virtual {v0, v1, v5}, Landroid/support/v7/widget/bw;->a(IZ)Z
+    invoke-virtual {v0, v1, v5}, Landroid/support/v7/widget/ci;->a(IZ)Z
 
     move-result v1
 
@@ -207,7 +207,7 @@
 
     sget v1, Landroid/support/design/b$m;->TextInputLayout_android_hint:I
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bw;->d(I)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/ci;->d(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -215,7 +215,7 @@
 
     sget v1, Landroid/support/design/b$m;->TextInputLayout_hintAnimationEnabled:I
 
-    invoke-virtual {v0, v1, v5}, Landroid/support/v7/widget/bw;->a(IZ)Z
+    invoke-virtual {v0, v1, v5}, Landroid/support/v7/widget/ci;->a(IZ)Z
 
     move-result v1
 
@@ -223,7 +223,7 @@
 
     sget v1, Landroid/support/design/b$m;->TextInputLayout_android_textColorHint:I
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bw;->j(I)Z
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/ci;->j(I)Z
 
     move-result v1
 
@@ -231,7 +231,7 @@
 
     sget v1, Landroid/support/design/b$m;->TextInputLayout_android_textColorHint:I
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bw;->g(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/ci;->g(I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
@@ -242,7 +242,7 @@
     :cond_0
     sget v1, Landroid/support/design/b$m;->TextInputLayout_hintTextAppearance:I
 
-    invoke-virtual {v0, v1, v6}, Landroid/support/v7/widget/bw;->g(II)I
+    invoke-virtual {v0, v1, v6}, Landroid/support/v7/widget/ci;->g(II)I
 
     move-result v1
 
@@ -250,7 +250,7 @@
 
     sget v1, Landroid/support/design/b$m;->TextInputLayout_hintTextAppearance:I
 
-    invoke-virtual {v0, v1, v4}, Landroid/support/v7/widget/bw;->g(II)I
+    invoke-virtual {v0, v1, v4}, Landroid/support/v7/widget/ci;->g(II)I
 
     move-result v1
 
@@ -259,7 +259,7 @@
     :cond_1
     sget v1, Landroid/support/design/b$m;->TextInputLayout_errorTextAppearance:I
 
-    invoke-virtual {v0, v1, v4}, Landroid/support/v7/widget/bw;->g(II)I
+    invoke-virtual {v0, v1, v4}, Landroid/support/v7/widget/ci;->g(II)I
 
     move-result v1
 
@@ -267,19 +267,19 @@
 
     sget v1, Landroid/support/design/b$m;->TextInputLayout_errorEnabled:I
 
-    invoke-virtual {v0, v1, v4}, Landroid/support/v7/widget/bw;->a(IZ)Z
+    invoke-virtual {v0, v1, v4}, Landroid/support/v7/widget/ci;->a(IZ)Z
 
     move-result v1
 
     sget v2, Landroid/support/design/b$m;->TextInputLayout_counterEnabled:I
 
-    invoke-virtual {v0, v2, v4}, Landroid/support/v7/widget/bw;->a(IZ)Z
+    invoke-virtual {v0, v2, v4}, Landroid/support/v7/widget/ci;->a(IZ)Z
 
     move-result v2
 
     sget v3, Landroid/support/design/b$m;->TextInputLayout_counterMaxLength:I
 
-    invoke-virtual {v0, v3, v6}, Landroid/support/v7/widget/bw;->a(II)I
+    invoke-virtual {v0, v3, v6}, Landroid/support/v7/widget/ci;->a(II)I
 
     move-result v3
 
@@ -287,7 +287,7 @@
 
     sget v3, Landroid/support/design/b$m;->TextInputLayout_counterTextAppearance:I
 
-    invoke-virtual {v0, v3, v4}, Landroid/support/v7/widget/bw;->g(II)I
+    invoke-virtual {v0, v3, v4}, Landroid/support/v7/widget/ci;->g(II)I
 
     move-result v3
 
@@ -295,7 +295,7 @@
 
     sget v3, Landroid/support/design/b$m;->TextInputLayout_counterOverflowTextAppearance:I
 
-    invoke-virtual {v0, v3, v4}, Landroid/support/v7/widget/bw;->g(II)I
+    invoke-virtual {v0, v3, v4}, Landroid/support/v7/widget/ci;->g(II)I
 
     move-result v3
 
@@ -303,7 +303,7 @@
 
     sget v3, Landroid/support/design/b$m;->TextInputLayout_passwordToggleEnabled:I
 
-    invoke-virtual {v0, v3, v4}, Landroid/support/v7/widget/bw;->a(IZ)Z
+    invoke-virtual {v0, v3, v4}, Landroid/support/v7/widget/ci;->a(IZ)Z
 
     move-result v3
 
@@ -311,7 +311,7 @@
 
     sget v3, Landroid/support/design/b$m;->TextInputLayout_passwordToggleDrawable:I
 
-    invoke-virtual {v0, v3}, Landroid/support/v7/widget/bw;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v3}, Landroid/support/v7/widget/ci;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
@@ -319,7 +319,7 @@
 
     sget v3, Landroid/support/design/b$m;->TextInputLayout_passwordToggleContentDescription:I
 
-    invoke-virtual {v0, v3}, Landroid/support/v7/widget/bw;->d(I)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v3}, Landroid/support/v7/widget/ci;->d(I)Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -327,7 +327,7 @@
 
     sget v3, Landroid/support/design/b$m;->TextInputLayout_passwordToggleTint:I
 
-    invoke-virtual {v0, v3}, Landroid/support/v7/widget/bw;->j(I)Z
+    invoke-virtual {v0, v3}, Landroid/support/v7/widget/ci;->j(I)Z
 
     move-result v3
 
@@ -337,7 +337,7 @@
 
     sget v3, Landroid/support/design/b$m;->TextInputLayout_passwordToggleTint:I
 
-    invoke-virtual {v0, v3}, Landroid/support/v7/widget/bw;->g(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, v3}, Landroid/support/v7/widget/ci;->g(I)Landroid/content/res/ColorStateList;
 
     move-result-object v3
 
@@ -346,7 +346,7 @@
     :cond_2
     sget v3, Landroid/support/design/b$m;->TextInputLayout_passwordToggleTintMode:I
 
-    invoke-virtual {v0, v3}, Landroid/support/v7/widget/bw;->j(I)Z
+    invoke-virtual {v0, v3}, Landroid/support/v7/widget/ci;->j(I)Z
 
     move-result v3
 
@@ -356,20 +356,20 @@
 
     sget v3, Landroid/support/design/b$m;->TextInputLayout_passwordToggleTintMode:I
 
-    invoke-virtual {v0, v3, v6}, Landroid/support/v7/widget/bw;->a(II)I
+    invoke-virtual {v0, v3, v6}, Landroid/support/v7/widget/ci;->a(II)I
 
     move-result v3
 
     const/4 v4, 0x0
 
-    invoke-static {v3, v4}, Landroid/support/design/widget/z;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
+    invoke-static {v3, v4}, Landroid/support/design/widget/ab;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v3
 
     iput-object v3, p0, Landroid/support/design/widget/TextInputLayout;->I:Landroid/graphics/PorterDuff$Mode;
 
     :cond_3
-    invoke-virtual {v0}, Landroid/support/v7/widget/bw;->e()V
+    invoke-virtual {v0}, Landroid/support/v7/widget/ci;->e()V
 
     invoke-virtual {p0, v1}, Landroid/support/design/widget/TextInputLayout;->setErrorEnabled(Z)V
 
@@ -494,13 +494,13 @@
 
     invoke-virtual {p0, v0, v1, v2}, Landroid/support/design/widget/TextInputLayout;->addView(Landroid/view/View;II)V
 
-    new-instance v0, Landroid/support/v4/widget/Space;
+    new-instance v0, Landroid/support/v4/widget/x;
 
     invoke-virtual {p0}, Landroid/support/design/widget/TextInputLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroid/support/v4/widget/Space;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Landroid/support/v4/widget/x;-><init>(Landroid/content/Context;)V
 
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -798,9 +798,9 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/g;->c(F)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/h;->c(F)V
 
     goto :goto_0
 .end method
@@ -843,9 +843,9 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/g;->c(F)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/h;->c(F)V
 
     goto :goto_0
 .end method
@@ -878,9 +878,9 @@
     :cond_0
     iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->l:Landroid/graphics/Paint;
 
-    iget-object v2, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v2, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v2}, Landroid/support/design/widget/g;->d()Landroid/graphics/Typeface;
+    invoke-virtual {v2}, Landroid/support/design/widget/h;->d()Landroid/graphics/Typeface;
 
     move-result-object v2
 
@@ -888,9 +888,9 @@
 
     iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->l:Landroid/graphics/Paint;
 
-    iget-object v2, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v2, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v2}, Landroid/support/design/widget/g;->h()F
+    invoke-virtual {v2}, Landroid/support/design/widget/h;->h()F
 
     move-result v2
 
@@ -978,7 +978,7 @@
 
     invoke-direct {p0}, Landroid/support/design/widget/TextInputLayout;->k()V
 
-    invoke-static {v0}, Landroid/support/v7/widget/am;->c(Landroid/graphics/drawable/Drawable;)Z
+    invoke-static {v0}, Landroid/support/v7/widget/aw;->c(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v1
 
@@ -1005,7 +1005,7 @@
 
     sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {v1, v2}, Landroid/support/v7/widget/l;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+    invoke-static {v1, v2}, Landroid/support/v7/widget/r;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
 
     move-result-object v1
 
@@ -1030,7 +1030,7 @@
 
     sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {v1, v2}, Landroid/support/v7/widget/l;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+    invoke-static {v1, v2}, Landroid/support/v7/widget/r;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
 
     move-result-object v1
 
@@ -1096,7 +1096,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroid/support/design/widget/j;->a(Landroid/graphics/drawable/DrawableContainer;Landroid/graphics/drawable/Drawable$ConstantState;)Z
+    invoke-static {v0, v2}, Landroid/support/design/widget/k;->a(Landroid/graphics/drawable/DrawableContainer;Landroid/graphics/drawable/Drawable$ConstantState;)Z
 
     move-result v0
 
@@ -1144,7 +1144,7 @@
 
     if-eqz v0, :cond_6
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     if-nez v0, :cond_2
 
@@ -1164,35 +1164,35 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/design/widget/CheckableImageButton;
+    check-cast v0, Landroid/support/design/widget/e;
 
-    iput-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iput-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->A:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/CheckableImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/e;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->B:Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/CheckableImageButton;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/e;->setContentDescription(Ljava/lang/CharSequence;)V
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->h:Landroid/widget/FrameLayout;
 
-    iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     new-instance v1, Landroid/support/design/widget/TextInputLayout$4;
 
     invoke-direct {v1, p0}, Landroid/support/design/widget/TextInputLayout$4;-><init>(Landroid/support/design/widget/TextInputLayout;)V
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/CheckableImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/e;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_2
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->a:Landroid/widget/EditText;
@@ -1209,7 +1209,7 @@
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->a:Landroid/widget/EditText;
 
-    iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     invoke-static {v1}, Landroid/support/v4/view/ac;->z(Landroid/view/View;)I
 
@@ -1218,15 +1218,15 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setMinimumHeight(I)V
 
     :cond_3
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
-    invoke-virtual {v0, v3}, Landroid/support/design/widget/CheckableImageButton;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/support/design/widget/e;->setVisibility(I)V
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     iget-boolean v1, p0, Landroid/support/design/widget/TextInputLayout;->D:Z
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/CheckableImageButton;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/e;->setChecked(Z)V
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->E:Landroid/graphics/drawable/Drawable;
 
@@ -1241,9 +1241,9 @@
     :cond_4
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->E:Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
-    invoke-virtual {v1}, Landroid/support/design/widget/CheckableImageButton;->getMeasuredWidth()I
+    invoke-virtual {v1}, Landroid/support/design/widget/e;->getMeasuredWidth()I
 
     move-result v1
 
@@ -1251,7 +1251,7 @@
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->a:Landroid/widget/EditText;
 
-    invoke-static {v0}, Landroid/support/v4/widget/z;->c(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, Landroid/support/v4/widget/aa;->c(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -1276,9 +1276,9 @@
 
     aget-object v0, v0, v6
 
-    invoke-static {v1, v2, v3, v4, v0}, Landroid/support/v4/widget/z;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v1, v2, v3, v4, v0}, Landroid/support/v4/widget/aa;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->a:Landroid/widget/EditText;
 
@@ -1304,28 +1304,28 @@
 
     move-result v4
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/support/design/widget/CheckableImageButton;->setPadding(IIII)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/support/design/widget/e;->setPadding(IIII)V
 
     goto/16 :goto_0
 
     :cond_6
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     if-eqz v0, :cond_7
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/CheckableImageButton;->getVisibility()I
+    invoke-virtual {v0}, Landroid/support/design/widget/e;->getVisibility()I
 
     move-result v0
 
     if-nez v0, :cond_7
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/CheckableImageButton;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/e;->setVisibility(I)V
 
     :cond_7
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->E:Landroid/graphics/drawable/Drawable;
@@ -1334,7 +1334,7 @@
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->a:Landroid/widget/EditText;
 
-    invoke-static {v0}, Landroid/support/v4/widget/z;->c(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, Landroid/support/v4/widget/aa;->c(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -1354,7 +1354,7 @@
 
     aget-object v0, v0, v6
 
-    invoke-static {v1, v2, v3, v4, v0}, Landroid/support/v4/widget/z;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v1, v2, v3, v4, v0}, Landroid/support/v4/widget/aa;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     const/4 v0, 0x0
 
@@ -1470,13 +1470,13 @@
     invoke-static {v0, v1}, Landroid/support/v4/d/a/a;->a(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_2
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/CheckableImageButton;->getDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Landroid/support/design/widget/e;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -1484,11 +1484,11 @@
 
     if-eq v0, v1, :cond_3
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->A:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/CheckableImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/e;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_3
     return-void
@@ -1510,7 +1510,7 @@
     throw v0
 
     :cond_0
-    instance-of v0, p1, Landroid/support/design/widget/u;
+    instance-of v0, p1, Landroid/support/design/widget/w;
 
     if-nez v0, :cond_1
 
@@ -1529,7 +1529,7 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->a:Landroid/widget/EditText;
 
@@ -1537,10 +1537,10 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/g;->c(Landroid/graphics/Typeface;)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/h;->c(Landroid/graphics/Typeface;)V
 
     :cond_2
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->a:Landroid/widget/EditText;
 
@@ -1548,7 +1548,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/g;->a(F)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/h;->a(F)V
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->a:Landroid/widget/EditText;
 
@@ -1556,17 +1556,17 @@
 
     move-result v0
 
-    iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     and-int/lit8 v2, v0, -0x71
 
     or-int/lit8 v2, v2, 0x30
 
-    invoke-virtual {v1, v2}, Landroid/support/design/widget/g;->b(I)V
+    invoke-virtual {v1, v2}, Landroid/support/design/widget/h;->b(I)V
 
-    iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v1, v0}, Landroid/support/design/widget/g;->a(I)V
+    invoke-virtual {v1, v0}, Landroid/support/design/widget/h;->a(I)V
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->a:Landroid/widget/EditText;
 
@@ -1660,9 +1660,9 @@
 
     iput-object p1, p0, Landroid/support/design/widget/TextInputLayout;->k:Ljava/lang/CharSequence;
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v0, p1}, Landroid/support/design/widget/g;->a(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Landroid/support/design/widget/h;->a(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -1674,9 +1674,9 @@
     .annotation build Landroid/support/annotation/as;
     .end annotation
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/g;->g()F
+    invoke-virtual {v0}, Landroid/support/design/widget/h;->g()F
 
     move-result v0
 
@@ -1727,9 +1727,9 @@
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v3, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v3}, Landroid/support/design/widget/g;->g()F
+    invoke-virtual {v3}, Landroid/support/design/widget/h;->g()F
 
     move-result v3
 
@@ -1812,7 +1812,7 @@
     iget v0, p0, Landroid/support/design/widget/TextInputLayout;->x:I
 
     :goto_2
-    invoke-static {v4, v0}, Landroid/support/v4/widget/z;->a(Landroid/widget/TextView;I)V
+    invoke-static {v4, v0}, Landroid/support/v4/widget/aa;->a(Landroid/widget/TextView;I)V
 
     :cond_2
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->u:Landroid/widget/TextView;
@@ -1925,11 +1925,11 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v2, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     iget-object v5, p0, Landroid/support/design/widget/TextInputLayout;->K:Landroid/content/res/ColorStateList;
 
-    invoke-virtual {v2, v5}, Landroid/support/design/widget/g;->b(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v2, v5}, Landroid/support/design/widget/h;->b(Landroid/content/res/ColorStateList;)V
 
     :cond_0
     if-eqz v3, :cond_7
@@ -1942,7 +1942,7 @@
 
     if-eqz v2, :cond_7
 
-    iget-object v2, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v2, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     iget-object v3, p0, Landroid/support/design/widget/TextInputLayout;->u:Landroid/widget/TextView;
 
@@ -1950,7 +1950,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Landroid/support/design/widget/g;->a(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v2, v3}, Landroid/support/design/widget/h;->a(Landroid/content/res/ColorStateList;)V
 
     :cond_1
     :goto_2
@@ -1999,11 +1999,11 @@
 
     if-eqz v2, :cond_8
 
-    iget-object v2, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v2, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     iget-object v3, p0, Landroid/support/design/widget/TextInputLayout;->L:Landroid/content/res/ColorStateList;
 
-    invoke-virtual {v2, v3}, Landroid/support/design/widget/g;->a(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v2, v3}, Landroid/support/design/widget/h;->a(Landroid/content/res/ColorStateList;)V
 
     goto :goto_2
 
@@ -2012,11 +2012,11 @@
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v2, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     iget-object v3, p0, Landroid/support/design/widget/TextInputLayout;->K:Landroid/content/res/ColorStateList;
 
-    invoke-virtual {v2, v3}, Landroid/support/design/widget/g;->a(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v2, v3}, Landroid/support/design/widget/h;->a(Landroid/content/res/ColorStateList;)V
 
     goto :goto_2
 
@@ -2192,9 +2192,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v0, p1}, Landroid/support/design/widget/g;->a(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Landroid/support/design/widget/h;->a(Landroid/graphics/Canvas;)V
 
     :cond_0
     return-void
@@ -2240,13 +2240,13 @@
 
     invoke-direct {p0}, Landroid/support/design/widget/TextInputLayout;->j()V
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v0, v2}, Landroid/support/design/widget/g;->a([I)Z
+    invoke-virtual {v0, v2}, Landroid/support/design/widget/h;->a([I)Z
 
     move-result v0
 
@@ -2311,11 +2311,11 @@
     iput-boolean v1, p0, Landroid/support/design/widget/TextInputLayout;->D:Z
 
     :goto_0
-    iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     iget-boolean v2, p0, Landroid/support/design/widget/TextInputLayout;->D:Z
 
-    invoke-virtual {v1, v2}, Landroid/support/design/widget/CheckableImageButton;->setChecked(Z)V
+    invoke-virtual {v1, v2}, Landroid/support/design/widget/e;->setChecked(Z)V
 
     iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->a:Landroid/widget/EditText;
 
@@ -2455,7 +2455,7 @@
 
     iget-object v1, p0, Landroid/support/design/widget/TextInputLayout;->a:Landroid/widget/EditText;
 
-    invoke-static {p0, v1, v0}, Landroid/support/design/widget/w;->b(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-static {p0, v1, v0}, Landroid/support/design/widget/y;->b(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
 
     iget v1, v0, Landroid/graphics/Rect;->left:I
 
@@ -2477,7 +2477,7 @@
 
     sub-int/2addr v2, v3
 
-    iget-object v3, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v3, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     iget v4, v0, Landroid/graphics/Rect;->top:I
 
@@ -2499,9 +2499,9 @@
 
     sub-int/2addr v0, v5
 
-    invoke-virtual {v3, v1, v4, v2, v0}, Landroid/support/design/widget/g;->a(IIII)V
+    invoke-virtual {v3, v1, v4, v2, v0}, Landroid/support/design/widget/h;->a(IIII)V
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     invoke-virtual {p0}, Landroid/support/design/widget/TextInputLayout;->getPaddingTop()I
 
@@ -2515,11 +2515,11 @@
 
     sub-int/2addr v4, v5
 
-    invoke-virtual {v0, v1, v3, v2, v4}, Landroid/support/design/widget/g;->b(IIII)V
+    invoke-virtual {v0, v1, v3, v2, v4}, Landroid/support/design/widget/h;->b(IIII)V
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/g;->j()V
+    invoke-virtual {v0}, Landroid/support/design/widget/h;->j()V
 
     :cond_0
     return-void
@@ -2599,13 +2599,13 @@
 
     if-eqz p1, :cond_3
 
-    new-instance v0, Landroid/support/v7/widget/aa;
+    new-instance v0, Landroid/support/v7/widget/ag;
 
     invoke-virtual {p0}, Landroid/support/design/widget/TextInputLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroid/support/v7/widget/aa;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Landroid/support/v7/widget/ag;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Landroid/support/design/widget/TextInputLayout;->u:Landroid/widget/TextView;
 
@@ -2637,7 +2637,7 @@
 
     iget v1, p0, Landroid/support/design/widget/TextInputLayout;->w:I
 
-    invoke-static {v0, v1}, Landroid/support/v4/widget/z;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Landroid/support/v4/widget/aa;->a(Landroid/widget/TextView;I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2669,7 +2669,7 @@
 
     sget v1, Landroid/support/v7/a/b$k;->TextAppearance_AppCompat_Caption:I
 
-    invoke-static {v0, v1}, Landroid/support/v4/widget/z;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Landroid/support/v4/widget/aa;->a(Landroid/widget/TextView;I)V
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->u:Landroid/widget/TextView;
 
@@ -2848,13 +2848,13 @@
     :cond_0
     if-eqz p1, :cond_4
 
-    new-instance v0, Landroid/support/v7/widget/aa;
+    new-instance v0, Landroid/support/v7/widget/ag;
 
     invoke-virtual {p0}, Landroid/support/design/widget/TextInputLayout;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-direct {v0, v3}, Landroid/support/v7/widget/aa;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v3}, Landroid/support/v7/widget/ag;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Landroid/support/design/widget/TextInputLayout;->b:Landroid/widget/TextView;
 
@@ -2880,7 +2880,7 @@
 
     iget v3, p0, Landroid/support/design/widget/TextInputLayout;->r:I
 
-    invoke-static {v0, v3}, Landroid/support/v4/widget/z;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v3}, Landroid/support/v4/widget/aa;->a(Landroid/widget/TextView;I)V
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -2913,7 +2913,7 @@
 
     sget v3, Landroid/support/v7/a/b$k;->TextAppearance_AppCompat_Caption:I
 
-    invoke-static {v0, v3}, Landroid/support/v4/widget/z;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v3}, Landroid/support/v4/widget/aa;->a(Landroid/widget/TextView;I)V
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->b:Landroid/widget/TextView;
 
@@ -2993,7 +2993,7 @@
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->b:Landroid/widget/TextView;
 
-    invoke-static {v0, p1}, Landroid/support/v4/widget/z;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, p1}, Landroid/support/v4/widget/aa;->a(Landroid/widget/TextView;I)V
 
     :cond_0
     return-void
@@ -3115,13 +3115,13 @@
         .end annotation
     .end param
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v0, p1}, Landroid/support/design/widget/g;->c(I)V
+    invoke-virtual {v0, p1}, Landroid/support/design/widget/h;->c(I)V
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/g;->m()Landroid/content/res/ColorStateList;
+    invoke-virtual {v0}, Landroid/support/design/widget/h;->m()Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -3178,13 +3178,13 @@
 
     iput-object p1, p0, Landroid/support/design/widget/TextInputLayout;->B:Ljava/lang/CharSequence;
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
-    invoke-virtual {v0, p1}, Landroid/support/design/widget/CheckableImageButton;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Landroid/support/design/widget/e;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :cond_0
     return-void
@@ -3227,13 +3227,13 @@
 
     iput-object p1, p0, Landroid/support/design/widget/TextInputLayout;->A:Landroid/graphics/drawable/Drawable;
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/CheckableImageButton;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->C:Landroid/support/design/widget/e;
 
-    invoke-virtual {v0, p1}, Landroid/support/design/widget/CheckableImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Landroid/support/design/widget/e;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
     return-void
@@ -3342,9 +3342,9 @@
     :cond_1
     iput-object p1, p0, Landroid/support/design/widget/TextInputLayout;->p:Landroid/graphics/Typeface;
 
-    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
-    invoke-virtual {v0, p1}, Landroid/support/design/widget/g;->c(Landroid/graphics/Typeface;)V
+    invoke-virtual {v0, p1}, Landroid/support/design/widget/h;->c(Landroid/graphics/Typeface;)V
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout;->u:Landroid/widget/TextView;
 

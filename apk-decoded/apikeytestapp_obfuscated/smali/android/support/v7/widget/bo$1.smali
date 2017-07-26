@@ -1,10 +1,10 @@
 .class Landroid/support/v7/widget/bo$1;
-.super Landroid/support/v7/widget/RecyclerView$m;
+.super Landroid/support/v7/widget/bg;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroid/support/v7/widget/bo;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroid/support/v7/widget/bo;->b(Landroid/support/v7/widget/RecyclerView$h;)Landroid/support/v7/widget/bg;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -14,63 +14,99 @@
 
 
 # instance fields
-.field a:Z
-
-.field final synthetic b:Landroid/support/v7/widget/bo;
+.field final synthetic i:Landroid/support/v7/widget/bo;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v7/widget/bo;)V
-    .locals 1
+.method constructor <init>(Landroid/support/v7/widget/bo;Landroid/content/Context;)V
+    .locals 0
 
-    iput-object p1, p0, Landroid/support/v7/widget/bo$1;->b:Landroid/support/v7/widget/bo;
+    iput-object p1, p0, Landroid/support/v7/widget/bo$1;->i:Landroid/support/v7/widget/bo;
 
-    invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$m;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Landroid/support/v7/widget/bo$1;->a:Z
+    invoke-direct {p0, p2}, Landroid/support/v7/widget/bg;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/support/v7/widget/RecyclerView;I)V
-    .locals 1
+.method protected a(Landroid/util/DisplayMetrics;)F
+    .locals 2
 
-    invoke-super {p0, p1, p2}, Landroid/support/v7/widget/RecyclerView$m;->a(Landroid/support/v7/widget/RecyclerView;I)V
+    const/high16 v0, 0x42c80000    # 100.0f
 
-    if-nez p2, :cond_0
+    iget v1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    iget-boolean v0, p0, Landroid/support/v7/widget/bo$1;->a:Z
+    int-to-float v1, v1
 
-    if-eqz v0, :cond_0
+    div-float/2addr v0, v1
 
-    const/4 v0, 0x0
+    return v0
+.end method
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/bo$1;->a:Z
+.method protected a(Landroid/view/View;Landroid/support/v7/widget/RecyclerView$t;Landroid/support/v7/widget/RecyclerView$s$a;)V
+    .locals 4
 
-    iget-object v0, p0, Landroid/support/v7/widget/bo$1;->b:Landroid/support/v7/widget/bo;
+    iget-object v0, p0, Landroid/support/v7/widget/bo$1;->i:Landroid/support/v7/widget/bo;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/bo;->a()V
+    iget-object v1, p0, Landroid/support/v7/widget/bo$1;->i:Landroid/support/v7/widget/bo;
+
+    iget-object v1, v1, Landroid/support/v7/widget/bo;->b:Landroid/support/v7/widget/RecyclerView;
+
+    invoke-virtual {v1}, Landroid/support/v7/widget/RecyclerView;->getLayoutManager()Landroid/support/v7/widget/RecyclerView$h;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p1}, Landroid/support/v7/widget/bo;->a(Landroid/support/v7/widget/RecyclerView$h;Landroid/view/View;)[I
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    aget v1, v0, v1
+
+    const/4 v2, 0x1
+
+    aget v0, v0, v2
+
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
+
+    move-result v2
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
+
+    move-result v3
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    invoke-virtual {p0, v2}, Landroid/support/v7/widget/bo$1;->a(I)I
+
+    move-result v2
+
+    if-lez v2, :cond_0
+
+    iget-object v3, p0, Landroid/support/v7/widget/bo$1;->e:Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-virtual {p3, v1, v0, v2, v3}, Landroid/support/v7/widget/RecyclerView$s$a;->a(IIILandroid/view/animation/Interpolator;)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Landroid/support/v7/widget/RecyclerView;II)V
-    .locals 1
+.method protected b(I)I
+    .locals 2
 
-    if-nez p2, :cond_0
+    const/16 v0, 0x64
 
-    if-eqz p3, :cond_1
+    invoke-super {p0, p1}, Landroid/support/v7/widget/bg;->b(I)I
 
-    :cond_0
-    const/4 v0, 0x1
+    move-result v1
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/bo$1;->a:Z
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
-    :cond_1
-    return-void
+    move-result v0
+
+    return v0
 .end method

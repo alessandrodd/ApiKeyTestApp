@@ -1,344 +1,183 @@
-.class Landroid/support/v7/widget/br;
-.super Ljava/lang/Object;
+.class public Landroid/support/v7/widget/br;
+.super Landroid/support/v4/view/a;
 
 
-# static fields
-.field static final a:[I
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/support/v7/widget/br$a;
+    }
+.end annotation
 
-.field static final b:[I
 
-.field static final c:[I
+# instance fields
+.field final a:Landroid/support/v7/widget/RecyclerView;
 
-.field static final d:[I
-
-.field static final e:[I
-
-.field static final f:[I
-
-.field static final g:[I
-
-.field static final h:[I
-
-.field private static final i:Ljava/lang/ThreadLocal;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ThreadLocal",
-            "<",
-            "Landroid/util/TypedValue;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private static final j:[I
+.field final c:Landroid/support/v4/view/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Landroid/support/v7/widget/RecyclerView;)V
+    .locals 1
 
-    const/4 v3, 0x1
+    invoke-direct {p0}, Landroid/support/v4/view/a;-><init>()V
 
-    const/4 v2, 0x0
+    iput-object p1, p0, Landroid/support/v7/widget/br;->a:Landroid/support/v7/widget/RecyclerView;
 
-    new-instance v0, Ljava/lang/ThreadLocal;
+    new-instance v0, Landroid/support/v7/widget/br$a;
 
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/br$a;-><init>(Landroid/support/v7/widget/br;)V
 
-    sput-object v0, Landroid/support/v7/widget/br;->i:Ljava/lang/ThreadLocal;
-
-    new-array v0, v3, [I
-
-    const v1, -0x101009e
-
-    aput v1, v0, v2
-
-    sput-object v0, Landroid/support/v7/widget/br;->a:[I
-
-    new-array v0, v3, [I
-
-    const v1, 0x101009c
-
-    aput v1, v0, v2
-
-    sput-object v0, Landroid/support/v7/widget/br;->b:[I
-
-    new-array v0, v3, [I
-
-    const v1, 0x10102fe
-
-    aput v1, v0, v2
-
-    sput-object v0, Landroid/support/v7/widget/br;->c:[I
-
-    new-array v0, v3, [I
-
-    const v1, 0x10100a7
-
-    aput v1, v0, v2
-
-    sput-object v0, Landroid/support/v7/widget/br;->d:[I
-
-    new-array v0, v3, [I
-
-    const v1, 0x10100a0
-
-    aput v1, v0, v2
-
-    sput-object v0, Landroid/support/v7/widget/br;->e:[I
-
-    new-array v0, v3, [I
-
-    const v1, 0x10100a1
-
-    aput v1, v0, v2
-
-    sput-object v0, Landroid/support/v7/widget/br;->f:[I
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Landroid/support/v7/widget/br;->g:[I
-
-    new-array v0, v2, [I
-
-    sput-object v0, Landroid/support/v7/widget/br;->h:[I
-
-    new-array v0, v3, [I
-
-    sput-object v0, Landroid/support/v7/widget/br;->j:[I
-
-    return-void
-
-    :array_0
-    .array-data 4
-        -0x10100a7
-        -0x101009c
-    .end array-data
-.end method
-
-.method constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object v0, p0, Landroid/support/v7/widget/br;->c:Landroid/support/v4/view/a;
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;I)I
-    .locals 3
 
-    const/4 v1, 0x0
+# virtual methods
+.method public a(Landroid/view/View;Landroid/support/v4/view/a/c;)V
+    .locals 1
 
-    sget-object v0, Landroid/support/v7/widget/br;->j:[I
+    invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/support/v4/view/a/c;)V
 
-    aput p1, v0, v1
+    const-class v0, Landroid/support/v7/widget/RecyclerView;
 
-    const/4 v0, 0x0
-
-    sget-object v1, Landroid/support/v7/widget/br;->j:[I
-
-    invoke-static {p0, v0, v1}, Landroid/support/v7/widget/bw;->a(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/support/v7/widget/bw;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/c;->b(Ljava/lang/CharSequence;)V
 
-    const/4 v2, 0x0
-
-    :try_start_0
-    invoke-virtual {v0, v1, v2}, Landroid/support/v7/widget/bw;->b(II)I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/bw;->e()V
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/bw;->e()V
-
-    throw v1
-.end method
-
-.method static a(Landroid/content/Context;IF)I
-    .locals 2
-
-    invoke-static {p0, p1}, Landroid/support/v7/widget/br;->a(Landroid/content/Context;I)I
+    invoke-virtual {p0}, Landroid/support/v7/widget/br;->b()Z
 
     move-result v0
-
-    invoke-static {v0}, Landroid/graphics/Color;->alpha(I)I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    mul-float/2addr v1, p2
-
-    invoke-static {v1}, Ljava/lang/Math;->round(F)I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Landroid/support/v4/d/b;->c(II)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static a(II)Landroid/content/res/ColorStateList;
-    .locals 4
-
-    const/4 v1, 0x2
-
-    new-array v0, v1, [[I
-
-    new-array v1, v1, [I
-
-    const/4 v2, 0x0
-
-    sget-object v3, Landroid/support/v7/widget/br;->a:[I
-
-    aput-object v3, v0, v2
-
-    aput p1, v1, v2
-
-    const/4 v2, 0x1
-
-    sget-object v3, Landroid/support/v7/widget/br;->h:[I
-
-    aput-object v3, v0, v2
-
-    aput p0, v1, v2
-
-    new-instance v2, Landroid/content/res/ColorStateList;
-
-    invoke-direct {v2, v0, v1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
-
-    return-object v2
-.end method
-
-.method private static a()Landroid/util/TypedValue;
-    .locals 2
-
-    sget-object v0, Landroid/support/v7/widget/br;->i:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/util/TypedValue;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Landroid/util/TypedValue;
+    iget-object v0, p0, Landroid/support/v7/widget/br;->a:Landroid/support/v7/widget/RecyclerView;
 
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
-
-    sget-object v1, Landroid/support/v7/widget/br;->i:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v1, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    :cond_0
-    return-object v0
-.end method
-
-.method public static b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
-    .locals 2
-
-    const/4 v1, 0x0
-
-    sget-object v0, Landroid/support/v7/widget/br;->j:[I
-
-    aput p1, v0, v1
-
-    const/4 v0, 0x0
-
-    sget-object v1, Landroid/support/v7/widget/br;->j:[I
-
-    invoke-static {p0, v0, v1}, Landroid/support/v7/widget/bw;->a(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/support/v7/widget/bw;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    :try_start_0
-    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bw;->g(I)Landroid/content/res/ColorStateList;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/bw;->e()V
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/bw;->e()V
-
-    throw v1
-.end method
-
-.method public static c(Landroid/content/Context;I)I
-    .locals 4
-
-    invoke-static {p0, p1}, Landroid/support/v7/widget/br;->b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getLayoutManager()Landroid/support/v7/widget/RecyclerView$h;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/content/res/ColorStateList;->isStateful()Z
+    iget-object v0, p0, Landroid/support/v7/widget/br;->a:Landroid/support/v7/widget/RecyclerView;
 
-    move-result v1
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getLayoutManager()Landroid/support/v7/widget/RecyclerView$h;
 
-    if-eqz v1, :cond_0
+    move-result-object v0
 
-    sget-object v1, Landroid/support/v7/widget/br;->a:[I
+    invoke-virtual {v0, p2}, Landroid/support/v7/widget/RecyclerView$h;->a(Landroid/support/v4/view/a/c;)V
 
-    invoke-virtual {v0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+    :cond_0
+    return-void
+.end method
 
-    move-result v2
+.method public a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    .locals 1
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+    invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+
+    const-class v0, Landroid/support/v7/widget/RecyclerView;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
+
+    instance-of v0, p1, Landroid/support/v7/widget/RecyclerView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/br;->b()Z
 
     move-result v0
+
+    if-nez v0, :cond_0
+
+    check-cast p1, Landroid/support/v7/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView;->getLayoutManager()Landroid/support/v7/widget/RecyclerView$h;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView;->getLayoutManager()Landroid/support/v7/widget/RecyclerView$h;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Landroid/support/v7/widget/RecyclerView$h;->a(Landroid/view/accessibility/AccessibilityEvent;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public a(Landroid/view/View;ILandroid/os/Bundle;)Z
+    .locals 1
+
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/view/a;->a(Landroid/view/View;ILandroid/os/Bundle;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
 
     :goto_0
     return v0
 
     :cond_0
-    invoke-static {}, Landroid/support/v7/widget/br;->a()Landroid/util/TypedValue;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object v1
-
-    const v2, 0x1010033
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
-
-    invoke-virtual {v0}, Landroid/util/TypedValue;->getFloat()F
+    invoke-virtual {p0}, Landroid/support/v7/widget/br;->b()Z
 
     move-result v0
 
-    invoke-static {p0, p1, v0}, Landroid/support/v7/widget/br;->a(Landroid/content/Context;IF)I
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Landroid/support/v7/widget/br;->a:Landroid/support/v7/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getLayoutManager()Landroid/support/v7/widget/RecyclerView$h;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Landroid/support/v7/widget/br;->a:Landroid/support/v7/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getLayoutManager()Landroid/support/v7/widget/RecyclerView$h;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/RecyclerView$h;->a(ILandroid/os/Bundle;)Z
 
     move-result v0
 
     goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method b()Z
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/widget/br;->a:Landroid/support/v7/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->C()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public c()Landroid/support/v4/view/a;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/widget/br;->c:Landroid/support/v4/view/a;
+
+    return-object v0
 .end method

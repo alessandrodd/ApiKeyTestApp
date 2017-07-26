@@ -42,7 +42,7 @@
 
 
 # instance fields
-.field h:Landroid/support/v4/widget/ac;
+.field h:Landroid/support/v4/widget/ad;
 
 .field i:Landroid/support/design/widget/SwipeDismissBehavior$a;
 
@@ -60,7 +60,7 @@
 
 .field private r:Z
 
-.field private final s:Landroid/support/v4/widget/ac$a;
+.field private final s:Landroid/support/v4/widget/ad$a;
 
 
 # direct methods
@@ -89,7 +89,7 @@
 
     invoke-direct {v0, p0}, Landroid/support/design/widget/SwipeDismissBehavior$1;-><init>(Landroid/support/design/widget/SwipeDismissBehavior;)V
 
-    iput-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->s:Landroid/support/v4/widget/ac$a;
+    iput-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->s:Landroid/support/v4/widget/ad$a;
 
     return-void
 .end method
@@ -125,7 +125,7 @@
 .method private a(Landroid/view/ViewGroup;)V
     .locals 2
 
-    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ac;
+    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ad;
 
     if-nez v0, :cond_0
 
@@ -135,22 +135,22 @@
 
     iget v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->q:F
 
-    iget-object v1, p0, Landroid/support/design/widget/SwipeDismissBehavior;->s:Landroid/support/v4/widget/ac$a;
+    iget-object v1, p0, Landroid/support/design/widget/SwipeDismissBehavior;->s:Landroid/support/v4/widget/ad$a;
 
-    invoke-static {p1, v0, v1}, Landroid/support/v4/widget/ac;->a(Landroid/view/ViewGroup;FLandroid/support/v4/widget/ac$a;)Landroid/support/v4/widget/ac;
+    invoke-static {p1, v0, v1}, Landroid/support/v4/widget/ad;->a(Landroid/view/ViewGroup;FLandroid/support/v4/widget/ad$a;)Landroid/support/v4/widget/ad;
 
     move-result-object v0
 
     :goto_0
-    iput-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ac;
+    iput-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ad;
 
     :cond_0
     return-void
 
     :cond_1
-    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->s:Landroid/support/v4/widget/ac$a;
+    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->s:Landroid/support/v4/widget/ad$a;
 
-    invoke-static {p1, v0}, Landroid/support/v4/widget/ac;->a(Landroid/view/ViewGroup;Landroid/support/v4/widget/ac$a;)Landroid/support/v4/widget/ac;
+    invoke-static {p1, v0}, Landroid/support/v4/widget/ad;->a(Landroid/view/ViewGroup;Landroid/support/v4/widget/ad$a;)Landroid/support/v4/widget/ad;
 
     move-result-object v0
 
@@ -174,13 +174,13 @@
 .method public a()I
     .locals 1
 
-    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ac;
+    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ad;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ac;
+    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ad;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/ac;->b()I
+    invoke-virtual {v0}, Landroid/support/v4/widget/ad;->b()I
 
     move-result v0
 
@@ -253,9 +253,9 @@
 
     invoke-direct {p0, p1}, Landroid/support/design/widget/SwipeDismissBehavior;->a(Landroid/view/ViewGroup;)V
 
-    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ac;
+    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ad;
 
-    invoke-virtual {v0, p3}, Landroid/support/v4/widget/ac;->a(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p3}, Landroid/support/v4/widget/ad;->a(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -339,13 +339,13 @@
         }
     .end annotation
 
-    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ac;
+    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ad;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ac;
+    iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ad;
 
-    invoke-virtual {v0, p3}, Landroid/support/v4/widget/ac;->b(Landroid/view/MotionEvent;)V
+    invoke-virtual {v0, p3}, Landroid/support/v4/widget/ad;->b(Landroid/view/MotionEvent;)V
 
     const/4 v0, 0x1
 

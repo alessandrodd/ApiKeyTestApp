@@ -84,9 +84,9 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$a;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/bb;->d()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/bn;->d()I
 
     move-result v0
 
@@ -100,9 +100,9 @@
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$a;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/bb;->c()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/bn;->c()I
 
     move-result v0
 
@@ -174,9 +174,9 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$a;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/bb;->d()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/bn;->d()I
 
     move-result v0
 
@@ -188,9 +188,9 @@
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$a;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/bb;->c()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/bn;->c()I
 
     move-result v0
 

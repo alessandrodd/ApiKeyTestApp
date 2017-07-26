@@ -211,7 +211,7 @@
     :cond_1
     iget-object v1, p0, Landroid/support/design/widget/FloatingActionButton$Behavior;->b:Landroid/graphics/Rect;
 
-    invoke-static {p1, p2, v1}, Landroid/support/design/widget/w;->b(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-static {p1, p2, v1}, Landroid/support/design/widget/y;->b(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
 
     iget v1, v1, Landroid/graphics/Rect;->bottom:I
 

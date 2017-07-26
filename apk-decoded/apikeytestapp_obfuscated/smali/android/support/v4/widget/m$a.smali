@@ -30,13 +30,13 @@
 .method public a(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;
     .locals 1
 
-    instance-of v0, p1, Landroid/support/v4/widget/ab;
+    instance-of v0, p1, Landroid/support/v4/widget/ac;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Landroid/support/v4/widget/ab;
+    check-cast p1, Landroid/support/v4/widget/ac;
 
-    invoke-interface {p1}, Landroid/support/v4/widget/ab;->getSupportImageTintList()Landroid/content/res/ColorStateList;
+    invoke-interface {p1}, Landroid/support/v4/widget/ac;->getSupportImageTintList()Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -52,13 +52,13 @@
 .method public a(Landroid/widget/ImageView;Landroid/content/res/ColorStateList;)V
     .locals 1
 
-    instance-of v0, p1, Landroid/support/v4/widget/ab;
+    instance-of v0, p1, Landroid/support/v4/widget/ac;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Landroid/support/v4/widget/ab;
+    check-cast p1, Landroid/support/v4/widget/ac;
 
-    invoke-interface {p1, p2}, Landroid/support/v4/widget/ab;->setSupportImageTintList(Landroid/content/res/ColorStateList;)V
+    invoke-interface {p1, p2}, Landroid/support/v4/widget/ac;->setSupportImageTintList(Landroid/content/res/ColorStateList;)V
 
     :cond_0
     return-void
@@ -67,13 +67,13 @@
 .method public a(Landroid/widget/ImageView;Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
 
-    instance-of v0, p1, Landroid/support/v4/widget/ab;
+    instance-of v0, p1, Landroid/support/v4/widget/ac;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Landroid/support/v4/widget/ab;
+    check-cast p1, Landroid/support/v4/widget/ac;
 
-    invoke-interface {p1, p2}, Landroid/support/v4/widget/ab;->setSupportImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-interface {p1, p2}, Landroid/support/v4/widget/ac;->setSupportImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_0
     return-void
@@ -82,13 +82,13 @@
 .method public b(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;
     .locals 1
 
-    instance-of v0, p1, Landroid/support/v4/widget/ab;
+    instance-of v0, p1, Landroid/support/v4/widget/ac;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Landroid/support/v4/widget/ab;
+    check-cast p1, Landroid/support/v4/widget/ac;
 
-    invoke-interface {p1}, Landroid/support/v4/widget/ab;->getSupportImageTintMode()Landroid/graphics/PorterDuff$Mode;
+    invoke-interface {p1}, Landroid/support/v4/widget/ac;->getSupportImageTintMode()Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v0
 

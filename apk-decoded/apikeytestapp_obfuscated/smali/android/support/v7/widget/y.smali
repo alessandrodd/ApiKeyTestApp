@@ -2,1024 +2,381 @@
 .super Ljava/lang/Object;
 
 
-# annotations
-.annotation build Landroid/support/annotation/ai;
-    a = 0x9
-.end annotation
+# static fields
+.field private static final a:[I
 
 
 # instance fields
-.field final a:Landroid/widget/TextView;
+.field private final b:Landroid/widget/ProgressBar;
 
-.field private b:Landroid/support/v7/widget/bu;
-
-.field private c:Landroid/support/v7/widget/bu;
-
-.field private d:Landroid/support/v7/widget/bu;
-
-.field private e:Landroid/support/v7/widget/bu;
-
-.field private final f:Landroid/support/v7/widget/ab;
-    .annotation build Landroid/support/annotation/ad;
-    .end annotation
-.end field
-
-.field private g:I
-
-.field private h:Landroid/graphics/Typeface;
+.field private c:Landroid/graphics/Bitmap;
 
 
 # direct methods
-.method constructor <init>(Landroid/widget/TextView;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Landroid/support/v7/widget/y;->a:[I
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x101013b
+        0x101013c
+    .end array-data
+.end method
+
+.method constructor <init>(Landroid/widget/ProgressBar;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroid/support/v7/widget/y;->g:I
-
-    iput-object p1, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    new-instance v0, Landroid/support/v7/widget/ab;
-
-    iget-object v1, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    invoke-direct {v0, v1}, Landroid/support/v7/widget/ab;-><init>(Landroid/widget/TextView;)V
-
-    iput-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
+    iput-object p1, p0, Landroid/support/v7/widget/y;->b:Landroid/widget/ProgressBar;
 
     return-void
 .end method
 
-.method protected static a(Landroid/content/Context;Landroid/support/v7/widget/l;I)Landroid/support/v7/widget/bu;
-    .locals 3
+.method private a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    .locals 6
 
-    invoke-virtual {p1, p0, p2}, Landroid/support/v7/widget/l;->b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    const/16 v5, 0x2710
 
-    move-result-object v1
+    instance-of v0, p1, Landroid/graphics/drawable/AnimationDrawable;
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_1
 
-    new-instance v0, Landroid/support/v7/widget/bu;
+    check-cast p1, Landroid/graphics/drawable/AnimationDrawable;
 
-    invoke-direct {v0}, Landroid/support/v7/widget/bu;-><init>()V
+    invoke-virtual {p1}, Landroid/graphics/drawable/AnimationDrawable;->getNumberOfFrames()I
 
-    const/4 v2, 0x1
+    move-result v2
 
-    iput-boolean v2, v0, Landroid/support/v7/widget/bu;->d:Z
+    new-instance v0, Landroid/graphics/drawable/AnimationDrawable;
 
-    iput-object v1, v0, Landroid/support/v7/widget/bu;->a:Landroid/content/res/ColorStateList;
+    invoke-direct {v0}, Landroid/graphics/drawable/AnimationDrawable;-><init>()V
 
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method static a(Landroid/widget/TextView;)Landroid/support/v7/widget/y;
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x11
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Landroid/support/v7/widget/z;
-
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/z;-><init>(Landroid/widget/TextView;)V
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    new-instance v0, Landroid/support/v7/widget/y;
-
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/y;-><init>(Landroid/widget/TextView;)V
-
-    goto :goto_0
-.end method
-
-.method private a(Landroid/content/Context;Landroid/support/v7/widget/bw;)V
-    .locals 3
-
-    sget v0, Landroid/support/v7/a/b$l;->TextAppearance_android_textStyle:I
-
-    iget v1, p0, Landroid/support/v7/widget/y;->g:I
-
-    invoke-virtual {p2, v0, v1}, Landroid/support/v7/widget/bw;->a(II)I
-
-    move-result v0
-
-    iput v0, p0, Landroid/support/v7/widget/y;->g:I
-
-    sget v0, Landroid/support/v7/a/b$l;->TextAppearance_android_fontFamily:I
-
-    invoke-virtual {p2, v0}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget v0, Landroid/support/v7/a/b$l;->TextAppearance_fontFamily:I
-
-    invoke-virtual {p2, v0}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_0
-    sget v0, Landroid/support/v7/a/b$l;->TextAppearance_android_fontFamily:I
-
-    invoke-virtual {p2, v0}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    sget v0, Landroid/support/v7/a/b$l;->TextAppearance_android_fontFamily:I
-
-    :goto_0
-    invoke-virtual {p1}, Landroid/content/Context;->isRestricted()Z
+    invoke-virtual {p1}, Landroid/graphics/drawable/AnimationDrawable;->isOneShot()Z
 
     move-result v1
 
-    if-nez v1, :cond_1
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/AnimationDrawable;->setOneShot(Z)V
 
-    :try_start_0
-    iget v1, p0, Landroid/support/v7/widget/y;->g:I
+    const/4 v1, 0x0
 
-    iget-object v2, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
+    :goto_0
+    if-ge v1, v2, :cond_0
 
-    invoke-virtual {p2, v0, v1, v2}, Landroid/support/v7/widget/bw;->a(IILandroid/widget/TextView;)Landroid/graphics/Typeface;
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/AnimationDrawable;->getFrame(I)Landroid/graphics/drawable/Drawable;
 
-    move-result-object v1
+    move-result-object v3
 
-    iput-object v1, p0, Landroid/support/v7/widget/y;->h:Landroid/graphics/Typeface;
-    :try_end_0
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+    const/4 v4, 0x1
 
-    :cond_1
-    :goto_1
-    iget-object v1, p0, Landroid/support/v7/widget/y;->h:Landroid/graphics/Typeface;
+    invoke-direct {p0, v3, v4}, Landroid/support/v7/widget/y;->a(Landroid/graphics/drawable/Drawable;Z)Landroid/graphics/drawable/Drawable;
 
-    if-nez v1, :cond_2
+    move-result-object v3
 
-    invoke-virtual {p2, v0}, Landroid/support/v7/widget/bw;->e(I)Ljava/lang/String;
+    invoke-virtual {v3, v5}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
 
-    move-result-object v0
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/AnimationDrawable;->getDuration(I)I
 
-    iget v1, p0, Landroid/support/v7/widget/y;->g:I
+    move-result v4
 
-    invoke-static {v0, v1}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
+    invoke-virtual {v0, v3, v4}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v7/widget/y;->h:Landroid/graphics/Typeface;
-
-    :cond_2
-    return-void
-
-    :cond_3
-    sget v0, Landroid/support/v7/a/b$l;->TextAppearance_fontFamily:I
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :catch_0
-    move-exception v1
+    :cond_0
+    invoke-virtual {v0, v5}, Landroid/graphics/drawable/AnimationDrawable;->setLevel(I)Z
 
-    goto :goto_1
+    move-object p1, v0
 
-    :catch_1
-    move-exception v1
-
-    goto :goto_1
+    :cond_1
+    return-object p1
 .end method
 
-.method private b(IF)V
-    .locals 1
+.method private a(Landroid/graphics/drawable/Drawable;Z)Landroid/graphics/drawable/Drawable;
+    .locals 8
 
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/ab;->a(IF)V
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    instance-of v0, p1, Landroid/support/v4/d/a/b;
 
-.method private b(Z)V
-    .locals 1
+    if-eqz v0, :cond_2
 
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
+    move-object v0, p1
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/ab;->a(Z)V
+    check-cast v0, Landroid/support/v4/d/a/b;
 
-    return-void
-.end method
+    invoke-interface {v0}, Landroid/support/v4/d/a/b;->a()Landroid/graphics/drawable/Drawable;
 
-.method private g()Z
-    .locals 1
+    move-result-object v0
 
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ab;->g()Z
+    invoke-direct {p0, v0, p2}, Landroid/support/v7/widget/y;->a(Landroid/graphics/drawable/Drawable;Z)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    move-object v0, p1
+
+    check-cast v0, Landroid/support/v4/d/a/b;
+
+    invoke-interface {v0, v1}, Landroid/support/v4/d/a/b;->a(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
+    move-object v0, p1
+
+    :cond_1
+    :goto_0
+    return-object v0
+
+    :cond_2
+    instance-of v0, p1, Landroid/graphics/drawable/LayerDrawable;
+
+    if-eqz v0, :cond_6
+
+    check-cast p1, Landroid/graphics/drawable/LayerDrawable;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/LayerDrawable;->getNumberOfLayers()I
+
+    move-result v4
+
+    new-array v5, v4, [Landroid/graphics/drawable/Drawable;
+
+    move v3, v1
+
+    :goto_1
+    if-ge v3, v4, :cond_5
+
+    invoke-virtual {p1, v3}, Landroid/graphics/drawable/LayerDrawable;->getId(I)I
 
     move-result v0
 
-    return v0
+    invoke-virtual {p1, v3}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v6
+
+    const v7, 0x102000d
+
+    if-eq v0, v7, :cond_3
+
+    const v7, 0x102000f
+
+    if-ne v0, v7, :cond_4
+
+    :cond_3
+    move v0, v2
+
+    :goto_2
+    invoke-direct {p0, v6, v0}, Landroid/support/v7/widget/y;->a(Landroid/graphics/drawable/Drawable;Z)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    aput-object v0, v5, v3
+
+    add-int/lit8 v0, v3, 0x1
+
+    move v3, v0
+
+    goto :goto_1
+
+    :cond_4
+    move v0, v1
+
+    goto :goto_2
+
+    :cond_5
+    new-instance v0, Landroid/graphics/drawable/LayerDrawable;
+
+    invoke-direct {v0, v5}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+
+    :goto_3
+    if-ge v1, v4, :cond_1
+
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/LayerDrawable;->getId(I)I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/LayerDrawable;->setId(II)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_3
+
+    :cond_6
+    instance-of v0, p1, Landroid/graphics/drawable/BitmapDrawable;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Landroid/graphics/drawable/BitmapDrawable;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    iget-object v1, p0, Landroid/support/v7/widget/y;->c:Landroid/graphics/Bitmap;
+
+    if-nez v1, :cond_7
+
+    iput-object v0, p0, Landroid/support/v7/widget/y;->c:Landroid/graphics/Bitmap;
+
+    :cond_7
+    new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-direct {p0}, Landroid/support/v7/widget/y;->b()Landroid/graphics/drawable/shapes/Shape;
+
+    move-result-object v3
+
+    invoke-direct {v1, v3}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    new-instance v3, Landroid/graphics/BitmapShader;
+
+    sget-object v4, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
+
+    sget-object v5, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+
+    invoke-direct {v3, v0, v4, v5}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/BitmapDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/graphics/Paint;->getColorFilter()Landroid/graphics/ColorFilter;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
+
+    if-eqz p2, :cond_8
+
+    new-instance v0, Landroid/graphics/drawable/ClipDrawable;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v0, v1, v3, v2}, Landroid/graphics/drawable/ClipDrawable;-><init>(Landroid/graphics/drawable/Drawable;II)V
+
+    goto :goto_0
+
+    :cond_8
+    move-object v0, v1
+
+    goto/16 :goto_0
 .end method
 
-.method private h()Z
-    .locals 1
+.method private b()Landroid/graphics/drawable/shapes/Shape;
+    .locals 3
 
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ab;->h()Z
+    const/16 v0, 0x8
 
-    move-result v0
+    new-array v0, v0, [F
 
-    return v0
-.end method
+    fill-array-data v0, :array_0
 
-.method private i()V
-    .locals 1
+    new-instance v1, Landroid/graphics/drawable/shapes/RoundRectShape;
 
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
+    invoke-direct {v1, v0, v2, v2}, Landroid/graphics/drawable/shapes/RoundRectShape;-><init>([FLandroid/graphics/RectF;[F)V
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ab;->f()V
+    return-object v1
 
-    return-void
+    :array_0
+    .array-data 4
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+    .end array-data
 .end method
 
 
 # virtual methods
-.method a()V
-    .locals 3
+.method a()Landroid/graphics/Bitmap;
+    .locals 1
 
-    iget-object v0, p0, Landroid/support/v7/widget/y;->b:Landroid/support/v7/widget/bu;
+    iget-object v0, p0, Landroid/support/v7/widget/y;->c:Landroid/graphics/Bitmap;
 
-    if-nez v0, :cond_0
+    return-object v0
+.end method
 
-    iget-object v0, p0, Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/bu;
+.method a(Landroid/util/AttributeSet;I)V
+    .locals 4
 
-    if-nez v0, :cond_0
+    const/4 v3, 0x0
 
-    iget-object v0, p0, Landroid/support/v7/widget/y;->d:Landroid/support/v7/widget/bu;
+    iget-object v0, p0, Landroid/support/v7/widget/y;->b:Landroid/widget/ProgressBar;
 
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->e:Landroid/support/v7/widget/bu;
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Landroid/widget/ProgressBar;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    sget-object v1, Landroid/support/v7/widget/y;->a:[I
 
-    aget-object v1, v0, v1
-
-    iget-object v2, p0, Landroid/support/v7/widget/y;->b:Landroid/support/v7/widget/bu;
-
-    invoke-virtual {p0, v1, v2}, Landroid/support/v7/widget/y;->a(Landroid/graphics/drawable/Drawable;Landroid/support/v7/widget/bu;)V
-
-    const/4 v1, 0x1
-
-    aget-object v1, v0, v1
-
-    iget-object v2, p0, Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/bu;
-
-    invoke-virtual {p0, v1, v2}, Landroid/support/v7/widget/y;->a(Landroid/graphics/drawable/Drawable;Landroid/support/v7/widget/bu;)V
-
-    const/4 v1, 0x2
-
-    aget-object v1, v0, v1
-
-    iget-object v2, p0, Landroid/support/v7/widget/y;->d:Landroid/support/v7/widget/bu;
-
-    invoke-virtual {p0, v1, v2}, Landroid/support/v7/widget/y;->a(Landroid/graphics/drawable/Drawable;Landroid/support/v7/widget/bu;)V
-
-    const/4 v1, 0x3
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Landroid/support/v7/widget/y;->e:Landroid/support/v7/widget/bu;
-
-    invoke-virtual {p0, v0, v1}, Landroid/support/v7/widget/y;->a(Landroid/graphics/drawable/Drawable;Landroid/support/v7/widget/bu;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method a(I)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/ab;->a(I)V
-
-    return-void
-.end method
-
-.method a(IF)V
-    .locals 1
-    .annotation build Landroid/support/annotation/ak;
-        a = {
-            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
-        }
-    .end annotation
-
-    invoke-static {}, Landroid/support/v4/os/b;->c()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-direct {p0}, Landroid/support/v7/widget/y;->g()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-direct {p0, p1, p2}, Landroid/support/v7/widget/y;->b(IF)V
-
-    :cond_0
-    return-void
-.end method
-
-.method a(IIII)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/support/v7/widget/ab;->a(IIII)V
-
-    return-void
-.end method
-
-.method a(Landroid/content/Context;I)V
-    .locals 3
-
-    sget-object v0, Landroid/support/v7/a/b$l;->TextAppearance:[I
-
-    invoke-static {p1, p2, v0}, Landroid/support/v7/widget/bw;->a(Landroid/content/Context;I[I)Landroid/support/v7/widget/bw;
+    invoke-static {v0, p1, v1, p2, v3}, Landroid/support/v7/widget/ci;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/support/v7/widget/ci;
 
     move-result-object v0
 
-    sget v1, Landroid/support/v7/a/b$l;->TextAppearance_textAllCaps:I
+    invoke-virtual {v0, v3}, Landroid/support/v7/widget/ci;->b(I)Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v1
+    move-result-object v1
 
     if-eqz v1, :cond_0
 
-    sget v1, Landroid/support/v7/a/b$l;->TextAppearance_textAllCaps:I
+    iget-object v2, p0, Landroid/support/v7/widget/y;->b:Landroid/widget/ProgressBar;
 
-    const/4 v2, 0x0
+    invoke-direct {p0, v1}, Landroid/support/v7/widget/y;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, v1, v2}, Landroid/support/v7/widget/bw;->a(IZ)Z
+    move-result-object v1
 
-    move-result v1
-
-    invoke-virtual {p0, v1}, Landroid/support/v7/widget/y;->a(Z)V
+    invoke-virtual {v2, v1}, Landroid/widget/ProgressBar;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v1, 0x1
 
-    const/16 v2, 0x17
-
-    if-ge v1, v2, :cond_1
-
-    sget v1, Landroid/support/v7/a/b$l;->TextAppearance_android_textColor:I
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    sget v1, Landroid/support/v7/a/b$l;->TextAppearance_android_textColor:I
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bw;->g(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/ci;->b(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    iget-object v2, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
+    iget-object v2, p0, Landroid/support/v7/widget/y;->b:Landroid/widget/ProgressBar;
 
-    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
+    invoke-direct {p0, v1, v3}, Landroid/support/v7/widget/y;->a(Landroid/graphics/drawable/Drawable;Z)Landroid/graphics/drawable/Drawable;
 
-    :cond_1
-    invoke-direct {p0, p1, v0}, Landroid/support/v7/widget/y;->a(Landroid/content/Context;Landroid/support/v7/widget/bw;)V
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/bw;->e()V
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->h:Landroid/graphics/Typeface;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    iget-object v1, p0, Landroid/support/v7/widget/y;->h:Landroid/graphics/Typeface;
-
-    iget v2, p0, Landroid/support/v7/widget/y;->g:I
-
-    invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
-
-    :cond_2
-    return-void
-.end method
-
-.method final a(Landroid/graphics/drawable/Drawable;Landroid/support/v7/widget/bu;)V
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    if-eqz p2, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getDrawableState()[I
-
-    move-result-object v0
-
-    invoke-static {p1, p2, v0}, Landroid/support/v7/widget/l;->a(Landroid/graphics/drawable/Drawable;Landroid/support/v7/widget/bu;[I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method a(Landroid/util/AttributeSet;I)V
-    .locals 12
-
-    const/16 v11, 0x17
-
-    const/4 v1, 0x1
-
-    const/4 v9, -0x1
-
-    const/4 v5, 0x0
-
-    const/4 v2, 0x0
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
-
-    move-result-object v7
-
-    invoke-static {}, Landroid/support/v7/widget/l;->a()Landroid/support/v7/widget/l;
-
-    move-result-object v0
-
-    sget-object v3, Landroid/support/v7/a/b$l;->AppCompatTextHelper:[I
-
-    invoke-static {v7, p1, v3, p2, v2}, Landroid/support/v7/widget/bw;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/support/v7/widget/bw;
-
-    move-result-object v3
-
-    sget v4, Landroid/support/v7/a/b$l;->AppCompatTextHelper_android_textAppearance:I
-
-    invoke-virtual {v3, v4, v9}, Landroid/support/v7/widget/bw;->g(II)I
-
-    move-result v4
-
-    sget v6, Landroid/support/v7/a/b$l;->AppCompatTextHelper_android_drawableLeft:I
-
-    invoke-virtual {v3, v6}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_0
-
-    sget v6, Landroid/support/v7/a/b$l;->AppCompatTextHelper_android_drawableLeft:I
-
-    invoke-virtual {v3, v6, v2}, Landroid/support/v7/widget/bw;->g(II)I
-
-    move-result v6
-
-    invoke-static {v7, v0, v6}, Landroid/support/v7/widget/y;->a(Landroid/content/Context;Landroid/support/v7/widget/l;I)Landroid/support/v7/widget/bu;
-
-    move-result-object v6
-
-    iput-object v6, p0, Landroid/support/v7/widget/y;->b:Landroid/support/v7/widget/bu;
-
-    :cond_0
-    sget v6, Landroid/support/v7/a/b$l;->AppCompatTextHelper_android_drawableTop:I
-
-    invoke-virtual {v3, v6}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    sget v6, Landroid/support/v7/a/b$l;->AppCompatTextHelper_android_drawableTop:I
-
-    invoke-virtual {v3, v6, v2}, Landroid/support/v7/widget/bw;->g(II)I
-
-    move-result v6
-
-    invoke-static {v7, v0, v6}, Landroid/support/v7/widget/y;->a(Landroid/content/Context;Landroid/support/v7/widget/l;I)Landroid/support/v7/widget/bu;
-
-    move-result-object v6
-
-    iput-object v6, p0, Landroid/support/v7/widget/y;->c:Landroid/support/v7/widget/bu;
+    invoke-virtual {v2, v1}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_1
-    sget v6, Landroid/support/v7/a/b$l;->AppCompatTextHelper_android_drawableRight:I
-
-    invoke-virtual {v3, v6}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    sget v6, Landroid/support/v7/a/b$l;->AppCompatTextHelper_android_drawableRight:I
-
-    invoke-virtual {v3, v6, v2}, Landroid/support/v7/widget/bw;->g(II)I
-
-    move-result v6
-
-    invoke-static {v7, v0, v6}, Landroid/support/v7/widget/y;->a(Landroid/content/Context;Landroid/support/v7/widget/l;I)Landroid/support/v7/widget/bu;
-
-    move-result-object v6
-
-    iput-object v6, p0, Landroid/support/v7/widget/y;->d:Landroid/support/v7/widget/bu;
-
-    :cond_2
-    sget v6, Landroid/support/v7/a/b$l;->AppCompatTextHelper_android_drawableBottom:I
-
-    invoke-virtual {v3, v6}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_3
-
-    sget v6, Landroid/support/v7/a/b$l;->AppCompatTextHelper_android_drawableBottom:I
-
-    invoke-virtual {v3, v6, v2}, Landroid/support/v7/widget/bw;->g(II)I
-
-    move-result v6
-
-    invoke-static {v7, v0, v6}, Landroid/support/v7/widget/y;->a(Landroid/content/Context;Landroid/support/v7/widget/l;I)Landroid/support/v7/widget/bu;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v7/widget/y;->e:Landroid/support/v7/widget/bu;
-
-    :cond_3
-    invoke-virtual {v3}, Landroid/support/v7/widget/bw;->e()V
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getTransformationMethod()Landroid/text/method/TransformationMethod;
-
-    move-result-object v0
-
-    instance-of v8, v0, Landroid/text/method/PasswordTransformationMethod;
-
-    if-eq v4, v9, :cond_14
-
-    sget-object v0, Landroid/support/v7/a/b$l;->TextAppearance:[I
-
-    invoke-static {v7, v4, v0}, Landroid/support/v7/widget/bw;->a(Landroid/content/Context;I[I)Landroid/support/v7/widget/bw;
-
-    move-result-object v9
-
-    if-nez v8, :cond_13
-
-    sget v0, Landroid/support/v7/a/b$l;->TextAppearance_textAllCaps:I
-
-    invoke-virtual {v9, v0}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_13
-
-    sget v0, Landroid/support/v7/a/b$l;->TextAppearance_textAllCaps:I
-
-    invoke-virtual {v9, v0, v2}, Landroid/support/v7/widget/bw;->a(IZ)Z
-
-    move-result v0
-
-    move v3, v0
-
-    move v0, v1
-
-    :goto_0
-    invoke-direct {p0, v7, v9}, Landroid/support/v7/widget/y;->a(Landroid/content/Context;Landroid/support/v7/widget/bw;)V
-
-    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-ge v4, v11, :cond_12
-
-    sget v4, Landroid/support/v7/a/b$l;->TextAppearance_android_textColor:I
-
-    invoke-virtual {v9, v4}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_11
-
-    sget v4, Landroid/support/v7/a/b$l;->TextAppearance_android_textColor:I
-
-    invoke-virtual {v9, v4}, Landroid/support/v7/widget/bw;->g(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v4
-
-    :goto_1
-    sget v6, Landroid/support/v7/a/b$l;->TextAppearance_android_textColorHint:I
-
-    invoke-virtual {v9, v6}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_10
-
-    sget v6, Landroid/support/v7/a/b$l;->TextAppearance_android_textColorHint:I
-
-    invoke-virtual {v9, v6}, Landroid/support/v7/widget/bw;->g(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v6
-
-    :goto_2
-    sget v10, Landroid/support/v7/a/b$l;->TextAppearance_android_textColorLink:I
-
-    invoke-virtual {v9, v10}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_4
-
-    sget v5, Landroid/support/v7/a/b$l;->TextAppearance_android_textColorLink:I
-
-    invoke-virtual {v9, v5}, Landroid/support/v7/widget/bw;->g(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v5
-
-    :cond_4
-    :goto_3
-    invoke-virtual {v9}, Landroid/support/v7/widget/bw;->e()V
-
-    :goto_4
-    sget-object v9, Landroid/support/v7/a/b$l;->TextAppearance:[I
-
-    invoke-static {v7, p1, v9, p2, v2}, Landroid/support/v7/widget/bw;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/support/v7/widget/bw;
-
-    move-result-object v9
-
-    if-nez v8, :cond_5
-
-    sget v10, Landroid/support/v7/a/b$l;->TextAppearance_textAllCaps:I
-
-    invoke-virtual {v9, v10}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_5
-
-    sget v0, Landroid/support/v7/a/b$l;->TextAppearance_textAllCaps:I
-
-    invoke-virtual {v9, v0, v2}, Landroid/support/v7/widget/bw;->a(IZ)Z
-
-    move-result v3
-
-    move v0, v1
-
-    :cond_5
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-ge v1, v11, :cond_8
-
-    sget v1, Landroid/support/v7/a/b$l;->TextAppearance_android_textColor:I
-
-    invoke-virtual {v9, v1}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    sget v1, Landroid/support/v7/a/b$l;->TextAppearance_android_textColor:I
-
-    invoke-virtual {v9, v1}, Landroid/support/v7/widget/bw;->g(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v4
-
-    :cond_6
-    sget v1, Landroid/support/v7/a/b$l;->TextAppearance_android_textColorHint:I
-
-    invoke-virtual {v9, v1}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    sget v1, Landroid/support/v7/a/b$l;->TextAppearance_android_textColorHint:I
-
-    invoke-virtual {v9, v1}, Landroid/support/v7/widget/bw;->g(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v6
-
-    :cond_7
-    sget v1, Landroid/support/v7/a/b$l;->TextAppearance_android_textColorLink:I
-
-    invoke-virtual {v9, v1}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    sget v1, Landroid/support/v7/a/b$l;->TextAppearance_android_textColorLink:I
-
-    invoke-virtual {v9, v1}, Landroid/support/v7/widget/bw;->g(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v5
-
-    :cond_8
-    invoke-direct {p0, v7, v9}, Landroid/support/v7/widget/y;->a(Landroid/content/Context;Landroid/support/v7/widget/bw;)V
-
-    invoke-virtual {v9}, Landroid/support/v7/widget/bw;->e()V
-
-    if-eqz v4, :cond_9
-
-    iget-object v1, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
-
-    :cond_9
-    if-eqz v6, :cond_a
-
-    iget-object v1, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v6}, Landroid/widget/TextView;->setHintTextColor(Landroid/content/res/ColorStateList;)V
-
-    :cond_a
-    if-eqz v5, :cond_b
-
-    iget-object v1, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setLinkTextColor(Landroid/content/res/ColorStateList;)V
-
-    :cond_b
-    if-nez v8, :cond_c
-
-    if-eqz v0, :cond_c
-
-    invoke-virtual {p0, v3}, Landroid/support/v7/widget/y;->a(Z)V
-
-    :cond_c
-    iget-object v0, p0, Landroid/support/v7/widget/y;->h:Landroid/graphics/Typeface;
-
-    if-eqz v0, :cond_d
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    iget-object v1, p0, Landroid/support/v7/widget/y;->h:Landroid/graphics/Typeface;
-
-    iget v3, p0, Landroid/support/v7/widget/y;->g:I
-
-    invoke-virtual {v0, v1, v3}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
-
-    :cond_d
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/ab;->a(Landroid/util/AttributeSet;I)V
-
-    invoke-static {}, Landroid/support/v4/os/b;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_e
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/ab;->a()I
-
-    move-result v0
-
-    if-eqz v0, :cond_e
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/ab;->e()[I
-
-    move-result-object v0
-
-    array-length v1, v0
-
-    if-lez v1, :cond_e
-
-    iget-object v1, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v1}, Landroid/widget/TextView;->getAutoSizeStepGranularity()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    const/high16 v3, -0x40800000    # -1.0f
-
-    cmpl-float v1, v1, v3
-
-    if-eqz v1, :cond_f
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    iget-object v1, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v1}, Landroid/support/v7/widget/ab;->c()I
-
-    move-result v1
-
-    iget-object v3, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v3}, Landroid/support/v7/widget/ab;->d()I
-
-    move-result v3
-
-    iget-object v4, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v4}, Landroid/support/v7/widget/ab;->b()I
-
-    move-result v4
-
-    invoke-virtual {v0, v1, v3, v4, v2}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithConfiguration(IIII)V
-
-    :cond_e
-    :goto_5
-    return-void
-
-    :cond_f
-    iget-object v1, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0, v2}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithPresetSizes([II)V
-
-    goto :goto_5
-
-    :cond_10
-    move-object v6, v5
-
-    goto/16 :goto_2
-
-    :cond_11
-    move-object v4, v5
-
-    goto/16 :goto_1
-
-    :cond_12
-    move-object v6, v5
-
-    move-object v4, v5
-
-    goto/16 :goto_3
-
-    :cond_13
-    move v0, v2
-
-    move v3, v2
-
-    goto/16 :goto_0
-
-    :cond_14
-    move-object v6, v5
-
-    move-object v4, v5
-
-    move v0, v2
-
-    move v3, v2
-
-    goto/16 :goto_4
-.end method
-
-.method a(Z)V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setAllCaps(Z)V
+    invoke-virtual {v0}, Landroid/support/v7/widget/ci;->e()V
 
     return-void
-.end method
-
-.method a(ZIIII)V
-    .locals 1
-    .annotation build Landroid/support/annotation/ak;
-        a = {
-            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
-        }
-    .end annotation
-
-    invoke-static {}, Landroid/support/v4/os/b;->c()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-direct {p0}, Landroid/support/v7/widget/y;->g()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-direct {p0}, Landroid/support/v7/widget/y;->h()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Landroid/support/v7/widget/y;->i()V
-
-    :cond_0
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Landroid/support/v7/widget/y;->b(Z)V
-
-    :cond_1
-    return-void
-.end method
-
-.method a([II)V
-    .locals 1
-    .param p1    # [I
-        .annotation build Landroid/support/annotation/ad;
-        .end annotation
-    .end param
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/ab;->a([II)V
-
-    return-void
-.end method
-
-.method b()I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/ab;->a()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method c()I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/ab;->b()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method d()I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/ab;->c()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method e()I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/ab;->d()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method f()[I
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/widget/y;->f:Landroid/support/v7/widget/ab;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/ab;->e()[I
-
-    move-result-object v0
-
-    return-object v0
 .end method

@@ -96,17 +96,17 @@
 
     invoke-virtual {p0, v0}, Landroid/support/design/widget/AppBarLayout;->setOrientation(I)V
 
-    invoke-static {p1}, Landroid/support/design/widget/v;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Landroid/support/design/widget/x;->a(Landroid/content/Context;)V
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v0, v3, :cond_0
 
-    invoke-static {p0}, Landroid/support/design/widget/aa;->a(Landroid/view/View;)V
+    invoke-static {p0}, Landroid/support/design/widget/ac;->a(Landroid/view/View;)V
 
     sget v0, Landroid/support/design/b$l;->Widget_Design_AppBarLayout:I
 
-    invoke-static {p0, p2, v2, v0}, Landroid/support/design/widget/aa;->a(Landroid/view/View;Landroid/util/AttributeSet;II)V
+    invoke-static {p0, p2, v2, v0}, Landroid/support/design/widget/ac;->a(Landroid/view/View;Landroid/util/AttributeSet;II)V
 
     :cond_0
     sget-object v0, Landroid/support/design/b$m;->AppBarLayout:[I
@@ -162,7 +162,7 @@
 
     int-to-float v1, v1
 
-    invoke-static {p0, v1}, Landroid/support/design/widget/aa;->a(Landroid/view/View;F)V
+    invoke-static {p0, v1}, Landroid/support/design/widget/ac;->a(Landroid/view/View;F)V
 
     :cond_2
     invoke-static {}, Landroid/support/v4/os/b;->c()Z
@@ -1288,7 +1288,7 @@
 
     if-lt v0, v1, :cond_0
 
-    invoke-static {p0, p1}, Landroid/support/design/widget/aa;->a(Landroid/view/View;F)V
+    invoke-static {p0, p1}, Landroid/support/design/widget/ac;->a(Landroid/view/View;F)V
 
     :cond_0
     return-void

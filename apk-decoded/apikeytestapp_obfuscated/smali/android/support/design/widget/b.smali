@@ -48,7 +48,7 @@
 # instance fields
 .field final i:Landroid/support/design/widget/b$g;
 
-.field final j:Landroid/support/design/widget/q$a;
+.field final j:Landroid/support/design/widget/s$a;
 
 .field private final l:Landroid/view/ViewGroup;
 
@@ -138,7 +138,7 @@
 
     invoke-direct {v0, p0}, Landroid/support/design/widget/b$6;-><init>(Landroid/support/design/widget/b;)V
 
-    iput-object v0, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/q$a;
+    iput-object v0, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/s$a;
 
     if-nez p1, :cond_0
 
@@ -185,7 +185,7 @@
 
     iget-object v0, p0, Landroid/support/design/widget/b;->m:Landroid/content/Context;
 
-    invoke-static {v0}, Landroid/support/design/widget/v;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Landroid/support/design/widget/x;->a(Landroid/content/Context;)V
 
     iget-object v0, p0, Landroid/support/design/widget/b;->m:Landroid/content/Context;
 
@@ -467,13 +467,13 @@
 .method b(I)V
     .locals 2
 
-    invoke-static {}, Landroid/support/design/widget/q;->a()Landroid/support/design/widget/q;
+    invoke-static {}, Landroid/support/design/widget/s;->a()Landroid/support/design/widget/s;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/q$a;
+    iget-object v1, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/s$a;
 
-    invoke-virtual {v0, v1, p1}, Landroid/support/design/widget/q;->a(Landroid/support/design/widget/q$a;I)V
+    invoke-virtual {v0, v1, p1}, Landroid/support/design/widget/s;->a(Landroid/support/design/widget/s$a;I)V
 
     return-void
 .end method
@@ -519,15 +519,15 @@
 .method public d()V
     .locals 3
 
-    invoke-static {}, Landroid/support/design/widget/q;->a()Landroid/support/design/widget/q;
+    invoke-static {}, Landroid/support/design/widget/s;->a()Landroid/support/design/widget/s;
 
     move-result-object v0
 
     iget v1, p0, Landroid/support/design/widget/b;->o:I
 
-    iget-object v2, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/q$a;
+    iget-object v2, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/s$a;
 
-    invoke-virtual {v0, v1, v2}, Landroid/support/design/widget/q;->a(ILandroid/support/design/widget/q$a;)V
+    invoke-virtual {v0, v1, v2}, Landroid/support/design/widget/s;->a(ILandroid/support/design/widget/s$a;)V
 
     return-void
 .end method
@@ -535,13 +535,13 @@
 .method d(I)V
     .locals 2
 
-    invoke-static {}, Landroid/support/design/widget/q;->a()Landroid/support/design/widget/q;
+    invoke-static {}, Landroid/support/design/widget/s;->a()Landroid/support/design/widget/s;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/q$a;
+    iget-object v1, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/s$a;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/q;->a(Landroid/support/design/widget/q$a;)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/s;->a(Landroid/support/design/widget/s$a;)V
 
     iget-object v0, p0, Landroid/support/design/widget/b;->p:Ljava/util/List;
 
@@ -623,13 +623,13 @@
 .method public f()Z
     .locals 2
 
-    invoke-static {}, Landroid/support/design/widget/q;->a()Landroid/support/design/widget/q;
+    invoke-static {}, Landroid/support/design/widget/s;->a()Landroid/support/design/widget/s;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/q$a;
+    iget-object v1, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/s$a;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/q;->e(Landroid/support/design/widget/q$a;)Z
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/s;->e(Landroid/support/design/widget/s$a;)Z
 
     move-result v0
 
@@ -639,13 +639,13 @@
 .method public g()Z
     .locals 2
 
-    invoke-static {}, Landroid/support/design/widget/q;->a()Landroid/support/design/widget/q;
+    invoke-static {}, Landroid/support/design/widget/s;->a()Landroid/support/design/widget/s;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/q$a;
+    iget-object v1, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/s$a;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/q;->f(Landroid/support/design/widget/q$a;)Z
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/s;->f(Landroid/support/design/widget/s$a;)Z
 
     move-result v0
 
@@ -866,13 +866,13 @@
 .method j()V
     .locals 2
 
-    invoke-static {}, Landroid/support/design/widget/q;->a()Landroid/support/design/widget/q;
+    invoke-static {}, Landroid/support/design/widget/s;->a()Landroid/support/design/widget/s;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/q$a;
+    iget-object v1, p0, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/s$a;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/q;->b(Landroid/support/design/widget/q$a;)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/s;->b(Landroid/support/design/widget/s$a;)V
 
     iget-object v0, p0, Landroid/support/design/widget/b;->p:Ljava/util/List;
 

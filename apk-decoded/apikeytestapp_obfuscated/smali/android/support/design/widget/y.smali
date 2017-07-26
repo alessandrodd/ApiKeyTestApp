@@ -2,169 +2,230 @@
 .super Ljava/lang/Object;
 
 
-# instance fields
-.field private final a:Landroid/view/View;
+# static fields
+.field private static final a:Ljava/lang/ThreadLocal;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ThreadLocal",
+            "<",
+            "Landroid/graphics/Matrix;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private b:I
-
-.field private c:I
-
-.field private d:I
-
-.field private e:I
+.field private static final b:Ljava/lang/ThreadLocal;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ThreadLocal",
+            "<",
+            "Landroid/graphics/RectF;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+
+    sput-object v0, Landroid/support/design/widget/y;->a:Ljava/lang/ThreadLocal;
+
+    new-instance v0, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+
+    sput-object v0, Landroid/support/design/widget/y;->b:Ljava/lang/ThreadLocal;
+
+    return-void
+.end method
+
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroid/support/design/widget/y;->a:Landroid/view/View;
-
     return-void
 .end method
 
-.method private f()V
-    .locals 4
+.method static a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
+    .locals 5
 
-    iget-object v0, p0, Landroid/support/design/widget/y;->a:Landroid/view/View;
+    const/high16 v4, 0x3f000000    # 0.5f
 
-    iget v1, p0, Landroid/support/design/widget/y;->d:I
+    sget-object v0, Landroid/support/design/widget/y;->a:Ljava/lang/ThreadLocal;
 
-    iget-object v2, p0, Landroid/support/design/widget/y;->a:Landroid/view/View;
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    invoke-virtual {v2}, Landroid/view/View;->getTop()I
+    move-result-object v0
 
-    move-result v2
+    check-cast v0, Landroid/graphics/Matrix;
 
-    iget v3, p0, Landroid/support/design/widget/y;->b:I
+    if-nez v0, :cond_1
 
-    sub-int/2addr v2, v3
+    new-instance v0, Landroid/graphics/Matrix;
 
-    sub-int/2addr v1, v2
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    invoke-static {v0, v1}, Landroid/support/v4/view/ac;->k(Landroid/view/View;I)V
+    sget-object v1, Landroid/support/design/widget/y;->a:Ljava/lang/ThreadLocal;
 
-    iget-object v0, p0, Landroid/support/design/widget/y;->a:Landroid/view/View;
+    invoke-virtual {v1, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    iget v1, p0, Landroid/support/design/widget/y;->e:I
-
-    iget-object v2, p0, Landroid/support/design/widget/y;->a:Landroid/view/View;
-
-    invoke-virtual {v2}, Landroid/view/View;->getLeft()I
-
-    move-result v2
-
-    iget v3, p0, Landroid/support/design/widget/y;->c:I
-
-    sub-int/2addr v2, v3
-
-    sub-int/2addr v1, v2
-
-    invoke-static {v0, v1}, Landroid/support/v4/view/ac;->l(Landroid/view/View;I)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a()V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/design/widget/y;->a:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getTop()I
-
-    move-result v0
-
-    iput v0, p0, Landroid/support/design/widget/y;->b:I
-
-    iget-object v0, p0, Landroid/support/design/widget/y;->a:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getLeft()I
-
-    move-result v0
-
-    iput v0, p0, Landroid/support/design/widget/y;->c:I
-
-    invoke-direct {p0}, Landroid/support/design/widget/y;->f()V
-
-    return-void
-.end method
-
-.method public a(I)Z
-    .locals 1
-
-    iget v0, p0, Landroid/support/design/widget/y;->d:I
-
-    if-eq v0, p1, :cond_0
-
-    iput p1, p0, Landroid/support/design/widget/y;->d:I
-
-    invoke-direct {p0}, Landroid/support/design/widget/y;->f()V
-
-    const/4 v0, 0x1
+    move-object v1, v0
 
     :goto_0
-    return v0
+    invoke-static {p0, p1, v1}, Landroid/support/design/widget/y;->a(Landroid/view/ViewParent;Landroid/view/View;Landroid/graphics/Matrix;)V
+
+    sget-object v0, Landroid/support/design/widget/y;->b:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/RectF;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/graphics/RectF;
+
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+
+    sget-object v2, Landroid/support/design/widget/y;->b:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v2, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v0, p2}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v1, v0}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
+
+    iget v1, v0, Landroid/graphics/RectF;->left:F
+
+    add-float/2addr v1, v4
+
+    float-to-int v1, v1
+
+    iget v2, v0, Landroid/graphics/RectF;->top:F
+
+    add-float/2addr v2, v4
+
+    float-to-int v2, v2
+
+    iget v3, v0, Landroid/graphics/RectF;->right:F
+
+    add-float/2addr v3, v4
+
+    float-to-int v3, v3
+
+    iget v0, v0, Landroid/graphics/RectF;->bottom:F
+
+    add-float/2addr v0, v4
+
+    float-to-int v0, v0
+
+    invoke-virtual {p2, v1, v2, v3, v0}, Landroid/graphics/Rect;->set(IIII)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
+
+    move-object v1, v0
 
     goto :goto_0
 .end method
 
-.method public b()I
-    .locals 1
+.method private static a(Landroid/view/ViewParent;Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 2
 
-    iget v0, p0, Landroid/support/design/widget/y;->d:I
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    return v0
-.end method
+    move-result-object v0
 
-.method public b(I)Z
-    .locals 1
+    instance-of v1, v0, Landroid/view/View;
 
-    iget v0, p0, Landroid/support/design/widget/y;->e:I
+    if-eqz v1, :cond_0
 
-    if-eq v0, p1, :cond_0
+    if-eq v0, p0, :cond_0
 
-    iput p1, p0, Landroid/support/design/widget/y;->e:I
+    check-cast v0, Landroid/view/View;
 
-    invoke-direct {p0}, Landroid/support/design/widget/y;->f()V
+    invoke-static {p0, v0, p2}, Landroid/support/design/widget/y;->a(Landroid/view/ViewParent;Landroid/view/View;Landroid/graphics/Matrix;)V
 
-    const/4 v0, 0x1
+    invoke-virtual {v0}, Landroid/view/View;->getScrollX()I
 
-    :goto_0
-    return v0
+    move-result v1
+
+    neg-int v1, v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {v0}, Landroid/view/View;->getScrollY()I
+
+    move-result v0
+
+    neg-int v0, v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p2, v1, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
-    goto :goto_0
+    move-result v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {p2, v0, v1}, Landroid/graphics/Matrix;->preTranslate(FF)Z
+
+    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Matrix;->isIdentity()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
+
+    :cond_1
+    return-void
 .end method
 
-.method public c()I
-    .locals 1
+.method static b(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
+    .locals 3
 
-    iget v0, p0, Landroid/support/design/widget/y;->e:I
+    const/4 v2, 0x0
 
-    return v0
-.end method
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-.method public d()I
-    .locals 1
+    move-result v0
 
-    iget v0, p0, Landroid/support/design/widget/y;->b:I
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    return v0
-.end method
+    move-result v1
 
-.method public e()I
-    .locals 1
+    invoke-virtual {p2, v2, v2, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
 
-    iget v0, p0, Landroid/support/design/widget/y;->c:I
+    invoke-static {p0, p1, p2}, Landroid/support/design/widget/y;->a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
 
-    return v0
+    return-void
 .end method

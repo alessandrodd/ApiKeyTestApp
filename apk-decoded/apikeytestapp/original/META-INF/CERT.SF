@@ -1,13 +1,13 @@
 Signature-Version: 1.0
 Created-By: 1.0 (Android)
-SHA1-Digest-Manifest: ZgYOZ5AswceKCSKh5GaYzVpEULo=
+SHA1-Digest-Manifest: 8XdUPTs1/vg/VWrDY2O+0HOEuDY=
 X-Android-APK-Signed: 2
 
 Name: AndroidManifest.xml
 SHA1-Digest: rFwEIE/DmFEL/sr0VOMMmNBZDEw=
 
 Name: classes.dex
-SHA1-Digest: UmQpQROZdW1AvGjpGn/HQZzNVq8=
+SHA1-Digest: qPfjkIJ7LSdp0mo+jApkGgNYfoA=
 
 Name: lib/arm64-v8a/libnative-lib.so
 SHA1-Digest: 2bxaiICBnGQtpL5RbQSx8PXkbXA=

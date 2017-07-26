@@ -2,12 +2,12 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/design/widget/k$c;
+.implements Landroid/support/design/widget/l$c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroid/support/design/widget/FloatingActionButton;->c(Landroid/support/design/widget/FloatingActionButton$a;)Landroid/support/design/widget/k$c;
+    value = Landroid/support/design/widget/FloatingActionButton;->c(Landroid/support/design/widget/FloatingActionButton$a;)Landroid/support/design/widget/l$c;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

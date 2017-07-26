@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v7/view/menu/p$a;
+.implements Landroid/support/v7/h/a/s$a;
 
 
 # annotations
@@ -33,17 +33,17 @@
 
 
 # virtual methods
-.method public a(Landroid/support/v7/view/menu/h;Z)V
+.method public a(Landroid/support/v7/h/a/k;Z)V
     .locals 1
 
     iget-object v0, p0, Landroid/support/v7/app/AppCompatDelegateImplV9$a;->a:Landroid/support/v7/app/AppCompatDelegateImplV9;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/app/AppCompatDelegateImplV9;->b(Landroid/support/v7/view/menu/h;)V
+    invoke-virtual {v0, p1}, Landroid/support/v7/app/AppCompatDelegateImplV9;->b(Landroid/support/v7/h/a/k;)V
 
     return-void
 .end method
 
-.method public a(Landroid/support/v7/view/menu/h;)Z
+.method public a(Landroid/support/v7/h/a/k;)Z
     .locals 2
 
     iget-object v0, p0, Landroid/support/v7/app/AppCompatDelegateImplV9$a;->a:Landroid/support/v7/app/AppCompatDelegateImplV9;

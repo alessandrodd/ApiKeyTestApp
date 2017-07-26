@@ -53,9 +53,9 @@
     :cond_1
     iget-object v2, p0, Landroid/support/v7/widget/SearchView$7;->a:Landroid/support/v7/widget/SearchView;
 
-    iget-object v2, v2, Landroid/support/v7/widget/SearchView;->c:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v2, v2, Landroid/support/v7/widget/SearchView;->c:Landroid/support/v7/widget/SearchView$e;
 
-    invoke-virtual {v2}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->isPopupShowing()Z
+    invoke-virtual {v2}, Landroid/support/v7/widget/SearchView$e;->isPopupShowing()Z
 
     move-result v2
 
@@ -63,9 +63,9 @@
 
     iget-object v2, p0, Landroid/support/v7/widget/SearchView$7;->a:Landroid/support/v7/widget/SearchView;
 
-    iget-object v2, v2, Landroid/support/v7/widget/SearchView;->c:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v2, v2, Landroid/support/v7/widget/SearchView;->c:Landroid/support/v7/widget/SearchView$e;
 
-    invoke-virtual {v2}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getListSelection()I
+    invoke-virtual {v2}, Landroid/support/v7/widget/SearchView$e;->getListSelection()I
 
     move-result v2
 
@@ -84,9 +84,9 @@
     :cond_2
     iget-object v2, p0, Landroid/support/v7/widget/SearchView$7;->a:Landroid/support/v7/widget/SearchView;
 
-    iget-object v2, v2, Landroid/support/v7/widget/SearchView;->c:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v2, v2, Landroid/support/v7/widget/SearchView;->c:Landroid/support/v7/widget/SearchView$e;
 
-    invoke-static {v2}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->a(Landroid/support/v7/widget/SearchView$SearchAutoComplete;)Z
+    invoke-static {v2}, Landroid/support/v7/widget/SearchView$e;->a(Landroid/support/v7/widget/SearchView$e;)Z
 
     move-result v2
 
@@ -116,9 +116,9 @@
 
     iget-object v4, p0, Landroid/support/v7/widget/SearchView$7;->a:Landroid/support/v7/widget/SearchView;
 
-    iget-object v4, v4, Landroid/support/v7/widget/SearchView;->c:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v4, v4, Landroid/support/v7/widget/SearchView;->c:Landroid/support/v7/widget/SearchView$e;
 
-    invoke-virtual {v4}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getText()Landroid/text/Editable;
+    invoke-virtual {v4}, Landroid/support/v7/widget/SearchView$e;->getText()Landroid/text/Editable;
 
     move-result-object v4
 

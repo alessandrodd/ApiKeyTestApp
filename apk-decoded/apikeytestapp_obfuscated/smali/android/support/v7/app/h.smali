@@ -1,442 +1,339 @@
-.class abstract Landroid/support/v7/app/h;
-.super Landroid/support/v7/app/g;
+.class public abstract Landroid/support/v7/app/h;
+.super Ljava/lang/Object;
 
 
 # annotations
-.annotation build Landroid/support/annotation/ai;
-    a = 0xe
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/v7/app/h$b;,
         Landroid/support/v7/app/h$a;
     }
 .end annotation
 
 
 # static fields
-.field static final j:Z = false
+.field static final a:Ljava/lang/String; = "AppCompatDelegate"
 
-.field static final k:Ljava/lang/String; = ". If the resource you are trying to use is a vector resource, you may be referencing it in an unsupported way. See AppCompatDelegate.setCompatVectorFromResourcesEnabled() for more info."
+.field public static final b:I = 0x1
 
-.field private static x:Z
+.field public static final c:I = 0x2
 
-.field private static final y:Z
+.field public static final d:I = 0x0
 
-.field private static final z:[I
+.field public static final e:I = -0x1
 
+.field static final f:I = -0x64
 
-# instance fields
-.field private A:Ljava/lang/CharSequence;
+.field public static final g:I = 0x6c
 
-.field private B:Z
+.field public static final h:I = 0x6d
 
-.field private C:Z
+.field public static final i:I = 0xa
 
-.field private D:Z
+.field private static j:I
 
-.field final l:Landroid/content/Context;
-
-.field final m:Landroid/view/Window;
-
-.field final n:Landroid/view/Window$Callback;
-
-.field final o:Landroid/view/Window$Callback;
-
-.field final p:Landroid/support/v7/app/f;
-
-.field q:Landroid/support/v7/app/a;
-
-.field r:Landroid/view/MenuInflater;
-
-.field s:Z
-
-.field t:Z
-
-.field u:Z
-
-.field v:Z
-
-.field w:Z
+.field private static k:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    const/4 v2, 0x0
+    const/4 v0, -0x1
 
-    const/4 v1, 0x1
+    sput v0, Landroid/support/v7/app/h;->j:I
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v0, 0x0
 
-    const/16 v3, 0x15
+    sput-boolean v0, Landroid/support/v7/app/h;->k:Z
 
-    if-ge v0, v3, :cond_1
+    return-void
+.end method
 
-    move v0, v1
+.method constructor <init>()V
+    .locals 0
 
-    :goto_0
-    sput-boolean v0, Landroid/support/v7/app/h;->y:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-boolean v0, Landroid/support/v7/app/h;->y:Z
+    return-void
+.end method
 
-    if-eqz v0, :cond_0
+.method public static a(Landroid/app/Activity;Landroid/support/v7/app/g;)Landroid/support/v7/app/h;
+    .locals 1
 
-    sget-boolean v0, Landroid/support/v7/app/h;->x:Z
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    new-instance v3, Landroid/support/v7/app/h$1;
+    invoke-static {p0, v0, p1}, Landroid/support/v7/app/h;->a(Landroid/content/Context;Landroid/view/Window;Landroid/support/v7/app/g;)Landroid/support/v7/app/h;
 
-    invoke-direct {v3, v0}, Landroid/support/v7/app/h$1;-><init>(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+    move-result-object v0
 
-    invoke-static {v3}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+    return-object v0
+.end method
 
-    sput-boolean v1, Landroid/support/v7/app/h;->x:Z
+.method public static a(Landroid/app/Dialog;Landroid/support/v7/app/g;)Landroid/support/v7/app/h;
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-static {v0, v1, p1}, Landroid/support/v7/app/h;->a(Landroid/content/Context;Landroid/view/Window;Landroid/support/v7/app/g;)Landroid/support/v7/app/h;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private static a(Landroid/content/Context;Landroid/view/Window;Landroid/support/v7/app/g;)Landroid/support/v7/app/h;
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x18
+
+    if-lt v0, v1, :cond_0
+
+    new-instance v0, Landroid/support/v7/app/j;
+
+    invoke-direct {v0, p0, p1, p2}, Landroid/support/v7/app/j;-><init>(Landroid/content/Context;Landroid/view/Window;Landroid/support/v7/app/g;)V
+
+    :goto_0
+    return-object v0
 
     :cond_0
-    new-array v0, v1, [I
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const v1, 0x1010054
+    const/16 v1, 0x17
 
-    aput v1, v0, v2
+    if-lt v0, v1, :cond_1
 
-    sput-object v0, Landroid/support/v7/app/h;->z:[I
+    new-instance v0, Landroid/support/v7/app/m;
 
-    return-void
+    invoke-direct {v0, p0, p1, p2}, Landroid/support/v7/app/m;-><init>(Landroid/content/Context;Landroid/view/Window;Landroid/support/v7/app/g;)V
+
+    goto :goto_0
 
     :cond_1
-    move v0, v2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0xe
+
+    if-lt v0, v1, :cond_2
+
+    new-instance v0, Landroid/support/v7/app/l;
+
+    invoke-direct {v0, p0, p1, p2}, Landroid/support/v7/app/l;-><init>(Landroid/content/Context;Landroid/view/Window;Landroid/support/v7/app/g;)V
+
+    goto :goto_0
+
+    :cond_2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0xb
+
+    if-lt v0, v1, :cond_3
+
+    new-instance v0, Landroid/support/v7/app/k;
+
+    invoke-direct {v0, p0, p1, p2}, Landroid/support/v7/app/k;-><init>(Landroid/content/Context;Landroid/view/Window;Landroid/support/v7/app/g;)V
+
+    goto :goto_0
+
+    :cond_3
+    new-instance v0, Landroid/support/v7/app/AppCompatDelegateImplV9;
+
+    invoke-direct {v0, p0, p1, p2}, Landroid/support/v7/app/AppCompatDelegateImplV9;-><init>(Landroid/content/Context;Landroid/view/Window;Landroid/support/v7/app/g;)V
 
     goto :goto_0
 .end method
 
-.method constructor <init>(Landroid/content/Context;Landroid/view/Window;Landroid/support/v7/app/f;)V
-    .locals 3
+.method public static b(Z)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/support/v7/app/g;-><init>()V
-
-    iput-object p1, p0, Landroid/support/v7/app/h;->l:Landroid/content/Context;
-
-    iput-object p2, p0, Landroid/support/v7/app/h;->m:Landroid/view/Window;
-
-    iput-object p3, p0, Landroid/support/v7/app/h;->p:Landroid/support/v7/app/f;
-
-    iget-object v0, p0, Landroid/support/v7/app/h;->m:Landroid/view/Window;
-
-    invoke-virtual {v0}, Landroid/view/Window;->getCallback()Landroid/view/Window$Callback;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v7/app/h;->n:Landroid/view/Window$Callback;
-
-    iget-object v0, p0, Landroid/support/v7/app/h;->n:Landroid/view/Window$Callback;
-
-    instance-of v0, v0, Landroid/support/v7/app/h$b;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "AppCompat has already installed itself into the Window"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/app/h;->n:Landroid/view/Window$Callback;
-
-    invoke-virtual {p0, v0}, Landroid/support/v7/app/h;->a(Landroid/view/Window$Callback;)Landroid/view/Window$Callback;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v7/app/h;->o:Landroid/view/Window$Callback;
-
-    iget-object v0, p0, Landroid/support/v7/app/h;->m:Landroid/view/Window;
-
-    iget-object v1, p0, Landroid/support/v7/app/h;->o:Landroid/view/Window$Callback;
-
-    invoke-virtual {v0, v1}, Landroid/view/Window;->setCallback(Landroid/view/Window$Callback;)V
-
-    const/4 v0, 0x0
-
-    sget-object v1, Landroid/support/v7/app/h;->z:[I
-
-    invoke-static {p1, v0, v1}, Landroid/support/v7/widget/bw;->a(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/support/v7/widget/bw;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/widget/bw;->b(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v2, p0, Landroid/support/v7/app/h;->m:Landroid/view/Window;
-
-    invoke-virtual {v2, v1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_1
-    invoke-virtual {v0}, Landroid/support/v7/widget/bw;->e()V
+    sput-boolean p0, Landroid/support/v7/app/h;->k:Z
 
     return-void
+.end method
+
+.method public static f(I)V
+    .locals 2
+
+    packed-switch p0, :pswitch_data_0
+
+    const-string v0, "AppCompatDelegate"
+
+    const-string v1, "setDefaultNightMode() called with an unknown mode"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    sput p0, Landroid/support/v7/app/h;->j:I
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static l()I
+    .locals 1
+
+    sget v0, Landroid/support/v7/app/h;->j:I
+
+    return v0
+.end method
+
+.method public static m()Z
+    .locals 1
+
+    sget-boolean v0, Landroid/support/v7/app/h;->k:Z
+
+    return v0
 .end method
 
 
 # virtual methods
-.method public a()Landroid/support/v7/app/a;
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/support/v7/app/h;->n()V
-
-    iget-object v0, p0, Landroid/support/v7/app/h;->q:Landroid/support/v7/app/a;
-
-    return-object v0
+.method public abstract a()Landroid/support/v7/app/a;
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
 .end method
 
-.method a(Landroid/view/Window$Callback;)Landroid/view/Window$Callback;
-    .locals 1
-
-    new-instance v0, Landroid/support/v7/app/h$b;
-
-    invoke-direct {v0, p0, p1}, Landroid/support/v7/app/h$b;-><init>(Landroid/support/v7/app/h;Landroid/view/Window$Callback;)V
-
-    return-object v0
+.method public abstract a(Landroid/support/v7/h/b$a;)Landroid/support/v7/h/b;
+    .param p1    # Landroid/support/v7/h/b$a;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
 .end method
 
-.method abstract a(ILandroid/view/Menu;)V
+.method public abstract a(I)Landroid/view/View;
+    .param p1    # I
+        .annotation build Landroid/support/annotation/v;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Landroid/view/View;",
+            ">(I)TT;"
+        }
+    .end annotation
 .end method
 
-.method public final a(Ljava/lang/CharSequence;)V
-    .locals 0
-
-    iput-object p1, p0, Landroid/support/v7/app/h;->A:Ljava/lang/CharSequence;
-
-    invoke-virtual {p0, p1}, Landroid/support/v7/app/h;->b(Ljava/lang/CharSequence;)V
-
-    return-void
+.method public abstract a(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
+    .param p1    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Context;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
+    .param p4    # Landroid/util/AttributeSet;
+        .annotation build Landroid/support/annotation/ad;
+        .end annotation
+    .end param
 .end method
 
-.method public a(Z)V
-    .locals 0
-
-    return-void
+.method public abstract a(Landroid/content/res/Configuration;)V
 .end method
 
-.method abstract a(ILandroid/view/KeyEvent;)Z
+.method public abstract a(Landroid/os/Bundle;)V
 .end method
 
-.method abstract a(Landroid/view/KeyEvent;)Z
+.method public abstract a(Landroid/support/v7/widget/Toolbar;)V
+    .param p1    # Landroid/support/v7/widget/Toolbar;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 .end method
 
-.method abstract b(Landroid/support/v7/view/b$a;)Landroid/support/v7/view/b;
+.method public abstract a(Landroid/view/View;)V
 .end method
 
-.method public b()Landroid/view/MenuInflater;
-    .locals 2
-
-    iget-object v0, p0, Landroid/support/v7/app/h;->r:Landroid/view/MenuInflater;
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/support/v7/app/h;->n()V
-
-    new-instance v1, Landroid/support/v7/view/g;
-
-    iget-object v0, p0, Landroid/support/v7/app/h;->q:Landroid/support/v7/app/a;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Landroid/support/v7/app/h;->q:Landroid/support/v7/app/a;
-
-    invoke-virtual {v0}, Landroid/support/v7/app/a;->p()Landroid/content/Context;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-direct {v1, v0}, Landroid/support/v7/view/g;-><init>(Landroid/content/Context;)V
-
-    iput-object v1, p0, Landroid/support/v7/app/h;->r:Landroid/view/MenuInflater;
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/app/h;->r:Landroid/view/MenuInflater;
-
-    return-object v0
-
-    :cond_1
-    iget-object v0, p0, Landroid/support/v7/app/h;->l:Landroid/content/Context;
-
-    goto :goto_0
+.method public abstract a(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 .end method
 
-.method abstract b(Ljava/lang/CharSequence;)V
+.method public abstract a(Ljava/lang/CharSequence;)V
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
 .end method
 
-.method abstract b(ILandroid/view/Menu;)Z
+.method public abstract a(Z)V
 .end method
 
-.method public c()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Landroid/support/v7/app/h;->B:Z
-
-    return-void
+.method public abstract b()Landroid/view/MenuInflater;
 .end method
 
-.method public c(Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
+.method public abstract b(I)V
+    .param p1    # I
+        .annotation build Landroid/support/annotation/aa;
+        .end annotation
+    .end param
 .end method
 
-.method public d()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Landroid/support/v7/app/h;->B:Z
-
-    return-void
+.method public abstract b(Landroid/os/Bundle;)V
 .end method
 
-.method public e(I)V
-    .locals 0
-
-    return-void
+.method public abstract b(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 .end method
 
-.method public g()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Landroid/support/v7/app/h;->C:Z
-
-    return-void
+.method public abstract c()V
 .end method
 
-.method public final h()Landroid/support/v7/app/b$a;
-    .locals 1
-
-    new-instance v0, Landroid/support/v7/app/h$a;
-
-    invoke-direct {v0, p0}, Landroid/support/v7/app/h$a;-><init>(Landroid/support/v7/app/h;)V
-
-    return-object v0
+.method public abstract c(Landroid/os/Bundle;)V
 .end method
 
-.method public j()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract c(I)Z
 .end method
 
-.method public k()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract d()V
 .end method
 
-.method abstract n()V
+.method public abstract d(I)Z
 .end method
 
-.method final o()Landroid/support/v7/app/a;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/app/h;->q:Landroid/support/v7/app/a;
-
-    return-object v0
+.method public abstract e()V
 .end method
 
-.method final p()Landroid/content/Context;
-    .locals 2
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0}, Landroid/support/v7/app/h;->a()Landroid/support/v7/app/a;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Landroid/support/v7/app/a;->p()Landroid/content/Context;
-
-    move-result-object v0
-
-    :cond_0
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Landroid/support/v7/app/h;->l:Landroid/content/Context;
-
-    :cond_1
-    return-object v0
+.method public abstract e(I)V
 .end method
 
-.method final q()Z
-    .locals 1
-
-    iget-boolean v0, p0, Landroid/support/v7/app/h;->C:Z
-
-    return v0
+.method public abstract f()V
 .end method
 
-.method final r()Z
-    .locals 1
-
-    iget-boolean v0, p0, Landroid/support/v7/app/h;->B:Z
-
-    return v0
+.method public abstract g()V
 .end method
 
-.method final s()Landroid/view/Window$Callback;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v7/app/h;->m:Landroid/view/Window;
-
-    invoke-virtual {v0}, Landroid/view/Window;->getCallback()Landroid/view/Window$Callback;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract h()Landroid/support/v7/app/b$a;
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
 .end method
 
-.method final t()Ljava/lang/CharSequence;
-    .locals 1
+.method public abstract i()V
+.end method
 
-    iget-object v0, p0, Landroid/support/v7/app/h;->n:Landroid/view/Window$Callback;
+.method public abstract j()Z
+.end method
 
-    instance-of v0, v0, Landroid/app/Activity;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/app/h;->n:Landroid/view/Window$Callback;
-
-    check-cast v0, Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/app/h;->A:Ljava/lang/CharSequence;
-
-    goto :goto_0
+.method public abstract k()Z
 .end method

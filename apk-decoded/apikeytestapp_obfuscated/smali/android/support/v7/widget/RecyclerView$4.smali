@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v7/widget/cd$b;
+.implements Landroid/support/v7/widget/cp$b;
 
 
 # annotations

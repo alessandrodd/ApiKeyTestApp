@@ -1,12 +1,15 @@
 .class public Landroid/support/v7/widget/t;
-.super Landroid/widget/RadioButton;
+.super Landroid/widget/ImageButton;
 
 # interfaces
-.implements Landroid/support/v4/widget/aa;
+.implements Landroid/support/v4/view/aa;
+.implements Landroid/support/v4/widget/ac;
 
 
 # instance fields
-.field private final a:Landroid/support/v7/widget/k;
+.field private final a:Landroid/support/v7/widget/m;
+
+.field private final b:Landroid/support/v7/widget/u;
 
 
 # direct methods
@@ -23,7 +26,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Landroid/support/v7/a/b$b;->radioButtonStyle:I
+    sget v0, Landroid/support/v7/a/b$b;->imageButtonStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroid/support/v7/widget/t;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -33,71 +36,204 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
 
-    invoke-static {p1}, Landroid/support/v7/widget/bt;->a(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p1}, Landroid/support/v7/widget/cf;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-direct {p0, v0, p2, p3}, Landroid/widget/RadioButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, v0, p2, p3}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    new-instance v0, Landroid/support/v7/widget/k;
+    new-instance v0, Landroid/support/v7/widget/m;
 
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/k;-><init>(Landroid/widget/CompoundButton;)V
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/m;-><init>(Landroid/view/View;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
+    iput-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
 
-    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
 
-    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/k;->a(Landroid/util/AttributeSet;I)V
+    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/m;->a(Landroid/util/AttributeSet;I)V
+
+    new-instance v0, Landroid/support/v7/widget/u;
+
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/u;-><init>(Landroid/widget/ImageView;)V
+
+    iput-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/u;->a(Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getCompoundPaddingLeft()I
-    .locals 2
+.method protected drawableStateChanged()V
+    .locals 1
 
-    invoke-super {p0}, Landroid/widget/RadioButton;->getCompoundPaddingLeft()I
+    invoke-super {p0}, Landroid/widget/ImageButton;->drawableStateChanged()V
 
-    move-result v0
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
 
-    iget-object v1, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
+    if-eqz v0, :cond_0
 
-    if-eqz v1, :cond_0
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
 
-    iget-object v1, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
-
-    invoke-virtual {v1, v0}, Landroid/support/v7/widget/k;->a(I)I
-
-    move-result v0
+    invoke-virtual {v0}, Landroid/support/v7/widget/m;->c()V
 
     :cond_0
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/u;->d()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
+    .locals 1
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
+
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/m;->a()Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
+    .locals 1
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
+
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/m;->b()Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getSupportImageTintList()Landroid/content/res/ColorStateList;
+    .locals 1
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
+
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/u;->b()Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getSupportImageTintMode()Landroid/graphics/PorterDuff$Mode;
+    .locals 1
+    .annotation build Landroid/support/annotation/ae;
+    .end annotation
+
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/u;->c()Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public hasOverlappingRendering()Z
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/u;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0}, Landroid/widget/ImageButton;->hasOverlappingRendering()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
     return v0
-.end method
-
-.method public getSupportButtonTintList()Landroid/content/res/ColorStateList;
-    .locals 1
-    .annotation build Landroid/support/annotation/ae;
-    .end annotation
-
-    .annotation build Landroid/support/annotation/ak;
-        a = {
-            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
-        }
-    .end annotation
-
-    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/k;->a()Landroid/content/res/ColorStateList;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
 
     :cond_0
     const/4 v0, 0x0
@@ -105,74 +241,139 @@
     goto :goto_0
 .end method
 
-.method public getSupportButtonTintMode()Landroid/graphics/PorterDuff$Mode;
+.method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
-    .annotation build Landroid/support/annotation/ae;
-    .end annotation
 
-    .annotation build Landroid/support/annotation/ak;
-        a = {
-            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
-        }
-    .end annotation
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/k;->b()Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/m;->a(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method
 
-.method public setButtonDrawable(I)V
+.method public setBackgroundResource(I)V
     .locals 1
     .param p1    # I
         .annotation build Landroid/support/annotation/p;
         .end annotation
     .end param
 
-    invoke-virtual {p0}, Landroid/support/v7/widget/t;->getContext()Landroid/content/Context;
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
 
-    move-result-object v0
-
-    invoke-static {v0, p1}, Landroid/support/v7/c/a/b;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroid/support/v7/widget/t;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-.end method
-
-.method public setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
-
-    invoke-super {p0, p1}, Landroid/widget/RadioButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/k;->c()V
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/m;->a(I)V
 
     :cond_0
     return-void
 .end method
 
-.method public setSupportButtonTintList(Landroid/content/res/ColorStateList;)V
+.method public setImageBitmap(Landroid/graphics/Bitmap;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/u;->d()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/u;->d()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setImageIcon(Landroid/graphics/drawable/Icon;)V
+    .locals 1
+    .param p1    # Landroid/graphics/drawable/Icon;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->setImageIcon(Landroid/graphics/drawable/Icon;)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/u;->d()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setImageResource(I)V
+    .locals 1
+    .param p1    # I
+        .annotation build Landroid/support/annotation/p;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/u;->a(I)V
+
+    return-void
+.end method
+
+.method public setImageURI(Landroid/net/Uri;)V
+    .locals 1
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->setImageURI(Landroid/net/Uri;)V
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/u;->d()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
     .param p1    # Landroid/content/res/ColorStateList;
         .annotation build Landroid/support/annotation/ae;
@@ -184,19 +385,19 @@
         }
     .end annotation
 
-    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/k;->a(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/m;->a(Landroid/content/res/ColorStateList;)V
 
     :cond_0
     return-void
 .end method
 
-.method public setSupportButtonTintMode(Landroid/graphics/PorterDuff$Mode;)V
+.method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
     .param p1    # Landroid/graphics/PorterDuff$Mode;
         .annotation build Landroid/support/annotation/ae;
@@ -208,13 +409,61 @@
         }
     .end annotation
 
-    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/k;
+    iget-object v0, p0, Landroid/support/v7/widget/t;->a:Landroid/support/v7/widget/m;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/k;->a(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/m;->a(Landroid/graphics/PorterDuff$Mode;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportImageTintList(Landroid/content/res/ColorStateList;)V
+    .locals 1
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/u;->a(Landroid/content/res/ColorStateList;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    .locals 1
+    .param p1    # Landroid/graphics/PorterDuff$Mode;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+    .annotation build Landroid/support/annotation/ak;
+        a = {
+            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/t;->b:Landroid/support/v7/widget/u;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/u;->a(Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_0
     return-void

@@ -2,473 +2,360 @@
 .super Ljava/lang/Object;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroid/support/v7/app/y$a;
-    }
-.end annotation
-
-
 # static fields
-.field private static final a:Ljava/lang/String; = "TwilightManager"
+.field public static final a:I = 0x0
 
-.field private static final b:I = 0x6
+.field public static final b:I = 0x1
 
-.field private static final c:I = 0x16
+.field private static f:Landroid/support/v7/app/y; = null
 
-.field private static d:Landroid/support/v7/app/y;
+.field private static final g:F = 0.017453292f
+
+.field private static final h:F = 9.0E-4f
+
+.field private static final i:F = -0.10471976f
+
+.field private static final j:F = 0.0334196f
+
+.field private static final k:F = 3.49066E-4f
+
+.field private static final l:F = 5.236E-6f
+
+.field private static final m:F = 0.4092797f
+
+.field private static final n:J = 0xdc6d62da00L
 
 
 # instance fields
-.field private final e:Landroid/content/Context;
+.field public c:J
 
-.field private final f:Landroid/location/LocationManager;
+.field public d:J
 
-.field private final g:Landroid/support/v7/app/y$a;
+.field public e:I
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Landroid/location/LocationManager;)V
-    .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroid/support/annotation/ad;
-        .end annotation
-    .end param
-    .param p2    # Landroid/location/LocationManager;
-        .annotation build Landroid/support/annotation/ad;
-        .end annotation
-    .end param
-    .annotation build Landroid/support/annotation/as;
-    .end annotation
+.method constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/support/v7/app/y$a;
-
-    invoke-direct {v0}, Landroid/support/v7/app/y$a;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v7/app/y;->g:Landroid/support/v7/app/y$a;
-
-    iput-object p1, p0, Landroid/support/v7/app/y;->e:Landroid/content/Context;
-
-    iput-object p2, p0, Landroid/support/v7/app/y;->f:Landroid/location/LocationManager;
-
     return-void
 .end method
 
-.method private a(Ljava/lang/String;)Landroid/location/Location;
-    .locals 3
+.method static a()Landroid/support/v7/app/y;
+    .locals 1
 
-    iget-object v0, p0, Landroid/support/v7/app/y;->f:Landroid/location/LocationManager;
-
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    iget-object v0, p0, Landroid/support/v7/app/y;->f:Landroid/location/LocationManager;
-
-    invoke-virtual {v0, p1}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/app/y;->f:Landroid/location/LocationManager;
-
-    invoke-virtual {v0, p1}, Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "TwilightManager"
-
-    const-string v2, "Failed to get last known location"
-
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method static a(Landroid/content/Context;)Landroid/support/v7/app/y;
-    .locals 3
-    .param p0    # Landroid/content/Context;
-        .annotation build Landroid/support/annotation/ad;
-        .end annotation
-    .end param
-
-    sget-object v0, Landroid/support/v7/app/y;->d:Landroid/support/v7/app/y;
+    sget-object v0, Landroid/support/v7/app/y;->f:Landroid/support/v7/app/y;
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    new-instance v0, Landroid/support/v7/app/y;
 
-    move-result-object v1
+    invoke-direct {v0}, Landroid/support/v7/app/y;-><init>()V
 
-    new-instance v2, Landroid/support/v7/app/y;
-
-    const-string v0, "location"
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/location/LocationManager;
-
-    invoke-direct {v2, v1, v0}, Landroid/support/v7/app/y;-><init>(Landroid/content/Context;Landroid/location/LocationManager;)V
-
-    sput-object v2, Landroid/support/v7/app/y;->d:Landroid/support/v7/app/y;
+    sput-object v0, Landroid/support/v7/app/y;->f:Landroid/support/v7/app/y;
 
     :cond_0
-    sget-object v0, Landroid/support/v7/app/y;->d:Landroid/support/v7/app/y;
+    sget-object v0, Landroid/support/v7/app/y;->f:Landroid/support/v7/app/y;
 
     return-object v0
-.end method
-
-.method private a(Landroid/location/Location;)V
-    .locals 20
-    .param p1    # Landroid/location/Location;
-        .annotation build Landroid/support/annotation/ad;
-        .end annotation
-    .end param
-
-    move-object/from16 v0, p0
-
-    iget-object v10, v0, Landroid/support/v7/app/y;->g:Landroid/support/v7/app/y$a;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v12
-
-    invoke-static {}, Landroid/support/v7/app/x;->a()Landroid/support/v7/app/x;
-
-    move-result-object v3
-
-    const-wide/32 v4, 0x5265c00
-
-    sub-long v4, v12, v4
-
-    invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLatitude()D
-
-    move-result-wide v6
-
-    invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLongitude()D
-
-    move-result-wide v8
-
-    invoke-virtual/range {v3 .. v9}, Landroid/support/v7/app/x;->a(JDD)V
-
-    iget-wide v14, v3, Landroid/support/v7/app/x;->c:J
-
-    invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLatitude()D
-
-    move-result-wide v6
-
-    invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLongitude()D
-
-    move-result-wide v8
-
-    move-wide v4, v12
-
-    invoke-virtual/range {v3 .. v9}, Landroid/support/v7/app/x;->a(JDD)V
-
-    iget v2, v3, Landroid/support/v7/app/x;->e:I
-
-    const/4 v4, 0x1
-
-    if-ne v2, v4, :cond_1
-
-    const/4 v2, 0x1
-
-    :goto_0
-    iget-wide v0, v3, Landroid/support/v7/app/x;->d:J
-
-    move-wide/from16 v16, v0
-
-    iget-wide v0, v3, Landroid/support/v7/app/x;->c:J
-
-    move-wide/from16 v18, v0
-
-    const-wide/32 v4, 0x5265c00
-
-    add-long/2addr v4, v12
-
-    invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLatitude()D
-
-    move-result-wide v6
-
-    invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLongitude()D
-
-    move-result-wide v8
-
-    invoke-virtual/range {v3 .. v9}, Landroid/support/v7/app/x;->a(JDD)V
-
-    iget-wide v6, v3, Landroid/support/v7/app/x;->d:J
-
-    const-wide/16 v4, 0x0
-
-    const-wide/16 v8, -0x1
-
-    cmp-long v3, v16, v8
-
-    if-eqz v3, :cond_0
-
-    const-wide/16 v8, -0x1
-
-    cmp-long v3, v18, v8
-
-    if-nez v3, :cond_2
-
-    :cond_0
-    const-wide/32 v4, 0x2932e00
-
-    add-long/2addr v4, v12
-
-    :goto_1
-    iput-boolean v2, v10, Landroid/support/v7/app/y$a;->a:Z
-
-    iput-wide v14, v10, Landroid/support/v7/app/y$a;->b:J
-
-    move-wide/from16 v0, v16
-
-    iput-wide v0, v10, Landroid/support/v7/app/y$a;->c:J
-
-    move-wide/from16 v0, v18
-
-    iput-wide v0, v10, Landroid/support/v7/app/y$a;->d:J
-
-    iput-wide v6, v10, Landroid/support/v7/app/y$a;->e:J
-
-    iput-wide v4, v10, Landroid/support/v7/app/y$a;->f:J
-
-    return-void
-
-    :cond_1
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_2
-    cmp-long v3, v12, v18
-
-    if-lez v3, :cond_3
-
-    add-long/2addr v4, v6
-
-    :goto_2
-    const-wide/32 v8, 0xea60
-
-    add-long/2addr v4, v8
-
-    goto :goto_1
-
-    :cond_3
-    cmp-long v3, v12, v16
-
-    if-lez v3, :cond_4
-
-    add-long v4, v4, v18
-
-    goto :goto_2
-
-    :cond_4
-    add-long v4, v4, v16
-
-    goto :goto_2
-.end method
-
-.method static a(Landroid/support/v7/app/y;)V
-    .locals 0
-    .annotation build Landroid/support/annotation/as;
-    .end annotation
-
-    sput-object p0, Landroid/support/v7/app/y;->d:Landroid/support/v7/app/y;
-
-    return-void
-.end method
-
-.method private b()Landroid/location/Location;
-    .locals 6
-
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Landroid/support/v7/app/y;->e:Landroid/content/Context;
-
-    const-string v2, "android.permission.ACCESS_COARSE_LOCATION"
-
-    invoke-static {v0, v2}, Landroid/support/v4/b/l;->a(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    const-string v0, "network"
-
-    invoke-direct {p0, v0}, Landroid/support/v7/app/y;->a(Ljava/lang/String;)Landroid/location/Location;
-
-    move-result-object v0
-
-    :goto_0
-    iget-object v2, p0, Landroid/support/v7/app/y;->e:Landroid/content/Context;
-
-    const-string v3, "android.permission.ACCESS_FINE_LOCATION"
-
-    invoke-static {v2, v3}, Landroid/support/v4/b/l;->a(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v1, "gps"
-
-    invoke-direct {p0, v1}, Landroid/support/v7/app/y;->a(Ljava/lang/String;)Landroid/location/Location;
-
-    move-result-object v1
-
-    :cond_0
-    if-eqz v1, :cond_2
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v1}, Landroid/location/Location;->getTime()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0}, Landroid/location/Location;->getTime()J
-
-    move-result-wide v4
-
-    cmp-long v2, v2, v4
-
-    if-lez v2, :cond_1
-
-    move-object v0, v1
-
-    :cond_1
-    :goto_1
-    return-object v0
-
-    :cond_2
-    if-eqz v1, :cond_3
-
-    :goto_2
-    move-object v0, v1
-
-    goto :goto_1
-
-    :cond_3
-    move-object v1, v0
-
-    goto :goto_2
-
-    :cond_4
-    move-object v0, v1
-
-    goto :goto_0
-.end method
-
-.method private c()Z
-    .locals 4
-
-    iget-object v0, p0, Landroid/support/v7/app/y;->g:Landroid/support/v7/app/y$a;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/app/y;->g:Landroid/support/v7/app/y$a;
-
-    iget-wide v0, v0, Landroid/support/v7/app/y$a;->f:J
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method a()Z
-    .locals 2
+.method public a(JDD)V
+    .locals 15
 
-    iget-object v0, p0, Landroid/support/v7/app/y;->g:Landroid/support/v7/app/y$a;
+    const-wide v2, 0xdc6d62da00L
 
-    invoke-direct {p0}, Landroid/support/v7/app/y;->c()Z
+    sub-long v2, p1, v2
 
-    move-result v1
+    long-to-float v2, v2
 
-    if-eqz v1, :cond_0
+    const v3, 0x4ca4cb80    # 8.64E7f
 
-    iget-boolean v0, v0, Landroid/support/v7/app/y$a;->a:Z
+    div-float/2addr v2, v3
+
+    const v3, 0x40c7ae92
+
+    const v4, 0x3c8ceb25
+
+    mul-float/2addr v4, v2
+
+    add-float/2addr v3, v4
+
+    float-to-double v4, v3
+
+    const-wide v6, 0x3fa11c5fc0000000L    # 0.03341960161924362
+
+    float-to-double v8, v3
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v6, v8
+
+    add-double/2addr v4, v6
+
+    const-wide v6, 0x3f36e05b00000000L    # 3.4906598739326E-4
+
+    const/high16 v8, 0x40000000    # 2.0f
+
+    mul-float/2addr v8, v3
+
+    float-to-double v8, v8
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v6, v8
+
+    add-double/2addr v4, v6
+
+    const-wide v6, 0x3ed5f61cc0000000L    # 5.236000106378924E-6
+
+    const/high16 v8, 0x40400000    # 3.0f
+
+    mul-float/2addr v8, v3
+
+    float-to-double v8, v8
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v6, v8
+
+    add-double/2addr v4, v6
+
+    const-wide v6, 0x3ffcbed85e1ce332L    # 1.796593063
+
+    add-double/2addr v4, v6
+
+    const-wide v6, 0x400921fb54442d18L    # Math.PI
+
+    add-double/2addr v4, v6
+
+    move-wide/from16 v0, p5
+
+    neg-double v6, v0
+
+    const-wide v8, 0x4076800000000000L    # 360.0
+
+    div-double/2addr v6, v8
+
+    const v8, 0x3a6bedfa    # 9.0E-4f
+
+    sub-float/2addr v2, v8
+
+    float-to-double v8, v2
+
+    sub-double/2addr v8, v6
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v8
+
+    long-to-float v2, v8
+
+    const v8, 0x3a6bedfa    # 9.0E-4f
+
+    add-float/2addr v2, v8
+
+    float-to-double v8, v2
+
+    add-double/2addr v6, v8
+
+    const-wide v8, 0x3f75b573eab367a1L    # 0.0053
+
+    float-to-double v2, v3
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v2
+
+    mul-double/2addr v2, v8
+
+    add-double/2addr v2, v6
+
+    const-wide v6, -0x4083bcd35a858794L    # -0.0069
+
+    const-wide/high16 v8, 0x4000000000000000L    # 2.0
+
+    mul-double/2addr v8, v4
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v6, v8
+
+    add-double/2addr v2, v6
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v4
+
+    const-wide v6, 0x3fda31a380000000L    # 0.4092797040939331
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v6
+
+    mul-double/2addr v4, v6
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->asin(D)D
+
+    move-result-wide v4
+
+    const-wide v6, 0x3f91df46a0000000L    # 0.01745329238474369
+
+    mul-double v6, v6, p3
+
+    const-wide v8, -0x4045311600000000L    # -0.10471975803375244
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v8
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v10
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v12
+
+    mul-double/2addr v10, v12
+
+    sub-double/2addr v8, v10
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v6
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v4
+
+    mul-double/2addr v4, v6
+
+    div-double v4, v8, v4
+
+    const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
+
+    cmpl-double v6, v4, v6
+
+    if-ltz v6, :cond_0
+
+    const/4 v2, 0x1
+
+    iput v2, p0, Landroid/support/v7/app/y;->e:I
+
+    const-wide/16 v2, -0x1
+
+    iput-wide v2, p0, Landroid/support/v7/app/y;->c:J
+
+    const-wide/16 v2, -0x1
+
+    iput-wide v2, p0, Landroid/support/v7/app/y;->d:J
 
     :goto_0
-    return v0
+    return-void
 
     :cond_0
-    invoke-direct {p0}, Landroid/support/v7/app/y;->b()Landroid/location/Location;
+    const-wide/high16 v6, -0x4010000000000000L    # -1.0
 
-    move-result-object v1
+    cmpg-double v6, v4, v6
 
-    if-eqz v1, :cond_1
+    if-gtz v6, :cond_1
 
-    invoke-direct {p0, v1}, Landroid/support/v7/app/y;->a(Landroid/location/Location;)V
+    const/4 v2, 0x0
 
-    iget-boolean v0, v0, Landroid/support/v7/app/y$a;->a:Z
+    iput v2, p0, Landroid/support/v7/app/y;->e:I
+
+    const-wide/16 v2, -0x1
+
+    iput-wide v2, p0, Landroid/support/v7/app/y;->c:J
+
+    const-wide/16 v2, -0x1
+
+    iput-wide v2, p0, Landroid/support/v7/app/y;->d:J
 
     goto :goto_0
 
     :cond_1
-    const-string v0, "TwilightManager"
+    invoke-static {v4, v5}, Ljava/lang/Math;->acos(D)D
 
-    const-string v1, "Could not get last known location. This is probably because the app does not have any location permissions. Falling back to hardcoded sunrise/sunset values."
+    move-result-wide v4
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    const-wide v6, 0x401921fb54442d18L    # 6.283185307179586
 
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+    div-double/2addr v4, v6
 
-    move-result-object v0
+    double-to-float v4, v4
 
-    const/16 v1, 0xb
+    float-to-double v6, v4
 
-    invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
+    add-double/2addr v6, v2
 
-    move-result v0
+    const-wide v8, 0x4194997000000000L    # 8.64E7
 
-    const/4 v1, 0x6
+    mul-double/2addr v6, v8
 
-    if-lt v0, v1, :cond_2
+    invoke-static {v6, v7}, Ljava/lang/Math;->round(D)J
 
-    const/16 v1, 0x16
+    move-result-wide v6
 
-    if-lt v0, v1, :cond_3
+    const-wide v8, 0xdc6d62da00L
 
-    :cond_2
-    const/4 v0, 0x1
+    add-long/2addr v6, v8
+
+    iput-wide v6, p0, Landroid/support/v7/app/y;->c:J
+
+    float-to-double v4, v4
+
+    sub-double/2addr v2, v4
+
+    const-wide v4, 0x4194997000000000L    # 8.64E7
+
+    mul-double/2addr v2, v4
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v2
+
+    const-wide v4, 0xdc6d62da00L
+
+    add-long/2addr v2, v4
+
+    iput-wide v2, p0, Landroid/support/v7/app/y;->d:J
+
+    iget-wide v2, p0, Landroid/support/v7/app/y;->d:J
+
+    cmp-long v2, v2, p1
+
+    if-gez v2, :cond_2
+
+    iget-wide v2, p0, Landroid/support/v7/app/y;->c:J
+
+    cmp-long v2, v2, p1
+
+    if-lez v2, :cond_2
+
+    const/4 v2, 0x0
+
+    iput v2, p0, Landroid/support/v7/app/y;->e:I
 
     goto :goto_0
 
-    :cond_3
-    const/4 v0, 0x0
+    :cond_2
+    const/4 v2, 0x1
+
+    iput v2, p0, Landroid/support/v7/app/y;->e:I
 
     goto :goto_0
 .end method

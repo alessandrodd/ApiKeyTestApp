@@ -1,75 +1,64 @@
-.class public Landroid/support/design/widget/u;
-.super Landroid/support/v7/widget/m;
+.class public final Landroid/support/design/widget/u;
+.super Landroid/view/View;
+
+
+# instance fields
+.field final a:Ljava/lang/CharSequence;
+
+.field final b:Landroid/graphics/drawable/Drawable;
+
+.field final c:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0, p1}, Landroid/support/v7/widget/m;-><init>(Landroid/content/Context;)V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroid/support/design/widget/u;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Landroid/support/v7/widget/m;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Landroid/support/v7/widget/m;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
     .locals 3
 
-    invoke-super {p0, p1}, Landroid/support/v7/widget/m;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+    invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    sget-object v0, Landroid/support/design/b$m;->TabItem:[I
+
+    invoke-static {p1, p2, v0}, Landroid/support/v7/widget/ci;->a(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/support/v7/widget/ci;
+
+    move-result-object v0
+
+    sget v1, Landroid/support/design/b$m;->TabItem_android_text:I
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/ci;->d(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    if-eqz v1, :cond_0
+    iput-object v1, p0, Landroid/support/design/widget/u;->a:Ljava/lang/CharSequence;
 
-    iget-object v0, p1, Landroid/view/inputmethod/EditorInfo;->hintText:Ljava/lang/CharSequence;
+    sget v1, Landroid/support/design/b$m;->TabItem_android_icon:I
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/ci;->a(I)Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Landroid/support/design/widget/u;->getParent()Landroid/view/ViewParent;
+    move-result-object v1
 
-    move-result-object v0
+    iput-object v1, p0, Landroid/support/design/widget/u;->b:Landroid/graphics/drawable/Drawable;
 
-    :goto_0
-    instance-of v2, v0, Landroid/view/View;
+    sget v1, Landroid/support/design/b$m;->TabItem_android_layout:I
 
-    if-eqz v2, :cond_0
+    const/4 v2, 0x0
 
-    instance-of v2, v0, Landroid/support/design/widget/TextInputLayout;
+    invoke-virtual {v0, v1, v2}, Landroid/support/v7/widget/ci;->g(II)I
 
-    if-eqz v2, :cond_1
+    move-result v1
 
-    check-cast v0, Landroid/support/design/widget/TextInputLayout;
+    iput v1, p0, Landroid/support/design/widget/u;->c:I
 
-    invoke-virtual {v0}, Landroid/support/design/widget/TextInputLayout;->getHint()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Landroid/support/v7/widget/ci;->e()V
 
-    move-result-object v0
-
-    iput-object v0, p1, Landroid/view/inputmethod/EditorInfo;->hintText:Ljava/lang/CharSequence;
-
-    :cond_0
-    return-object v1
-
-    :cond_1
-    invoke-interface {v0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    goto :goto_0
+    return-void
 .end method

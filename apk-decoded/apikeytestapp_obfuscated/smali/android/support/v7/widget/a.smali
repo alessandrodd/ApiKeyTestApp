@@ -19,7 +19,7 @@
 
 .field protected final b:Landroid/content/Context;
 
-.field protected c:Landroid/support/v7/widget/ActionMenuView;
+.field protected c:Landroid/support/v7/widget/g;
 
 .field protected d:Landroid/support/v7/widget/ActionMenuPresenter;
 

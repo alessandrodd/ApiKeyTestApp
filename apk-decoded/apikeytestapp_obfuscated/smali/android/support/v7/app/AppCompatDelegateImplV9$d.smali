@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v7/view/menu/p$a;
+.implements Landroid/support/v7/h/a/s$a;
 
 
 # annotations
@@ -33,12 +33,12 @@
 
 
 # virtual methods
-.method public a(Landroid/support/v7/view/menu/h;Z)V
+.method public a(Landroid/support/v7/h/a/k;Z)V
     .locals 5
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1}, Landroid/support/v7/view/menu/h;->q()Landroid/support/v7/view/menu/h;
+    invoke-virtual {p1}, Landroid/support/v7/h/a/k;->q()Landroid/support/v7/h/a/k;
 
     move-result-object v2
 
@@ -89,7 +89,7 @@
     goto :goto_1
 .end method
 
-.method public a(Landroid/support/v7/view/menu/h;)Z
+.method public a(Landroid/support/v7/h/a/k;)Z
     .locals 2
 
     if-nez p1, :cond_0

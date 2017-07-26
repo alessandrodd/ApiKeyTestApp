@@ -53,9 +53,9 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$q;->a:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView;->v:Landroid/support/v7/widget/e;
+    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView;->v:Landroid/support/v7/widget/j;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/e;->d()Z
+    invoke-virtual {v0}, Landroid/support/v7/widget/j;->d()Z
 
     move-result v0
 
@@ -80,9 +80,9 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$q;->a:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView;->v:Landroid/support/v7/widget/e;
+    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView;->v:Landroid/support/v7/widget/j;
 
-    invoke-virtual {v0, p1, p2, p3}, Landroid/support/v7/widget/e;->a(III)Z
+    invoke-virtual {v0, p1, p2, p3}, Landroid/support/v7/widget/j;->a(III)Z
 
     move-result v0
 
@@ -105,9 +105,9 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$q;->a:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView;->v:Landroid/support/v7/widget/e;
+    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView;->v:Landroid/support/v7/widget/j;
 
-    invoke-virtual {v0, p1, p2, p3}, Landroid/support/v7/widget/e;->a(IILjava/lang/Object;)Z
+    invoke-virtual {v0, p1, p2, p3}, Landroid/support/v7/widget/j;->a(IILjava/lang/Object;)Z
 
     move-result v0
 
@@ -174,9 +174,9 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$q;->a:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView;->v:Landroid/support/v7/widget/e;
+    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView;->v:Landroid/support/v7/widget/j;
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/e;->b(II)Z
+    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/j;->b(II)Z
 
     move-result v0
 
@@ -199,9 +199,9 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$q;->a:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView;->v:Landroid/support/v7/widget/e;
+    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView;->v:Landroid/support/v7/widget/j;
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/e;->c(II)Z
+    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/j;->c(II)Z
 
     move-result v0
 

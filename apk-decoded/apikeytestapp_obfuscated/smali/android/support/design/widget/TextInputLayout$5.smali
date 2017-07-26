@@ -38,7 +38,7 @@
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$5;->a:Landroid/support/design/widget/TextInputLayout;
 
-    iget-object v1, v0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/g;
+    iget-object v1, v0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/h;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -50,7 +50,7 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Landroid/support/design/widget/g;->c(F)V
+    invoke-virtual {v1, v0}, Landroid/support/design/widget/h;->c(F)V
 
     return-void
 .end method

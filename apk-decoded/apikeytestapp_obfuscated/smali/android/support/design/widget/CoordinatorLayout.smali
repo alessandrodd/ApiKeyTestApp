@@ -106,10 +106,10 @@
     .end annotation
 .end field
 
-.field private final n:Landroid/support/design/widget/i;
+.field private final n:Landroid/support/design/widget/j;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/support/design/widget/i",
+            "Landroid/support/design/widget/j",
             "<",
             "Landroid/view/View;",
             ">;"
@@ -272,11 +272,11 @@
 
     iput-object v1, p0, Landroid/support/design/widget/CoordinatorLayout;->m:Ljava/util/List;
 
-    new-instance v1, Landroid/support/design/widget/i;
+    new-instance v1, Landroid/support/design/widget/j;
 
-    invoke-direct {v1}, Landroid/support/design/widget/i;-><init>()V
+    invoke-direct {v1}, Landroid/support/design/widget/j;-><init>()V
 
-    iput-object v1, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/i;
+    iput-object v1, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/j;
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -302,7 +302,7 @@
 
     iput-object v1, p0, Landroid/support/design/widget/CoordinatorLayout;->D:Landroid/support/v4/view/s;
 
-    invoke-static {p1}, Landroid/support/design/widget/v;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Landroid/support/design/widget/x;->a(Landroid/content/Context;)V
 
     sget-object v1, Landroid/support/design/b$m;->CoordinatorLayout:[I
 
@@ -2070,9 +2070,9 @@
 .method private e(Landroid/view/View;)Z
     .locals 1
 
-    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/i;
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/j;
 
-    invoke-virtual {v0, p1}, Landroid/support/design/widget/i;->e(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroid/support/design/widget/j;->e(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2197,9 +2197,9 @@
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/i;
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/j;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/i;->a()V
+    invoke-virtual {v0}, Landroid/support/design/widget/j;->a()V
 
     invoke-virtual {p0}, Landroid/support/design/widget/CoordinatorLayout;->getChildCount()I
 
@@ -2220,9 +2220,9 @@
 
     invoke-virtual {v5, p0, v4}, Landroid/support/design/widget/CoordinatorLayout$e;->b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)Landroid/view/View;
 
-    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/i;
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/j;
 
-    invoke-virtual {v0, v4}, Landroid/support/design/widget/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v4}, Landroid/support/design/widget/j;->a(Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -2248,22 +2248,22 @@
 
     if-eqz v7, :cond_0
 
-    iget-object v7, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/i;
+    iget-object v7, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/j;
 
-    invoke-virtual {v7, v6}, Landroid/support/design/widget/i;->b(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v6}, Landroid/support/design/widget/j;->b(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-nez v7, :cond_2
 
-    iget-object v7, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/i;
+    iget-object v7, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/j;
 
-    invoke-virtual {v7, v6}, Landroid/support/design/widget/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {v7, v6}, Landroid/support/design/widget/j;->a(Ljava/lang/Object;)V
 
     :cond_2
-    iget-object v7, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/i;
+    iget-object v7, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/j;
 
-    invoke-virtual {v7, v6, v4}, Landroid/support/design/widget/i;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v7, v6, v4}, Landroid/support/design/widget/j;->a(Ljava/lang/Object;Ljava/lang/Object;)V
 
     goto :goto_2
 
@@ -2277,9 +2277,9 @@
     :cond_4
     iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout;->m:Ljava/util/List;
 
-    iget-object v1, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/i;
+    iget-object v1, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/j;
 
-    invoke-virtual {v1}, Landroid/support/design/widget/i;->b()Ljava/util/ArrayList;
+    invoke-virtual {v1}, Landroid/support/design/widget/j;->b()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -3339,7 +3339,7 @@
 .method a(Landroid/view/View;Landroid/graphics/Rect;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Landroid/support/design/widget/w;->b(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-static {p0, p1, p2}, Landroid/support/design/widget/y;->b(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
 
     return-void
 .end method
@@ -3662,9 +3662,9 @@
 .method public b(Landroid/view/View;)V
     .locals 4
 
-    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/i;
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/j;
 
-    invoke-virtual {v0, p1}, Landroid/support/design/widget/i;->c(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v0, p1}, Landroid/support/design/widget/j;->c(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
 
@@ -3939,9 +3939,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/i;
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/j;
 
-    invoke-virtual {v0, p1}, Landroid/support/design/widget/i;->d(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v0, p1}, Landroid/support/design/widget/j;->d(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
@@ -4128,9 +4128,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/i;
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout;->n:Landroid/support/design/widget/j;
 
-    invoke-virtual {v0, p1}, Landroid/support/design/widget/i;->c(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v0, p1}, Landroid/support/design/widget/j;->c(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 

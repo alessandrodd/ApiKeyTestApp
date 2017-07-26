@@ -1,756 +1,714 @@
-.class abstract Landroid/support/design/widget/m;
-.super Landroid/support/design/widget/x;
+.class Landroid/support/design/widget/m;
+.super Landroid/support/design/widget/l;
 
 
 # annotations
+.annotation build Landroid/support/annotation/ai;
+    a = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/design/widget/m$a;
     }
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<V:",
-        "Landroid/view/View;",
-        ">",
-        "Landroid/support/design/widget/x",
-        "<TV;>;"
-    }
-.end annotation
-
-
-# static fields
-.field private static final b:I = -0x1
-
 
 # instance fields
-.field a:Landroid/widget/OverScroller;
-
-.field private c:Ljava/lang/Runnable;
-
-.field private d:Z
-
-.field private e:I
-
-.field private f:I
-
-.field private g:I
-
-.field private h:Landroid/view/VelocityTracker;
+.field private v:Landroid/graphics/drawable/InsetDrawable;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>(Landroid/support/design/widget/ad;Landroid/support/design/widget/q;)V
+    .locals 0
 
-    const/4 v0, -0x1
+    invoke-direct {p0, p1, p2}, Landroid/support/design/widget/l;-><init>(Landroid/support/design/widget/ad;Landroid/support/design/widget/q;)V
 
-    invoke-direct {p0}, Landroid/support/design/widget/x;-><init>()V
-
-    iput v0, p0, Landroid/support/design/widget/m;->e:I
-
-    iput v0, p0, Landroid/support/design/widget/m;->g:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
-
-    const/4 v0, -0x1
-
-    invoke-direct {p0, p1, p2}, Landroid/support/design/widget/x;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    iput v0, p0, Landroid/support/design/widget/m;->e:I
-
-    iput v0, p0, Landroid/support/design/widget/m;->g:I
-
-    return-void
-.end method
-
-.method private a()V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;III)I
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;III)I"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Landroid/support/design/widget/m;->d()I
-
-    move-result v1
-
-    const/4 v0, 0x0
-
-    if-eqz p4, :cond_0
-
-    if-lt v1, p4, :cond_0
-
-    if-gt v1, p5, :cond_0
-
-    invoke-static {p3, p4, p5}, Landroid/support/v4/g/a;->a(III)I
-
-    move-result v2
-
-    if-eq v1, v2, :cond_0
-
-    invoke-virtual {p0, v2}, Landroid/support/design/widget/m;->b(I)Z
-
-    sub-int v0, v1, v2
-
-    :cond_0
-    return v0
-.end method
-
-.method a(Landroid/view/View;)I
+.method public a()F
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)I"
-        }
-    .end annotation
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    iget-object v0, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    invoke-virtual {v0}, Landroid/support/design/widget/ad;->getElevation()F
 
     move-result v0
 
     return v0
 .end method
 
-.method a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)V
+.method a(FF)V
+    .locals 8
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-ne v0, v1, :cond_4
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    invoke-virtual {v0}, Landroid/support/design/widget/ad;->isEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    invoke-virtual {v0, p1}, Landroid/support/design/widget/ad;->setElevation(F)V
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    invoke-virtual {v0}, Landroid/support/design/widget/ad;->isFocused()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    invoke-virtual {v0}, Landroid/support/design/widget/ad;->isPressed()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    :cond_0
+    iget-object v0, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    invoke-virtual {v0, p2}, Landroid/support/design/widget/ad;->setTranslationZ(F)V
+
+    :goto_0
+    iget-object v0, p0, Landroid/support/design/widget/m;->u:Landroid/support/design/widget/q;
+
+    invoke-interface {v0}, Landroid/support/design/widget/q;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroid/support/design/widget/m;->e()V
+
+    :cond_1
+    return-void
+
+    :cond_2
+    iget-object v0, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/ad;->setTranslationZ(F)V
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/ad;->setElevation(F)V
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/ad;->setTranslationZ(F)V
+
+    goto :goto_0
+
+    :cond_4
+    new-instance v1, Landroid/animation/StateListAnimator;
+
+    invoke-direct {v1}, Landroid/animation/StateListAnimator;-><init>()V
+
+    new-instance v0, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
+
+    iget-object v2, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    const-string v3, "elevation"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [F
+
+    const/4 v5, 0x0
+
+    aput p1, v4, v5
+
+    invoke-static {v2, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v2
+
+    const-wide/16 v4, 0x0
+
+    invoke-virtual {v2, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    sget-object v4, Landroid/view/View;->TRANSLATION_Z:Landroid/util/Property;
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [F
+
+    const/4 v6, 0x0
+
+    aput p2, v5, v6
+
+    invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v3
+
+    const-wide/16 v4, 0x64
+
+    invoke-virtual {v3, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    sget-object v2, Landroid/support/design/widget/m;->a:Landroid/view/animation/Interpolator;
+
+    invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    sget-object v2, Landroid/support/design/widget/m;->p:[I
+
+    invoke-virtual {v1, v2, v0}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
+
+    new-instance v0, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
+
+    iget-object v2, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    const-string v3, "elevation"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [F
+
+    const/4 v5, 0x0
+
+    aput p1, v4, v5
+
+    invoke-static {v2, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v2
+
+    const-wide/16 v4, 0x0
+
+    invoke-virtual {v2, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    sget-object v4, Landroid/view/View;->TRANSLATION_Z:Landroid/util/Property;
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [F
+
+    const/4 v6, 0x0
+
+    aput p2, v5, v6
+
+    invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v3
+
+    const-wide/16 v4, 0x64
+
+    invoke-virtual {v3, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    sget-object v2, Landroid/support/design/widget/m;->a:Landroid/view/animation/Interpolator;
+
+    invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    sget-object v2, Landroid/support/design/widget/m;->q:[I
+
+    invoke-virtual {v1, v2, v0}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
+
+    new-instance v2, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v2}, Landroid/animation/AnimatorSet;-><init>()V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iget-object v3, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    const-string v4, "elevation"
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [F
+
+    const/4 v6, 0x0
+
+    aput p1, v5, v6
+
+    invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v3
+
+    const-wide/16 v4, 0x0
+
+    invoke-virtual {v3, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v3
+
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x16
+
+    if-lt v3, v4, :cond_5
+
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x18
+
+    if-gt v3, v4, :cond_5
+
+    iget-object v3, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    sget-object v4, Landroid/view/View;->TRANSLATION_Z:Landroid/util/Property;
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [F
+
+    const/4 v6, 0x0
+
+    iget-object v7, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    invoke-virtual {v7}, Landroid/support/design/widget/ad;->getTranslationZ()F
+
+    move-result v7
+
+    aput v7, v5, v6
+
+    invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v3
+
+    const-wide/16 v4, 0x64
+
+    invoke-virtual {v3, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v3
+
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_5
+    iget-object v3, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    sget-object v4, Landroid/view/View;->TRANSLATION_Z:Landroid/util/Property;
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [F
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    aput v7, v5, v6
+
+    invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v3
+
+    const-wide/16 v4, 0x64
+
+    invoke-virtual {v3, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v3
+
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const/4 v3, 0x0
+
+    new-array v3, v3, [Landroid/animation/ObjectAnimator;
+
+    invoke-interface {v0, v3}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/animation/Animator;
+
+    invoke-virtual {v2, v0}, Landroid/animation/AnimatorSet;->playSequentially([Landroid/animation/Animator;)V
+
+    sget-object v0, Landroid/support/design/widget/m;->a:Landroid/view/animation/Interpolator;
+
+    invoke-virtual {v2, v0}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    sget-object v0, Landroid/support/design/widget/m;->r:[I
+
+    invoke-virtual {v1, v0, v2}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
+
+    new-instance v0, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
+
+    iget-object v2, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    const-string v3, "elevation"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [F
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    aput v6, v4, v5
+
+    invoke-static {v2, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v2
+
+    const-wide/16 v4, 0x0
+
+    invoke-virtual {v2, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    sget-object v4, Landroid/view/View;->TRANSLATION_Z:Landroid/util/Property;
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [F
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    aput v7, v5, v6
+
+    invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v3
+
+    const-wide/16 v4, 0x0
+
+    invoke-virtual {v3, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    sget-object v2, Landroid/support/design/widget/m;->a:Landroid/view/animation/Interpolator;
+
+    invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    sget-object v2, Landroid/support/design/widget/m;->s:[I
+
+    invoke-virtual {v1, v2, v0}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->t:Landroid/support/design/widget/ad;
+
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/ad;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
+
+    goto/16 :goto_0
+.end method
+
+.method a(I)V
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->j:Landroid/graphics/drawable/Drawable;
+
+    instance-of v0, v0, Landroid/graphics/drawable/RippleDrawable;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->j:Landroid/graphics/drawable/Drawable;
+
+    check-cast v0, Landroid/graphics/drawable/RippleDrawable;
+
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/RippleDrawable;->setColor(Landroid/content/res/ColorStateList;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-super {p0, p1}, Landroid/support/design/widget/l;->a(I)V
+
+    goto :goto_0
+.end method
+
+.method a(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;II)V
+    .locals 5
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p0}, Landroid/support/design/widget/m;->k()Landroid/graphics/drawable/GradientDrawable;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/support/v4/d/a/a;->g(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/design/widget/m;->i:Landroid/graphics/drawable/Drawable;
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->i:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v0, p1}, Landroid/support/v4/d/a/a;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+
+    if-eqz p2, :cond_0
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->i:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v0, p2}, Landroid/support/v4/d/a/a;->a(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+
+    :cond_0
+    if-lez p4, :cond_1
+
+    invoke-virtual {p0, p4, p1}, Landroid/support/design/widget/m;->a(ILandroid/content/res/ColorStateList;)Landroid/support/design/widget/f;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/design/widget/m;->k:Landroid/support/design/widget/f;
+
+    new-instance v0, Landroid/graphics/drawable/LayerDrawable;
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Landroid/graphics/drawable/Drawable;
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Landroid/support/design/widget/m;->k:Landroid/support/design/widget/f;
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Landroid/support/design/widget/m;->i:Landroid/graphics/drawable/Drawable;
+
+    aput-object v3, v1, v2
+
+    invoke-direct {v0, v1}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+
+    :goto_0
+    new-instance v1, Landroid/graphics/drawable/RippleDrawable;
+
+    invoke-static {p3}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2, v0, v4}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    iput-object v1, p0, Landroid/support/design/widget/m;->j:Landroid/graphics/drawable/Drawable;
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->j:Landroid/graphics/drawable/Drawable;
+
+    iput-object v0, p0, Landroid/support/design/widget/m;->l:Landroid/graphics/drawable/Drawable;
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->u:Landroid/support/design/widget/q;
+
+    iget-object v1, p0, Landroid/support/design/widget/m;->j:Landroid/graphics/drawable/Drawable;
+
+    invoke-interface {v0, v1}, Landroid/support/design/widget/q;->a(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    :cond_1
+    iput-object v4, p0, Landroid/support/design/widget/m;->k:Landroid/support/design/widget/f;
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->i:Landroid/graphics/drawable/Drawable;
+
+    goto :goto_0
+.end method
+
+.method a(Landroid/graphics/Rect;)V
+    .locals 5
+
+    const/4 v4, 0x0
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->u:Landroid/support/design/widget/q;
+
+    invoke-interface {v0}, Landroid/support/design/widget/q;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->u:Landroid/support/design/widget/q;
+
+    invoke-interface {v0}, Landroid/support/design/widget/q;->a()F
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/support/design/widget/m;->a()F
+
+    move-result v1
+
+    iget v2, p0, Landroid/support/design/widget/m;->n:F
+
+    add-float/2addr v1, v2
+
+    invoke-static {v1, v0, v4}, Landroid/support/design/widget/p;->b(FFZ)F
+
+    move-result v2
+
+    float-to-double v2, v2
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v2
+
+    double-to-int v2, v2
+
+    invoke-static {v1, v0, v4}, Landroid/support/design/widget/p;->a(FFZ)F
+
+    move-result v0
+
+    float-to-double v0, v0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v0
+
+    double-to-int v0, v0
+
+    invoke-virtual {p1, v2, v0, v2, v0}, Landroid/graphics/Rect;->set(IIII)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-virtual {p1, v4, v4, v4, v4}, Landroid/graphics/Rect;->set(IIII)V
+
+    goto :goto_0
+.end method
+
+.method a([I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;)V"
-        }
-    .end annotation
 
     return-void
 .end method
 
-.method final a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;IIF)Z
-    .locals 9
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;IIF)Z"
-        }
-    .end annotation
+.method b()V
+    .locals 0
 
-    const/4 v1, 0x0
+    return-void
+.end method
 
-    iget-object v0, p0, Landroid/support/design/widget/m;->c:Ljava/lang/Runnable;
+.method b(Landroid/graphics/Rect;)V
+    .locals 6
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->u:Landroid/support/design/widget/q;
+
+    invoke-interface {v0}, Landroid/support/design/widget/q;->b()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/m;->c:Ljava/lang/Runnable;
+    new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    iget-object v1, p0, Landroid/support/design/widget/m;->j:Landroid/graphics/drawable/Drawable;
+
+    iget v2, p1, Landroid/graphics/Rect;->left:I
+
+    iget v3, p1, Landroid/graphics/Rect;->top:I
+
+    iget v4, p1, Landroid/graphics/Rect;->right:I
+
+    iget v5, p1, Landroid/graphics/Rect;->bottom:I
+
+    invoke-direct/range {v0 .. v5}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
+
+    iput-object v0, p0, Landroid/support/design/widget/m;->v:Landroid/graphics/drawable/InsetDrawable;
+
+    iget-object v0, p0, Landroid/support/design/widget/m;->u:Landroid/support/design/widget/q;
+
+    iget-object v1, p0, Landroid/support/design/widget/m;->v:Landroid/graphics/drawable/InsetDrawable;
+
+    invoke-interface {v0, v1}, Landroid/support/design/widget/q;->a(Landroid/graphics/drawable/Drawable;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Landroid/support/design/widget/m;->u:Landroid/support/design/widget/q;
+
+    iget-object v1, p0, Landroid/support/design/widget/m;->j:Landroid/graphics/drawable/Drawable;
+
+    invoke-interface {v0, v1}, Landroid/support/design/widget/q;->a(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
+.end method
+
+.method d()V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/support/design/widget/m;->e()V
+
+    return-void
+.end method
+
+.method h()Z
+    .locals 1
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroid/support/design/widget/m;->c:Ljava/lang/Runnable;
+    return v0
+.end method
 
-    :cond_0
-    iget-object v0, p0, Landroid/support/design/widget/m;->a:Landroid/widget/OverScroller;
+.method i()Landroid/support/design/widget/f;
+    .locals 1
 
-    if-nez v0, :cond_1
+    new-instance v0, Landroid/support/design/widget/g;
 
-    new-instance v0, Landroid/widget/OverScroller;
+    invoke-direct {v0}, Landroid/support/design/widget/g;-><init>()V
 
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    return-object v0
+.end method
 
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Landroid/support/design/widget/m;->a:Landroid/widget/OverScroller;
-
-    :cond_1
-    iget-object v0, p0, Landroid/support/design/widget/m;->a:Landroid/widget/OverScroller;
-
-    invoke-virtual {p0}, Landroid/support/design/widget/m;->d()I
-
-    move-result v2
-
-    invoke-static {p5}, Ljava/lang/Math;->round(F)I
-
-    move-result v4
-
-    move v3, v1
-
-    move v5, v1
-
-    move v6, v1
-
-    move v7, p3
-
-    move v8, p4
-
-    invoke-virtual/range {v0 .. v8}, Landroid/widget/OverScroller;->fling(IIIIIIII)V
-
-    iget-object v0, p0, Landroid/support/design/widget/m;->a:Landroid/widget/OverScroller;
-
-    invoke-virtual {v0}, Landroid/widget/OverScroller;->computeScrollOffset()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
+.method l()Landroid/graphics/drawable/GradientDrawable;
+    .locals 1
 
     new-instance v0, Landroid/support/design/widget/m$a;
 
-    invoke-direct {v0, p0, p1, p2}, Landroid/support/design/widget/m$a;-><init>(Landroid/support/design/widget/m;Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)V
+    invoke-direct {v0}, Landroid/support/design/widget/m$a;-><init>()V
 
-    iput-object v0, p0, Landroid/support/design/widget/m;->c:Ljava/lang/Runnable;
-
-    iget-object v0, p0, Landroid/support/design/widget/m;->c:Ljava/lang/Runnable;
-
-    invoke-static {p2, v0}, Landroid/support/v4/view/ac;->a(Landroid/view/View;Ljava/lang/Runnable;)V
-
-    const/4 v1, 0x1
-
-    :goto_0
-    return v1
-
-    :cond_2
-    invoke-virtual {p0, p1, p2}, Landroid/support/design/widget/m;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)V
-
-    goto :goto_0
-.end method
-
-.method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;",
-            "Landroid/view/MotionEvent;",
-            ")Z"
-        }
-    .end annotation
-
-    const/4 v0, 0x1
-
-    const/4 v4, 0x0
-
-    const/4 v3, -0x1
-
-    iget v1, p0, Landroid/support/design/widget/m;->g:I
-
-    if-gez v1, :cond_0
-
-    invoke-virtual {p1}, Landroid/support/design/widget/CoordinatorLayout;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
-
-    move-result v1
-
-    iput v1, p0, Landroid/support/design/widget/m;->g:I
-
-    :cond_0
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    if-ne v1, v2, :cond_1
-
-    iget-boolean v1, p0, Landroid/support/design/widget/m;->d:Z
-
-    if-eqz v1, :cond_1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getActionMasked()I
-
-    move-result v1
-
-    packed-switch v1, :pswitch_data_0
-
-    :cond_2
-    :goto_1
-    iget-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    invoke-virtual {v0, p3}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
-
-    :cond_3
-    iget-boolean v0, p0, Landroid/support/design/widget/m;->d:Z
-
-    goto :goto_0
-
-    :pswitch_0
-    iput-boolean v4, p0, Landroid/support/design/widget/m;->d:Z
-
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    invoke-virtual {p0, p2}, Landroid/support/design/widget/m;->c(Landroid/view/View;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {p1, p2, v0, v1}, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/view/View;II)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iput v1, p0, Landroid/support/design/widget/m;->f:I
-
-    invoke-virtual {p3, v4}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result v0
-
-    iput v0, p0, Landroid/support/design/widget/m;->e:I
-
-    invoke-direct {p0}, Landroid/support/design/widget/m;->a()V
-
-    goto :goto_1
-
-    :pswitch_1
-    iget v1, p0, Landroid/support/design/widget/m;->e:I
-
-    if-eq v1, v3, :cond_2
-
-    invoke-virtual {p3, v1}, Landroid/view/MotionEvent;->findPointerIndex(I)I
-
-    move-result v1
-
-    if-eq v1, v3, :cond_2
-
-    invoke-virtual {p3, v1}, Landroid/view/MotionEvent;->getY(I)F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    iget v2, p0, Landroid/support/design/widget/m;->f:I
-
-    sub-int v2, v1, v2
-
-    invoke-static {v2}, Ljava/lang/Math;->abs(I)I
-
-    move-result v2
-
-    iget v3, p0, Landroid/support/design/widget/m;->g:I
-
-    if-le v2, v3, :cond_2
-
-    iput-boolean v0, p0, Landroid/support/design/widget/m;->d:Z
-
-    iput v1, p0, Landroid/support/design/widget/m;->f:I
-
-    goto :goto_1
-
-    :pswitch_2
-    iput-boolean v4, p0, Landroid/support/design/widget/m;->d:Z
-
-    iput v3, p0, Landroid/support/design/widget/m;->e:I
-
-    iget-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    goto :goto_1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
-.end method
-
-.method a_(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;I)I
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;I)I"
-        }
-    .end annotation
-
-    const/high16 v4, -0x80000000
-
-    const v5, 0x7fffffff
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move v3, p3
-
-    invoke-virtual/range {v0 .. v5}, Landroid/support/design/widget/m;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;III)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method b()I
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/support/design/widget/m;->d()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method final b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;III)I
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;III)I"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Landroid/support/design/widget/m;->b()I
-
-    move-result v0
-
-    sub-int v3, v0, p3
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move v4, p4
-
-    move v5, p5
-
-    invoke-virtual/range {v0 .. v5}, Landroid/support/design/widget/m;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;III)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method b(Landroid/view/View;)I
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)I"
-        }
-    .end annotation
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    neg-int v0, v0
-
-    return v0
-.end method
-
-.method public b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 9
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;",
-            "Landroid/view/MotionEvent;",
-            ")Z"
-        }
-    .end annotation
-
-    const/4 v7, 0x1
-
-    const/4 v8, -0x1
-
-    const/4 v5, 0x0
-
-    iget v0, p0, Landroid/support/design/widget/m;->g:I
-
-    if-gez v0, :cond_0
-
-    invoke-virtual {p1}, Landroid/support/design/widget/CoordinatorLayout;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
-
-    move-result v0
-
-    iput v0, p0, Landroid/support/design/widget/m;->g:I
-
-    :cond_0
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getActionMasked()I
-
-    move-result v0
-
-    packed-switch v0, :pswitch_data_0
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    invoke-virtual {v0, p3}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
-
-    :cond_2
-    move v5, v7
-
-    :cond_3
-    return v5
-
-    :pswitch_0
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    invoke-virtual {p1, p2, v0, v1}, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/view/View;II)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0, p2}, Landroid/support/design/widget/m;->c(Landroid/view/View;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iput v1, p0, Landroid/support/design/widget/m;->f:I
-
-    invoke-virtual {p3, v5}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result v0
-
-    iput v0, p0, Landroid/support/design/widget/m;->e:I
-
-    invoke-direct {p0}, Landroid/support/design/widget/m;->a()V
-
-    goto :goto_0
-
-    :pswitch_1
-    iget v0, p0, Landroid/support/design/widget/m;->e:I
-
-    invoke-virtual {p3, v0}, Landroid/view/MotionEvent;->findPointerIndex(I)I
-
-    move-result v0
-
-    if-eq v0, v8, :cond_3
-
-    invoke-virtual {p3, v0}, Landroid/view/MotionEvent;->getY(I)F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    iget v1, p0, Landroid/support/design/widget/m;->f:I
-
-    sub-int v3, v1, v0
-
-    iget-boolean v1, p0, Landroid/support/design/widget/m;->d:Z
-
-    if-nez v1, :cond_4
-
-    invoke-static {v3}, Ljava/lang/Math;->abs(I)I
-
-    move-result v1
-
-    iget v2, p0, Landroid/support/design/widget/m;->g:I
-
-    if-le v1, v2, :cond_4
-
-    iput-boolean v7, p0, Landroid/support/design/widget/m;->d:Z
-
-    if-lez v3, :cond_5
-
-    iget v1, p0, Landroid/support/design/widget/m;->g:I
-
-    sub-int/2addr v3, v1
-
-    :cond_4
-    :goto_1
-    iget-boolean v1, p0, Landroid/support/design/widget/m;->d:Z
-
-    if-eqz v1, :cond_1
-
-    iput v0, p0, Landroid/support/design/widget/m;->f:I
-
-    invoke-virtual {p0, p2}, Landroid/support/design/widget/m;->b(Landroid/view/View;)I
-
-    move-result v4
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    invoke-virtual/range {v0 .. v5}, Landroid/support/design/widget/m;->b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;III)I
-
-    goto :goto_0
-
-    :cond_5
-    iget v1, p0, Landroid/support/design/widget/m;->g:I
-
-    add-int/2addr v3, v1
-
-    goto :goto_1
-
-    :pswitch_2
-    iget-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    if-eqz v0, :cond_6
-
-    iget-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    invoke-virtual {v0, p3}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
-
-    iget-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    const/16 v1, 0x3e8
-
-    invoke-virtual {v0, v1}, Landroid/view/VelocityTracker;->computeCurrentVelocity(I)V
-
-    iget-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    iget v1, p0, Landroid/support/design/widget/m;->e:I
-
-    invoke-virtual {v0, v1}, Landroid/view/VelocityTracker;->getYVelocity(I)F
-
-    move-result v6
-
-    invoke-virtual {p0, p2}, Landroid/support/design/widget/m;->a(Landroid/view/View;)I
-
-    move-result v0
-
-    neg-int v4, v0
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    invoke-virtual/range {v1 .. v6}, Landroid/support/design/widget/m;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;IIF)Z
-
-    :cond_6
-    :pswitch_3
-    iput-boolean v5, p0, Landroid/support/design/widget/m;->d:Z
-
-    iput v8, p0, Landroid/support/design/widget/m;->e:I
-
-    iget-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Landroid/support/design/widget/m;->h:Landroid/view/VelocityTracker;
-
-    goto/16 :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_3
-    .end packed-switch
-.end method
-
-.method c(Landroid/view/View;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)Z"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    return v0
+    return-object v0
 .end method

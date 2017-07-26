@@ -21,9 +21,9 @@
 
 
 # instance fields
-.field private final d:Landroid/support/v7/view/menu/h;
+.field private final d:Landroid/support/v7/h/a/k;
 
-.field private final e:Landroid/support/design/internal/c;
+.field private final e:Landroid/support/design/internal/d;
 
 .field private final f:Landroid/support/design/internal/BottomNavigationPresenter;
 
@@ -98,19 +98,19 @@
 
     iput-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->f:Landroid/support/design/internal/BottomNavigationPresenter;
 
-    invoke-static {p1}, Landroid/support/design/widget/v;->a(Landroid/content/Context;)V
-
-    new-instance v0, Landroid/support/design/internal/b;
-
-    invoke-direct {v0, p1}, Landroid/support/design/internal/b;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/view/menu/h;
+    invoke-static {p1}, Landroid/support/design/widget/x;->a(Landroid/content/Context;)V
 
     new-instance v0, Landroid/support/design/internal/c;
 
     invoke-direct {v0, p1}, Landroid/support/design/internal/c;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iput-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/h/a/k;
+
+    new-instance v0, Landroid/support/design/internal/d;
+
+    invoke-direct {v0, p1}, Landroid/support/design/internal/d;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -120,15 +120,15 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
-    invoke-virtual {v1, v0}, Landroid/support/design/internal/c;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, v0}, Landroid/support/design/internal/d;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->f:Landroid/support/design/internal/BottomNavigationPresenter;
 
-    iget-object v2, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v2, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
-    invoke-virtual {v1, v2}, Landroid/support/design/internal/BottomNavigationPresenter;->a(Landroid/support/design/internal/c;)V
+    invoke-virtual {v1, v2}, Landroid/support/design/internal/BottomNavigationPresenter;->a(Landroid/support/design/internal/d;)V
 
     iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->f:Landroid/support/design/internal/BottomNavigationPresenter;
 
@@ -136,17 +136,17 @@
 
     invoke-virtual {v1, v2}, Landroid/support/design/internal/BottomNavigationPresenter;->a(I)V
 
-    iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
     iget-object v2, p0, Landroid/support/design/widget/BottomNavigationView;->f:Landroid/support/design/internal/BottomNavigationPresenter;
 
-    invoke-virtual {v1, v2}, Landroid/support/design/internal/c;->setPresenter(Landroid/support/design/internal/BottomNavigationPresenter;)V
+    invoke-virtual {v1, v2}, Landroid/support/design/internal/d;->setPresenter(Landroid/support/design/internal/BottomNavigationPresenter;)V
 
-    iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/view/menu/h;
+    iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/h/a/k;
 
     iget-object v2, p0, Landroid/support/design/widget/BottomNavigationView;->f:Landroid/support/design/internal/BottomNavigationPresenter;
 
-    invoke-virtual {v1, v2}, Landroid/support/v7/view/menu/h;->a(Landroid/support/v7/view/menu/p;)V
+    invoke-virtual {v1, v2}, Landroid/support/v7/h/a/k;->a(Landroid/support/v7/h/a/s;)V
 
     iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->f:Landroid/support/design/internal/BottomNavigationPresenter;
 
@@ -154,59 +154,59 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/view/menu/h;
+    iget-object v3, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/h/a/k;
 
-    invoke-virtual {v1, v2, v3}, Landroid/support/design/internal/BottomNavigationPresenter;->a(Landroid/content/Context;Landroid/support/v7/view/menu/h;)V
+    invoke-virtual {v1, v2, v3}, Landroid/support/design/internal/BottomNavigationPresenter;->a(Landroid/content/Context;Landroid/support/v7/h/a/k;)V
 
     sget-object v1, Landroid/support/design/b$m;->BottomNavigationView:[I
 
     sget v2, Landroid/support/design/b$l;->Widget_Design_BottomNavigationView:I
 
-    invoke-static {p1, p2, v1, p3, v2}, Landroid/support/v7/widget/bw;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/support/v7/widget/bw;
+    invoke-static {p1, p2, v1, p3, v2}, Landroid/support/v7/widget/ci;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/support/v7/widget/ci;
 
     move-result-object v1
 
     sget v2, Landroid/support/design/b$m;->BottomNavigationView_itemIconTint:I
 
-    invoke-virtual {v1, v2}, Landroid/support/v7/widget/bw;->j(I)Z
+    invoke-virtual {v1, v2}, Landroid/support/v7/widget/ci;->j(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v2, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
     sget v3, Landroid/support/design/b$m;->BottomNavigationView_itemIconTint:I
 
-    invoke-virtual {v1, v3}, Landroid/support/v7/widget/bw;->g(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v1, v3}, Landroid/support/v7/widget/ci;->g(I)Landroid/content/res/ColorStateList;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Landroid/support/design/internal/c;->setIconTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v2, v3}, Landroid/support/design/internal/d;->setIconTintList(Landroid/content/res/ColorStateList;)V
 
     :goto_0
     sget v2, Landroid/support/design/b$m;->BottomNavigationView_itemTextColor:I
 
-    invoke-virtual {v1, v2}, Landroid/support/v7/widget/bw;->j(I)Z
+    invoke-virtual {v1, v2}, Landroid/support/v7/widget/ci;->j(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    iget-object v2, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v2, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
     sget v3, Landroid/support/design/b$m;->BottomNavigationView_itemTextColor:I
 
-    invoke-virtual {v1, v3}, Landroid/support/v7/widget/bw;->g(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v1, v3}, Landroid/support/v7/widget/ci;->g(I)Landroid/content/res/ColorStateList;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Landroid/support/design/internal/c;->setItemTextColor(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v2, v3}, Landroid/support/design/internal/d;->setItemTextColor(Landroid/content/res/ColorStateList;)V
 
     :goto_1
     sget v2, Landroid/support/design/b$m;->BottomNavigationView_elevation:I
 
-    invoke-virtual {v1, v2}, Landroid/support/v7/widget/bw;->j(I)Z
+    invoke-virtual {v1, v2}, Landroid/support/v7/widget/ci;->j(I)Z
 
     move-result v2
 
@@ -214,7 +214,7 @@
 
     sget v2, Landroid/support/design/b$m;->BottomNavigationView_elevation:I
 
-    invoke-virtual {v1, v2, v4}, Landroid/support/v7/widget/bw;->e(II)I
+    invoke-virtual {v1, v2, v4}, Landroid/support/v7/widget/ci;->e(II)I
 
     move-result v2
 
@@ -225,17 +225,17 @@
     :cond_0
     sget v2, Landroid/support/design/b$m;->BottomNavigationView_itemBackground:I
 
-    invoke-virtual {v1, v2, v4}, Landroid/support/v7/widget/bw;->g(II)I
+    invoke-virtual {v1, v2, v4}, Landroid/support/v7/widget/ci;->g(II)I
 
     move-result v2
 
-    iget-object v3, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v3, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
-    invoke-virtual {v3, v2}, Landroid/support/design/internal/c;->setItemBackgroundRes(I)V
+    invoke-virtual {v3, v2}, Landroid/support/design/internal/d;->setItemBackgroundRes(I)V
 
     sget v2, Landroid/support/design/b$m;->BottomNavigationView_menu:I
 
-    invoke-virtual {v1, v2}, Landroid/support/v7/widget/bw;->j(I)Z
+    invoke-virtual {v1, v2}, Landroid/support/v7/widget/ci;->j(I)Z
 
     move-result v2
 
@@ -243,16 +243,16 @@
 
     sget v2, Landroid/support/design/b$m;->BottomNavigationView_menu:I
 
-    invoke-virtual {v1, v2, v4}, Landroid/support/v7/widget/bw;->g(II)I
+    invoke-virtual {v1, v2, v4}, Landroid/support/v7/widget/ci;->g(II)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Landroid/support/design/widget/BottomNavigationView;->a(I)V
 
     :cond_1
-    invoke-virtual {v1}, Landroid/support/v7/widget/bw;->e()V
+    invoke-virtual {v1}, Landroid/support/v7/widget/ci;->e()V
 
-    iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
     invoke-virtual {p0, v1, v0}, Landroid/support/design/widget/BottomNavigationView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -265,35 +265,35 @@
     invoke-direct {p0, p1}, Landroid/support/design/widget/BottomNavigationView;->a(Landroid/content/Context;)V
 
     :cond_2
-    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/view/menu/h;
+    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/h/a/k;
 
     new-instance v1, Landroid/support/design/widget/BottomNavigationView$1;
 
     invoke-direct {v1, p0}, Landroid/support/design/widget/BottomNavigationView$1;-><init>(Landroid/support/design/widget/BottomNavigationView;)V
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/view/menu/h;->a(Landroid/support/v7/view/menu/h$a;)V
+    invoke-virtual {v0, v1}, Landroid/support/v7/h/a/k;->a(Landroid/support/v7/h/a/k$a;)V
 
     return-void
 
     :cond_3
-    iget-object v2, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v2, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
     invoke-direct {p0, v5}, Landroid/support/design/widget/BottomNavigationView;->b(I)Landroid/content/res/ColorStateList;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Landroid/support/design/internal/c;->setIconTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v2, v3}, Landroid/support/design/internal/d;->setIconTintList(Landroid/content/res/ColorStateList;)V
 
     goto :goto_0
 
     :cond_4
-    iget-object v2, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v2, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
     invoke-direct {p0, v5}, Landroid/support/design/widget/BottomNavigationView;->b(I)Landroid/content/res/ColorStateList;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Landroid/support/design/internal/c;->setItemTextColor(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v2, v3}, Landroid/support/design/internal/d;->setItemTextColor(Landroid/content/res/ColorStateList;)V
 
     goto :goto_1
 .end method
@@ -462,13 +462,13 @@
 
     if-nez v0, :cond_0
 
-    new-instance v0, Landroid/support/v7/view/g;
+    new-instance v0, Landroid/support/v7/h/g;
 
     invoke-virtual {p0}, Landroid/support/design/widget/BottomNavigationView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroid/support/v7/view/g;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Landroid/support/v7/h/g;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->g:Landroid/view/MenuInflater;
 
@@ -493,7 +493,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/view/menu/h;
+    iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/h/a/k;
 
     invoke-virtual {v0, p1, v1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
@@ -515,9 +515,9 @@
     .annotation build Landroid/support/annotation/p;
     .end annotation
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
-    invoke-virtual {v0}, Landroid/support/design/internal/c;->getItemBackgroundRes()I
+    invoke-virtual {v0}, Landroid/support/design/internal/d;->getItemBackgroundRes()I
 
     move-result v0
 
@@ -529,9 +529,9 @@
     .annotation build Landroid/support/annotation/ae;
     .end annotation
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
-    invoke-virtual {v0}, Landroid/support/design/internal/c;->getIconTintList()Landroid/content/res/ColorStateList;
+    invoke-virtual {v0}, Landroid/support/design/internal/d;->getIconTintList()Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -543,9 +543,9 @@
     .annotation build Landroid/support/annotation/ae;
     .end annotation
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
-    invoke-virtual {v0}, Landroid/support/design/internal/c;->getItemTextColor()Landroid/content/res/ColorStateList;
+    invoke-virtual {v0}, Landroid/support/design/internal/d;->getItemTextColor()Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -565,7 +565,7 @@
     .annotation build Landroid/support/annotation/ad;
     .end annotation
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/view/menu/h;
+    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/h/a/k;
 
     return-object v0
 .end method
@@ -575,9 +575,9 @@
     .annotation build Landroid/support/annotation/v;
     .end annotation
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
-    invoke-virtual {v0}, Landroid/support/design/internal/c;->getSelectedItemId()I
+    invoke-virtual {v0}, Landroid/support/design/internal/d;->getSelectedItemId()I
 
     move-result v0
 
@@ -605,11 +605,11 @@
 
     invoke-super {p0, v0}, Landroid/widget/FrameLayout;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/view/menu/h;
+    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/h/a/k;
 
     iget-object v1, p1, Landroid/support/design/widget/BottomNavigationView$SavedState;->a:Landroid/os/Bundle;
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/view/menu/h;->b(Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1}, Landroid/support/v7/h/a/k;->b(Landroid/os/Bundle;)V
 
     goto :goto_0
 .end method
@@ -631,11 +631,11 @@
 
     iput-object v0, v1, Landroid/support/design/widget/BottomNavigationView$SavedState;->a:Landroid/os/Bundle;
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/view/menu/h;
+    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/h/a/k;
 
     iget-object v2, v1, Landroid/support/design/widget/BottomNavigationView$SavedState;->a:Landroid/os/Bundle;
 
-    invoke-virtual {v0, v2}, Landroid/support/v7/view/menu/h;->a(Landroid/os/Bundle;)V
+    invoke-virtual {v0, v2}, Landroid/support/v7/h/a/k;->a(Landroid/os/Bundle;)V
 
     return-object v1
 .end method
@@ -647,9 +647,9 @@
         .end annotation
     .end param
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
-    invoke-virtual {v0, p1}, Landroid/support/design/internal/c;->setItemBackgroundRes(I)V
+    invoke-virtual {v0, p1}, Landroid/support/design/internal/d;->setItemBackgroundRes(I)V
 
     return-void
 .end method
@@ -661,9 +661,9 @@
         .end annotation
     .end param
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
-    invoke-virtual {v0, p1}, Landroid/support/design/internal/c;->setIconTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v0, p1}, Landroid/support/design/internal/d;->setIconTintList(Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
@@ -675,9 +675,9 @@
         .end annotation
     .end param
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/c;
+    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->e:Landroid/support/design/internal/d;
 
-    invoke-virtual {v0, p1}, Landroid/support/design/internal/c;->setItemTextColor(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v0, p1}, Landroid/support/design/internal/d;->setItemTextColor(Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
@@ -713,21 +713,21 @@
         .end annotation
     .end param
 
-    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/view/menu/h;
+    iget-object v0, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/h/a/k;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/view/menu/h;->findItem(I)Landroid/view/MenuItem;
+    invoke-virtual {v0, p1}, Landroid/support/v7/h/a/k;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/view/menu/h;
+    iget-object v1, p0, Landroid/support/design/widget/BottomNavigationView;->d:Landroid/support/v7/h/a/k;
 
     iget-object v2, p0, Landroid/support/design/widget/BottomNavigationView;->f:Landroid/support/design/internal/BottomNavigationPresenter;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v1, v0, v2, v3}, Landroid/support/v7/view/menu/h;->a(Landroid/view/MenuItem;Landroid/support/v7/view/menu/p;I)Z
+    invoke-virtual {v1, v0, v2, v3}, Landroid/support/v7/h/a/k;->a(Landroid/view/MenuItem;Landroid/support/v7/h/a/s;I)Z
 
     move-result v1
 

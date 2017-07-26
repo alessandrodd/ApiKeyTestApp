@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v7/widget/ActionMenuView$e;
+.implements Landroid/support/v7/widget/g$e;
 
 
 # annotations

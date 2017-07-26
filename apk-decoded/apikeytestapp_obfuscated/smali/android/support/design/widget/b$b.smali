@@ -76,28 +76,28 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Landroid/support/design/widget/q;->a()Landroid/support/design/widget/q;
+    invoke-static {}, Landroid/support/design/widget/s;->a()Landroid/support/design/widget/s;
 
     move-result-object v0
 
     iget-object v1, p0, Landroid/support/design/widget/b$b;->a:Landroid/support/design/widget/b;
 
-    iget-object v1, v1, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/q$a;
+    iget-object v1, v1, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/s$a;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/q;->c(Landroid/support/design/widget/q$a;)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/s;->c(Landroid/support/design/widget/s$a;)V
 
     goto :goto_0
 
     :pswitch_2
-    invoke-static {}, Landroid/support/design/widget/q;->a()Landroid/support/design/widget/q;
+    invoke-static {}, Landroid/support/design/widget/s;->a()Landroid/support/design/widget/s;
 
     move-result-object v0
 
     iget-object v1, p0, Landroid/support/design/widget/b$b;->a:Landroid/support/design/widget/b;
 
-    iget-object v1, v1, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/q$a;
+    iget-object v1, v1, Landroid/support/design/widget/b;->j:Landroid/support/design/widget/s$a;
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/q;->d(Landroid/support/design/widget/q$a;)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/s;->d(Landroid/support/design/widget/s$a;)V
 
     goto :goto_0
 

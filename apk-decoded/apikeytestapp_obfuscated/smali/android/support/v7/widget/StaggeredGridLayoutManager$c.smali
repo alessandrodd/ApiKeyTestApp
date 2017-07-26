@@ -129,17 +129,17 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$c;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/bb;->c()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/bn;->c()I
 
     move-result v4
 
     iget-object v0, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$c;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/bb;->d()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/bn;->d()I
 
     move-result v5
 
@@ -162,17 +162,17 @@
 
     iget-object v2, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$c;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v2, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v2, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v2, v0}, Landroid/support/v7/widget/bb;->a(Landroid/view/View;)I
+    invoke-virtual {v2, v0}, Landroid/support/v7/widget/bn;->a(Landroid/view/View;)I
 
     move-result v6
 
     iget-object v2, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$c;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v2, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v2, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v2, v0}, Landroid/support/v7/widget/bb;->b(Landroid/view/View;)I
+    invoke-virtual {v2, v0}, Landroid/support/v7/widget/bn;->b(Landroid/view/View;)I
 
     move-result v7
 
@@ -471,9 +471,9 @@
 
     iget-object v2, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$c;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v2, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v2, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v2, v0}, Landroid/support/v7/widget/bb;->a(Landroid/view/View;)I
+    invoke-virtual {v2, v0}, Landroid/support/v7/widget/bn;->a(Landroid/view/View;)I
 
     move-result v0
 
@@ -568,9 +568,9 @@
 
     iget-object v1, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$c;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v1, v1, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v1, v1, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v1, p1}, Landroid/support/v7/widget/bb;->e(Landroid/view/View;)I
+    invoke-virtual {v1, p1}, Landroid/support/v7/widget/bn;->e(Landroid/view/View;)I
 
     move-result v1
 
@@ -614,9 +614,9 @@
 
     iget-object v1, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$c;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v1, v1, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v1, v1, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v1}, Landroid/support/v7/widget/bb;->d()I
+    invoke-virtual {v1}, Landroid/support/v7/widget/bn;->d()I
 
     move-result v1
 
@@ -627,9 +627,9 @@
 
     iget-object v1, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$c;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v1, v1, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v1, v1, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v1}, Landroid/support/v7/widget/bb;->c()I
+    invoke-virtual {v1}, Landroid/support/v7/widget/bn;->c()I
 
     move-result v1
 
@@ -770,9 +770,9 @@
 
     iget-object v1, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$c;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v1, v1, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v1, v1, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v1, p1}, Landroid/support/v7/widget/bb;->e(Landroid/view/View;)I
+    invoke-virtual {v1, p1}, Landroid/support/v7/widget/bn;->e(Landroid/view/View;)I
 
     move-result v1
 
@@ -821,9 +821,9 @@
 
     iget-object v2, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$c;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v2, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v2, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v2, v0}, Landroid/support/v7/widget/bb;->b(Landroid/view/View;)I
+    invoke-virtual {v2, v0}, Landroid/support/v7/widget/bn;->b(Landroid/view/View;)I
 
     move-result v0
 
@@ -1005,9 +1005,9 @@
 
     iget-object v3, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$c;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v3, v3, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v3, v3, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v3, v0}, Landroid/support/v7/widget/bb;->e(Landroid/view/View;)I
+    invoke-virtual {v3, v0}, Landroid/support/v7/widget/bn;->e(Landroid/view/View;)I
 
     move-result v0
 
@@ -1079,9 +1079,9 @@
 
     iget-object v2, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$c;->g:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    iget-object v2, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bb;
+    iget-object v2, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager;->i:Landroid/support/v7/widget/bn;
 
-    invoke-virtual {v2, v0}, Landroid/support/v7/widget/bb;->e(Landroid/view/View;)I
+    invoke-virtual {v2, v0}, Landroid/support/v7/widget/bn;->e(Landroid/view/View;)I
 
     move-result v0
 

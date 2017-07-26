@@ -1,5 +1,8 @@
 .class Landroid/support/v7/app/i$a;
-.super Landroid/support/v7/app/l$a;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/support/v7/app/b$a;
 
 
 # annotations
@@ -8,67 +11,134 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x2
     name = "a"
 .end annotation
 
 
 # instance fields
-.field final synthetic b:Landroid/support/v7/app/i;
+.field final synthetic a:Landroid/support/v7/app/i;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v7/app/i;Landroid/view/Window$Callback;)V
+.method constructor <init>(Landroid/support/v7/app/i;)V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v7/app/i$a;->b:Landroid/support/v7/app/i;
+    iput-object p1, p0, Landroid/support/v7/app/i$a;->a:Landroid/support/v7/app/i;
 
-    invoke-direct {p0, p1, p2}, Landroid/support/v7/app/l$a;-><init>(Landroid/support/v7/app/l;Landroid/view/Window$Callback;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onProvideKeyboardShortcuts(Ljava/util/List;Landroid/view/Menu;I)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Landroid/view/KeyboardShortcutGroup;",
-            ">;",
-            "Landroid/view/Menu;",
-            "I)V"
-        }
-    .end annotation
+.method public a()Landroid/graphics/drawable/Drawable;
+    .locals 5
 
-    iget-object v0, p0, Landroid/support/v7/app/i$a;->b:Landroid/support/v7/app/i;
+    const/4 v4, 0x0
+
+    invoke-virtual {p0}, Landroid/support/v7/app/i$a;->b()Landroid/content/Context;
+
+    move-result-object v0
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Landroid/support/v7/app/i;->a(IZ)Landroid/support/v7/app/AppCompatDelegateImplV9$PanelFeatureState;
+    new-array v2, v2, [I
+
+    sget v3, Landroid/support/v7/a/b$b;->homeAsUpIndicator:I
+
+    aput v3, v2, v4
+
+    invoke-static {v0, v1, v2}, Landroid/support/v7/widget/ci;->a(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/support/v7/widget/ci;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Landroid/support/v7/widget/ci;->a(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/ci;->e()V
+
+    return-object v1
+.end method
+
+.method public a(I)V
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/app/i$a;->a:Landroid/support/v7/app/i;
+
+    invoke-virtual {v0}, Landroid/support/v7/app/i;->a()Landroid/support/v7/app/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v1, v0, Landroid/support/v7/app/AppCompatDelegateImplV9$PanelFeatureState;->j:Landroid/support/v7/view/menu/h;
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, v0, Landroid/support/v7/app/AppCompatDelegateImplV9$PanelFeatureState;->j:Landroid/support/v7/view/menu/h;
-
-    invoke-super {p0, p1, v0, p3}, Landroid/support/v7/app/l$a;->onProvideKeyboardShortcuts(Ljava/util/List;Landroid/view/Menu;I)V
-
-    :goto_0
-    return-void
+    invoke-virtual {v0, p1}, Landroid/support/v7/app/a;->l(I)V
 
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Landroid/support/v7/app/l$a;->onProvideKeyboardShortcuts(Ljava/util/List;Landroid/view/Menu;I)V
+    return-void
+.end method
+
+.method public a(Landroid/graphics/drawable/Drawable;I)V
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/app/i$a;->a:Landroid/support/v7/app/i;
+
+    invoke-virtual {v0}, Landroid/support/v7/app/i;->a()Landroid/support/v7/app/a;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/app/a;->f(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {v0, p2}, Landroid/support/v7/app/a;->l(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public b()Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/app/i$a;->a:Landroid/support/v7/app/i;
+
+    invoke-virtual {v0}, Landroid/support/v7/app/i;->p()Landroid/content/Context;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public c()Z
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/app/i$a;->a:Landroid/support/v7/app/i;
+
+    invoke-virtual {v0}, Landroid/support/v7/app/i;->a()Landroid/support/v7/app/a;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/support/v7/app/a;->g()I
+
+    move-result v0
+
+    and-int/lit8 v0, v0, 0x4
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

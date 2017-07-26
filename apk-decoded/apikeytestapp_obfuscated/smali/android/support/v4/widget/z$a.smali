@@ -1,26 +1,22 @@
-.class public interface abstract annotation Landroid/support/v4/widget/z$a;
+.class public interface abstract Landroid/support/v4/widget/z$a;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
 
 
 # annotations
-.annotation build Landroid/support/annotation/ak;
-    a = {
-        .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
-    }
-.end annotation
-
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroid/support/v4/widget/z;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2609
+    accessFlags = 0x609
     name = "a"
 .end annotation
 
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->SOURCE:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
+
+# virtual methods
+.method public abstract a(Landroid/support/v4/widget/z;Landroid/view/View;)Z
+    .param p2    # Landroid/view/View;
+        .annotation build Landroid/support/annotation/ae;
+        .end annotation
+    .end param
+.end method

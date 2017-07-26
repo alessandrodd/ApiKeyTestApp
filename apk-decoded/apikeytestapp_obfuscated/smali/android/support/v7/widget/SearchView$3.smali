@@ -46,7 +46,7 @@
 
     iget-object v0, v0, Landroid/support/v7/widget/SearchView;->o:Landroid/support/v4/widget/f;
 
-    instance-of v0, v0, Landroid/support/v7/widget/bp;
+    instance-of v0, v0, Landroid/support/v7/widget/cb;
 
     if-eqz v0, :cond_0
 

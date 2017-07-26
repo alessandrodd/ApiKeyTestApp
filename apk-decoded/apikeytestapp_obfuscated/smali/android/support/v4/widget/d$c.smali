@@ -35,13 +35,13 @@
 .method public a(Landroid/widget/CompoundButton;)Landroid/content/res/ColorStateList;
     .locals 1
 
-    instance-of v0, p1, Landroid/support/v4/widget/aa;
+    instance-of v0, p1, Landroid/support/v4/widget/ab;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Landroid/support/v4/widget/aa;
+    check-cast p1, Landroid/support/v4/widget/ab;
 
-    invoke-interface {p1}, Landroid/support/v4/widget/aa;->getSupportButtonTintList()Landroid/content/res/ColorStateList;
+    invoke-interface {p1}, Landroid/support/v4/widget/ab;->getSupportButtonTintList()Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -57,13 +57,13 @@
 .method public a(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
     .locals 1
 
-    instance-of v0, p1, Landroid/support/v4/widget/aa;
+    instance-of v0, p1, Landroid/support/v4/widget/ab;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Landroid/support/v4/widget/aa;
+    check-cast p1, Landroid/support/v4/widget/ab;
 
-    invoke-interface {p1, p2}, Landroid/support/v4/widget/aa;->setSupportButtonTintList(Landroid/content/res/ColorStateList;)V
+    invoke-interface {p1, p2}, Landroid/support/v4/widget/ab;->setSupportButtonTintList(Landroid/content/res/ColorStateList;)V
 
     :cond_0
     return-void
@@ -72,13 +72,13 @@
 .method public a(Landroid/widget/CompoundButton;Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
 
-    instance-of v0, p1, Landroid/support/v4/widget/aa;
+    instance-of v0, p1, Landroid/support/v4/widget/ab;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Landroid/support/v4/widget/aa;
+    check-cast p1, Landroid/support/v4/widget/ab;
 
-    invoke-interface {p1, p2}, Landroid/support/v4/widget/aa;->setSupportButtonTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-interface {p1, p2}, Landroid/support/v4/widget/ab;->setSupportButtonTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_0
     return-void
@@ -87,13 +87,13 @@
 .method public b(Landroid/widget/CompoundButton;)Landroid/graphics/PorterDuff$Mode;
     .locals 1
 
-    instance-of v0, p1, Landroid/support/v4/widget/aa;
+    instance-of v0, p1, Landroid/support/v4/widget/ab;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Landroid/support/v4/widget/aa;
+    check-cast p1, Landroid/support/v4/widget/ab;
 
-    invoke-interface {p1}, Landroid/support/v4/widget/aa;->getSupportButtonTintMode()Landroid/graphics/PorterDuff$Mode;
+    invoke-interface {p1}, Landroid/support/v4/widget/ab;->getSupportButtonTintMode()Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v0
 

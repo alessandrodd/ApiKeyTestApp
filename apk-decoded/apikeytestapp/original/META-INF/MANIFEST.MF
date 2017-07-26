@@ -1,12 +1,12 @@
 Manifest-Version: 1.0
 Built-By: Generated-by-ADT
-Created-By: Android Gradle 3.0.0-alpha7
+Created-By: Android Gradle 3.0.0-alpha8
 
 Name: AndroidManifest.xml
 SHA1-Digest: Ou/yOIBH3dKIU3S7fMGPpVlYNyU=
 
 Name: classes.dex
-SHA1-Digest: 2NNW1tJOM1ikmZCNMFVDPsUPOls=
+SHA1-Digest: y7w67aHUrWwB+yaZKcemITYMlpk=
 
 Name: lib/arm64-v8a/libnative-lib.so
 SHA1-Digest: HRl1qRc3vW9NUEC/nRQOKtwktDQ=

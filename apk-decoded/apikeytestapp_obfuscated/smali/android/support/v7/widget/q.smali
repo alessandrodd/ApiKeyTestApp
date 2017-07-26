@@ -1,329 +1,329 @@
-.class public Landroid/support/v7/widget/q;
-.super Landroid/widget/MultiAutoCompleteTextView;
-
-# interfaces
-.implements Landroid/support/v4/view/aa;
+.class Landroid/support/v7/widget/q;
+.super Ljava/lang/Object;
 
 
-# static fields
-.field private static final a:[I
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/support/v7/widget/q$a;
+    }
+.end annotation
 
 
 # instance fields
-.field private final b:Landroid/support/v7/widget/g;
+.field private final a:Landroid/widget/CompoundButton;
 
-.field private final c:Landroid/support/v7/widget/y;
+.field private b:Landroid/content/res/ColorStateList;
+
+.field private c:Landroid/graphics/PorterDuff$Mode;
+
+.field private d:Z
+
+.field private e:Z
+
+.field private f:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [I
+.method constructor <init>(Landroid/widget/CompoundButton;)V
+    .locals 2
 
     const/4 v1, 0x0
 
-    const v2, 0x1010176
-
-    aput v2, v0, v1
-
-    sput-object v0, Landroid/support/v7/widget/q;->a:[I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Landroid/support/v7/widget/q;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object v1, p0, Landroid/support/v7/widget/q;->b:Landroid/content/res/ColorStateList;
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
+    iput-object v1, p0, Landroid/support/v7/widget/q;->c:Landroid/graphics/PorterDuff$Mode;
 
-    sget v0, Landroid/support/v7/a/b$b;->autoCompleteTextViewStyle:I
+    iput-boolean v0, p0, Landroid/support/v7/widget/q;->d:Z
 
-    invoke-direct {p0, p1, p2, v0}, Landroid/support/v7/widget/q;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    iput-boolean v0, p0, Landroid/support/v7/widget/q;->e:Z
 
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 3
-
-    const/4 v2, 0x0
-
-    invoke-static {p1}, Landroid/support/v7/widget/bt;->a(Landroid/content/Context;)Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0, p2, p3}, Landroid/widget/MultiAutoCompleteTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/q;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget-object v1, Landroid/support/v7/widget/q;->a:[I
-
-    invoke-static {v0, p2, v1, p3, v2}, Landroid/support/v7/widget/bw;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/support/v7/widget/bw;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/support/v7/widget/bw;->j(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, v2}, Landroid/support/v7/widget/bw;->a(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Landroid/support/v7/widget/q;->setDropDownBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/support/v7/widget/bw;->e()V
-
-    new-instance v0, Landroid/support/v7/widget/g;
-
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/g;-><init>(Landroid/view/View;)V
-
-    iput-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
-
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
-
-    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/g;->a(Landroid/util/AttributeSet;I)V
-
-    invoke-static {p0}, Landroid/support/v7/widget/y;->a(Landroid/widget/TextView;)Landroid/support/v7/widget/y;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v7/widget/q;->c:Landroid/support/v7/widget/y;
-
-    iget-object v0, p0, Landroid/support/v7/widget/q;->c:Landroid/support/v7/widget/y;
-
-    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/y;->a(Landroid/util/AttributeSet;I)V
-
-    iget-object v0, p0, Landroid/support/v7/widget/q;->c:Landroid/support/v7/widget/y;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/y;->a()V
+    iput-object p1, p0, Landroid/support/v7/widget/q;->a:Landroid/widget/CompoundButton;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected drawableStateChanged()V
-    .locals 1
+.method a(I)I
+    .locals 2
 
-    invoke-super {p0}, Landroid/widget/MultiAutoCompleteTextView;->drawableStateChanged()V
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
+    const/16 v1, 0x11
 
-    if-eqz v0, :cond_0
+    if-ge v0, v1, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
+    iget-object v0, p0, Landroid/support/v7/widget/q;->a:Landroid/widget/CompoundButton;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/g;->c()V
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/q;->c:Landroid/support/v7/widget/y;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Landroid/support/v7/widget/q;->c:Landroid/support/v7/widget/y;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/y;->a()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
-    .locals 1
-    .annotation build Landroid/support/annotation/ae;
-    .end annotation
-
-    .annotation build Landroid/support/annotation/ak;
-        a = {
-            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
-        }
-    .end annotation
-
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/g;->a()Landroid/content/res/ColorStateList;
+    invoke-static {v0}, Landroid/support/v4/widget/d;->c(Landroid/widget/CompoundButton;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    :goto_0
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v0
+
+    add-int/2addr p1, v0
+
+    :cond_0
+    return p1
+.end method
+
+.method a()Landroid/content/res/ColorStateList;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/content/res/ColorStateList;
+
     return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
-.method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
-    .locals 1
-    .annotation build Landroid/support/annotation/ae;
-    .end annotation
-
-    .annotation build Landroid/support/annotation/ak;
-        a = {
-            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
-        }
-    .end annotation
-
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/g;->b()Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+.method a(Landroid/content/res/ColorStateList;)V
     .locals 1
 
-    invoke-super {p0, p1}, Landroid/widget/MultiAutoCompleteTextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    iput-object p1, p0, Landroid/support/v7/widget/q;->b:Landroid/content/res/ColorStateList;
 
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    iput-boolean v0, p0, Landroid/support/v7/widget/q;->d:Z
 
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
-
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/g;->a(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setBackgroundResource(I)V
-    .locals 1
-    .param p1    # I
-        .annotation build Landroid/support/annotation/p;
-        .end annotation
-    .end param
-
-    invoke-super {p0, p1}, Landroid/widget/MultiAutoCompleteTextView;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
-
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/g;->a(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setDropDownBackgroundResource(I)V
-    .locals 1
-    .param p1    # I
-        .annotation build Landroid/support/annotation/p;
-        .end annotation
-    .end param
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/q;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Landroid/support/v7/c/a/b;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroid/support/v7/widget/q;->setDropDownBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0}, Landroid/support/v7/widget/q;->d()V
 
     return-void
 .end method
 
-.method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
-    .locals 1
-    .param p1    # Landroid/content/res/ColorStateList;
-        .annotation build Landroid/support/annotation/ae;
-        .end annotation
-    .end param
-    .annotation build Landroid/support/annotation/ak;
-        a = {
-            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
-        }
-    .end annotation
-
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
-
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/g;->a(Landroid/content/res/ColorStateList;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
+.method a(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
     .param p1    # Landroid/graphics/PorterDuff$Mode;
         .annotation build Landroid/support/annotation/ae;
         .end annotation
     .end param
-    .annotation build Landroid/support/annotation/ak;
-        a = {
-            .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
-        }
-    .end annotation
 
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
+    iput-object p1, p0, Landroid/support/v7/widget/q;->c:Landroid/graphics/PorterDuff$Mode;
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Landroid/support/v7/widget/q;->b:Landroid/support/v7/widget/g;
+    iput-boolean v0, p0, Landroid/support/v7/widget/q;->e:Z
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/g;->a(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-virtual {p0}, Landroid/support/v7/widget/q;->d()V
 
-    :cond_0
     return-void
 .end method
 
-.method public setTextAppearance(Landroid/content/Context;I)V
-    .locals 1
+.method a(Landroid/util/AttributeSet;I)V
+    .locals 4
 
-    invoke-super {p0, p1, p2}, Landroid/widget/MultiAutoCompleteTextView;->setTextAppearance(Landroid/content/Context;I)V
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Landroid/support/v7/widget/q;->c:Landroid/support/v7/widget/y;
+    iget-object v0, p0, Landroid/support/v7/widget/q;->a:Landroid/widget/CompoundButton;
+
+    invoke-virtual {v0}, Landroid/widget/CompoundButton;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget-object v1, Landroid/support/v7/a/b$l;->CompoundButton:[I
+
+    invoke-virtual {v0, p1, v1, p2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object v1
+
+    :try_start_0
+    sget v0, Landroid/support/v7/a/b$l;->CompoundButton_android_button:I
+
+    invoke-virtual {v1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/q;->c:Landroid/support/v7/widget/y;
+    sget v0, Landroid/support/v7/a/b$l;->CompoundButton_android_button:I
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/y;->a(Landroid/content/Context;I)V
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v2, p0, Landroid/support/v7/widget/q;->a:Landroid/widget/CompoundButton;
+
+    iget-object v3, p0, Landroid/support/v7/widget/q;->a:Landroid/widget/CompoundButton;
+
+    invoke-virtual {v3}, Landroid/widget/CompoundButton;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-static {v3, v0}, Landroid/support/v7/c/a/b;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Landroid/widget/CompoundButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
+    sget v0, Landroid/support/v7/a/b$l;->CompoundButton_buttonTint:I
+
+    invoke-virtual {v1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Landroid/support/v7/widget/q;->a:Landroid/widget/CompoundButton;
+
+    sget v2, Landroid/support/v7/a/b$l;->CompoundButton_buttonTint:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Landroid/support/v4/widget/d;->a(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
+
+    :cond_1
+    sget v0, Landroid/support/v7/a/b$l;->CompoundButton_buttonTintMode:I
+
+    invoke-virtual {v1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Landroid/support/v7/widget/q;->a:Landroid/widget/CompoundButton;
+
+    sget v2, Landroid/support/v7/a/b$l;->CompoundButton_buttonTintMode:I
+
+    const/4 v3, -0x1
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    invoke-static {v2, v3}, Landroid/support/v7/widget/aw;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Landroid/support/v4/widget/d;->a(Landroid/widget/CompoundButton;Landroid/graphics/PorterDuff$Mode;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_2
+    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
+
+    throw v0
+.end method
+
+.method b()Landroid/graphics/PorterDuff$Mode;
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v7/widget/q;->c:Landroid/graphics/PorterDuff$Mode;
+
+    return-object v0
+.end method
+
+.method c()V
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/v7/widget/q;->f:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroid/support/v7/widget/q;->f:Z
+
+    :goto_0
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/support/v7/widget/q;->f:Z
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/q;->d()V
+
+    goto :goto_0
+.end method
+
+.method d()V
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v7/widget/q;->a:Landroid/widget/CompoundButton;
+
+    invoke-static {v0}, Landroid/support/v4/widget/d;->c(Landroid/widget/CompoundButton;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    iget-boolean v1, p0, Landroid/support/v7/widget/q;->d:Z
+
+    if-nez v1, :cond_0
+
+    iget-boolean v1, p0, Landroid/support/v7/widget/q;->e:Z
+
+    if-eqz v1, :cond_4
+
+    :cond_0
+    invoke-static {v0}, Landroid/support/v4/d/a/a;->g(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iget-boolean v1, p0, Landroid/support/v7/widget/q;->d:Z
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Landroid/support/v7/widget/q;->b:Landroid/content/res/ColorStateList;
+
+    invoke-static {v0, v1}, Landroid/support/v4/d/a/a;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+
+    :cond_1
+    iget-boolean v1, p0, Landroid/support/v7/widget/q;->e:Z
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Landroid/support/v7/widget/q;->c:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-static {v0, v1}, Landroid/support/v4/d/a/a;->a(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+
+    :cond_2
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Landroid/support/v7/widget/q;->a:Landroid/widget/CompoundButton;
+
+    invoke-virtual {v1}, Landroid/widget/CompoundButton;->getDrawableState()[I
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    :cond_3
+    iget-object v1, p0, Landroid/support/v7/widget/q;->a:Landroid/widget/CompoundButton;
+
+    invoke-virtual {v1, v0}, Landroid/widget/CompoundButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_4
     return-void
 .end method

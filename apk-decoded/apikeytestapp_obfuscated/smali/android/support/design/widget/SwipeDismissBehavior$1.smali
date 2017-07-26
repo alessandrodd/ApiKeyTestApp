@@ -1,5 +1,5 @@
 .class Landroid/support/design/widget/SwipeDismissBehavior$1;
-.super Landroid/support/v4/widget/ac$a;
+.super Landroid/support/v4/widget/ad$a;
 
 
 # annotations
@@ -31,7 +31,7 @@
 
     iput-object p1, p0, Landroid/support/design/widget/SwipeDismissBehavior$1;->a:Landroid/support/design/widget/SwipeDismissBehavior;
 
-    invoke-direct {p0}, Landroid/support/v4/widget/ac$a;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/widget/ad$a;-><init>()V
 
     const/4 v0, -0x1
 
@@ -246,13 +246,13 @@
     :goto_1
     iget-object v2, p0, Landroid/support/design/widget/SwipeDismissBehavior$1;->a:Landroid/support/design/widget/SwipeDismissBehavior;
 
-    iget-object v2, v2, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ac;
+    iget-object v2, v2, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ad;
 
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v3
 
-    invoke-virtual {v2, v1, v3}, Landroid/support/v4/widget/ac;->a(II)Z
+    invoke-virtual {v2, v1, v3}, Landroid/support/v4/widget/ad;->a(II)Z
 
     move-result v1
 

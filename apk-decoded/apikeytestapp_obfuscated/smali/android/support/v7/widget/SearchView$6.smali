@@ -92,7 +92,7 @@
     :cond_4
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$6;->a:Landroid/support/v7/widget/SearchView;
 
-    iget-object v0, v0, Landroid/support/v7/widget/SearchView;->c:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, v0, Landroid/support/v7/widget/SearchView;->c:Landroid/support/v7/widget/SearchView$e;
 
     if-ne p1, v0, :cond_0
 

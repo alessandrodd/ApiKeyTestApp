@@ -46,17 +46,17 @@
 
     iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior$b;->a:Landroid/support/design/widget/BottomSheetBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ac;
+    iget-object v0, v0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ad;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Landroid/support/design/widget/BottomSheetBehavior$b;->a:Landroid/support/design/widget/BottomSheetBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ac;
+    iget-object v0, v0, Landroid/support/design/widget/BottomSheetBehavior;->k:Landroid/support/v4/widget/ad;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ac;->a(Z)Z
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ad;->a(Z)Z
 
     move-result v0
 

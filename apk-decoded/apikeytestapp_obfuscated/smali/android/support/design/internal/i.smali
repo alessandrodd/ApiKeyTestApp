@@ -1,12 +1,11 @@
 .class public Landroid/support/design/internal/i;
-.super Landroid/support/h/ao;
+.super Landroid/support/v7/widget/RecyclerView;
+
+# interfaces
+.implements Landroid/support/v7/h/a/t;
 
 
 # annotations
-.annotation build Landroid/support/annotation/ai;
-    a = 0xe
-.end annotation
-
 .annotation build Landroid/support/annotation/ak;
     a = {
         .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
@@ -14,187 +13,57 @@
 .end annotation
 
 
-# static fields
-.field private static final a:Ljava/lang/String; = "android:textscale:scale"
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    invoke-direct {p0}, Landroid/support/h/ao;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroid/support/design/internal/i;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
 
-.method private d(Landroid/support/h/au;)V
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v0}, Landroid/support/design/internal/i;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 3
 
-    iget-object v0, p1, Landroid/support/h/au;->b:Landroid/view/View;
+    invoke-direct {p0, p1, p2, p3}, Landroid/support/v7/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    instance-of v0, v0, Landroid/widget/TextView;
+    new-instance v0, Landroid/support/v7/widget/LinearLayoutManager;
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x1
 
-    iget-object v0, p1, Landroid/support/h/au;->b:Landroid/view/View;
+    const/4 v2, 0x0
 
-    check-cast v0, Landroid/widget/TextView;
+    invoke-direct {v0, p1, v1, v2}, Landroid/support/v7/widget/LinearLayoutManager;-><init>(Landroid/content/Context;IZ)V
 
-    iget-object v1, p1, Landroid/support/h/au;->a:Ljava/util/Map;
+    invoke-virtual {p0, v0}, Landroid/support/design/internal/i;->setLayoutManager(Landroid/support/v7/widget/RecyclerView$h;)V
 
-    const-string v2, "android:textscale:scale"
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getScaleX()F
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v0
-
-    invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/ViewGroup;Landroid/support/h/au;Landroid/support/h/au;)Landroid/animation/Animator;
-    .locals 6
-
-    const/4 v4, 0x0
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    if-eqz p2, :cond_0
-
-    if-eqz p3, :cond_0
-
-    iget-object v0, p2, Landroid/support/h/au;->b:Landroid/view/View;
-
-    instance-of v0, v0, Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p3, Landroid/support/h/au;->b:Landroid/view/View;
-
-    instance-of v0, v0, Landroid/widget/TextView;
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    move-object v0, v4
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    iget-object v0, p3, Landroid/support/h/au;->b:Landroid/view/View;
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iget-object v1, p2, Landroid/support/h/au;->a:Ljava/util/Map;
-
-    iget-object v5, p3, Landroid/support/h/au;->a:Ljava/util/Map;
-
-    const-string v2, "android:textscale:scale"
-
-    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_3
-
-    const-string v2, "android:textscale:scale"
-
-    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Float;
-
-    invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
-
-    move-result v1
-
-    move v2, v1
-
-    :goto_1
-    const-string v1, "android:textscale:scale"
-
-    invoke-interface {v5, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    const-string v1, "android:textscale:scale"
-
-    invoke-interface {v5, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Float;
-
-    invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
-
-    move-result v3
-
-    :cond_2
-    cmpl-float v1, v2, v3
-
-    if-nez v1, :cond_4
-
-    move-object v0, v4
-
-    goto :goto_0
-
-    :cond_3
-    move v2, v3
-
-    goto :goto_1
-
-    :cond_4
-    const/4 v1, 0x2
-
-    new-array v1, v1, [F
-
-    const/4 v4, 0x0
-
-    aput v2, v1, v4
-
-    const/4 v2, 0x1
-
-    aput v3, v1, v2
-
-    invoke-static {v1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object v1
-
-    new-instance v2, Landroid/support/design/internal/i$1;
-
-    invoke-direct {v2, p0, v0}, Landroid/support/design/internal/i$1;-><init>(Landroid/support/design/internal/i;Landroid/widget/TextView;)V
-
-    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    move-object v0, v1
-
-    goto :goto_0
-.end method
-
-.method public a(Landroid/support/h/au;)V
+.method public a(Landroid/support/v7/h/a/k;)V
     .locals 0
-
-    invoke-direct {p0, p1}, Landroid/support/design/internal/i;->d(Landroid/support/h/au;)V
 
     return-void
 .end method
 
-.method public b(Landroid/support/h/au;)V
-    .locals 0
+.method public getWindowAnimations()I
+    .locals 1
 
-    invoke-direct {p0, p1}, Landroid/support/design/internal/i;->d(Landroid/support/h/au;)V
+    const/4 v0, 0x0
 
-    return-void
+    return v0
 .end method

@@ -59,7 +59,7 @@
     .end annotation
 .end method
 
-.method public a(Landroid/support/v7/view/b$a;)Landroid/support/v7/view/b;
+.method public a(Landroid/support/v7/h/b$a;)Landroid/support/v7/h/b;
     .locals 1
     .annotation build Landroid/support/annotation/ak;
         a = {

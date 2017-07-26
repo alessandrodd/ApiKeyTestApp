@@ -4,7 +4,7 @@
 
 # annotations
 .annotation build Landroid/support/annotation/ai;
-    a = 0x18
+    a = 0x15
 .end annotation
 
 
@@ -17,34 +17,28 @@
     return-void
 .end method
 
-.method public static a(Landroid/support/v4/app/aj;)V
+.method public static a(Landroid/support/v4/app/aj;[ILjava/lang/Object;)V
     .locals 2
+
+    new-instance v0, Landroid/app/Notification$MediaStyle;
 
     invoke-interface {p0}, Landroid/support/v4/app/aj;->a()Landroid/app/Notification$Builder;
 
-    move-result-object v0
+    move-result-object v1
 
-    new-instance v1, Landroid/app/Notification$DecoratedCustomViewStyle;
+    invoke-direct {v0, v1}, Landroid/app/Notification$MediaStyle;-><init>(Landroid/app/Notification$Builder;)V
 
-    invoke-direct {v1}, Landroid/app/Notification$DecoratedCustomViewStyle;-><init>()V
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
+    invoke-virtual {v0, p1}, Landroid/app/Notification$MediaStyle;->setShowActionsInCompactView([I)Landroid/app/Notification$MediaStyle;
 
-    return-void
-.end method
+    :cond_0
+    if-eqz p2, :cond_1
 
-.method public static b(Landroid/support/v4/app/aj;)V
-    .locals 2
+    check-cast p2, Landroid/media/session/MediaSession$Token;
 
-    invoke-interface {p0}, Landroid/support/v4/app/aj;->a()Landroid/app/Notification$Builder;
+    invoke-virtual {v0, p2}, Landroid/app/Notification$MediaStyle;->setMediaSession(Landroid/media/session/MediaSession$Token;)Landroid/app/Notification$MediaStyle;
 
-    move-result-object v0
-
-    new-instance v1, Landroid/app/Notification$DecoratedMediaCustomViewStyle;
-
-    invoke-direct {v1}, Landroid/app/Notification$DecoratedMediaCustomViewStyle;-><init>()V
-
-    invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
-
+    :cond_1
     return-void
 .end method

@@ -46,17 +46,17 @@
 
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$b;->a:Landroid/support/design/widget/SwipeDismissBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ac;
+    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ad;
 
     if-eqz v0, :cond_1
 
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$b;->a:Landroid/support/design/widget/SwipeDismissBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ac;
+    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->h:Landroid/support/v4/widget/ad;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ac;->a(Z)Z
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ad;->a(Z)Z
 
     move-result v0
 

@@ -1,196 +1,201 @@
-.class Landroid/support/v7/widget/as;
+.class public interface abstract Landroid/support/v7/widget/as;
 .super Ljava/lang/Object;
 
 
-# static fields
-.field static final a:Ljava/lang/String; = "LayoutState"
-
-.field static final b:I = -0x1
-
-.field static final c:I = 0x1
-
-.field static final d:I = -0x80000000
-
-.field static final e:I = -0x1
-
-.field static final f:I = 0x1
-
-
-# instance fields
-.field g:Z
-
-.field h:I
-
-.field i:I
-
-.field j:I
-
-.field k:I
-
-.field l:I
-
-.field m:I
-
-.field n:Z
-
-.field o:Z
-
-
-# direct methods
-.method constructor <init>()V
-    .locals 2
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Landroid/support/v7/widget/as;->g:Z
-
-    iput v1, p0, Landroid/support/v7/widget/as;->l:I
-
-    iput v1, p0, Landroid/support/v7/widget/as;->m:I
-
-    return-void
-.end method
+# annotations
+.annotation build Landroid/support/annotation/ak;
+    a = {
+        .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+    }
+.end annotation
 
 
 # virtual methods
-.method a(Landroid/support/v7/widget/RecyclerView$o;)Landroid/view/View;
-    .locals 3
-
-    iget v0, p0, Landroid/support/v7/widget/as;->i:I
-
-    invoke-virtual {p1, v0}, Landroid/support/v7/widget/RecyclerView$o;->c(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iget v1, p0, Landroid/support/v7/widget/as;->i:I
-
-    iget v2, p0, Landroid/support/v7/widget/as;->j:I
-
-    add-int/2addr v1, v2
-
-    iput v1, p0, Landroid/support/v7/widget/as;->i:I
-
-    return-object v0
+.method public abstract A()Landroid/view/Menu;
 .end method
 
-.method a(Landroid/support/v7/widget/RecyclerView$t;)Z
-    .locals 2
-
-    iget v0, p0, Landroid/support/v7/widget/as;->i:I
-
-    if-ltz v0, :cond_0
-
-    iget v0, p0, Landroid/support/v7/widget/as;->i:I
-
-    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$t;->i()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+.method public abstract a(IJ)Landroid/support/v4/view/ag;
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 2
+.method public abstract a()Landroid/view/ViewGroup;
+.end method
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public abstract a(I)V
+.end method
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+.method public abstract a(Landroid/graphics/drawable/Drawable;)V
+.end method
 
-    const-string v1, "LayoutState{mAvailable="
+.method public abstract a(Landroid/support/v7/h/a/s$a;Landroid/support/v7/h/a/k$a;)V
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public abstract a(Landroid/support/v7/widget/bx;)V
+.end method
 
-    move-result-object v0
+.method public abstract a(Landroid/util/SparseArray;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/SparseArray",
+            "<",
+            "Landroid/os/Parcelable;",
+            ">;)V"
+        }
+    .end annotation
+.end method
 
-    iget v1, p0, Landroid/support/v7/widget/as;->h:I
+.method public abstract a(Landroid/view/Menu;Landroid/support/v7/h/a/s$a;)V
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+.method public abstract a(Landroid/view/View;)V
+.end method
 
-    move-result-object v0
+.method public abstract a(Landroid/view/Window$Callback;)V
+.end method
 
-    const-string v1, ", mCurrentPosition="
+.method public abstract a(Landroid/widget/SpinnerAdapter;Landroid/widget/AdapterView$OnItemSelectedListener;)V
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public abstract a(Ljava/lang/CharSequence;)V
+.end method
 
-    move-result-object v0
+.method public abstract a(Z)V
+.end method
 
-    iget v1, p0, Landroid/support/v7/widget/as;->i:I
+.method public abstract b()Landroid/content/Context;
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+.method public abstract b(I)V
+.end method
 
-    move-result-object v0
+.method public abstract b(Landroid/graphics/drawable/Drawable;)V
+.end method
 
-    const-string v1, ", mItemDirection="
+.method public abstract b(Landroid/util/SparseArray;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/SparseArray",
+            "<",
+            "Landroid/os/Parcelable;",
+            ">;)V"
+        }
+    .end annotation
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public abstract b(Ljava/lang/CharSequence;)V
+.end method
 
-    move-result-object v0
+.method public abstract b(Z)V
+.end method
 
-    iget v1, p0, Landroid/support/v7/widget/as;->j:I
+.method public abstract c(I)V
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+.method public abstract c(Landroid/graphics/drawable/Drawable;)V
+.end method
 
-    move-result-object v0
+.method public abstract c(Ljava/lang/CharSequence;)V
+.end method
 
-    const-string v1, ", mLayoutDirection="
+.method public abstract c()Z
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public abstract d()V
+.end method
 
-    move-result-object v0
+.method public abstract d(I)V
+.end method
 
-    iget v1, p0, Landroid/support/v7/widget/as;->k:I
+.method public abstract d(Landroid/graphics/drawable/Drawable;)V
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+.method public abstract d(Ljava/lang/CharSequence;)V
+.end method
 
-    move-result-object v0
+.method public abstract e()Ljava/lang/CharSequence;
+.end method
 
-    const-string v1, ", mStartLine="
+.method public abstract e(I)V
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public abstract e(Landroid/graphics/drawable/Drawable;)V
+.end method
 
-    move-result-object v0
+.method public abstract f()Ljava/lang/CharSequence;
+.end method
 
-    iget v1, p0, Landroid/support/v7/widget/as;->l:I
+.method public abstract f(I)V
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+.method public abstract g()V
+.end method
 
-    move-result-object v0
+.method public abstract g(I)V
+.end method
 
-    const-string v1, ", mEndLine="
+.method public abstract h()V
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public abstract h(I)V
+.end method
 
-    move-result-object v0
+.method public abstract i(I)V
+.end method
 
-    iget v1, p0, Landroid/support/v7/widget/as;->m:I
+.method public abstract i()Z
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+.method public abstract j(I)V
+.end method
 
-    move-result-object v0
+.method public abstract j()Z
+.end method
 
-    const/16 v1, 0x7d
+.method public abstract k()Z
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+.method public abstract l()Z
+.end method
 
-    move-result-object v0
+.method public abstract m()Z
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public abstract n()Z
+.end method
 
-    move-result-object v0
+.method public abstract o()Z
+.end method
 
-    return-object v0
+.method public abstract p()V
+.end method
+
+.method public abstract q()V
+.end method
+
+.method public abstract r()I
+.end method
+
+.method public abstract s()Z
+.end method
+
+.method public abstract t()Z
+.end method
+
+.method public abstract u()I
+.end method
+
+.method public abstract v()I
+.end method
+
+.method public abstract w()I
+.end method
+
+.method public abstract x()Landroid/view/View;
+.end method
+
+.method public abstract y()I
+.end method
+
+.method public abstract z()I
 .end method

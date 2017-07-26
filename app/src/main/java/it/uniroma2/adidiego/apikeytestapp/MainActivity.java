@@ -12,6 +12,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import it.uniroma2.adidiego.apikeytestapp.adapter.ApiKeyAdapter;
@@ -33,14 +34,12 @@ public class MainActivity extends Activity {
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setAdapter(mAdapter);
-
-        prepareData();
     }
 
     private void prepareData() {
         ApiKey apiKey;
 
-        apiKey = new ApiKey(getString(R.string.api_key_res),    "R.string.api_key_res");
+        apiKey = new ApiKey(getString(R.string.api_key_res), "R.string.api_key_res");
         apiKeys.add(apiKey);
 
         JavaKey javaKey = new JavaKey();
@@ -50,7 +49,11 @@ public class MainActivity extends Activity {
             if (method.getParameterTypes().length == 0) {
                 try {
                     Log.d(getClass().getName(), method.getName());
-                    apiKey = new ApiKey((String) method.invoke(javaKey), method.getName());
+                    if (method.getReturnType().equals(String.class)) {
+                        apiKey = new ApiKey((String) method.invoke(javaKey), method.getName());
+                    } else if (method.getReturnType().equals(String[].class)) {
+                        apiKey = new ApiKey(Arrays.toString((String[]) method.invoke(javaKey)), method.getName());
+                    } else continue;
                     apiKeys.add(apiKey);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -62,10 +65,14 @@ public class MainActivity extends Activity {
 
         // get all ACCESSIBLE fields through reflection
         for (Field field : JavaKey.class.getDeclaredFields()) {
-            if (!Modifier.isPrivate(field.getModifiers()) && field.getType().equals(String.class)) {
+            if (!Modifier.isPrivate(field.getModifiers())) {
                 try {
                     Log.d(getClass().getName(), field.getName());
-                    apiKey = new ApiKey((String) field.get(javaKey), field.getName());
+                    if (field.getType().equals(String.class)) {
+                        apiKey = new ApiKey((String) field.get(javaKey), field.getName());
+                    } else if (field.getType().equals(String[].class)) {
+                        apiKey = new ApiKey(Arrays.toString((String[]) field.get(javaKey)), field.getName());
+                    } else continue;
                     apiKeys.add(apiKey);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -93,5 +100,12 @@ public class MainActivity extends Activity {
         mAdapter.notifyDataSetChanged();
     }
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (apiKeys.isEmpty())
+            prepareData();
+        else
+            mAdapter.notifyDataSetChanged();
+    }
 }

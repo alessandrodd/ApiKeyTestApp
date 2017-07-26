@@ -1,250 +1,513 @@
-.class Landroid/support/v7/widget/SearchView$e;
-.super Landroid/view/TouchDelegate;
+.class public Landroid/support/v7/widget/SearchView$e;
+.super Landroid/support/v7/widget/l;
 
 
 # annotations
+.annotation build Landroid/support/annotation/ak;
+    a = {
+        .enum Landroid/support/annotation/ak$a;->LIBRARY_GROUP:Landroid/support/annotation/ak$a;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroid/support/v7/widget/SearchView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x9
     name = "e"
 .end annotation
 
 
 # instance fields
-.field private final a:Landroid/view/View;
+.field final a:Ljava/lang/Runnable;
 
-.field private final b:Landroid/graphics/Rect;
+.field private b:I
 
-.field private final c:Landroid/graphics/Rect;
+.field private c:Landroid/support/v7/widget/SearchView;
 
-.field private final d:Landroid/graphics/Rect;
-
-.field private final e:I
-
-.field private f:Z
+.field private d:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/view/View;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    invoke-direct {p0, p1, p3}, Landroid/view/TouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-direct {p0, p1, v0}, Landroid/support/v7/widget/SearchView$e;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    invoke-static {v0}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
 
-    move-result-object v0
+    sget v0, Landroid/support/v7/a/b$b;->autoCompleteTextViewStyle:I
 
-    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+    invoke-direct {p0, p1, p2, v0}, Landroid/support/v7/widget/SearchView$e;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 1
+
+    invoke-direct {p0, p1, p2, p3}, Landroid/support/v7/widget/l;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    new-instance v0, Landroid/support/v7/widget/SearchView$e$1;
+
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/SearchView$e$1;-><init>(Landroid/support/v7/widget/SearchView$e;)V
+
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView$e;->a:Ljava/lang/Runnable;
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/SearchView$e;->getThreshold()I
 
     move-result v0
 
-    iput v0, p0, Landroid/support/v7/widget/SearchView$e;->e:I
-
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView$e;->b:Landroid/graphics/Rect;
-
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView$e;->d:Landroid/graphics/Rect;
-
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView$e;->c:Landroid/graphics/Rect;
-
-    invoke-virtual {p0, p1, p2}, Landroid/support/v7/widget/SearchView$e;->a(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
-
-    iput-object p3, p0, Landroid/support/v7/widget/SearchView$e;->a:Landroid/view/View;
+    iput v0, p0, Landroid/support/v7/widget/SearchView$e;->b:I
 
     return-void
+.end method
+
+.method static synthetic a(Landroid/support/v7/widget/SearchView$e;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Landroid/support/v7/widget/SearchView$e;->setImeVisibility(Z)V
+
+    return-void
+.end method
+
+.method private a()Z
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/SearchView$e;->getText()Landroid/text/Editable;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->getTrimmedLength(Ljava/lang/CharSequence;)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method static synthetic a(Landroid/support/v7/widget/SearchView$e;)Z
+    .locals 1
+
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView$e;->a()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method private b()V
+    .locals 3
+
+    const/4 v2, 0x0
+
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView$e;->d:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/SearchView$e;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "input_method"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+
+    invoke-virtual {v0, p0, v2}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
+
+    iput-boolean v2, p0, Landroid/support/v7/widget/SearchView$e;->d:Z
+
+    :cond_0
+    return-void
+.end method
+
+.method static synthetic b(Landroid/support/v7/widget/SearchView$e;)V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView$e;->b()V
+
+    return-void
+.end method
+
+.method private getSearchViewTextMinWidthDp()I
+    .locals 4
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/SearchView$e;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v1, v0, Landroid/content/res/Configuration;->screenWidthDp:I
+
+    iget v2, v0, Landroid/content/res/Configuration;->screenHeightDp:I
+
+    const/16 v3, 0x3c0
+
+    if-lt v1, v3, :cond_0
+
+    const/16 v3, 0x2d0
+
+    if-lt v2, v3, :cond_0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v3, 0x2
+
+    if-ne v0, v3, :cond_0
+
+    const/16 v0, 0x100
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/16 v0, 0x258
+
+    if-ge v1, v0, :cond_1
+
+    const/16 v0, 0x280
+
+    if-lt v1, v0, :cond_2
+
+    const/16 v0, 0x1e0
+
+    if-lt v2, v0, :cond_2
+
+    :cond_1
+    const/16 v0, 0xc0
+
+    goto :goto_0
+
+    :cond_2
+    const/16 v0, 0xa0
+
+    goto :goto_0
+.end method
+
+.method private setImeVisibility(Z)V
+    .locals 3
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/SearchView$e;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "input_method"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+
+    if-nez p1, :cond_0
+
+    iput-boolean v2, p0, Landroid/support/v7/widget/SearchView$e;->d:Z
+
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView$e;->a:Ljava/lang/Runnable;
+
+    invoke-virtual {p0, v1}, Landroid/support/v7/widget/SearchView$e;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/SearchView$e;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-virtual {v0, p0}, Landroid/view/inputmethod/InputMethodManager;->isActive(Landroid/view/View;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iput-boolean v2, p0, Landroid/support/v7/widget/SearchView$e;->d:Z
+
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView$e;->a:Ljava/lang/Runnable;
+
+    invoke-virtual {p0, v1}, Landroid/support/v7/widget/SearchView$e;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    invoke-virtual {v0, p0, v2}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/support/v7/widget/SearchView$e;->d:Z
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public a(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+.method public enoughToFilter()Z
+    .locals 1
+
+    iget v0, p0, Landroid/support/v7/widget/SearchView$e;->b:I
+
+    if-lez v0, :cond_0
+
+    invoke-super {p0}, Landroid/support/v7/widget/l;->enoughToFilter()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+    .locals 2
+
+    invoke-super {p0, p1}, Landroid/support/v7/widget/l;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+
+    move-result-object v0
+
+    iget-boolean v1, p0, Landroid/support/v7/widget/SearchView$e;->d:Z
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView$e;->a:Ljava/lang/Runnable;
+
+    invoke-virtual {p0, v1}, Landroid/support/v7/widget/SearchView$e;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView$e;->a:Ljava/lang/Runnable;
+
+    invoke-virtual {p0, v1}, Landroid/support/v7/widget/SearchView$e;->post(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    return-object v0
+.end method
+
+.method protected onFinishInflate()V
     .locals 3
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView$e;->b:Landroid/graphics/Rect;
+    invoke-super {p0}, Landroid/support/v7/widget/l;->onFinishInflate()V
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {p0}, Landroid/support/v7/widget/SearchView$e;->getResources()Landroid/content/res/Resources;
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView$e;->d:Landroid/graphics/Rect;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView$e;->d:Landroid/graphics/Rect;
+    move-result-object v0
 
-    iget v1, p0, Landroid/support/v7/widget/SearchView$e;->e:I
+    const/4 v1, 0x1
 
-    neg-int v1, v1
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView$e;->getSearchViewTextMinWidthDp()I
 
-    iget v2, p0, Landroid/support/v7/widget/SearchView$e;->e:I
+    move-result v2
 
-    neg-int v2, v2
+    int-to-float v2, v2
 
-    invoke-virtual {v0, v1, v2}, Landroid/graphics/Rect;->inset(II)V
+    invoke-static {v1, v2, v0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView$e;->c:Landroid/graphics/Rect;
+    move-result v0
 
-    invoke-virtual {v0, p2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    float-to-int v0, v0
+
+    invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView$e;->setMinWidth(I)V
 
     return-void
 .end method
 
-.method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 6
+.method protected onFocusChanged(ZILandroid/graphics/Rect;)V
+    .locals 1
 
-    const/4 v1, 0x1
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v7/widget/l;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView$e;->c:Landroid/support/v7/widget/SearchView;
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+    invoke-virtual {v0}, Landroid/support/v7/widget/SearchView;->o()V
 
-    move-result v2
+    return-void
+.end method
 
-    float-to-int v3, v2
+.method public onKeyPreIme(ILandroid/view/KeyEvent;)Z
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+    const/4 v0, 0x1
 
-    move-result v2
+    const/4 v1, 0x4
 
-    float-to-int v4, v2
+    if-ne p1, v1, :cond_3
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v2
-
-    packed-switch v2, :pswitch_data_0
-
-    :cond_0
-    move v2, v0
-
-    :cond_1
-    :goto_0
-    if-eqz v2, :cond_2
-
-    if-eqz v1, :cond_3
-
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView$e;->c:Landroid/graphics/Rect;
-
-    invoke-virtual {v0, v3, v4}, Landroid/graphics/Rect;->contains(II)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView$e;->a:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    div-int/lit8 v0, v0, 0x2
-
-    int-to-float v0, v0
-
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView$e;->a:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v1
 
-    div-int/lit8 v1, v1, 0x2
+    if-nez v1, :cond_1
 
-    int-to-float v1, v1
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
 
-    invoke-virtual {p1, v0, v1}, Landroid/view/MotionEvent;->setLocation(FF)V
+    move-result v1
 
-    :goto_1
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView$e;->a:Landroid/view/View;
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-virtual {p0}, Landroid/support/v7/widget/SearchView$e;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
-    move-result v0
+    move-result-object v1
 
-    :cond_2
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, p2, p0}, Landroid/view/KeyEvent$DispatcherState;->startTracking(Landroid/view/KeyEvent;Ljava/lang/Object;)V
+
+    :cond_0
+    :goto_0
     return v0
 
-    :pswitch_0
-    iget-object v2, p0, Landroid/support/v7/widget/SearchView$e;->b:Landroid/graphics/Rect;
+    :cond_1
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
 
-    invoke-virtual {v2, v3, v4}, Landroid/graphics/Rect;->contains(II)Z
+    move-result v1
 
-    move-result v2
+    if-ne v1, v0, :cond_3
 
-    if-eqz v2, :cond_0
+    invoke-virtual {p0}, Landroid/support/v7/widget/SearchView$e;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
-    iput-boolean v1, p0, Landroid/support/v7/widget/SearchView$e;->f:Z
+    move-result-object v1
 
-    move v2, v1
+    if-eqz v1, :cond_2
 
-    goto :goto_0
+    invoke-virtual {v1, p2}, Landroid/view/KeyEvent$DispatcherState;->handleUpEvent(Landroid/view/KeyEvent;)V
 
-    :pswitch_1
-    iget-boolean v2, p0, Landroid/support/v7/widget/SearchView$e;->f:Z
+    :cond_2
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->isTracking()Z
 
-    if-eqz v2, :cond_1
+    move-result v1
 
-    iget-object v5, p0, Landroid/support/v7/widget/SearchView$e;->d:Landroid/graphics/Rect;
+    if-eqz v1, :cond_3
 
-    invoke-virtual {v5, v3, v4}, Landroid/graphics/Rect;->contains(II)Z
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->isCanceled()Z
 
-    move-result v5
+    move-result v1
 
-    if-nez v5, :cond_1
+    if-nez v1, :cond_3
 
-    move v1, v0
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView$e;->c:Landroid/support/v7/widget/SearchView;
 
-    goto :goto_0
+    invoke-virtual {v1}, Landroid/support/v7/widget/SearchView;->clearFocus()V
 
-    :pswitch_2
-    iget-boolean v2, p0, Landroid/support/v7/widget/SearchView$e;->f:Z
+    const/4 v1, 0x0
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/SearchView$e;->f:Z
+    invoke-direct {p0, v1}, Landroid/support/v7/widget/SearchView$e;->setImeVisibility(Z)V
 
     goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView$e;->c:Landroid/graphics/Rect;
+    invoke-super {p0, p1, p2}, Landroid/support/v7/widget/l;->onKeyPreIme(ILandroid/view/KeyEvent;)Z
 
-    iget v0, v0, Landroid/graphics/Rect;->left:I
+    move-result v0
 
-    sub-int v0, v3, v0
+    goto :goto_0
+.end method
 
-    int-to-float v0, v0
+.method public onWindowFocusChanged(Z)V
+    .locals 2
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView$e;->c:Landroid/graphics/Rect;
+    const/4 v1, 0x1
 
-    iget v1, v1, Landroid/graphics/Rect;->top:I
+    invoke-super {p0, p1}, Landroid/support/v7/widget/l;->onWindowFocusChanged(Z)V
 
-    sub-int v1, v4, v1
+    if-eqz p1, :cond_0
 
-    int-to-float v1, v1
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView$e;->c:Landroid/support/v7/widget/SearchView;
 
-    invoke-virtual {p1, v0, v1}, Landroid/view/MotionEvent;->setLocation(FF)V
+    invoke-virtual {v0}, Landroid/support/v7/widget/SearchView;->hasFocus()Z
 
-    goto :goto_1
+    move-result v0
 
-    nop
+    if-eqz v0, :cond_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
+    invoke-virtual {p0}, Landroid/support/v7/widget/SearchView$e;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iput-boolean v1, p0, Landroid/support/v7/widget/SearchView$e;->d:Z
+
+    invoke-virtual {p0}, Landroid/support/v7/widget/SearchView$e;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/support/v7/widget/SearchView;->a(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Landroid/support/v7/widget/SearchView;->q:Landroid/support/v7/widget/SearchView$a;
+
+    invoke-virtual {v0, p0, v1}, Landroid/support/v7/widget/SearchView$a;->a(Landroid/widget/AutoCompleteTextView;Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public performCompletion()V
+    .locals 0
+
+    return-void
+.end method
+
+.method protected replaceText(Ljava/lang/CharSequence;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method setSearchView(Landroid/support/v7/widget/SearchView;)V
+    .locals 0
+
+    iput-object p1, p0, Landroid/support/v7/widget/SearchView$e;->c:Landroid/support/v7/widget/SearchView;
+
+    return-void
+.end method
+
+.method public setThreshold(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Landroid/support/v7/widget/l;->setThreshold(I)V
+
+    iput p1, p0, Landroid/support/v7/widget/SearchView$e;->b:I
+
+    return-void
 .end method

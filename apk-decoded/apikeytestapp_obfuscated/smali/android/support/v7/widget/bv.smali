@@ -1,68 +1,271 @@
 .class Landroid/support/v7/widget/bv;
-.super Landroid/support/v7/widget/bg;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field public static final a:I = -0x80000000
 
 
 # instance fields
-.field private final a:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference",
-            "<",
-            "Landroid/content/Context;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private b:I
+
+.field private c:I
+
+.field private d:I
+
+.field private e:I
+
+.field private f:I
+
+.field private g:I
+
+.field private h:Z
+
+.field private i:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/content/res/Resources;)V
-    .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroid/support/annotation/ad;
-        .end annotation
-    .end param
-    .param p2    # Landroid/content/res/Resources;
-        .annotation build Landroid/support/annotation/ad;
-        .end annotation
-    .end param
+.method constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0, p2}, Landroid/support/v7/widget/bg;-><init>(Landroid/content/res/Resources;)V
+    const/high16 v1, -0x80000000
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/widget/bv;->a:Ljava/lang/ref/WeakReference;
+    iput v0, p0, Landroid/support/v7/widget/bv;->b:I
+
+    iput v0, p0, Landroid/support/v7/widget/bv;->c:I
+
+    iput v1, p0, Landroid/support/v7/widget/bv;->d:I
+
+    iput v1, p0, Landroid/support/v7/widget/bv;->e:I
+
+    iput v0, p0, Landroid/support/v7/widget/bv;->f:I
+
+    iput v0, p0, Landroid/support/v7/widget/bv;->g:I
+
+    iput-boolean v0, p0, Landroid/support/v7/widget/bv;->h:Z
+
+    iput-boolean v0, p0, Landroid/support/v7/widget/bv;->i:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getDrawable(I)Landroid/graphics/drawable/Drawable;
+.method public a()I
+    .locals 1
+
+    iget v0, p0, Landroid/support/v7/widget/bv;->b:I
+
+    return v0
+.end method
+
+.method public a(II)V
     .locals 2
 
-    invoke-super {p0, p1}, Landroid/support/v7/widget/bg;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    const/high16 v1, -0x80000000
 
-    move-result-object v1
+    iput p1, p0, Landroid/support/v7/widget/bv;->d:I
 
-    iget-object v0, p0, Landroid/support/v7/widget/bv;->a:Ljava/lang/ref/WeakReference;
+    iput p2, p0, Landroid/support/v7/widget/bv;->e:I
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    iput-boolean v0, p0, Landroid/support/v7/widget/bv;->i:Z
 
-    check-cast v0, Landroid/content/Context;
+    iget-boolean v0, p0, Landroid/support/v7/widget/bv;->h:Z
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_2
+
+    if-eq p2, v1, :cond_0
+
+    iput p2, p0, Landroid/support/v7/widget/bv;->b:I
+
+    :cond_0
+    if-eq p1, v1, :cond_1
+
+    iput p1, p0, Landroid/support/v7/widget/bv;->c:I
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :cond_2
+    if-eq p1, v1, :cond_3
+
+    iput p1, p0, Landroid/support/v7/widget/bv;->b:I
+
+    :cond_3
+    if-eq p2, v1, :cond_1
+
+    iput p2, p0, Landroid/support/v7/widget/bv;->c:I
+
+    goto :goto_0
+.end method
+
+.method public a(Z)V
+    .locals 2
+
+    const/high16 v1, -0x80000000
+
+    iget-boolean v0, p0, Landroid/support/v7/widget/bv;->h:Z
+
+    if-ne p1, v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iput-boolean p1, p0, Landroid/support/v7/widget/bv;->h:Z
+
+    iget-boolean v0, p0, Landroid/support/v7/widget/bv;->i:Z
+
+    if-eqz v0, :cond_6
+
+    if-eqz p1, :cond_3
+
+    iget v0, p0, Landroid/support/v7/widget/bv;->e:I
+
+    if-eq v0, v1, :cond_1
+
+    iget v0, p0, Landroid/support/v7/widget/bv;->e:I
+
+    :goto_1
+    iput v0, p0, Landroid/support/v7/widget/bv;->b:I
+
+    iget v0, p0, Landroid/support/v7/widget/bv;->d:I
+
+    if-eq v0, v1, :cond_2
+
+    iget v0, p0, Landroid/support/v7/widget/bv;->d:I
+
+    :goto_2
+    iput v0, p0, Landroid/support/v7/widget/bv;->c:I
+
+    goto :goto_0
+
+    :cond_1
+    iget v0, p0, Landroid/support/v7/widget/bv;->f:I
+
+    goto :goto_1
+
+    :cond_2
+    iget v0, p0, Landroid/support/v7/widget/bv;->g:I
+
+    goto :goto_2
+
+    :cond_3
+    iget v0, p0, Landroid/support/v7/widget/bv;->d:I
+
+    if-eq v0, v1, :cond_4
+
+    iget v0, p0, Landroid/support/v7/widget/bv;->d:I
+
+    :goto_3
+    iput v0, p0, Landroid/support/v7/widget/bv;->b:I
+
+    iget v0, p0, Landroid/support/v7/widget/bv;->e:I
+
+    if-eq v0, v1, :cond_5
+
+    iget v0, p0, Landroid/support/v7/widget/bv;->e:I
+
+    :goto_4
+    iput v0, p0, Landroid/support/v7/widget/bv;->c:I
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Landroid/support/v7/widget/bv;->f:I
+
+    goto :goto_3
+
+    :cond_5
+    iget v0, p0, Landroid/support/v7/widget/bv;->g:I
+
+    goto :goto_4
+
+    :cond_6
+    iget v0, p0, Landroid/support/v7/widget/bv;->f:I
+
+    iput v0, p0, Landroid/support/v7/widget/bv;->b:I
+
+    iget v0, p0, Landroid/support/v7/widget/bv;->g:I
+
+    iput v0, p0, Landroid/support/v7/widget/bv;->c:I
+
+    goto :goto_0
+.end method
+
+.method public b()I
+    .locals 1
+
+    iget v0, p0, Landroid/support/v7/widget/bv;->c:I
+
+    return v0
+.end method
+
+.method public b(II)V
+    .locals 2
+
+    const/high16 v1, -0x80000000
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroid/support/v7/widget/bv;->i:Z
+
+    if-eq p1, v1, :cond_0
+
+    iput p1, p0, Landroid/support/v7/widget/bv;->f:I
+
+    iput p1, p0, Landroid/support/v7/widget/bv;->b:I
+
+    :cond_0
+    if-eq p2, v1, :cond_1
+
+    iput p2, p0, Landroid/support/v7/widget/bv;->g:I
+
+    iput p2, p0, Landroid/support/v7/widget/bv;->c:I
+
+    :cond_1
+    return-void
+.end method
+
+.method public c()I
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/v7/widget/bv;->h:Z
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Landroid/support/v7/widget/l;->a()Landroid/support/v7/widget/l;
+    iget v0, p0, Landroid/support/v7/widget/bv;->c:I
 
-    invoke-static {v0, p1, v1}, Landroid/support/v7/widget/l;->a(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
+    :goto_0
+    return v0
 
     :cond_0
-    return-object v1
+    iget v0, p0, Landroid/support/v7/widget/bv;->b:I
+
+    goto :goto_0
+.end method
+
+.method public d()I
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/v7/widget/bv;->h:Z
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Landroid/support/v7/widget/bv;->b:I
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget v0, p0, Landroid/support/v7/widget/bv;->c:I
+
+    goto :goto_0
 .end method
