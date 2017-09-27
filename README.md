@@ -933,7 +933,7 @@ app/gradle.properties
 hiddenString=ZIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 ```
 
-***Obfuscated***
+***Not Obfuscated***
 ```
 [...]
 .super Ljava/lang/Object;
