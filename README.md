@@ -910,3 +910,36 @@ Java_it_uniroma2_adidiego_apikeytestapp_NativeKey_staticKey(JNIEnv *env, jobject
 3c64 JIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 [...]
 ```
+
+### Gradle BuildConfig's field
+ZIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
+
+**Original**
+
+app/build.gradle
+```
+[...]
+buildTypes {
+  debug {
+    minifyEnabled true
+    buildConfigField "String", "hiddenString", "\"${hiddenString}\""
+  }
+}
+[...]
+```
+
+app/gradle.properties
+```
+hiddenString=ZIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
+```
+
+***Obfuscated***
+```
+[...]
+.class public final Lcom/apothesource/hidingpasswords/BuildConfig;
+.super Ljava/lang/Object;
+.source "BuildConfig.java"
+[...]
+.field public static final hiddenString:Ljava/lang/String; = "ZIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4"
+[...]
+```
