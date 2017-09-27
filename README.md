@@ -936,7 +936,6 @@ hiddenString=ZIzaSyCuxR_sUTfFJZBDkIsauakeuqXaFxhbur4
 ***Obfuscated***
 ```
 [...]
-.class public final Lcom/apothesource/hidingpasswords/BuildConfig;
 .super Ljava/lang/Object;
 .source "BuildConfig.java"
 [...]
